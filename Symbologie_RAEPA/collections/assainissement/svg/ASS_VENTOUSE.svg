@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="99.213" height="99.213">
+<metadata
+     id="metadata829">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>ASTEE</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>ASTEE; Le Grand Lyon</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <dc:language>FR</dc:language>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>eau</rdf:li>
+            <rdf:li>potable</rdf:li>
+            <rdf:li>assainissement</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:date></dc:date>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  
+    <circle fill="param(fill) #FFFFFF" fill-opacity="param(fill-opacity) 1" stroke="param(outline) #000" stroke-width="6" stroke-miterlimit="10" cx="49.606" cy="49.606" r="46.25"/>
+    <path fill="param(outline) #fff" d="M57.509 27.532c1.829 0 3.31.759 3.31 1.694v53.899c0 .939-1.484 1.697-3.31 1.697-1.83 0-3.313-.758-3.313-1.697V29.224c0-.933 1.484-1.692 3.313-1.692zM41.538 27.532c1.923 0 3.477.759 3.477 1.694v53.899c0 .939-1.56 1.697-3.477 1.697-1.918 0-3.474-.758-3.474-1.697V29.224c0-.933 1.564-1.692 3.474-1.692z"/>
+    <path fill="none" stroke="param(outline) #000" stroke-width="5" stroke-miterlimit="10" d="M19.318 49.257c-.577 3.515 2.525-28.244 30.289-28.244 30.298 0 30.506 31.501 30.29 28.246"/>
+</svg>

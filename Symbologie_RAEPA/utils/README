@@ -1,0 +1,3 @@
+Ce répertoire contient les utilitaires pour faciliter la maintenance de jeux de symboles. 
+
+- `batch_replace_metadata.py` associé à `metadata_bloc.xml` permettent de mettre à jour en masse la section metadata de tous les symboles SVG

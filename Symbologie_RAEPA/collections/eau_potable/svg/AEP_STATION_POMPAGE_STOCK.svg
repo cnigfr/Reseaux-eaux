@@ -1,0 +1,54 @@
+<svg xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100">
+<metadata
+     id="metadata829">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>ASTEE</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>ASTEE; Le Grand Lyon</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <dc:language>FR</dc:language>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>eau</rdf:li>
+            <rdf:li>potable</rdf:li>
+            <rdf:li>assainissement</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:date></dc:date>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  
+    <path d="M1.507 49.608c0-25.718 21.534-46.572 48.098-46.572 26.569 0 48.101 20.854 48.101 46.572 0 25.719-21.532 46.57-48.101 46.57-26.563 0-48.098-20.853-48.098-46.57z" stroke-miterlimit="8" fill="param(fill) #fff" fill-opacity="param(fill-opacity) 1" stroke="param(outline) #000" stroke-width="4"/>
+    <path d="M18.328 49.57c0-16.726 14.001-30.286 31.277-30.286 17.276 0 31.28 13.56 31.28 30.286 0 16.729-14.004 30.285-31.28 30.285-17.275-.001-31.277-13.562-31.277-30.285z" stroke-miterlimit="8" fill="none" stroke="param(outline) #000" stroke-width="2"/>
+    <path d="M35.95 27.268c.142-1.667.666-1.886 2.099-1.23l38.617 22.02c.99.436 1.54 1.432.265 2.172L59.057 60.705l-21.359 12.51c-1.156.704-1.802-.344-1.537-1.427z" fill="param(outline) #000"/>
+</svg>

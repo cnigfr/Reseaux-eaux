@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="99" height="99" inkscape:version="0.92.3 (2405546, 2018-03-11)" sodipodi:docname="AEP_STATION_ALERTE.min.svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+<metadata
+     id="metadata829">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>ASTEE</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>ASTEE; Le Grand Lyon</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <dc:language>FR</dc:language>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>eau</rdf:li>
+            <rdf:li>potable</rdf:li>
+            <rdf:li>assainissement</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:date></dc:date>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+   <sodipodi:namedview bordercolor="#666666" borderopacity="1" gridtolerance="10" guidetolerance="10" inkscape:current-layer="svg24" inkscape:cx="43.336475" inkscape:cy="-5.1230263" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-height="903" inkscape:window-maximized="0" inkscape:window-width="1742" inkscape:window-x="385" inkscape:window-y="497" inkscape:zoom="3.3640189" objecttolerance="10" pagecolor="#ffffff" showgrid="false"/>
+ <path d="m14 34 37-8v70l-37-10v-52l37-8 37 10v52l-37 8" fill="param(fill) #fff" fill-opacity="param(fill-opacity) 1"  stroke="param(outline) #000" stroke-linecap="round" stroke-miterlimit="10" inkscape:connector-curvature="0"/>
+ <path d="m73 15-42-11 19 22 43 11z" fill="param(fill) #fff"  fill-opacity="param(fill-opacity) 1"   stroke="param(outline) #000" stroke-linecap="round" stroke-miterlimit="10" inkscape:connector-curvature="0"/>
+ <path d="m51 26 37 10m-79-1 42-9m0 0-19-21m0 0-22 30" fill="none" stroke="param(outline) #000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="6" inkscape:connector-curvature="0"/>
+ <path d="m31 4 42 11m20 22-20-22" fill="param(fill) #fff"  fill-opacity="param(fill-opacity) 1"  stroke="param(outline) #000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="6" inkscape:connector-curvature="0"/>
+ <path d="m13 32 19-26 18 18-37 8" fill="param(outline) #000" stroke="param(outline) #000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="6" inkscape:connector-curvature="0"/>
+ <path d="m14 34 37-8m-37 8v52l37 10v-70l37 10v52l-37 8" fill="none" stroke="param(outline) #000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="6" inkscape:connector-curvature="0"/>
+ <path d="m31 4 19 22" fill="param(fill) #fff"  fill-opacity="param(fill-opacity) 1"  stroke="param(outline) #000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="6" inkscape:connector-curvature="0"/>
+</svg>
