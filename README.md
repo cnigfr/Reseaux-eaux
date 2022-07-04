@@ -1,2 +1,2 @@
 # Reseaux-eaux
-GT Réseaux enterrés des eaux
+Branche pour empaquetage de la symbologie, et seulement la symbologie
