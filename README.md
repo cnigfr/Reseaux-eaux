@@ -15,7 +15,7 @@ suivants :
 
 # Symbologie
 Le premier chantier de ce groupe a abouti à une symbologie SIG des réseaux d’eau et d’assainissement prête à l’emploi, disponible depuis septembre 2020 et téléchargeable 
-sur le site du [CNIG](http://cnig.gouv.fr/?page_id=23994),de l’[ASTEE](https://www.astee.org/publications/symbologies-des-reseaux-deau-et-dassainissement-applicables-aux-systemes-dinformation-geographique-sig/) ou ici [RELEASE]
+sur le site du [CNIG](http://cnig.gouv.fr/?page_id=23994),de l’[ASTEE](https://www.astee.org/publications/symbologies-des-reseaux-deau-et-dassainissement-applicables-aux-systemes-dinformation-geographique-sig/) ou ici [RELEASE](https://github.com/cnigfr/Reseaux-eaux/releases/tag/V2020.09)
 
 # Modèle de données
 Travail en cours
