@@ -17,6 +17,27 @@ suivants :
 Le premier chantier de ce groupe a abouti à une symbologie SIG des réseaux d’eau et d’assainissement prête à l’emploi, disponible depuis septembre 2020 et téléchargeable 
 sur le site du [CNIG](http://cnig.gouv.fr/?page_id=23994),de l’[ASTEE](https://www.astee.org/publications/symbologies-des-reseaux-deau-et-dassainissement-applicables-aux-systemes-dinformation-geographique-sig/) ou ici [RELEASE](https://github.com/cnigfr/Reseaux-eaux/releases/tag/V2020.09)
 
-# Modèle de données
-Travail en cours
+Version de septembre 2022.
+Cette version ne modifie pas les symboles de la version de septembre 2020.
+Les dossiers sont organisés pour répondre à la possibilité du plugin QGIS Resource Sharing
+les dossiers sont composés comme suit :
+
+collections
+ - Assainissement
+    - PNG : contient les symboles au format .png en noir et blanc
+    - preview : visuel des symboles pour affichage Resource Sharing
+    - style : fichier de style QGIS
+    - style_ARCGIS : fichier de style ARCGIS
+    - svg : symbole format svg compatible au changement de couleur QGIS
+    - svg_nb : symbole format svg optimisé en noir et blanc
+ - Eau potable
+    - PNG : contient les symboles au format .png en noir et blanc
+    - preview : visuel des symboles pour affichage Resource Sharing
+    - style : fichier de style QGIS
+    - style_ARCGIS : fichier de style ARCGIS
+    - svg : symbole format svg compatible au changement de couleur QGIS
+    - svg_nb : symbole format svg optimisé en noir et blanc
+
+Documents_Symbologie_RAEPA : contient les documents et tutoriel pour la mise en place et la compréhension des symboles.
+ - utils : contient des fichiers, script et paramètre pour création des symboles
 
