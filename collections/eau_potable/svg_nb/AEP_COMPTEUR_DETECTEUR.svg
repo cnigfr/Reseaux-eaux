@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg11" width="100" height="100" version="1.1" viewBox="0 6.219 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata829">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>ASTEE</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:contributor>
+     <cc:Agent>
+      <dc:title>ASTEE; Le Grand Lyon</dc:title>
+     </cc:Agent>
+    </dc:contributor>
+    <dc:language>FR</dc:language>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>eau</rdf:li>
+      <rdf:li>potable</rdf:li>
+      <rdf:li>assainissement</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:date/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <path id="path3" d="m26.356 97.171-23.644-40.951 23.644-40.953h47.289l23.643 40.953-23.643 40.951z" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+ <path id="path5" d="m48.397 32.673c7.871-0.377 14.969 1.522 20.414 3.92 2.666 1.175 4.692 2.313 7.703 4.46 2.022 1.444 5.584 3.881 5.947 6.083 0.488 2.938-1.611 4.814-3.785 4.868-2.423 0.06-4.316-2.584-6.082-3.921-5.761-4.361-12.996-7.519-22.442-7.569-8.98-0.05-16.92 3.201-22.573 7.434-2.189 1.64-3.724 3.942-5.814 4.057-2.498 0.136-4.292-1.863-4.326-3.921-0.05-2.722 3.657-5.117 5.272-6.354 4.594-3.515 9.156-5.852 15.409-7.569 3.141-0.864 6.395-1.303 10.277-1.488z" stroke="#000"/>
+ <path id="path7" d="m47.449 46.056c8.691-0.681 16.338 2.186 21.629 6.084 1.843 1.356 4.465 3.375 4.596 5.54 0.163 2.67-1.926 4.498-4.327 4.191-2.727-0.35-4.004-2.756-5.945-4.055-3.686-2.464-8.771-4.374-15.545-3.921-5.654 0.381-9.747 2.735-13.114 5.542-1.653 1.378-2.569 2.769-5.137 2.434-1.806-0.236-3.25-1.559-3.246-3.921 0-2.55 2.667-4.391 4.597-5.812 4.158-3.062 9.603-5.545 16.492-6.082z" stroke="#000"/>
+ <path id="path9" d="m48.935 59.303c5.213-0.385 10.301 1.694 13.382 4.462 1.102 0.985 2.204 2.173 2.436 3.378 0.578 3.007-1.967 5.102-4.598 4.732-1.796-0.255-3.216-2.404-4.595-3.246-2.6-1.584-7.073-1.952-10.273-0.407-2.839 1.372-3.336 4.084-6.759 3.653-2.178-0.276-3.732-2.267-3.244-4.732 0.496-2.5 3.153-4.192 5.273-5.406 2.607-1.495 4.979-2.183 8.378-2.434zm0.813 13.788c2.873-0.188 5.736 2.225 5.001 5.814-0.417 2.037-2.647 4.229-5.814 3.649-3.729-0.684-4.672-5.725-2.43-8.11 0.783-0.835 1.752-1.255 3.243-1.353z" stroke="#000"/>
+</svg>

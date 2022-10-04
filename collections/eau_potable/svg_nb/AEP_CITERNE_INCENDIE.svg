@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="svg8" width="100" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<svg id="svg7" width="100" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  <metadata id="metadata829">
   <rdf:RDF>
    <cc:Work rdf:about="">
@@ -36,6 +36,8 @@
    </cc:License>
   </rdf:RDF>
  </metadata>
- <path id="path2" d="m4.0442 29.878h91.912v40.244h-91.912z" fill=param(fill) #fff" fill-opacity="param(fill-opacity)"/>
- <path id="path4" d="m2.0506 27.963v43.623l0.1484-0.123h95.75v-15.955-6.36-21.181h-47.95zm1.9922 2.082h91.911v19.101c0 5.565 0 10.624-0.02 14.291a386.77 386.77 0 0 1-0.02 3.334c-20.832-32.945-71.273-32.898-91.871 0.094zm45.972 13.687c17.875 0.01 35.767 8.594 45.588 25.766h-91.127l0.01-0.02c9.7446-17.167 27.629-25.755 45.529-25.746z" stroke="param(outline) #000" stroke-width="param(outline-width) 0.8" stroke-opacity="param(outline-opacity)" />
+ <g id="g848" transform="translate(.3875 1.7925)" stroke="#000">
+  <path id="path3" d="m1.765 18.578h95.695v59.259h-95.695z" fill="#fff" stroke-miterlimit="10" stroke-width="3"/>
+  <path id="path5" d="m1.7673 77.837v-59.259h95.693z"/>
+ </g>
 </svg>

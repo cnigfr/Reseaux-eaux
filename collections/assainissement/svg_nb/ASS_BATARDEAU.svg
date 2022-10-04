@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="svg8" width="100" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<svg id="svg2619" width="100" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  <metadata id="metadata829">
   <rdf:RDF>
    <cc:Work rdf:about="">
@@ -36,6 +36,6 @@
    </cc:License>
   </rdf:RDF>
  </metadata>
- <path id="path2" d="m4.0442 29.878h91.912v40.244h-91.912z" fill=param(fill) #fff" fill-opacity="param(fill-opacity)"/>
- <path id="path4" d="m2.0506 27.963v43.623l0.1484-0.123h95.75v-15.955-6.36-21.181h-47.95zm1.9922 2.082h91.911v19.101c0 5.565 0 10.624-0.02 14.291a386.77 386.77 0 0 1-0.02 3.334c-20.832-32.945-71.273-32.898-91.871 0.094zm45.972 13.687c17.875 0.01 35.767 8.594 45.588 25.766h-91.127l0.01-0.02c9.7446-17.167 27.629-25.755 45.529-25.746z" stroke="param(outline) #000" stroke-width="param(outline-width) 0.8" stroke-opacity="param(outline-opacity)" />
+ <circle id="circle2609" cx="50" cy="50" r="48.972" fill="#fff"/>
+ <path id="path2611" d="m50.001 1.3712c-26.822 0-48.63 21.805-48.63 48.628 0 26.825 21.807 48.63 48.63 48.63 26.82 0 48.628-21.807 48.628-48.63 0-26.822-21.804-48.628-48.628-48.628zm0 6.0723c23.534 0 42.554 19.018 42.554 42.556 0 23.539-19.02 42.554-42.554 42.554-23.538 0-42.556-19.018-42.556-42.554-1e-3 -23.535 19.018-42.556 42.556-42.556zm-24.157 16.976c-1.177 0-2.127 0.882-2.127 1.976v51.917c0 0.273 0.06 0.532 0.167 0.768 0.05 0.118 0.12 0.229 0.196 0.334 0.229 0.315 0.553 0.566 0.934 0.716 0.127 0.05 0.26 0.09 0.398 0.114 0.138 0.03 0.282 0.04 0.429 0.04h48.662c0.588 0 1.12-0.222 1.505-0.58 0.386-0.358 0.627-0.851 0.627-1.397v-51.912c0-1.092-0.957-1.976-2.132-1.976h-0.04c-1.178 0-2.131 0.882-2.129 1.976v31.839h-44.319v-31.839c0-1.092-0.955-1.976-2.128-1.976zm2.171 37.806h44.326v5.039h-44.326zm0 9.03h44.326v5.038h-44.326z"/>
 </svg>

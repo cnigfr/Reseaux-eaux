@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="svg8" width="100" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<svg id="svg2517" width="100" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  <metadata id="metadata829">
   <rdf:RDF>
    <cc:Work rdf:about="">
@@ -36,6 +36,6 @@
    </cc:License>
   </rdf:RDF>
  </metadata>
- <path id="path2" d="m4.0442 29.878h91.912v40.244h-91.912z" fill=param(fill) #fff" fill-opacity="param(fill-opacity)"/>
- <path id="path4" d="m2.0506 27.963v43.623l0.1484-0.123h95.75v-15.955-6.36-21.181h-47.95zm1.9922 2.082h91.911v19.101c0 5.565 0 10.624-0.02 14.291a386.77 386.77 0 0 1-0.02 3.334c-20.832-32.945-71.273-32.898-91.871 0.094zm45.972 13.687c17.875 0.01 35.767 8.594 45.588 25.766h-91.127l0.01-0.02c9.7446-17.167 27.629-25.755 45.529-25.746z" stroke="param(outline) #000" stroke-width="param(outline-width) 0.8" stroke-opacity="param(outline-opacity)" />
+ <path id="path2511" d="m25.565 2.2155h48.869c13.173 0 23.849 10.566 23.849 23.602v48.364c0 13.034-10.676 23.603-23.849 23.603h-48.869c-13.172 0-23.848-10.569-23.848-23.603v-48.364c2e-3 -13.036 10.678-23.602 23.848-23.602z" fill="#fff"/>
+ <path id="path2513" d="m26.51 0.51678c-14.364 0-25.993 11.628-25.993 25.993v46.981c0 14.364 11.628 25.992 25.993 25.992h46.981c14.363 0 25.992-11.628 25.992-25.992v-46.981c0-14.364-11.629-25.993-25.992-25.993zm0 4.123h46.981a21.779 21.779 0 0 1 21.869 21.87v46.979a21.781 21.781 0 0 1-21.869 21.873h-46.981a21.78 21.78 0 0 1-21.868-21.873v-46.979a21.776 21.776 0 0 1 21.868-21.87zm-14.045 47.466c0 13.326 7.156 25.639 18.768 32.303a37.75 37.75 0 0 0 37.533 0c11.615-6.664 18.766-18.977 18.766-32.303z"/>
 </svg>

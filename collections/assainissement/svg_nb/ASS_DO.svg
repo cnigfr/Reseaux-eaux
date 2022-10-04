@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="svg8" width="100" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<svg id="svg2232" width="100" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
  <metadata id="metadata829">
   <rdf:RDF>
    <cc:Work rdf:about="">
@@ -36,6 +36,10 @@
    </cc:License>
   </rdf:RDF>
  </metadata>
- <path id="path2" d="m4.0442 29.878h91.912v40.244h-91.912z" fill=param(fill) #fff" fill-opacity="param(fill-opacity)"/>
- <path id="path4" d="m2.0506 27.963v43.623l0.1484-0.123h95.75v-15.955-6.36-21.181h-47.95zm1.9922 2.082h91.911v19.101c0 5.565 0 10.624-0.02 14.291a386.77 386.77 0 0 1-0.02 3.334c-20.832-32.945-71.273-32.898-91.871 0.094zm45.972 13.687c17.875 0.01 35.767 8.594 45.588 25.766h-91.127l0.01-0.02c9.7446-17.167 27.629-25.755 45.529-25.746z" stroke="param(outline) #000" stroke-width="param(outline-width) 0.8" stroke-opacity="param(outline-opacity)" />
+ <path id="path2224" d="m59.252 7.7568c-5.088-5.066-13.41-5.076-18.498-9e-3l-33.202 33.05c-5.088 5.067-5.079 13.346 0.01 18.413l33.192 33.038c5.088 5.067 13.398 5.067 18.49 0l33.198-33.049c5.092-5.067 5.092-13.337 0-18.402z" fill="#fff" stroke="#000" stroke-width="6"/>
+ <g id="g1321">
+  <path id="path2226" d="m69.896 35.175c0.231-0.264 0.643-0.08 0.796 0.233l7.436 18.317c0.134 0.26 0 0.28-0.194 0.211l-19.093-5.601c-0.35-0.1-0.608-0.462-0.363-0.704z"/>
+  <path id="path2228" d="m40.022 34.105c5.608-1.808 11.107-1.652 15.513-0.78 2.156 0.428 3.843 0.948 6.441 2.086 1.745 0.765 4.798 2.029 5.495 3.717 0.933 2.252-0.21 4.152-1.769 4.611-1.737 0.514-3.627-1.236-5.165-1.965-5.021-2.379-10.868-3.514-17.698-1.745-6.492 1.68-11.581 5.795-14.825 10.257-1.255 1.729-1.908 3.86-3.395 4.352-1.776 0.587-3.466-0.665-3.897-2.301-0.572-2.165 1.627-4.786 2.549-6.083 2.622-3.685 5.453-6.425 9.627-8.993 2.096-1.291 4.359-2.265 7.124-3.156z"/>
+  <path id="path2230" d="m49.198 16.959 0.251 66.082" fill="#fff" stroke="#000" stroke-width="6"/>
+ </g>
 </svg>
