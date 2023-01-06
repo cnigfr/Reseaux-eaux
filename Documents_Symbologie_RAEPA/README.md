@@ -1,9 +1,3 @@
-les téléchargements officiels sont,également, sur
-
-http://cnig.gouv.fr/?page_id=23994
-
-http://cnig.gouv.fr/wp-content/uploads/2022/05/Astee_Livrables-SIG_septembre-2020.zip
-
 # Fr Water Network Styles
 
 QGIS French official styles for water network elements. 
