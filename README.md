@@ -16,6 +16,8 @@ suivants :
 # Symbologie
 Le premier chantier de ce groupe a abouti à une symbologie SIG des réseaux d’eau et d’assainissement prête à l’emploi, disponible depuis septembre 2020 et téléchargeable ici [RELEASE](https://github.com/cnigfr/Reseaux-eaux/releases/), et retrouver l'actu sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html), ou l’[ASTEE](https://www.astee.org/publications/symbologies-des-reseaux-deau-et-dassainissement-applicables-aux-systemes-dinformation-geographique-sig/)
 
+Retrouver la [documentation simplifiée en cliquant ici](https://github.com/cnigfr/Reseaux-eaux/wiki)
+
 ## Version de septembre 2022
 Cette version ne modifie pas les symboles de la version de septembre 2020.
 Les dossiers sont organisés pour répondre à la possibilité du plugin QGIS Resource Sharing
