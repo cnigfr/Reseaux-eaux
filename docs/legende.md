@@ -1,3 +1,11 @@
+---
+title: légende
+author: Alain
+date: 2024-03-20
+category: symbologie
+layout: post
+---
+
 Nom de la colonne et sa description / contenu
 * **Objets** : Nom des objets représentés dans les bases de données géographiques Assainissement et AEP
 * **Définitions** : contient descriptions des objets (définition), la source de la définition et des précisions sur l'objet
