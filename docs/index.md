@@ -1,5 +1,10 @@
-# Bienvenue
-
+---
+title: Bienvenue
+author: Alain
+date: 2024-03-20
+category: Symbologie
+layout: post
+---
 Symbologie SIG Eau / Assainissement du groupe de travail Standards SIG de l'Astee (Association Scientifique et Technique pour l'Eau et l'assainissement) est mis à disposition selon les termes de la licence _Creative Commons Attribution 4.0 International_.
 
 1. [Légende des tableaux](01-Légende-des-tableaux)
