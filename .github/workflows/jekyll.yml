@@ -55,7 +55,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: /cnigfr/Reseaux-eaux/docs/
+      url: "/cnigfr/Reseaux-eaux/docs/"
     runs-on: ubuntu-latest
     needs: build
     steps:
