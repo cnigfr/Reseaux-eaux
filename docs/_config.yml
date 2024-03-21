@@ -54,7 +54,7 @@ collections:
 
 page_width: 800px
 
-destination:      ./_site
+destination:      ./Reseaux-eaux/_site
 incremental:      false
 regenerate:       true
 
