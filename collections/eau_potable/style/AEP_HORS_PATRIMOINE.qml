@@ -664,9 +664,7 @@
   <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 Les formulaires QGIS peuvent avoir une fonction Python qui sera appelée à l'ouverture du formulaire.
-
 Utilisez cette fonction pour ajouter plus de fonctionnalités à vos formulaires.
-
 Entrez le nom de la fonction dans le champ "Fonction d'initialisation Python".
 Voici un exemple à suivre:
 """
