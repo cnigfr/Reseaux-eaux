@@ -1,3 +1,5 @@
+ ![logo](https://github.com/cnigfr/Reseaux-eaux/blob/main/Documentation/image_documentation/logo.png "logo")
+
 # GT Réseaux enterrés des eaux
 
 Retrouvez le suivi du groupe de travail sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html)
@@ -23,7 +25,7 @@ Cette version ne modifie pas les symboles de la version de septembre 2020.
 Les dossiers sont organisés pour répondre à la possibilité du plugin QGIS Resource Sharing
 les dossiers sont composés comme suit :
 
-+ collections
++ **collections**
  - Assainissement
     - PNG : contient les symboles au format .png en noir et blanc
     - preview : visuel des symboles pour affichage Resource Sharing
