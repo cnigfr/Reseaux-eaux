@@ -172,8 +172,8 @@ COMMENT ON COLUMN "stareau_principale".canalisation.fictive IS 'conduite fictive
 CREATE TABLE "stareau_principale".emprise (
   id_emprise text NOT NULL DEFAULT gen_random_uuid(), -- uuid par défaut peut-être retirer pour autre identifiant
   --id_emprise text NOT NULL, -- identifiant emprise
-  type_emprise text NULL, -- type d'emprise
   visible bool NULL, -- visible de la surface ?
+  fictive bool DEFAULT false NULL, -- fictive ?
   geom public.geometry(polygon, 2154) NOT NULL,
   CONSTRAINT emprise_pk PRIMARY KEY (id_emprise)
 )
@@ -181,10 +181,21 @@ INHERITS ("stareau_principale".donnee_generale,"stareau_principale".metadonnee);
 CREATE INDEX sidx_emprise_geom ON stareau_principale.emprise USING gist (geom);
 
 COMMENT ON TABLE "stareau_principale".emprise IS 'table mère des éléments ayant une surface réelle ou projetée au sol';
+COMMENT ON COLUMN stareau_principale.emprise.id_emprise IS 'identifiant emprise';
+COMMENT ON COLUMN stareau_principale.emprise.visible IS 'visible de la surface ?';
+COMMENT ON COLUMN stareau_principale.emprise.fictive IS 'fictive ?';
 
 -- Column comments
 
 COMMENT ON COLUMN "stareau_principale".emprise.id_emprise IS 'identifiant emprise';
-COMMENT ON COLUMN "stareau_principale".emprise.type_emprise IS '>type d''emprise';
+--COMMENT ON COLUMN "stareau_principale".emprise.type_emprise IS '>type d''emprise';
 COMMENT ON COLUMN "stareau_principale".emprise.visible IS 'visible de la surface ?';
+
+--- TABLE DE RELATION NOEUD-EMPRISE
+CREATE TABLE stareau_principale.mm_emprise_ponctuel (
+  id_emprise text NOT NULL,
+  id_noeud text NOT NULL
+);
+COMMENT ON TABLE stareau_principale.mm_emprise_ponctuel IS 'table many-many entre éléments surfaciques et éléments ponctuels';
+
 
