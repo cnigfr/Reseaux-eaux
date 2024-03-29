@@ -1,14 +1,14 @@
- ![logo](https://github.com/cnigfr/Reseaux-eaux/blob/main/Documentation/image_documentation/logo.png "logo")
+ ![logo](https://github.com/cnigfr/Reseaux-eaux/blob/main/Documentation/image_documentation/logo/logo.png "logo")
 
 # GT Réseaux enterrés des eaux
 
 Retrouvez le suivi du groupe de travail sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html)
 
-# Présentation 
+# Présentation
 Le groupe de travail de l’ASTEE ‘Standards SIG’ a été créé pour travailler sur des ressources ou livrables SIG standards facilitant l’usage des SIG par les exploitants ou gestionnaires des réseaux d’eau ou d’assainissement.
 
 ## Objectif
-L’objectif de cette démarche est de proposer des évolutions des modèles de données Eau et Assainissement en zone urbaine, sur la base du modèle RAEPA avec les objectifs 
+L’objectif de cette démarche est de proposer des évolutions des modèles de données Eau et Assainissement en zone urbaine, sur la base du modèle RAEPA avec les objectifs
 suivants :
 - Compléter les modèles de données représentatifs de l’ensemble du patrimoine pour répondre aux besoins métiers et faciliter les échanges de données
 - Répondre aux obligations réglementaires (réforme anti-endommagement, descriptif détaillé des réseaux, …)
