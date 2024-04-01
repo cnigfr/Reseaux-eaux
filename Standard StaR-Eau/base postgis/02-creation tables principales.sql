@@ -75,8 +75,6 @@ CREATE TABLE "stareau_principale".donnee_generale(
    --CONSTRAINT PK_donnee_generale PRIMARY KEY(id_donnee_generale)
 );
 
-ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_generale_com_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeurs.com_etat_service(code) ON DELETE RESTRICT ON UPDATE CASCADE;
-
 COMMENT ON TABLE "stareau_principale".donnee_generale IS 'table mére des données générales sur les éléments de patrimoine';
 COMMENT ON COLUMN "stareau_principale".donnee_generale.type_reseau IS '>type de réseau';
 COMMENT ON COLUMN "stareau_principale".donnee_generale.etat_service IS '>état de service';

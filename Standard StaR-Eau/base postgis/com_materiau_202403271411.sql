@@ -1,6 +1,6 @@
--- DROP TABLE stareau_valeurs.com_materiau;
+-- DROP TABLE stareau_valeur.com_materiau;
 
-CREATE TABLE stareau_valeurs.com_materiau (
+CREATE TABLE stareau_valeur.com_materiau (
   code text NOT NULL,
   valeur text NULL,
   description text NULL,
@@ -9,9 +9,9 @@ CREATE TABLE stareau_valeurs.com_materiau (
   ref13508 text NULL,
   CONSTRAINT com_materiau_unique UNIQUE (code)
 );
-COMMENT ON TABLE stareau_valeurs.com_materiau IS 'liste des matériaux';
+COMMENT ON TABLE stareau_valeur.com_materiau IS 'liste des matériaux';
 
-INSERT INTO stareau_valeurs.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
+INSERT INTO stareau_valeur.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
    ('acier','Acier','acier','métal','steel','ACDAP'),
    ('amci','Amiante-Ciment','Amiante-ciment','composite','asbestos','ACDAA'),
    ('bitum','Bitume','bitume','composite','','ACDAB'),
@@ -22,7 +22,7 @@ INSERT INTO stareau_valeurs.com_materiau (code,valeur,description,categorie,star
    ('btfb','Béton Fibré','béton fibré','assemblage','reinforcedConcrete',''),
    ('btna','Béton Non Armé','béton non armé','assemblage','',''),
    ('btpj','Béton Projeté','béton projeté','assemblage','','ACDAI');
-INSERT INTO stareau_valeurs.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
+INSERT INTO stareau_valeur.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
    ('btpc','Béton Précontraint','Béton précontraint','assemblage','prestressedReinforcedConcrete',''),
    ('btat','Béton Âme Tôle','béton âme tôle','assemblage','',''),
    ('cu','Cuivre','cuivre','métal','',''),
@@ -33,7 +33,7 @@ INSERT INTO stareau_valeurs.com_materiau (code,valeur,description,categorie,star
    ('fd','Fonte Ductile','fonte ductile','métal','','ACDAO'),
    ('fg','Fonte Grise','fonte grise','métal','','ACDAN'),
    ('fonte','Fonte','fonte','métal','','ACDAM');
-INSERT INTO stareau_valeurs.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
+INSERT INTO stareau_valeur.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
    ('gres','Grès','grès','autre','','ACDAE'),
    ('mac','Maçonné','maçonné','assemblage','masonry',''),
    ('maca','Maçonnerie Appareillée','maçonnerie appareillée','assemblage','','ACDAR'),
@@ -44,7 +44,7 @@ INSERT INTO stareau_valeurs.com_materiau (code,valeur,description,categorie,star
    ('pbu','Polybutylène (PB)','Polybutylène (PB)','plastique','PB',''),
    ('pe','Polyéthylène','polyéthylène','plastique','PE','ACDAV'),
    ('pebd','Pebd','Pebd','plastique','','');
-INSERT INTO stareau_valeurs.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
+INSERT INTO stareau_valeur.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
    ('pehda','Pehd Annelé','Pehd Annelé','plastique','',''),
    ('pehdl','Pehd Lisse','Pehd Lisse','plastique','',''),
    ('pex','Polyéthylène Réticulé','polyéthylène réticulé à haute densité (PEX)','plastique','PEX',''),
@@ -55,7 +55,7 @@ INSERT INTO stareau_valeurs.com_materiau (code,valeur,description,categorie,star
    ('prva','Prv A','Prv A','plastique','',''),
    ('prvb','Prv B','Prv B','plastique','',''),
    ('pu','Polyester','polyester','plastique','','ACDAU');
-INSERT INTO stareau_valeurs.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
+INSERT INTO stareau_valeur.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
    ('pvccvm','Pvc Ancien','polychlorure de vinyle posés avant 1980','plastique','',''),
    ('pvcc','Pvc C','polychlorure de vinyle type C','plastique','CPVC',''),
    ('pvcua','Pvc U Annelé','polychlorure de vinyle rigide tuyaux annelés','plastique','',''),
@@ -66,7 +66,7 @@ INSERT INTO stareau_valeurs.com_materiau (code,valeur,description,categorie,star
    ('sgbt','Segment De Béton','segment de béton','assemblage','','ACDAJ'),
    ('tole','Tôle Galvanisée','tôle galvanisée','métal','galvanizedSteel',''),
    ('trct','Terre Cuite','Terre Cuite','autre','terracota','');
-INSERT INTO stareau_valeurs.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
+INSERT INTO stareau_valeur.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
    ('plast','Plastique Inconnu','type non identifié de plastiques','plastique','','ACDAY'),
    ('metal','Métal Inconnu','type non identifié fer ou acier','métal','','ACDAQ'),
    ('beton','Béton','béton inconnu','assemblage','concrete','ACDAG'),
