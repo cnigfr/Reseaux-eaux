@@ -96,7 +96,7 @@ COMMENT ON COLUMN "stareau_principale".donnee_generale.localisation IS 'adresse,
 
 --METADONNÉES
 
-CREATE TABLE "stareau_principale".metadonnee (
+/*CREATE TABLE "stareau_principale".metadonnee (
   --id_metadonnee serial4 NOT NULL,
   precisionxy varchar(1) NOT NULL, -- classe de precision xy
   precisionz varchar(1) NULL, -- classe de precision y
@@ -118,7 +118,7 @@ COMMENT ON COLUMN "stareau_principale".metadonnee.date_geoloc IS 'date de geoloc
 COMMENT ON COLUMN "stareau_principale".metadonnee.source_geoloc IS 'source de la geolocalisation*';
 COMMENT ON COLUMN "stareau_principale".metadonnee.prop_metadonnees IS 'propriétaire de la métadonnée';
 COMMENT ON COLUMN "stareau_principale".metadonnee.source_attribut IS 'source des attributs';
-COMMENT ON COLUMN "stareau_principale".metadonnee.producteur IS 'producteur de la donnée';
+COMMENT ON COLUMN "stareau_principale".metadonnee.producteur IS 'producteur de la donnée';*/
 
 --ÉLÉMENTS PONCTUELS - NOEUDS-RÉSEAU
 
@@ -152,7 +152,7 @@ CREATE TABLE "stareau_principale".canalisation (
   fictive bool NOT NULL, -- conduite fictive ou virtuelle pour continuité hydraulique
   CONSTRAINT pk_canalisation PRIMARY KEY (id_canalisation)
 )
-INHERITS ("stareau_principale".donnee_generale,"stareau_principale".metadonnee);
+INHERITS ("stareau_principale".donnee_generale);
 CREATE INDEX sidx_canalisation_geom ON stareau_principale.canalisation USING gist (geom);
 
 COMMENT ON TABLE "stareau_principale".canalisation IS 'table mère des éléments linéaire';
@@ -175,7 +175,7 @@ CREATE TABLE "stareau_principale".emprise (
   geom public.geometry(polygon, 2154) NOT NULL,
   CONSTRAINT emprise_pk PRIMARY KEY (id_emprise)
 )
-INHERITS ("stareau_principale".donnee_generale,"stareau_principale".metadonnee);
+INHERITS ("stareau_principale".donnee_generale);
 CREATE INDEX sidx_emprise_geom ON stareau_principale.emprise USING gist (geom);
 
 COMMENT ON TABLE "stareau_principale".emprise IS 'table mère des éléments ayant une surface réelle ou projetée au sol';
