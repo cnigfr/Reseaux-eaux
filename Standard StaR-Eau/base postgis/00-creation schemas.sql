@@ -43,5 +43,5 @@ COMMENT ON SCHEMA "stareau_valeur" IS 'Listes de valeurs du modèle de Star-Eau'
 --crétation des extensions nécessaires
 CREATE EXTENSION IF NOT EXISTS postgis;
 CREATE EXTENSION IF NOT EXISTS hstore;
-CREATE EXTENSION IF NOT EXISTS pgrouting;
-CREATE EXTENSION IF NOT EXISTS plpython3u;
+--CREATE EXTENSION IF NOT EXISTS pgrouting; --pas indispensable cf. installation
+--CREATE EXTENSION IF NOT EXISTS plpython3u; --postgreSQL >11
