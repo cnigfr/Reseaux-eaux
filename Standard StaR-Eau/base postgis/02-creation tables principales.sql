@@ -54,6 +54,7 @@ COMMENT ON COLUMN "stareau_principale".dimension.longueur_exterieure IS 'longueu
 CREATE TABLE "stareau_principale".donnee_generale(
    --id_donnee_generale SERIAL4 NOT NULL,
    type_reseau TEXT NOT NULL, --type de réseau (com_type_reseau)
+   fictif BOOL DEFULT 'false',
    etat_service TEXT NOT NULL, --etat de service (com_etat_service)
    --insee_commune varchar(5) NOT NULL, --Insee de la commune
    insee_commune c_insee NOT NULL, --Insee de la commune
