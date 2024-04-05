@@ -19,7 +19,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  * MA 02110-1301, USA.
  * 
- * 17.03.2024
+ * avril 2024
  */
 
  
@@ -28,17 +28,19 @@
 --CANALISATION BRANCHEMENT
 
 CREATE TABLE "stareau_aep_brcht".aep_canalisation_branchement (
+  id_aep_canalisation_branchement text null,
 	fonction_canalisation_branchement text NULL -- >fonction du branchement
 )
 INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
 COMMENT ON TABLE "stareau_aep_brcht".aep_canalisation_branchement IS 'conduite et accessoire mis en oeuvre pour amener l''eau du réseau de desserte jusqu''au point de livraison à l''usager, à l''exception des conduites et accessoires privés des immeubles collectifs';
 
 -- Column comments
-COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.fonction_canalisation_branchement IS '>fonction du branchement';
+COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.fonction_canalisation_branchement IS '*fonction du branchement*';
 
 --POINT LIVRAISON
 
 CREATE TABLE "stareau_aep_brcht".aep_point_livraison (
+  id_point_livraison text NULL,
 	type_point_livraison text NULL, -- >type point livraison
   type_usager text NOT NULL, -- >type usager desservis
 	ref_externe text NULL, -- référence externe (sdis, expoitation...)
@@ -48,14 +50,15 @@ INHERITS ("stareau_principale".noeud_reseau);
 COMMENT ON TABLE "stareau_aep_brcht".aep_point_livraison IS 'point de livraison';
 
 -- Column comments
-COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.type_point_livraison IS '>type point livraison';
+COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.type_point_livraison IS '*type point livraison*';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.ref_externe IS 'référence externe (sdis, expoitation...)';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.ref_client IS 'référence client';
-COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.type_usager IS 'type usager desservis*';
+COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.type_usager IS '*type usager desservis*';
 
 --RACCORD BRANCHEMENT
 
 CREATE TABLE stareau_aep_brcht.aep_raccord_branchement (
+  id_raccord_branchement text null,
 	type_raccord_branchement text NULL, -- > type de raccord
 	ref_canalisation text NOT NULL -- lien vers canalisation
 )
@@ -64,13 +67,13 @@ COMMENT ON TABLE stareau_aep_brcht.aep_raccord_branchement IS 'Point de raccorde
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep_brcht.aep_raccord_branchement.type_raccord_branchement IS '> type de raccord';
+COMMENT ON COLUMN stareau_aep_brcht.aep_raccord_branchement.type_raccord_branchement IS '*type de raccord*';
 COMMENT ON COLUMN stareau_aep_brcht.aep_raccord_branchement.ref_canalisation IS 'lien vers canalisation';
 
 ---- PIECE BRANCHEMENT
 
 CREATE TABLE stareau_aep_brcht.aep_piece_branchement (
-	id_piece_branchement serial4 NOT NULL,
+	id_piece_branchement text NULL,
 	type_piece_branchement text NULL -- >type de pièce
 )
 INHERITS (stareau_principale.noeud_reseau);
@@ -78,12 +81,13 @@ COMMENT ON TABLE stareau_aep_brcht.aep_piece_branchement IS 'Pièces de branchem
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep_brcht.aep_piece_branchement.type_piece_branchement IS '>type de pièce';
+COMMENT ON COLUMN stareau_aep_brcht.aep_piece_branchement.type_piece_branchement IS '*type de pièce*';
 
 ---VANNE BRANCHEMENT
 
 CREATE TABLE stareau_aep_brcht.aep_vanne_branchement (
-	type_vanne_branchement text NULL, -- >type de vanne
+	id_vanne_branchement text null,
+  type_vanne_branchement text NULL, -- >type de vanne
 	diametre float4 NULL, -- diametre nominale de la vanne
   etat_ouverture text NULL, -- >état d'ouverture
 	sens_fermeture text NULL -- >sens de fermeture
@@ -94,7 +98,7 @@ INHERITS (stareau_principale.noeud_reseau);
 
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.type_vanne_branchement IS '>type de vanne';
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.diametre IS 'diametre nominale de la vanne';
-COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.sens_fermeture IS '>sens de fermeture';
-COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.etat_ouverture IS '>état d''ouverture';
+COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.sens_fermeture IS '*sens de fermeture*';
+COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.etat_ouverture IS '*état d''ouverture*';
 
 

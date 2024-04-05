@@ -18,12 +18,13 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  * MA 02110-1301, USA.
  * 
- * 02.11.2023
+ * avril 2024
  */
 
 ---CANALISATION 
 
 CREATE TABLE "stareau_aep".aep_canalisation (
+  id_aep_canalisation text null,
 	fonction_canalisation text NOT NULL, -- >fonction canalisation dans le réseau
 	contenu_canalisation text NOT NULL, -- >type d'eau transportée
 	protection_cathodique text NULL, -- >presence protection cathodique
@@ -39,20 +40,20 @@ COMMENT ON TABLE "stareau_aep".aep_canalisation IS 'assemblage de tuyau, de leur
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep".aep_canalisation.fonction_canalisation IS '>fonction canalisation dans le réseau';
-COMMENT ON COLUMN "stareau_aep".aep_canalisation.contenu_canalisation IS '>type d''eau transportée';
-COMMENT ON COLUMN "stareau_aep".aep_canalisation.protection_cathodique IS '>presence protection cathodique';
-COMMENT ON COLUMN "stareau_aep".aep_canalisation.etage_pression IS 'reference etage de pression';
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.fonction_canalisation IS '*fonction canalisation dans le réseau*';
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.contenu_canalisation IS '*type d''eau transportée*';
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.protection_cathodique IS '*présence protection cathodique*';
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.etage_pression IS 'référence etage de pression';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.secteur_hydraulique IS 'secteur ou ilot de distribution';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.ref_udi IS 'référence unité de distribution (référence ARS)';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_debut IS 'cote de la génératrice superieure';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_fin IS 'cote génératrice supérieure';
-COMMENT ON COLUMN "stareau_aep".aep_canalisation.type_pression IS '>pression de distribution';
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.type_pression IS '*type de pression de distribution*';
 
 --CAPTAGE
 
 CREATE TABLE "stareau_aep".aep_captage (
-	id_aep_captage serial4 NOT NULL,
+  id_aep_captage TEXT NULL,
 	nom_usuel text NULL, -- nom d'usage
 	type_captage text NOT NULL, -- type de captage
 	nom_ressource text NULL, -- nom ressource
@@ -67,9 +68,9 @@ COMMENT ON TABLE "stareau_aep".aep_captage IS 'Ouvrage de prélèvement exploita
 -- Column comments
 
 COMMENT ON COLUMN "stareau_aep".aep_captage.nom_usuel IS 'nom d''usage';
-COMMENT ON COLUMN "stareau_aep".aep_captage.type_captage IS '>type de captage';
+COMMENT ON COLUMN "stareau_aep".aep_captage.type_captage IS '*type de captage*';
 COMMENT ON COLUMN "stareau_aep".aep_captage.nom_ressource IS 'nom ressource';
-COMMENT ON COLUMN "stareau_aep".aep_captage.type_ressource IS '>type de ressource';
+COMMENT ON COLUMN "stareau_aep".aep_captage.type_ressource IS '*type de ressource*';
 COMMENT ON COLUMN "stareau_aep".aep_captage.ref_aac IS 'reference aire alimentation captage';
 COMMENT ON COLUMN "stareau_aep".aep_captage.ref_dup IS 'référence arrêté autorisation ';
 COMMENT ON COLUMN "stareau_aep".aep_captage.debit_max_autorise IS 'Débit max autorisé mentionné dans la DUP, accompagné de son unité';
@@ -78,7 +79,7 @@ COMMENT ON COLUMN "stareau_aep".aep_captage.debit_max_autorise IS 'Débit max au
 --- RESERVOIR
 
 CREATE TABLE "stareau_aep".aep_reservoir (
-	id_aep_reservoir serial4 NOT NULL,
+ id_aep_reservoir TEXT NULL,
 	nom_usuel text NULL, -- nom d'usage
 	type_reservoir text NOT NULL, -- >type réservoir
 	nb_cuves int2 NOT NULL DEFAULT 1, -- nombre de cuves
@@ -94,19 +95,19 @@ COMMENT ON TABLE "stareau_aep".aep_reservoir IS 'installation destinée au stock
 -- Column comments
 
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.nom_usuel IS 'nom d''usage';
-COMMENT ON COLUMN "stareau_aep".aep_reservoir.type_reservoir IS '>type réservoir';
+COMMENT ON COLUMN "stareau_aep".aep_reservoir.type_reservoir IS '*type réservoir*';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.nb_cuves IS 'nombre de cuves';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.volume_utile IS 'volume total utile m3';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.cote_sol IS 'cote NGF sol du reservoir';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.cote_radier IS 'cote NGF du fond de cuve la plus basse';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.cote_trop_plein IS 'cote NGF du trop-plein';
-COMMENT ON COLUMN "stareau_aep".aep_reservoir.telegestion IS '>présence d''une gestion à distance';
+COMMENT ON COLUMN "stareau_aep".aep_reservoir.telegestion IS '*présence d''une gestion à distance*';
 
 
 --TRAITEMENT (UP)
 
 CREATE TABLE "stareau_aep".aep_traitement (
-	id_aep_traitement serial4 NOT NULL,
+  id_aep_traitement TEXT NULL,
 	nom_usuel text NULL, -- nom d'usage
 	fonction_traitement text NOT NULL, -- >fonction traitement
 	type_desinfection text NOT NULL, -- >type désinfection
@@ -124,12 +125,12 @@ COMMENT ON COLUMN "stareau_aep".aep_traitement.fonction_traitement IS '>fonction
 COMMENT ON COLUMN "stareau_aep".aep_traitement.type_desinfection IS '>type désinfection';
 COMMENT ON COLUMN "stareau_aep".aep_traitement.capacite IS 'capacité de traitement m3/j';
 COMMENT ON COLUMN "stareau_aep".aep_traitement.debit_ref IS 'débit de référence m3/j';
-COMMENT ON COLUMN "stareau_aep".aep_traitement.telegestion IS '>présence d''une gestion à distance';
+COMMENT ON COLUMN "stareau_aep".aep_traitement.telegestion IS '*présence d''une gestion à distance*';
 
 --POINT DE MESURE
 
 CREATE TABLE stareau_aep.aep_point_mesure (
-  id_aep_point_mesure serial4 NOT NULL,
+  id_aep_point_mesure TEXT NULL,
   nom_usuel text NULL,
   type_point_mesure text NOT NULL, -- >type point de mesure*
   fonction_point_mesure text NOT NULL, -- >fonction point de mesure*
@@ -142,18 +143,18 @@ CREATE TABLE stareau_aep.aep_point_mesure (
 INHERITS (stareau_principale.noeud_reseau);
 COMMENT ON TABLE stareau_aep.aep_point_mesure IS 'table des point de mesure (compteurs) sur réseaux';
 
-COMMENT ON COLUMN stareau_aep.aep_point_mesure.type_point_mesure IS '>type point de mesure*';
-COMMENT ON COLUMN stareau_aep.aep_point_mesure.fonction_point_mesure IS '>fonction point de mesure*';
+COMMENT ON COLUMN stareau_aep.aep_point_mesure.type_point_mesure IS '*type point de mesure*';
+COMMENT ON COLUMN stareau_aep.aep_point_mesure.fonction_point_mesure IS '*fonction point de mesure*';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.calibre IS 'calibre/diametre';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.annee_fabrication IS 'année fabrication';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.marque IS 'marque compteur';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.numero_serie IS 'numéro série';
-COMMENT ON COLUMN stareau_aep.aep_point_mesure.telegestion IS '>présence d''une gestion à distance';
+COMMENT ON COLUMN stareau_aep.aep_point_mesure.telegestion IS '*présence d''une gestion à distance*';
 
 --- VANNE
 
 CREATE TABLE "stareau_aep".aep_vanne (
-	id_aep_vanne serial4 NOT NULL,
+	id_aep_vanne TEXT NULL,
 	type_vanne text NOT NULL, -- type_vanne
 	fonction_vanne text NOT NULL, -- fonction vanne
 	diametre float4 NULL, -- diametre nominal
@@ -167,18 +168,18 @@ COMMENT ON TABLE "stareau_aep".aep_vanne IS 'Appareillage capable d''intercepter
 
 
 COMMENT ON TABLE "stareau_aep".aep_vanne IS 'vanne réseau';
-COMMENT ON COLUMN "stareau_aep".aep_vanne.type_vanne IS '>type_vanne';
-COMMENT ON COLUMN "stareau_aep".aep_vanne.fonction_vanne IS '>fonction vanne';
+COMMENT ON COLUMN "stareau_aep".aep_vanne.type_vanne IS '*type_vanne*';
+COMMENT ON COLUMN "stareau_aep".aep_vanne.fonction_vanne IS '*fonction vanne*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.diametre IS 'diametre nominal';
-COMMENT ON COLUMN "stareau_aep".aep_vanne.sens_fermeture IS 'sens fermeture*';
-COMMENT ON COLUMN "stareau_aep".aep_vanne.etat_ouverture IS 'état ouverture*';
+COMMENT ON COLUMN "stareau_aep".aep_vanne.sens_fermeture IS '*sens fermeture*';
+COMMENT ON COLUMN "stareau_aep".aep_vanne.etat_ouverture IS '*état ouverture*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.motorisation IS 'motorisation';
-COMMENT ON COLUMN "stareau_aep".aep_vanne.telegestion IS 'présence d''une gestion à distance';
+COMMENT ON COLUMN "stareau_aep".aep_vanne.telegestion IS '*présence d''une gestion à distance*';
 
 --REGULATION
 
 CREATE TABLE "stareau_aep".aep_regulation (
-	id_aep_regulation serial4 NOT NULL,
+	id_aep_regulation TEXT NULL,
 	nom_usuel text NULL, -- nom usage
 	type_regulation text NOT NULL, -- type régulation*
 	type_consigne text NOT NULL, -- type consigne*
@@ -193,23 +194,23 @@ INHERITS ("stareau_principale".noeud_reseau);
 
 COMMENT ON TABLE "stareau_aep".aep_regulation IS 'appareil de régulation du débit ou de la pression';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.nom_usuel IS 'nom usage';
-COMMENT ON COLUMN "stareau_aep".aep_regulation.type_regulation IS '>type régulation';
-COMMENT ON COLUMN "stareau_aep".aep_regulation.type_consigne IS '>type consigne';
+COMMENT ON COLUMN "stareau_aep".aep_regulation.type_regulation IS '*type régulation*';
+COMMENT ON COLUMN "stareau_aep".aep_regulation.type_consigne IS '*type consigne*';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.consigne_amont IS 'consigne en amont';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.consigne_aval IS 'consigne en aval';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.marque IS 'marque de l''appareil';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.diametre IS 'diametre nominal';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.annee_fabrication IS 'année de fabrication';
-COMMENT ON COLUMN "stareau_aep".aep_regulation.telegestion IS '>présence d''une gestion à distance';
+COMMENT ON COLUMN "stareau_aep".aep_regulation.telegestion IS '*présence d''une gestion à distance*';
   
 --POMPAGE
 
 CREATE TABLE "stareau_aep".aep_pompage (
-	id_aep_pompage serial4 NOT NULL, -- identifiant
+	id_aep_pompage TEXT NULL, -- identifiant
 	nom_usuel text NULL, -- nom d'usage
 	fonction_pompage text NOT NULL, -- >fonction du pompage
 	installation_pompage text NOT NULL, -- >mode installation
-	nb_pompes int2 NULL, -- nombre de pompes
+	nb_pompes int2 null default 1, -- nombre de pompes
 	capacite float4 NULL, -- capacite nominale de pompage m3/j
 	telegestion text NULL
 )
@@ -217,17 +218,16 @@ INHERITS ("stareau_principale".noeud_reseau);
 COMMENT ON TABLE "stareau_aep".aep_pompage IS 'ensemble des dispositifs permettant d''aspirer, de refouler ou de comprimer des eaux';
 
 -- Column comments
-COMMENT ON COLUMN "stareau_aep".aep_pompage.id_aep_pompage IS 'identifiant';
 COMMENT ON COLUMN "stareau_aep".aep_pompage.nom_usuel IS 'nom d''usage';
-COMMENT ON COLUMN "stareau_aep".aep_pompage.fonction_pompage IS '>fonction du pompage';
-COMMENT ON COLUMN "stareau_aep".aep_pompage.installation_pompage IS '>mode installation';
+COMMENT ON COLUMN "stareau_aep".aep_pompage.fonction_pompage IS '*fonction du pompage*';
+COMMENT ON COLUMN "stareau_aep".aep_pompage.installation_pompage IS '*mode installation*';
 COMMENT ON COLUMN "stareau_aep".aep_pompage.nb_pompes IS 'nombre de pompes';
 COMMENT ON COLUMN "stareau_aep".aep_pompage.capacite IS 'capacité nominale de pompage m3/j';
-COMMENT ON COLUMN "stareau_aep".aep_pompage.telegestion IS '>présence d''une gestion à distance';
+COMMENT ON COLUMN "stareau_aep".aep_pompage.telegestion IS '*présence d''une gestion à distance*';
 
 --APPAREILLAGE
 CREATE TABLE "stareau_aep".aep_appareillage (
-	id_aep_appareillage serial4 NOT NULL,
+	id_aep_appareillage TEXT NULL,
 	type_appareillage text NOT NULL, -- >type d'appariellage
 	diametre float4 NULL, -- diametre nominal
 	telegestion text NULL -- > Présence d'une gestion à distance
@@ -237,14 +237,14 @@ COMMENT ON TABLE "stareau_aep".aep_appareillage IS 'Equipements divers sur le r�
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep".aep_appareillage.type_appareillage IS '>type d''appariellage';
+COMMENT ON COLUMN "stareau_aep".aep_appareillage.type_appareillage IS '*type d''appariellage*';
 COMMENT ON COLUMN "stareau_aep".aep_appareillage.diametre IS 'diametre nominal';
-COMMENT ON COLUMN "stareau_aep".aep_appareillage.telegestion IS '> Présence d''une gestion à distance';
+COMMENT ON COLUMN "stareau_aep".aep_appareillage.telegestion IS '*Présence d''une gestion à distance*';
 
 --STATION D'ALERTE
 
 CREATE TABLE stareau_aep.aep_station_alerte (
-	id_aep_station_alerte serial4 NOT NULL, -- identifiant
+	id_aep_station_alerte TEXT NULL, -- identifiant
 	nom_usuel text NULL, -- nom d'usage
 	geom public.geometry(point, 2154) NOT NULL,
 	CONSTRAINT aep_station_alerte_pk PRIMARY KEY (id_aep_station_alerte)
@@ -253,5 +253,4 @@ COMMENT ON TABLE stareau_aep.aep_station_alerte IS 'equipement permettent de dé
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep.aep_station_alerte.id_aep_station_alerte IS 'identifiant';
 COMMENT ON COLUMN stareau_aep.aep_station_alerte.nom_usuel IS 'nom d''usage';
