@@ -52,7 +52,7 @@ COMMENT ON COLUMN "stareau_principale".dimension.longueur_exterieure IS 'longueu
 --DONNÉES GÉNÉRALES
 
 CREATE TABLE "stareau_principale".donnee_generale(
-   --id_donnee_generale SERIAL4 NOT NULL,
+   --id_donnee_generale INT GENERATED ALWAYS AS IDENTITY,
    type_reseau TEXT NOT NULL, --type de réseau (com_type_reseau)
    fictif BOOL DEFAULT false NULL,
    etat_service TEXT NOT NULL, --etat de service (com_etat_service)
@@ -80,25 +80,29 @@ CREATE TABLE "stareau_principale".donnee_generale(
    --CONSTRAINT PK_donnee_generale PRIMARY KEY(id_donnee_generale)
 );
 
-COMMENT ON TABLE "stareau_principale".donnee_generale IS 'table mére des données générales sur les éléments de patrimoine';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.type_reseau IS '*type de réseau*';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.etat_service IS '*état de service*';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.insee_commune IS 'insee de la commune';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.maitre_ouvrage IS 'maitre d''ouvrage';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.exploitant IS 'exploitant actuel';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.entreprise_pose IS 'entreprise de pose';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.an_pose_sup IS 'Année marquant la fin de la période de pose';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.an_pose_inf IS 'Année marquant la début de la période de pose';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.an_service_sup IS 'Année marquant la fin de la période de mise en service';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.an_service_inf IS 'Année marquant le début de la période de mise en service';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.an_abandon_sup IS 'Année marquant la fin de la période d''arrêt définitif';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.an_abandon_inf IS 'Année marquant le début de la période d''arrêt définitif';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.an_rehab_sup IS 'Année marquant la fin de la période de réhabilitation';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.an_rehab_inf IS 'Année marquant le début de la période de mise en service';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.lien_doc1 IS 'lien vers document';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.lien_doc2 IS 'lien 2 vers document';
-COMMENT ON COLUMN "stareau_principale".donnee_generale.localisation IS 'adresse, nom de la rue principale, ou localisation relative du patrimoine';
-
+COMMENT ON COLUMN stareau_principale.donnee_generale.type_reseau IS '*type de réseau*';
+COMMENT ON COLUMN stareau_principale.donnee_generale.etat_service IS '*état de service*';
+COMMENT ON COLUMN stareau_principale.donnee_generale.insee_commune IS 'insee de la commune';
+COMMENT ON COLUMN stareau_principale.donnee_generale.localisation IS 'adresse, nom de la rue principale, ou localisation relative du patrimoine';
+COMMENT ON COLUMN stareau_principale.donnee_generale.maitre_ouvrage IS 'maitre d''ouvrage';
+COMMENT ON COLUMN stareau_principale.donnee_generale.exploitant IS 'exploitant actuel';
+COMMENT ON COLUMN stareau_principale.donnee_generale.entreprise_pose IS 'entreprise de pose';
+COMMENT ON COLUMN stareau_principale.donnee_generale.an_pose_sup IS 'Année marquant la fin de la période de pose';
+COMMENT ON COLUMN stareau_principale.donnee_generale.an_pose_inf IS 'Année marquant la début de la période de pose';
+COMMENT ON COLUMN stareau_principale.donnee_generale.an_service_sup IS 'Année marquant la fin de la période de mise en service';
+COMMENT ON COLUMN stareau_principale.donnee_generale.an_service_inf IS 'Année marquant le début de la période de mise en service';
+COMMENT ON COLUMN stareau_principale.donnee_generale.an_abandon_sup IS 'Année marquant la fin de la période d''arrêt définitif';
+COMMENT ON COLUMN stareau_principale.donnee_generale.an_abandon_inf IS 'Année marquant le début de la période d''arrêt définitif';
+COMMENT ON COLUMN stareau_principale.donnee_generale.an_rehab_sup IS 'Année marquant la fin de la période de réhabilitation';
+COMMENT ON COLUMN stareau_principale.donnee_generale.an_rehab_inf IS 'Année marquant le début de la période de mise en service';
+COMMENT ON COLUMN stareau_principale.donnee_generale.date_creation IS 'date de la création de l''objet sig';
+COMMENT ON COLUMN stareau_principale.donnee_generale.origine_creation IS '*document source de la création*';
+COMMENT ON COLUMN stareau_principale.donnee_generale.date_maj IS 'date de mise à jour de l''objet sig';
+COMMENT ON COLUMN stareau_principale.donnee_generale.origine_maj IS '*document source de la mise à jour*';
+COMMENT ON COLUMN stareau_principale.donnee_generale.lien_doc1 IS 'lien vers document';
+COMMENT ON COLUMN stareau_principale.donnee_generale.lien_doc2 IS 'lien 2 vers document';
+COMMENT ON COLUMN stareau_principale.donnee_generale.precision_xy IS '*classe de précision XY*';
+COMMENT ON COLUMN stareau_principale.donnee_generale.precision_z IS '*classe de précision Z*';
 
 --ÉLÉMENTS PONCTUELS - NOEUDS-RÉSEAU
 
@@ -135,11 +139,11 @@ INHERITS ("stareau_principale".donnee_generale);
 CREATE INDEX sidx_canalisation_geom ON stareau_principale.canalisation USING gist (geom); --- indexation
 
 COMMENT ON TABLE "stareau_principale".canalisation IS 'table mère des éléments linéaire';
-COMMENT ON COLUMN "stareau_principale".canalisation.mode_circulation IS '>mode de circulation';
-COMMENT ON COLUMN "stareau_principale".canalisation.type_pose IS '>type de pose';
-COMMENT ON COLUMN "stareau_principale".canalisation.raison_pose IS '>raison de la pose';
-COMMENT ON COLUMN "stareau_principale".canalisation.materiau IS '>materiau';
-COMMENT ON COLUMN "stareau_principale".canalisation.revetement_interieur IS '>revêtement intérieur';
+COMMENT ON COLUMN "stareau_principale".canalisation.mode_circulation IS '*mode de circulation*';
+COMMENT ON COLUMN "stareau_principale".canalisation.type_pose IS '*type de pose*';
+COMMENT ON COLUMN "stareau_principale".canalisation.raison_pose IS '*raison de la pose*';
+COMMENT ON COLUMN "stareau_principale".canalisation.materiau IS '*materiau*';
+COMMENT ON COLUMN "stareau_principale".canalisation.revetement_interieur IS '*revêtement intérieur*';
 COMMENT ON COLUMN "stareau_principale".canalisation.diametre_equivalent IS 'diametre nominale ou équivalent';
 COMMENT ON COLUMN "stareau_principale".canalisation.longueur_terrain IS 'longueur réelle terrain';
 
@@ -158,12 +162,6 @@ CREATE INDEX sidx_emprise_geom ON stareau_principale.emprise USING gist (geom); 
 COMMENT ON TABLE "stareau_principale".emprise IS 'table mère des éléments ayant une surface réelle ou projetée au sol';
 COMMENT ON COLUMN stareau_principale.emprise.id_emprise IS 'identifiant emprise';
 COMMENT ON COLUMN stareau_principale.emprise.visible IS 'visible de la surface ?';
-
--- Column comments
-
-COMMENT ON COLUMN "stareau_principale".emprise.id_emprise IS 'identifiant emprise';
---COMMENT ON COLUMN "stareau_principale".emprise.type_emprise IS '>type d''emprise';
-COMMENT ON COLUMN "stareau_principale".emprise.visible IS 'visible de la surface ?';
 
 --- TABLE DE RELATION NOEUD-EMPRISE
 CREATE TABLE stareau_principale.mm_emprise_ponctuel (

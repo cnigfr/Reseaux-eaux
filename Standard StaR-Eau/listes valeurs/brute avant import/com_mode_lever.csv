@@ -1,0 +1,5 @@
+"gps","GPS","gps standard"
+"rtk","GPS-RTK","gps centimétrique"
+"station","Station totale","theodolite de lever"
+"lidar","Lidar","télédétection par laser"
+"manuelle","Saisie manuelle","saisie faite à la main"

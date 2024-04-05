@@ -1,0 +1,8 @@
+"regulation","régulation","permet de réguler le débit des écoulements"
+"anti_crue","anti-crue","permet de la gestion des crues dans le réseau"
+"anti_retour","anti-retour","permet d'éviter le retour des eaux en arrière"
+"deversoir_orage","deversoir d'orage","sur unitaire, permet d'évacuer le trop-plein de pluvial par surverse"
+"reprise_temps_secs","reprise temps secs","sur pluvial, permet de diriger les écoulements de temps secs vers le réseaux d'eaux usées"
+"securite","mise en sécurité","permet de la mise en sécurité du personnel"
+"deviation","déviation","permet de diriger les eaux vers un autre réseau."
+

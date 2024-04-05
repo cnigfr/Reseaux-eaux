@@ -1,0 +1,5 @@
+"stabilisateur","stabilisateur","évite les fluctuation en pression ou en débit"
+"reducteur","réducteur","réduit la pression ou le débit"
+"limiteur","limiteur de débit","maintient automatiquement le débit, indépendamment des changements de pressions amont ou aval."
+"vanne_alti","vanne altimétrique","vanne de régulation - régule automatiquement les niveaux d'eau"
+
