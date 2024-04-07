@@ -1,0 +1,6 @@
+"by_pass","By-pass","canalisation créant un by-pass du réseau ou d'un ouvrage"
+"collecte","Collecte","collecte des eaux usées"
+"galerie_acces","Galerie d'accès","galerie d'accès à une canalisation depuis un regard ou entre canalisation"
+"stockage","Stockage","canalisation permettant le stockage ou la rétention des effluents"
+"transport","Transport","canalisation de transit entre 2 ouvrages sans branchement."
+"trop_plein","Trop-plein","canalisation d'évacuation d'un trop-plein d'ouvrage"

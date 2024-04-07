@@ -2,6 +2,7 @@
 "nappe","nappe phréatique","nappe phréatique"
 "retenue","retenue d'eau","retenue d'eau artificielle ou naturel"
 "source","source","Eau sortant naturellement du sol."
+"impluvium","implvium","zone de récupération des eaux de pluie"
 "REU","REU","ré-utilisation des eaux usées"
 "marin","milieu marin","eaux prélévée dans les milieux salins"
 "surface","eaux de surface","Eau qui s'écoule ou qui stagne à la surface de l'écorce terrestre (lithosphère)"
@@ -13,4 +14,3 @@
 "non_valide","Non validé(e)","information existe mais n'est pas officiellement validée"
 "non_determine","Non déterminé(e)","information inconnue ou non disponible et ne peut pas l'être"
 "autre","Autre","ne figure pas dans la liste ci-dessus. cf. observations"
-"impluvium","impluvium","zone de récupération des eaux de pluie"

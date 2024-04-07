@@ -1,5 +1,5 @@
 "domestique","domestique","habitat particulier ou d'un habitat collectif"
 "industriel","industriel","rejettant des eaux industrielles"
 "commercial","commercial","rejettant des eaux issues de commerce"
-"medical","medical",
+"medical","médical","rejettant des eaux d'une unité médicale"
 "mixte","mixte","rejettant plusieurs types d'eaux"
