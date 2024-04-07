@@ -1,0 +1,8 @@
+"forage","forage","ouvrages permettant de capter les eaux souterraines"
+"prise_eau","prise d'eau","prise d'eau, puit artésien, ou captant"
+"puits","puits","Cavité circulaire, profonde et étroite, à parois maçonnées, pratiquée dans le sol pour atteindre une nappe d'eau souterraine."
+"non_renseigne","Non renseigné(e)","information en recherche ou disponible mais non saisie"
+"non_concerne","Non concerné(e)","information non possible ou non pertinente pour l'élément décrit"
+"non_valide","Non validé(e)","information existe mais n'est pas officiellement validée"
+"non_determine","Non déterminé(e)","information inconnue ou non disponible et ne peut pas l'être"
+"autre","Autre","ne figure pas dans la liste ci-dessus. cf. observations"

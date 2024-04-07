@@ -17,9 +17,9 @@ def create_csv_files_from_csv(input_file):
                 #writer.writerow(['code', 'valeur', 'description'])
                 writer.writerow([])
                 writer.writerow(['non_renseigne','Non renseigné(e)','information en recherche ou disponible mais non saisie'])
-                writer.writerow(['non_concerne','Non concerné(e)','information non possible ou non pertinente pour l élément décrit'])
-                writer.writerow(['non_valide','Non validé(e)','information existe mais n est pas officiellement validée'])
-                writer.writerow(['non_determine','Non déterminé(e)','information inconnue ou non disponible et ne peut pas l être'])
+                writer.writerow(['non_concerne','Non concerné(e)','information non possible ou non pertinente pour l''élément décrit'])
+                writer.writerow(['non_valide','Non validé(e)','information existe mais n''est pas officiellement validée'])
+                writer.writerow(['non_determine','Non déterminé(e)','information inconnue ou non disponible et ne peut pas l''être'])
                 writer.writerow(['autre','autre','ne figure pas dans la liste ci-dessus. cf. observations'])
 
 # utilisation
