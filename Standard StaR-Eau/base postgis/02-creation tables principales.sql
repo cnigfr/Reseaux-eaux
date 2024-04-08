@@ -108,7 +108,8 @@ COMMENT ON COLUMN stareau_principale.donnee_generale.precision_z IS '*classe de 
 
 CREATE TABLE "stareau_principale".noeud_reseau (
   id_noeud_reseau text NOT NULL DEFAULT gen_random_uuid(), -- uuid par défaut peut-être retirer pour autre identifiant
-  --id_noeud_reseau TEXT NOT NULL,
+  --id_noeud_reseau INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_noeud_reseau TEXT NOT NULL,  -- pour personnalisation ou récupération de l'id existant
   fictif bool DEFAULT false NULL,
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_noeud_reseau PRIMARY KEY (id_noeud_reseau)
@@ -122,7 +123,8 @@ COMMENT ON TABLE "stareau_principale".noeud_reseau IS 'table mére des élèment
 
 CREATE TABLE "stareau_principale".canalisation (
   id_canalisation text NOT NULL DEFAULT gen_random_uuid(),  -- uuid par défaut peut-être retirer pour autre identifiant
-  --id_canalisation TEXT NOT NULL,
+  --id_canalisation INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_canalisation TEXT NOT NULL, -- pour personnalisation ou récupération de l'id existant
   geom public.geometry(multilinestring, 2154) NOT NULL,
   mode_circulation text NULL, -- mode de circulation
   type_pose text NULL, -- type de pose
@@ -150,8 +152,9 @@ COMMENT ON COLUMN "stareau_principale".canalisation.longueur_terrain IS 'longueu
 -- ÉLÉMENTS SURFACIQUES - EMPRISE--
 
 CREATE TABLE "stareau_principale".emprise (
-  id_emprise text NOT NULL DEFAULT gen_random_uuid(), -- uuid par défaut peut-être retirer pour autre identifiant
-  --id_emprise text NOT NULL, -- identifiant emprise
+  id_emprise text NOT NULL DEFAULT gen_random_uuid(), -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+  --id_emprise INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_emprise text NOT NULL, -- pour personnalisation ou récupération de l'id existant
   visible bool NULL, -- visible de la surface ?
   geom public.geometry(polygon, 2154) NOT NULL,
   CONSTRAINT emprise_pk PRIMARY KEY (id_emprise)
