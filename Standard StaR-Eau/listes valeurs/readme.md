@@ -6,7 +6,7 @@ Répertoire des listes de valeurs
 - UTF-8
 - sans en-tête (compatible QGIS) --> dans liste complète (avec les champs communs de renseignements)
 
-Les listes "brute avant import" servent de base aux imports Postgis 💻 grâce au script présent dans «base postgis - utilitaire»
+Les listes 📁 "brute avant import" servent de base aux imports Postgis grâce au script présent dans [base postgis - utilitaire](https://github.com/cnigfr/Reseaux-eaux/tree/main/Standard%20StaR-Eau/base%20postgis/utilitaire)
 
 Les listes commençant par :
 
