@@ -193,14 +193,15 @@ COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.fk_ass_canalisation IS 'réf
 ---POINT DE MESURE
 
 CREATE TABLE "stareau_ass".ass_point_mesure (
-  id_ass_point_mesure serial4 NULL,
-	type_point_mesure text NOT NULL, -- >type du point de mesure
-	code_sandre text NOT NULL, -- >code sandre officiel
-	id_sandre text NULL, -- identifiant SANDRE
+  id_ass_point_mesure serial4 NOT NULL,
+  --id_ass_point_mesure TEXT NOt NULL, --
+  type_point_mesure text NOT NULL, -- >type du point de mesure
+  code_sandre text NOT NULL, -- >code sandre officiel
+  id_sandre text NULL, -- identifiant SANDRE
   ref_ouvrage text NULL, -- référence à l'ouvrage de rattachement
-	telegestion text NOT null,
-  geom public.geometry(point, 2154) NOT NULL, 
-)
+  telegestion text NOT null,
+  geom public.geometry(point, 2154) NOT NULL
+);
 COMMENT ON TABLE "stareau_ass".ass_point_mesure IS 'Point de suivi remarquable du fonctionnement d''un ouvrage d''assainissement';
 
 -- Column comments
