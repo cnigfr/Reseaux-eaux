@@ -23,7 +23,7 @@
 
 --canalisation de branchement
 CREATE TABLE "stareau_ass_brcht".ass_canalisation_branchement (
-	id_ass_canalisation_branchement, TEXT NULL -- identifiant
+	id_ass_canalisation_branchement TEXT NULL, -- identifiant
 	fonction_canalisation_branchement text NULL -- >fonction du branchement
 )
 INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
@@ -32,7 +32,7 @@ COMMENT ON TABLE "stareau_ass_brcht".ass_canalisation_branchement IS 'Ensemble d
 -- Column comments
 
 COMMENT ON COLUMN "stareau_ass_brcht".ass_canalisation_branchement.id_ass_canalisation_branchement IS 'identifiant';
-COMMENT ON COLUMN "stareau_aep_brcht".ass_canalisation_branchement.fonction_canalisation_branchement IS '*fonction du branchement*';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_canalisation_branchement.fonction_canalisation_branchement IS '*fonction du branchement*';
 
 --point de collecte assainissement
 CREATE TABLE "stareau_ass_brcht".ass_point_collecte (
