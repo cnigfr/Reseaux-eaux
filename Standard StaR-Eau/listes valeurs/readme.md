@@ -4,7 +4,9 @@ Répertoire des listes de valeurs
 
 - en .csv
 - UTF-8
-- sans en-tête (compatible QGIS)
+- sans en-tête (compatible QGIS) --> dans liste complète (avec les champs communs de renseignements)
+
+Les listes "brute avant import" servent de base aux imports Postgis 💻 grâce au script présent dans «base postgis - utilitaire»
 
 Les listes commençant par :
 
@@ -12,4 +14,4 @@ Les listes commençant par :
  - **aep** concernent les tables EAU POTABLE
  - **com** concernent les tables communes ou des valeurs communes à ASS et AEP
 
- le nom est ensuite celui du champ concerné dans la table.
+ Le nom est ensuite celui du champ concerné dans la table. :joy:
