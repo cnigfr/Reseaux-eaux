@@ -62,6 +62,8 @@ CREATE TABLE "stareau_principale".donnee_generale(
    maitre_ouvrage TEXT NOT NULL, --propriétaire de patrimoine
    exploitant TEXT NOT NULL, --exploitant actuel du patrimoine
    entreprise_pose TEXT, --entreprise ayant effectué les travaux de mise en place
+   precision_xy VARCHAR(1) NOT NULL,
+   precision_z VARCHAR(1) NULL,
    an_pose_sup c_annee NOT NULL, --Année marquant la fin de la période de pose
    an_pose_inf c_annee, --Année marquant la début de la période de pose
    an_service_sup c_annee, --Année marquant la fin de la période de mise en service
