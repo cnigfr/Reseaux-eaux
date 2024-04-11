@@ -40,12 +40,12 @@ COMMENT ON TABLE "stareau_principale".dimension IS 'table mére des dimensions d
 -- Column comments
 
 COMMENT ON COLUMN "stareau_principale".dimension.forme IS '*forme générale de l''objet*';
-COMMENT ON COLUMN "stareau_principale".dimension.hauteur_interieure IS 'hauteur max interieure';
-COMMENT ON COLUMN "stareau_principale".dimension.hauteur_exterieure IS 'hauteur max exterieure';
-COMMENT ON COLUMN "stareau_principale".dimension.largeur_interieure IS 'largeur max interieure';
-COMMENT ON COLUMN "stareau_principale".dimension.largeur_exterieure IS 'largeur max exterieure';
-COMMENT ON COLUMN "stareau_principale".dimension.longueur_interieure IS 'longueur max interieure';
-COMMENT ON COLUMN "stareau_principale".dimension.longueur_exterieure IS 'longueur max exterieure';
+COMMENT ON COLUMN "stareau_principale".dimension.hauteur_interieure IS 'hauteur max interieure mm';
+COMMENT ON COLUMN "stareau_principale".dimension.hauteur_exterieure IS 'hauteur max exterieure mm';
+COMMENT ON COLUMN "stareau_principale".dimension.largeur_interieure IS 'largeur max interieure mm';
+COMMENT ON COLUMN "stareau_principale".dimension.largeur_exterieure IS 'largeur max exterieure mm';
+COMMENT ON COLUMN "stareau_principale".dimension.longueur_interieure IS 'longueur max interieure m';
+COMMENT ON COLUMN "stareau_principale".dimension.longueur_exterieure IS 'longueur max exterieure m';
 
 --DONNÉES GÉNÉRALES
 
