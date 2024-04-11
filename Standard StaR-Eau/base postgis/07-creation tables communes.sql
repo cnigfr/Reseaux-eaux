@@ -101,7 +101,7 @@ CREATE TABLE "stareau_commun".pluviometre (
 --id_pluviometre text NOT NULL,
   type_pluviometre text NOT NULL, -- type de pluviometre*
   nom_usuel text NOT NULL, -- nom usuel
-  ref_meteofrance text NULL, -- référence MétéoFrance
+  ref_meteo_france text NULL, -- référence MétéoFrance
   telegestion text NOT NULL,
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_pluviometre PRIMARY KEY (id_pluviometre)
