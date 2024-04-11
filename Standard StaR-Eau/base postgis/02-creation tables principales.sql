@@ -28,7 +28,6 @@
 CREATE TABLE "stareau_principale".dimension (
   --id_dimension text NOT NULL -- pas utile dans base, à voir si besoin pour gpkg ou autre
   forme text NULL, -- forme générale de l'objet
-  type_dimension text NULL, -- type de dimension
   hauteur_interieure float8 NULL, -- hauteur max interieure
   hauteur_exterieure float8 NULL, -- hauteur max exterieure
   largeur_interieure float8 NULL, -- largeur max interieure
@@ -41,7 +40,6 @@ COMMENT ON TABLE "stareau_principale".dimension IS 'table mére des dimensions d
 -- Column comments
 
 COMMENT ON COLUMN "stareau_principale".dimension.forme IS '*forme générale de l''objet*';
-COMMENT ON COLUMN "stareau_principale".dimension.type_dimension IS '*type de dimension*';
 COMMENT ON COLUMN "stareau_principale".dimension.hauteur_interieure IS 'hauteur max interieure';
 COMMENT ON COLUMN "stareau_principale".dimension.hauteur_exterieure IS 'hauteur max exterieure';
 COMMENT ON COLUMN "stareau_principale".dimension.largeur_interieure IS 'largeur max interieure';
