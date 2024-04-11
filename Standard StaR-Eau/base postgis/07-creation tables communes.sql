@@ -113,7 +113,7 @@ COMMENT ON TABLE "stareau_commun".pluviometre IS 'pluviometre';
 
 COMMENT ON COLUMN "stareau_commun".pluviometre.type_pluviometre IS '*type de pluviometre*';
 COMMENT ON COLUMN "stareau_commun".pluviometre.nom_usuel IS 'nom usuel';
-COMMENT ON COLUMN "stareau_commun".pluviometre.ref_meteofrance IS 'référence MétéoFrance';
+COMMENT ON COLUMN "stareau_commun".pluviometre.ref_meteo_france IS 'référence MétéoFrance';
 
 ----
 
