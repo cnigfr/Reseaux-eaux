@@ -1,5 +1,5 @@
 /*
- * 04-creation branchement eau potable.sql
+ * 06-creation branchement eau potable.sql
  
  * 
  * Copyright 2023 Alain <>
@@ -93,10 +93,10 @@ CREATE TABLE stareau_aep_brcht.aep_vanne_branchement (
 	sens_fermeture text NULL -- >sens de fermeture
 )
 INHERITS (stareau_principale.noeud_reseau);
-
+COMMENT ON TABLE stareau_aep_brcht.aep_vanne_branchement IS 'élément de coupure sur le branchement';
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.type_vanne_branchement IS '>type de vanne';
+COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.type_vanne_branchement IS '*type de vanne*';
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.diametre IS 'diametre nominale de la vanne';
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.sens_fermeture IS '*sens de fermeture*';
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.etat_ouverture IS '*état d''ouverture*';
