@@ -21,27 +21,30 @@
  * 02.11.2023
  */
 
-
 --creation des schemas
 
 CREATE SCHEMA IF NOT EXISTS "stareau_commun";
-COMMENT ON SCHEMA "stareau_commun" IS 'schéma des tables partagées communes AEP-ASS du modèle Star-Eau'; -- pas appelé commune pour éviter la confusion avec les emprises communales
+COMMENT ON SCHEMA "stareau_commun" IS 'schéma des tables partagées communes AEP-ASS du modèle Star-Eau'; -- pas appelée stareau_commune pour éviter la confusion avec les emprises communales
 CREATE SCHEMA IF NOT EXISTS "stareau_principale";
 COMMENT ON SCHEMA "stareau_principale" IS 'schéma des tables principales du modèle Star-Eau';
-CREATE SCHEMA IF NOT EXISTS "stareau_ass";
-COMMENT ON SCHEMA "stareau_ass" IS 'schéma des tables spécifiques ASSAINISSEMENT du modèle Star-Eau';
-CREATE SCHEMA IF NOT EXISTS "stareau_aep";
-COMMENT ON SCHEMA "stareau_aep" IS 'schéma des tables spécifiques EAU POTABLE du modèle Star-Eau';
-CREATE SCHEMA IF NOT EXISTS "stareau_ass_brcht";
-COMMENT ON SCHEMA "stareau_ass_brcht" IS 'schéma des tables spécifiques ASSAINISSEMENT du modèle BRANCHEMENT de Star-Eau';
-CREATE SCHEMA IF NOT EXISTS "stareau_aep_brcht";
-COMMENT ON SCHEMA "stareau_aep_brcht" IS 'schéma des tables spécifiques EAU POTABLE du modèle BRANCHEMENT de Star-Eau';
 CREATE SCHEMA IF NOT EXISTS "stareau_valeur";
 COMMENT ON SCHEMA "stareau_valeur" IS 'Listes de valeurs du modèle de Star-Eau';
 
+--ass
+CREATE SCHEMA IF NOT EXISTS "stareau_ass";
+COMMENT ON SCHEMA "stareau_ass" IS 'schéma des tables spécifiques ASSAINISSEMENT du modèle Star-Eau';
+CREATE SCHEMA IF NOT EXISTS "stareau_ass_brcht";
+COMMENT ON SCHEMA "stareau_ass_brcht" IS 'schéma des tables spécifiques ASSAINISSEMENT du modèle BRANCHEMENT de Star-Eau';
 
---crétation des extensions nécessaires
+--aep
+CREATE SCHEMA IF NOT EXISTS "stareau_aep";
+COMMENT ON SCHEMA "stareau_aep" IS 'schéma des tables spécifiques EAU POTABLE du modèle Star-Eau';
+CREATE SCHEMA IF NOT EXISTS "stareau_aep_brcht";
+COMMENT ON SCHEMA "stareau_aep_brcht" IS 'schéma des tables spécifiques EAU POTABLE du modèle BRANCHEMENT de Star-Eau';
+
+
+--création des extensions nécessaires
 CREATE EXTENSION IF NOT EXISTS postgis;
 CREATE EXTENSION IF NOT EXISTS hstore;
---CREATE EXTENSION IF NOT EXISTS pgrouting; --pas indispensable cf. installation
---CREATE EXTENSION IF NOT EXISTS plpython3u; --postgreSQL >11
+--CREATE EXTENSION IF NOT EXISTS pgrouting; --pas indispensable cf. installation de pgrouting
+--CREATE EXTENSION IF NOT EXISTS plpython3u; -- seuelement avec postgreSQL >11
