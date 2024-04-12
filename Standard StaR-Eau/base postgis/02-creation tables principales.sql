@@ -73,7 +73,7 @@ CREATE TABLE "stareau_principale".donnee_generale(
    date_creation TIMESTAMP NOT NULL,
    origine_creation TEXT NOT NULL,
    date_maj TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-   origine_maj TEXT NOT NULL,
+   origine_maj TEXT NULL,
    lien_doc1 TEXT,
    lien_doc2 TEXT,
    commentaire TEXT
