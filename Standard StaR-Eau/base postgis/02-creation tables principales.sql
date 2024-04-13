@@ -26,14 +26,16 @@
 --DIMENSIONS
 
 CREATE TABLE "stareau_principale".dimension (
-  --id_dimension text NOT NULL -- pas utile dans base, à voir si besoin pour gpkg ou autre
+  --id_dimension INT GENERATED ALWAYS AS IDENTITY, -- pas utile dans base, à voir si besoin pour gpkg ou autre
   forme text NULL, -- forme générale de l'objet
+  unite text NOT NULL, --*unité des mesures
   hauteur_interieure float8 NULL, -- hauteur max interieure
   hauteur_exterieure float8 NULL, -- hauteur max exterieure
   largeur_interieure float8 NULL, -- largeur max interieure
   largeur_exterieure float8 NULL, -- largeur max exterieure
   longueur_interieure float8 NULL, -- longueur max interieure
   longueur_exterieure float8 NULL -- longueur max exterieure
+  --,CONSTRAINT PK_id_dimension PRIMARY KEY(id_dimension)
 );
 COMMENT ON TABLE "stareau_principale".dimension IS 'table mére des dimensions des élèments';
 
@@ -77,8 +79,9 @@ CREATE TABLE "stareau_principale".donnee_generale(
    lien_doc1 TEXT,
    lien_doc2 TEXT,
    commentaire TEXT
-   --CONSTRAINT PK_donnee_generale PRIMARY KEY(id_donnee_generale)
+   --,CONSTRAINT PK_donnee_generale PRIMARY KEY(id_donnee_generale)
 );
+COMMENT ON TABLE stareau_principale.donnee_generale IS 'table de champs communs à toutes les tables';
 
 COMMENT ON COLUMN stareau_principale.donnee_generale.type_reseau IS '*type de réseau*';
 COMMENT ON COLUMN stareau_principale.donnee_generale.etat_service IS '*état de service*';
@@ -157,7 +160,7 @@ CREATE TABLE "stareau_principale".emprise (
   --id_emprise text NOT NULL, -- pour personnalisation ou récupération de l'id existant
   visible bool NULL, -- visible de la surface ?
   geom public.geometry(polygon, 2154) NOT NULL,
-  CONSTRAINT emprise_pk PRIMARY KEY (id_emprise)
+  CONSTRAINT pk_emprise PRIMARY KEY (id_emprise)
 )
 INHERITS ("stareau_principale".donnee_generale);
 CREATE INDEX sidx_emprise_geom ON stareau_principale.emprise USING gist (geom);  ---indexation

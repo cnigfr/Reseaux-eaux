@@ -1,35 +1,36 @@
 /*
  * 06-creation branchement eau potable.sql
- 
- * 
+
+ *
  * Copyright 2023 Alain <>
- * 
+ *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  * MA 02110-1301, USA.
- * 
+ *
  * avril 2024
  */
 
- 
+
 --- AEP ---
 
 --CANALISATION BRANCHEMENT
 
 CREATE TABLE "stareau_aep_brcht".aep_canalisation_branchement (
   id_aep_canalisation_branchement text null,
-	fonction_canalisation_branchement text NULL -- >fonction du branchement
+  fonction_canalisation_branchement text NULL, -- >fonction du branchement
+  CONSTRAINT pk_aep_cana_brcht PRIMARY KEY (id_canalisation)
 )
 INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
 COMMENT ON TABLE "stareau_aep_brcht".aep_canalisation_branchement IS 'conduite et accessoire mis en oeuvre pour amener l''eau du réseau de desserte jusqu''au point de livraison à l''usager, à l''exception des conduites et accessoires privés des immeubles collectifs';
@@ -41,10 +42,11 @@ COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.fonction_cana
 
 CREATE TABLE "stareau_aep_brcht".aep_point_livraison (
   id_point_livraison text NULL,
-	type_point_livraison text NULL, -- >type point livraison
+  type_point_livraison text NULL, -- >type point livraison
   type_usager text NOT NULL, -- >type usager desservis
-	ref_externe text NULL, -- référence externe (sdis, expoitation...)
-	ref_client text NULL -- référence client
+  ref_externe text NULL, -- référence externe (sdis, expoitation...)
+  ref_client text NULL, -- référence client
+  CONSTRAINT pk_aep_point_livraison PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);
 COMMENT ON TABLE "stareau_aep_brcht".aep_point_livraison IS 'point de livraison';
@@ -59,8 +61,9 @@ COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.type_usager IS '*type 
 
 CREATE TABLE stareau_aep_brcht.aep_raccord_branchement (
   id_raccord_branchement text null,
-	type_raccord_branchement text NULL, -- > type de raccord
-	ref_canalisation text NOT NULL -- lien vers canalisation
+  type_raccord_branchement text NULL, -- > type de raccord
+  ref_canalisation text NOT NULL, -- lien vers canalisation
+  CONSTRAINT pk_aep_raccord_brcht PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS (stareau_principale.noeud_reseau);
 COMMENT ON TABLE stareau_aep_brcht.aep_raccord_branchement IS 'Point de raccordement entre le branchement et la canalisation (non sécant)';
@@ -73,8 +76,9 @@ COMMENT ON COLUMN stareau_aep_brcht.aep_raccord_branchement.ref_canalisation IS 
 ---- PIECE BRANCHEMENT
 
 CREATE TABLE stareau_aep_brcht.aep_piece_branchement (
-	id_piece_branchement text NULL,
-	type_piece_branchement text NULL -- >type de pièce
+  id_piece_branchement text NULL,
+  type_piece_branchement text NULL, -- >type de pièce
+  CONSTRAINT pk_aep_piece_brcht PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS (stareau_principale.noeud_reseau);
 COMMENT ON TABLE stareau_aep_brcht.aep_piece_branchement IS 'Pièces de branchement qui impactent le modèle hydraulique, et donc associées à des noeuds';
@@ -86,11 +90,12 @@ COMMENT ON COLUMN stareau_aep_brcht.aep_piece_branchement.type_piece_branchement
 ---VANNE BRANCHEMENT
 
 CREATE TABLE stareau_aep_brcht.aep_vanne_branchement (
-	id_vanne_branchement text null,
+  id_vanne_branchement text null,
   type_vanne_branchement text NULL, -- >type de vanne
-	diametre float4 NULL, -- diametre nominale de la vanne
+  diametre float4 NULL, -- diametre nominale de la vanne
   etat_ouverture text NULL, -- >état d'ouverture
-	sens_fermeture text NULL -- >sens de fermeture
+  sens_fermeture text NULL, -- >sens de fermeture
+  CONSTRAINT pk_aep_vanne_brcht PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS (stareau_principale.noeud_reseau);
 COMMENT ON TABLE stareau_aep_brcht.aep_vanne_branchement IS 'élément de coupure sur le branchement';

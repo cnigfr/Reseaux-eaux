@@ -20,17 +20,21 @@
  *
  *avril 2024
  */
+
 --com
---table des affleurant--
+
+--table des affleurants--
 
 CREATE TABLE stareau_commun.affleurant (
   id_affleurant text NULL,
+  --id_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
   type_affleurant text NOT NULL,
   id_affleurant_pcrs text NULL,
   id_emprise text NULL, -- lien vers emprise
   id_noeud_reseau text NULL, -- lien vers élèment ponctuel
   id_canalisation text NULL, -- lien vers élément linéaire
-  geom public.geometry(point, 2154) NOT NULL
+  geom public.geometry(point, 2154) NOT NULL,
+  CONSTRAINT pk_affleurant PRIMARY KEY (id_affleurant)
 )
 INHERITS (stareau_principale.donnee_generale,stareau_principale.dimension);
 CREATE INDEX sidx_affleurant_geom ON stareau_commun.affleurant USING gist (geom);
@@ -49,7 +53,8 @@ COMMENT ON COLUMN stareau_commun.affleurant.id_canalisation IS 'lien vers élém
 CREATE TABLE "stareau_commun".genie_civil(
   id_genie_civil text NULL,
   materiau TEXT NOT NULL,
-  niveau int2 NOT null default 0 -- niveau par rapport au sol
+  niveau int2 NOT null default 0 ,-- niveau par rapport au sol
+  CONSTRAINT pk_genie_civil PRIMARY KEY (id_emprise)
 )
 INHERITS ("stareau_principale".emprise);
 COMMENT ON TABLE "stareau_commun".genie_civil IS 'enveloppe externe de génie civil';
@@ -59,12 +64,13 @@ COMMENT ON TABLE "stareau_commun".genie_civil IS 'enveloppe externe de génie ci
 COMMENT ON COLUMN "stareau_commun".genie_civil.materiau IS '*materiau constitutif du GC*';
 COMMENT ON COLUMN "stareau_commun".genie_civil.niveau IS 'niveau par rapport au sol';
 
---perimetre_special
+--perimetre_gestion
 
 CREATE TABLE "stareau_commun".perimetre_gestion (
   id_perimetre_gestion text NULL,
   type_perimetre_gestion text NOT NULL, -- >type de périmètre
-  type_acces text NOT NULL -- >type d'accès
+  type_acces text NOT NULL, -- >type d'accès
+  CONSTRAINT pk_perimetre_gestion PRIMARY KEY (id_emprise)
 )
 INHERITS ("stareau_principale".emprise);
 COMMENT ON TABLE "stareau_commun".perimetre_gestion IS 'périmètre virtuel ou administratif autour des installations ou des ouvrages.';
@@ -74,10 +80,10 @@ COMMENT ON TABLE "stareau_commun".perimetre_gestion IS 'périmètre virtuel ou a
 COMMENT ON COLUMN "stareau_commun".perimetre_gestion.type_perimetre_gestion IS '*type de périmètre*';
 COMMENT ON COLUMN "stareau_commun".perimetre_gestion.type_acces IS '*type d''accès*';
 
--- protection mecanique
+-- protection mecanique (hors topologie)
 
 CREATE TABLE "stareau_commun".protection_mecanique (
-  id_protection_mecanique serial4 NOT NULL,
+  id_protection_mecanique INT GENERATED ALWAYS AS IDENTITY,
   type_protection text NOT NULL,
   materiau TEXT NOT NULL,
   geom public.geometry(multilinestring, 2154) NOT NULL,
@@ -94,10 +100,10 @@ CREATE TABLE "stareau_commun".mm_cana_protection (
 );
 COMMENT ON TABLE "stareau_commun".mm_cana_protection IS 'table de relation entre canalisation et protection mecanique';
 
---- pluviometre
+--- pluviometre (hors topologie)
 
 CREATE TABLE "stareau_commun".pluviometre (
-  id_pluviometre serial4 NOT NULL,
+  id_pluviometre INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
 --id_pluviometre text NOT NULL,
   type_pluviometre text NOT NULL, -- type de pluviometre*
   nom_usuel text NOT NULL, -- nom usuel
@@ -117,10 +123,10 @@ COMMENT ON COLUMN "stareau_commun".pluviometre.ref_meteo_france IS 'référence 
 
 ----
 
-----piezometre de nappe
+----piezometre de nappe (hors topologie)
 
 CREATE TABLE "stareau_commun".piezometre (
-  id_piezometre serial4 NOT NULL,
+  id_piezometre INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
 --id_piezometre TEXT NOT NULL,
   type_piezometre text NOT NULL, -- type_de piezometre*
   nom_usuel text NOT NULL, -- nom usuel
@@ -144,10 +150,10 @@ COMMENT ON COLUMN "stareau_commun".piezometre.cote_fin_crepine IS 'cote de fin d
 COMMENT ON COLUMN "stareau_commun".piezometre.ref_bss IS 'référence à la banque du sous-sol (BRGM)';
 
 
-----point geolocalisation
+----point geolocalisation (hors topologie)
 
 CREATE TABLE "stareau_commun".point_geolocalisation (
-  id_point_geolocalisation serial4 NOT NULL,
+  id_point_geolocalisation INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
 --id_point_geolocalisation TEXT NOT NULL,
   z_objet float4 NULL, -- cote altimétrique de l'objet
   reference_z text NULL, -- lieu de lever du Z*
