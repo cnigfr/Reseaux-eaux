@@ -227,16 +227,6 @@
         </config>
       </editWidget>
     </field>
-    <field name="id_canalisation" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
-          </Option>
-        </config>
-      </editWidget>
-    </field>
     <field name="mode_circulation" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
@@ -474,16 +464,6 @@
         </config>
       </editWidget>
     </field>
-    <field name="id_aep_canalisation" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
-          </Option>
-        </config>
-      </editWidget>
-    </field>
     <field name="fonction_canalisation" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
@@ -495,76 +475,6 @@
       </editWidget>
     </field>
     <field name="contenu_canalisation" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
-          </Option>
-        </config>
-      </editWidget>
-    </field>
-    <field name="protection_cathodique" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
-          </Option>
-        </config>
-      </editWidget>
-    </field>
-    <field name="etage_pression" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
-          </Option>
-        </config>
-      </editWidget>
-    </field>
-    <field name="type_pression" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
-          </Option>
-        </config>
-      </editWidget>
-    </field>
-    <field name="secteur_hydraulique" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
-          </Option>
-        </config>
-      </editWidget>
-    </field>
-    <field name="ref_udi" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
-          </Option>
-        </config>
-      </editWidget>
-    </field>
-    <field name="cote_debut" configurationFlags="None">
-      <editWidget type="TextEdit">
-        <config>
-          <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
-          </Option>
-        </config>
-      </editWidget>
-    </field>
-    <field name="cote_fin" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -586,14 +496,14 @@
     <alias name="Entreprise de pose" index="7" field="entreprise_pose"/>
     <alias name="Classe de précision XY" index="8" field="precision_xy"/>
     <alias name="Classe de précision Z" index="9" field="precision_z"/>
-    <alias name="" index="10" field="an_pose_sup"/>
-    <alias name="" index="11" field="an_pose_inf"/>
-    <alias name="" index="12" field="an_service_sup"/>
-    <alias name="" index="13" field="an_service_inf"/>
-    <alias name="" index="14" field="an_abandon_sup"/>
-    <alias name="" index="15" field="an_abandon_inf"/>
-    <alias name="" index="16" field="an_rehab_sup"/>
-    <alias name="" index="17" field="an_rehab_inf"/>
+    <alias name="fin période de pose" index="10" field="an_pose_sup"/>
+    <alias name="début période de pose" index="11" field="an_pose_inf"/>
+    <alias name="fin période mise en service" index="12" field="an_service_sup"/>
+    <alias name="début période mise en service" index="13" field="an_service_inf"/>
+    <alias name="fin période abandon" index="14" field="an_abandon_sup"/>
+    <alias name="début période abandon" index="15" field="an_abandon_inf"/>
+    <alias name="fin période réhabiliation" index="16" field="an_rehab_sup"/>
+    <alias name="début période réhabilitation" index="17" field="an_rehab_inf"/>
     <alias name="date création de l'objet" index="18" field="date_creation"/>
     <alias name="source à l'origine" index="19" field="origine_creation"/>
     <alias name="date de mise à jour" index="20" field="date_maj"/>
@@ -601,7 +511,6 @@
     <alias name="lien vers document" index="22" field="lien_doc1"/>
     <alias name="lien 2 vers document" index="23" field="lien_doc2"/>
     <alias name="" index="24" field="commentaire"/>
-    <alias name="" index="25" field="id_canalisation"/>
     <alias name="mode de circulation" index="26" field="mode_circulation"/>
     <alias name="type de pose" index="27" field="type_pose"/>
     <alias name="raison de pose" index="28" field="raison_pose"/>
@@ -619,16 +528,6 @@
     <alias name="largeur max extérieure" index="40" field="largeur_exterieure"/>
     <alias name="longueur max intérieure" index="41" field="longueur_interieure"/>
     <alias name="longueur max extérieure" index="42" field="longueur_exterieure"/>
-    <alias name="" index="43" field="id_aep_canalisation"/>
-    <alias name="fonction dans le réseau" index="44" field="fonction_canalisation"/>
-    <alias name="contenu transporté" index="45" field="contenu_canalisation"/>
-    <alias name="protection cathodique?" index="46" field="protection_cathodique"/>
-    <alias name="étage de pression" index="47" field="etage_pression"/>
-    <alias name="type de pression" index="48" field="type_pression"/>
-    <alias name="secteur hydraulique" index="49" field="secteur_hydraulique"/>
-    <alias name="référence UDI" index="50" field="ref_udi"/>
-    <alias name="cote alti début cana" index="51" field="cote_debut"/>
-    <alias name="cote alti fin cana" index="52" field="cote_fin"/>
   </aliases>
   <defaults>
     <default applyOnUpdate="0" field="type_reseau" expression=""/>
@@ -656,7 +555,6 @@
     <default applyOnUpdate="0" field="lien_doc1" expression=""/>
     <default applyOnUpdate="0" field="lien_doc2" expression=""/>
     <default applyOnUpdate="0" field="commentaire" expression=""/>
-    <default applyOnUpdate="0" field="id_canalisation" expression=""/>
     <default applyOnUpdate="0" field="mode_circulation" expression=""/>
     <default applyOnUpdate="0" field="type_pose" expression=""/>
     <default applyOnUpdate="0" field="raison_pose" expression=""/>
@@ -674,16 +572,6 @@
     <default applyOnUpdate="0" field="largeur_exterieure" expression=""/>
     <default applyOnUpdate="0" field="longueur_interieure" expression=""/>
     <default applyOnUpdate="0" field="longueur_exterieure" expression=""/>
-    <default applyOnUpdate="0" field="id_aep_canalisation" expression=""/>
-    <default applyOnUpdate="0" field="fonction_canalisation" expression=""/>
-    <default applyOnUpdate="0" field="contenu_canalisation" expression=""/>
-    <default applyOnUpdate="0" field="protection_cathodique" expression=""/>
-    <default applyOnUpdate="0" field="etage_pression" expression=""/>
-    <default applyOnUpdate="0" field="type_pression" expression=""/>
-    <default applyOnUpdate="0" field="secteur_hydraulique" expression=""/>
-    <default applyOnUpdate="0" field="ref_udi" expression=""/>
-    <default applyOnUpdate="0" field="cote_debut" expression=""/>
-    <default applyOnUpdate="0" field="cote_fin" expression=""/>
   </defaults>
   <constraints>
     <constraint notnull_strength="1" exp_strength="0" unique_strength="0" field="type_reseau" constraints="1"/>
@@ -711,7 +599,6 @@
     <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="lien_doc1" constraints="0"/>
     <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="lien_doc2" constraints="0"/>
     <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="commentaire" constraints="0"/>
-    <constraint notnull_strength="1" exp_strength="0" unique_strength="1" field="id_canalisation" constraints="3"/>
     <constraint notnull_strength="1" exp_strength="0" unique_strength="0" field="mode_circulation" constraints="1"/>
     <constraint notnull_strength="1" exp_strength="0" unique_strength="0" field="type_pose" constraints="1"/>
     <constraint notnull_strength="1" exp_strength="0" unique_strength="0" field="raison_pose" constraints="1"/>
@@ -729,16 +616,6 @@
     <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="largeur_exterieure" constraints="0"/>
     <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="longueur_interieure" constraints="0"/>
     <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="longueur_exterieure" constraints="0"/>
-    <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="id_aep_canalisation" constraints="0"/>
-    <constraint notnull_strength="1" exp_strength="0" unique_strength="0" field="fonction_canalisation" constraints="1"/>
-    <constraint notnull_strength="1" exp_strength="0" unique_strength="0" field="contenu_canalisation" constraints="1"/>
-    <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="protection_cathodique" constraints="0"/>
-    <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="etage_pression" constraints="0"/>
-    <constraint notnull_strength="1" exp_strength="0" unique_strength="0" field="type_pression" constraints="1"/>
-    <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="secteur_hydraulique" constraints="0"/>
-    <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="ref_udi" constraints="0"/>
-    <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="cote_debut" constraints="0"/>
-    <constraint notnull_strength="0" exp_strength="0" unique_strength="0" field="cote_fin" constraints="0"/>
   </constraints>
   <constraintExpressions>
     <constraint desc="" exp="" field="type_reseau"/>
@@ -766,7 +643,6 @@
     <constraint desc="" exp="" field="lien_doc1"/>
     <constraint desc="" exp="" field="lien_doc2"/>
     <constraint desc="" exp="" field="commentaire"/>
-    <constraint desc="" exp="" field="id_canalisation"/>
     <constraint desc="" exp="" field="mode_circulation"/>
     <constraint desc="" exp="" field="type_pose"/>
     <constraint desc="" exp="" field="raison_pose"/>
@@ -784,16 +660,6 @@
     <constraint desc="" exp="" field="largeur_exterieure"/>
     <constraint desc="" exp="" field="longueur_interieure"/>
     <constraint desc="" exp="" field="longueur_exterieure"/>
-    <constraint desc="" exp="" field="id_aep_canalisation"/>
-    <constraint desc="" exp="" field="fonction_canalisation"/>
-    <constraint desc="" exp="" field="contenu_canalisation"/>
-    <constraint desc="" exp="" field="protection_cathodique"/>
-    <constraint desc="" exp="" field="etage_pression"/>
-    <constraint desc="" exp="" field="type_pression"/>
-    <constraint desc="" exp="" field="secteur_hydraulique"/>
-    <constraint desc="" exp="" field="ref_udi"/>
-    <constraint desc="" exp="" field="cote_debut"/>
-    <constraint desc="" exp="" field="cote_fin"/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
@@ -826,7 +692,6 @@
       <column name="lien_doc1" hidden="0" type="field" width="-1"/>
       <column name="lien_doc2" hidden="0" type="field" width="-1"/>
       <column name="commentaire" hidden="0" type="field" width="-1"/>
-      <column name="id_canalisation" hidden="0" type="field" width="-1"/>
       <column name="mode_circulation" hidden="0" type="field" width="-1"/>
       <column name="type_pose" hidden="0" type="field" width="-1"/>
       <column name="raison_pose" hidden="0" type="field" width="-1"/>
@@ -844,16 +709,6 @@
       <column name="largeur_exterieure" hidden="0" type="field" width="-1"/>
       <column name="longueur_interieure" hidden="0" type="field" width="-1"/>
       <column name="longueur_exterieure" hidden="0" type="field" width="-1"/>
-      <column name="id_aep_canalisation" hidden="0" type="field" width="-1"/>
-      <column name="fonction_canalisation" hidden="0" type="field" width="-1"/>
-      <column name="contenu_canalisation" hidden="0" type="field" width="-1"/>
-      <column name="protection_cathodique" hidden="0" type="field" width="-1"/>
-      <column name="etage_pression" hidden="0" type="field" width="-1"/>
-      <column name="type_pression" hidden="0" type="field" width="-1"/>
-      <column name="secteur_hydraulique" hidden="0" type="field" width="-1"/>
-      <column name="ref_udi" hidden="0" type="field" width="-1"/>
-      <column name="cote_debut" hidden="0" type="field" width="-1"/>
-      <column name="cote_fin" hidden="0" type="field" width="-1"/>
       <column hidden="1" type="actions" width="-1"/>
     </columns>
   </attributetableconfig>
@@ -998,41 +853,6 @@ def my_form_open(dialog, layer, feature):
           <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="protection_cathodique" showLabel="1" index="46">
-        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
-          <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
-        </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField name="etage_pression" showLabel="1" index="47">
-        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
-          <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
-        </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField name="type_pression" showLabel="1" index="48">
-        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
-          <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
-        </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField name="secteur_hydraulique" showLabel="1" index="49">
-        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
-          <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
-        </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField name="ref_udi" showLabel="1" index="50">
-        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
-          <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
-        </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField name="cote_debut" showLabel="1" index="51">
-        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
-          <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
-        </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField name="cote_fin" showLabel="1" index="52">
-        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
-          <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
-        </labelStyle>
-      </attributeEditorField>
     </attributeEditorContainer>
     <attributeEditorContainer name="données générales" collapsed="0" showLabel="1" visibilityExpression="" collapsedExpressionEnabled="0" collapsedExpression="" visibilityExpressionEnabled="0" columnCount="1" groupBox="0">
       <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
@@ -1158,22 +978,12 @@ def my_form_open(dialog, layer, feature):
           <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="id_canalisation" showLabel="1" index="25">
-        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
-          <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
-        </labelStyle>
-      </attributeEditorField>
       <attributeEditorField name="noeudterminal" showLabel="1" index="33">
         <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
           <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
         </labelStyle>
       </attributeEditorField>
       <attributeEditorField name="noeudinitial" showLabel="1" index="34">
-        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
-          <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
-        </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField name="id_aep_canalisation" showLabel="1" index="43">
         <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
           <labelFont style="" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" underline="0" italic="0"/>
         </labelStyle>
@@ -1196,7 +1006,6 @@ def my_form_open(dialog, layer, feature):
     <field editable="1" name="an_service_sup"/>
     <field editable="1" name="commentaire"/>
     <field editable="1" name="contenu_canalisation"/>
-    <field editable="1" name="cote_debut"/>
     <field editable="1" name="cote_fin"/>
     <field editable="1" name="date_creation"/>
     <field editable="1" name="date_maj"/>
@@ -1210,8 +1019,6 @@ def my_form_open(dialog, layer, feature):
     <field editable="1" name="forme"/>
     <field editable="1" name="hauteur_exterieure"/>
     <field editable="1" name="hauteur_interieure"/>
-    <field editable="1" name="id_aep_canalisation"/>
-    <field editable="1" name="id_canalisation"/>
     <field editable="1" name="insee_commune"/>
     <field editable="1" name="largeur_exterieure"/>
     <field editable="1" name="largeur_interieure"/>
@@ -1232,9 +1039,7 @@ def my_form_open(dialog, layer, feature):
     <field editable="1" name="precision_z"/>
     <field editable="1" name="protection_cathodique"/>
     <field editable="1" name="raison_pose"/>
-    <field editable="1" name="ref_udi"/>
     <field editable="1" name="revetement_interieur"/>
-    <field editable="1" name="secteur_hydraulique"/>
     <field editable="1" name="type_pose"/>
     <field editable="1" name="type_pression"/>
     <field editable="1" name="type_reseau"/>
@@ -1251,7 +1056,6 @@ def my_form_open(dialog, layer, feature):
     <field labelOnTop="0" name="an_service_sup"/>
     <field labelOnTop="0" name="commentaire"/>
     <field labelOnTop="0" name="contenu_canalisation"/>
-    <field labelOnTop="0" name="cote_debut"/>
     <field labelOnTop="0" name="cote_fin"/>
     <field labelOnTop="0" name="date_creation"/>
     <field labelOnTop="0" name="date_maj"/>
@@ -1265,8 +1069,6 @@ def my_form_open(dialog, layer, feature):
     <field labelOnTop="0" name="forme"/>
     <field labelOnTop="0" name="hauteur_exterieure"/>
     <field labelOnTop="0" name="hauteur_interieure"/>
-    <field labelOnTop="0" name="id_aep_canalisation"/>
-    <field labelOnTop="0" name="id_canalisation"/>
     <field labelOnTop="0" name="insee_commune"/>
     <field labelOnTop="0" name="largeur_exterieure"/>
     <field labelOnTop="0" name="largeur_interieure"/>
@@ -1285,13 +1087,6 @@ def my_form_open(dialog, layer, feature):
     <field labelOnTop="0" name="origine_maj"/>
     <field labelOnTop="0" name="precision_xy"/>
     <field labelOnTop="0" name="precision_z"/>
-    <field labelOnTop="0" name="protection_cathodique"/>
-    <field labelOnTop="0" name="raison_pose"/>
-    <field labelOnTop="0" name="ref_udi"/>
-    <field labelOnTop="0" name="revetement_interieur"/>
-    <field labelOnTop="0" name="secteur_hydraulique"/>
-    <field labelOnTop="0" name="type_pose"/>
-    <field labelOnTop="0" name="type_pression"/>
     <field labelOnTop="0" name="type_reseau"/>
     <field labelOnTop="0" name="unite"/>
   </labelOnTop>
@@ -1306,8 +1101,6 @@ def my_form_open(dialog, layer, feature):
     <field name="an_service_sup" reuseLastValue="0"/>
     <field name="commentaire" reuseLastValue="0"/>
     <field name="contenu_canalisation" reuseLastValue="0"/>
-    <field name="cote_debut" reuseLastValue="0"/>
-    <field name="cote_fin" reuseLastValue="0"/>
     <field name="date_creation" reuseLastValue="0"/>
     <field name="date_maj" reuseLastValue="0"/>
     <field name="diametre_equivalent" reuseLastValue="0"/>
@@ -1320,8 +1113,6 @@ def my_form_open(dialog, layer, feature):
     <field name="forme" reuseLastValue="0"/>
     <field name="hauteur_exterieure" reuseLastValue="0"/>
     <field name="hauteur_interieure" reuseLastValue="0"/>
-    <field name="id_aep_canalisation" reuseLastValue="0"/>
-    <field name="id_canalisation" reuseLastValue="0"/>
     <field name="insee_commune" reuseLastValue="0"/>
     <field name="largeur_exterieure" reuseLastValue="0"/>
     <field name="largeur_interieure" reuseLastValue="0"/>
@@ -1340,11 +1131,8 @@ def my_form_open(dialog, layer, feature):
     <field name="origine_maj" reuseLastValue="0"/>
     <field name="precision_xy" reuseLastValue="0"/>
     <field name="precision_z" reuseLastValue="0"/>
-    <field name="protection_cathodique" reuseLastValue="0"/>
     <field name="raison_pose" reuseLastValue="0"/>
-    <field name="ref_udi" reuseLastValue="0"/>
     <field name="revetement_interieur" reuseLastValue="0"/>
-    <field name="secteur_hydraulique" reuseLastValue="0"/>
     <field name="type_pose" reuseLastValue="0"/>
     <field name="type_pression" reuseLastValue="0"/>
     <field name="type_reseau" reuseLastValue="1"/>
