@@ -25,29 +25,29 @@
 
 --DIMENSIONS
 
-CREATE TABLE "stareau_principale".dimension (
-  --id_dimension INT GENERATED ALWAYS AS IDENTITY, -- pas utile dans base, à voir si besoin pour gpkg ou autre
-  forme text NULL, -- forme générale de l'objet
-  unite text NOT NULL, --*unité des mesures
+CREATE TABLE stareau_principale.dimension (
+  forme text DEFAULT 'circulaire'::text NOT NULL, -- *forme générale de l'objet*
+  unite text DEFAULT 'mm'::text NOT NULL, -- *unité des mesures*
   hauteur_interieure float8 NULL, -- hauteur max interieure
   hauteur_exterieure float8 NULL, -- hauteur max exterieure
   largeur_interieure float8 NULL, -- largeur max interieure
   largeur_exterieure float8 NULL, -- largeur max exterieure
   longueur_interieure float8 NULL, -- longueur max interieure
   longueur_exterieure float8 NULL -- longueur max exterieure
-  --,CONSTRAINT PK_id_dimension PRIMARY KEY(id_dimension)
 );
-COMMENT ON TABLE "stareau_principale".dimension IS 'table mére des dimensions des élèments';
+COMMENT ON TABLE stareau_principale.dimension IS 'table mére des dimensions des élèments';
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_principale".dimension.forme IS '*forme générale de l''objet*';
-COMMENT ON COLUMN "stareau_principale".dimension.hauteur_interieure IS 'hauteur max interieure mm';
-COMMENT ON COLUMN "stareau_principale".dimension.hauteur_exterieure IS 'hauteur max exterieure mm';
-COMMENT ON COLUMN "stareau_principale".dimension.largeur_interieure IS 'largeur max interieure mm';
-COMMENT ON COLUMN "stareau_principale".dimension.largeur_exterieure IS 'largeur max exterieure mm';
-COMMENT ON COLUMN "stareau_principale".dimension.longueur_interieure IS 'longueur max interieure m';
-COMMENT ON COLUMN "stareau_principale".dimension.longueur_exterieure IS 'longueur max exterieure m';
+COMMENT ON COLUMN stareau_principale.dimension.forme IS '*forme générale de l''objet*';
+COMMENT ON COLUMN stareau_principale.dimension.unite IS '*unité des mesures*';
+COMMENT ON COLUMN stareau_principale.dimension.hauteur_interieure IS 'hauteur max interieure';
+COMMENT ON COLUMN stareau_principale.dimension.hauteur_exterieure IS 'hauteur max exterieure';
+COMMENT ON COLUMN stareau_principale.dimension.largeur_interieure IS 'largeur max interieure';
+COMMENT ON COLUMN stareau_principale.dimension.largeur_exterieure IS 'largeur max exterieure';
+COMMENT ON COLUMN stareau_principale.dimension.longueur_interieure IS 'longueur max interieure';
+COMMENT ON COLUMN stareau_principale.dimension.longueur_exterieure IS 'longueur max exterieure';
+
 
 --DONNÉES GÉNÉRALES
 

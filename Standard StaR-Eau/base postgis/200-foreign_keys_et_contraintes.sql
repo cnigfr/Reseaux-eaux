@@ -16,7 +16,7 @@ ALTER TABLE "stareau_ass".ass_piece_hors_topo ADD CONSTRAINT ass_pieceht_fk FORE
 ALTER TABLE "stareau_aep".aep_piece ADD CONSTRAINT aep_piece_fk FOREIGN KEY (fk_aep_canalisation) REFERENCES "stareau_aep".aep_canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE "stareau_aep".aep_piece_hors_topo ADD CONSTRAINT aep_pieceht_fk FOREIGN KEY (fk_aep_canalisation) REFERENCES "stareau_aep".aep_canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
 
-
+--raccord branchement
 ALTER TABLE stareau_aep_brcht.aep_raccord_branchement ADD CONSTRAINT aep_raccord_branchement_canalisation_fk FOREIGN KEY (ref_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass_brcht.ass_raccord_branchement ADD CONSTRAINT ass_raccord_branchement_canalisation_fk FOREIGN KEY (ref_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON UPDATE CASCADE;
 
@@ -32,25 +32,20 @@ ALTER TABLE stareau_principale.mm_emprise_ponctuel ADD CONSTRAINT mm_emprise_pon
 --set defaut pour réseau aep
 ALTER TABLE stareau_aep.aep_appareillage ALTER COLUMN type_reseau SET DEFAULT 'aep';
 ALTER TABLE stareau_aep.aep_canalisation ALTER COLUMN type_reseau SET DEFAULT 'aep';
-ALTER TABLE stareau_aep.aep_canalisation_branchement ALTER COLUMN type_reseau SET DEFAULT 'aep';
+ALTER TABLE stareau_aep_brcht.aep_canalisation_branchement ALTER COLUMN type_reseau SET DEFAULT 'aep';
 ALTER TABLE stareau_aep.aep_captage ALTER COLUMN type_reseau SET DEFAULT 'aep';
 ALTER TABLE stareau_aep.aep_piece ALTER COLUMN type_reseau SET DEFAULT 'aep';
 ALTER TABLE stareau_aep.aep_piece_hors_topo ALTER COLUMN type_reseau SET DEFAULT 'aep';
-ALTER TABLE stareau_aep.aep_piece_branchement ALTER COLUMN type_reseau SET DEFAULT 'aep';
+ALTER TABLE stareau_aep_brcht.aep_piece_branchement ALTER COLUMN type_reseau SET DEFAULT 'aep';
 ALTER TABLE stareau_aep.aep_point_mesure ALTER COLUMN type_reseau SET DEFAULT 'aep';
 ALTER TABLE stareau_aep.aep_pompage ALTER COLUMN type_reseau SET DEFAULT 'aep';
 ALTER TABLE stareau_aep.aep_regulation ALTER COLUMN type_reseau SET DEFAULT 'aep';
 ALTER TABLE stareau_aep.aep_reservoir ALTER COLUMN type_reseau SET DEFAULT 'aep';
-ALTER TABLE stareau_aep.aep_station_alerte ALTER COLUMN type_reseau SET DEFAULT 'aep';
 ALTER TABLE stareau_aep.aep_traitement ALTER COLUMN type_reseau SET DEFAULT 'aep';
 ALTER TABLE stareau_aep.aep_vanne ALTER COLUMN type_reseau SET DEFAULT 'aep';
-ALTER TABLE stareau_aep.aep_vanne_branchement ALTER COLUMN type_reseau SET DEFAULT 'aep';
+ALTER TABLE stareau_aep_brcht.aep_vanne_branchement ALTER COLUMN type_reseau SET DEFAULT 'aep';
 
----
+---à débloquer à la fin
 -- "stareau_principale".canalisation foreign keys
 --ALTER TABLE "stareau_principale".canalisation ADD CONSTRAINT fk_canalisation_noeud_reseau_ndinitial FOREIGN KEY (noeudinitial) REFERENCES "stareau_principale".noeud_reseau(id_noeud_reseau);
 --ALTER TABLE "stareau_principale".canalisation ADD CONSTRAINT fk_canalisation_noeud_reseau_ndterminal FOREIGN KEY (noeudterminal) REFERENCES "stareau_principale".noeud_reseau(id_noeud_reseau);
-
-
---ALTER TABLE stareau_ass.ass_canalisation ADD CONSTRAINT ass_canalisation_com_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON DELETE RESTRICT ON UPDATE CASCADE;
---ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_com_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON DELETE RESTRICT ON UPDATE CASCADE;
