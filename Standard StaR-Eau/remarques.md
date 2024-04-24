@@ -9,3 +9,5 @@
 - les listes aep_usage = ass_type_usager  ==> com_type_usager ??
 - Dans les raison_pose, le distinguo doit être fait entre réhabilitation structurante et ponctuelle pour faciliter le calcul d'indicateur.
 - Les valeurs -9999,-8888... compliquent la possibilité de check dans la base type an_pose_sup>=an_pose_inf
+
+- symbole aep pompage avec stock mais pas d'attribut dans modele pour indiquer si stock ou pas
