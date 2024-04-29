@@ -20,4 +20,4 @@ Les listes 📁 "brute avant import" servent de base aux imports Postgis grâce 
 2. listes complètes sont un export de Postgresql 
 
 # création __sans python__ 
-il existe un script .sql qui créé les tables vides des listes dans postgresql (création généré par script depuis le répertoire «brute avant import"), il faut ensuite importer les valeurs depuis les .csv «listes complètes» dans la base.
+il existe un script .sql qui crée les tables vides des listes dans postgresql (création générée par script depuis le répertoire «brute avant import"), il faut ensuite importer les valeurs depuis les .csv «listes complètes» dans la base.
