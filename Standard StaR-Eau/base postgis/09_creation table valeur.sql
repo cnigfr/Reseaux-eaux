@@ -1,3 +1,4 @@
+---aep---
 CREATE TABLE stareau_valeur.aep_contenu_canalisation (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT aep_contenu_canalisation_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.aep_etat_ouverture (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT aep_etat_ouverture_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.aep_fonction_branchement (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT aep_fonction_branchement_pk PRIMARY KEY (code));
@@ -22,6 +23,7 @@ CREATE TABLE stareau_valeur.aep_type_ressource (code VARCHAR(50) NOT NULL, valeu
 CREATE TABLE stareau_valeur.aep_type_usager (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT aep_type_usager_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.aep_type_vanne (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT aep_type_vanne_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.aep_usage (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT aep_usage_pk PRIMARY KEY (code));
+---ASS---
 CREATE TABLE stareau_valeur.ass_code_sandre (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT ass_code_sandre_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.ass_destination (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT ass_destination_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.ass_fonction_bassin (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT ass_fonction_bassin_pk PRIMARY KEY (code));
@@ -47,6 +49,7 @@ CREATE TABLE stareau_valeur.ass_type_pretraitement (code VARCHAR(50) NOT NULL, v
 CREATE TABLE stareau_valeur.ass_type_raccord (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT ass_type_raccord_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.ass_type_regard (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT ass_type_regard_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.ass_type_usager (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT ass_type_usager_pk PRIMARY KEY (code));
+---commun---
 CREATE TABLE stareau_valeur.com_etat_service (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT com_etat_service_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.com_forme (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT com_forme_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.com_mode_circulation (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT com_mode_circulation_pk PRIMARY KEY (code));
