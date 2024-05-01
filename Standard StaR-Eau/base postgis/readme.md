@@ -6,7 +6,7 @@ DDL initial depuis postgresl 13 / postgis 3
 
 **fichiers sql à lancer dans l'ordre de numérotation**
 
-** Merci de lire les commentaires dans les fichiers **
+**Merci de lire les commentaires dans les fichiers**
 
 # indicateurs
 
@@ -16,5 +16,6 @@ Essais de la base pour calcul des indcateurs SISPEA
 
 Creation de vues pour compatibilité Star-Dt
 
-#utilitaire
+# utilitaire
+
 Contient actuellement le fichier d'audit des bases, utilisation optionnelle
