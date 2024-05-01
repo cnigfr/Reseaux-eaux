@@ -1,0 +1,5 @@
+<substitutions version="1.0">
+    <replacement match="non_renseigne" replace="NR" wholeWord="1" caseSensitive="0"/>
+    <replacement match="non_determine" replace="NR" wholeWord="1" caseSensitive="0"/>
+    <replacement match="non_concerne" replace="sans" wholeWord="1" caseSensitive="0"/>
+</substitutions>
