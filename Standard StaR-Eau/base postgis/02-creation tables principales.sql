@@ -128,7 +128,7 @@ CREATE TABLE "stareau_principale".canalisation (
   id_canalisation text NOT NULL DEFAULT gen_random_uuid(),  -- uuid par défaut peut-être retirer pour autre identifiant
   --id_canalisation INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_canalisation TEXT NOT NULL, -- pour personnalisation ou récupération de l'id existant
-  geom public.geometry(multilinestring, 2154) NOT NULL,
+  geom public.geometry(linestring, 2154) NOT NULL,
   mode_circulation text NULL, -- mode de circulation
   type_pose text NULL, -- type de pose
   raison_pose text NULL, -- raison de la pose
@@ -160,6 +160,7 @@ CREATE TABLE "stareau_principale".emprise (
   --id_emprise text NOT NULL, -- pour personnalisation ou récupération de l'id existant
   visible bool NULL, -- visible de la surface ?
   geom public.geometry(polygon, 2154) NOT NULL,
+  --geom public.geometry(polygonZ, 2154) NOT NULL,
   CONSTRAINT pk_emprise PRIMARY KEY (id_emprise)
 )
 INHERITS ("stareau_principale".donnee_generale);

@@ -82,14 +82,20 @@ COMMENT ON COLUMN "stareau_commun".perimetre_gestion.type_acces IS '*type d''acc
 
 -- protection mecanique (hors topologie)
 
-CREATE TABLE "stareau_commun".protection_mecanique (
-  id_protection_mecanique INT GENERATED ALWAYS AS IDENTITY,
-  type_protection text NOT NULL,
-  materiau TEXT NOT NULL,
-  geom public.geometry(multilinestring, 2154) NOT NULL,
+CREATE TABLE stareau_commun.protection_mecanique (
+  id_protection_mecanique int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
+  type_protection text NOT NULL, -- * type de protection *
+  materiau text NOT NULL, -- * materiau * constitutif de la protection
+  geom public.geometry(linestring, 2154) NOT NULL,
   CONSTRAINT pk_protect_meca PRIMARY KEY (id_protection_mecanique)
 )
-INHERITS ("stareau_principale".donnee_generale,"stareau_principale".dimension);
+INHERITS (stareau_principale.donnee_generale,stareau_principale.dimension);
+COMMENT ON TABLE stareau_commun.protection_mecanique IS 'Construction dans laquelle les canalisations sont protégées et/ou guidées. (hors topologie)';
+
+-- Column comments
+
+COMMENT ON COLUMN stareau_commun.protection_mecanique.type_protection IS '*type de protection*';
+COMMENT ON COLUMN stareau_commun.protection_mecanique.materiau IS '*materiau* constitutif de la protection';
 
 -- table relation canalisation - protection
 
