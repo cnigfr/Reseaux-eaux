@@ -1,7 +1,7 @@
 from qgis.core import QgsProject
 from qgis.gui import *
 import qgis.utils
-inLayer = 'dimension'
+inLayer = 'ptavecdim'
 for layer in QgsProject.instance().mapLayers().values():
     if inLayer in layer.name():
         print(layer.name())

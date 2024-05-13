@@ -125,8 +125,8 @@ COMMENT ON TABLE "stareau_aep".aep_traitement IS 'ensemble des installations cha
 -- Column comments
 
 COMMENT ON COLUMN "stareau_aep".aep_traitement.nom_usuel IS 'nom d''usage';
-COMMENT ON COLUMN "stareau_aep".aep_traitement.fonction_traitement IS '>fonction traitement';
-COMMENT ON COLUMN "stareau_aep".aep_traitement.type_desinfection IS '>type désinfection';
+COMMENT ON COLUMN "stareau_aep".aep_traitement.fonction_traitement IS '*fonction traitement*';
+COMMENT ON COLUMN "stareau_aep".aep_traitement.type_desinfection IS '*type désinfection*';
 COMMENT ON COLUMN "stareau_aep".aep_traitement.capacite IS 'capacité de traitement m3/j';
 COMMENT ON COLUMN "stareau_aep".aep_traitement.debit_ref IS 'débit de référence m3/j';
 COMMENT ON COLUMN "stareau_aep".aep_traitement.telegestion IS '*présence d''une gestion à distance*';
@@ -136,8 +136,8 @@ COMMENT ON COLUMN "stareau_aep".aep_traitement.telegestion IS '*présence d''une
 CREATE TABLE stareau_aep.aep_point_mesure (
   id_aep_point_mesure TEXT NULL,
   nom_usuel text NULL,
-  type_point_mesure text NOT NULL, -- >type point de mesure*
-  fonction_point_mesure text NOT NULL, -- >fonction point de mesure*
+  type_point_mesure text NOT NULL, -- *type point de mesure*
+  fonction_point_mesure text NOT NULL, -- *fonction point de mesure*
   calibre float4 NULL, -- calibre/diametre
   annee_fabrication int4 NULL, -- année fabrication
   marque text NULL, -- marque compteur
