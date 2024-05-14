@@ -1,7 +1,7 @@
 from qgis.core import QgsProject
 from qgis.gui import *
 import qgis.utils
-inLayer = 'ptavecdim'
+inLayer = 'pei'
 for layer in QgsProject.instance().mapLayers().values():
     if inLayer in layer.name():
         print(layer.name())

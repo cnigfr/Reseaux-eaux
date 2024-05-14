@@ -68,8 +68,8 @@ COMMENT ON COLUMN "stareau_ass".ass_pretraitement.telegestion IS '*présence d''
 
 CREATE TABLE "stareau_ass".ass_equipement (
   id_ass_equipement TEXT NULL,
-  type_equipement text NOT NULL, -- >type équipement
-  fonction_equipement text NOT NULL, -- >fonction de l'équipement
+  type_equipement text NOT NULL, -- *type équipement*
+  fonction_equipement text NOT NULL, -- *fonction de l'équipement*
   telegestion text NOT NULL, -- >présence d''une gestion à distance
   CONSTRAINT pk_ass_equipement PRIMARY KEY (id_noeud_reseau)
 )
@@ -78,9 +78,9 @@ COMMENT ON TABLE "stareau_ass".ass_equipement IS 'Composant associé à un ouvra
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_equipement.type_equipement IS '>type équipement';
-COMMENT ON COLUMN "stareau_ass".ass_equipement.fonction_equipement IS '>fonction de l''équipement';
-COMMENT ON COLUMN "stareau_ass".ass_equipement.telegestion IS '>présence d''''une gestion à distance';
+COMMENT ON COLUMN "stareau_ass".ass_equipement.type_equipement IS '*type équipement*';
+COMMENT ON COLUMN "stareau_ass".ass_equipement.fonction_equipement IS '*fonction de l''équipement*';
+COMMENT ON COLUMN "stareau_ass".ass_equipement.telegestion IS '*présence d''''une gestion à distance*';
 
 ---POMPAGE
 
@@ -144,8 +144,8 @@ COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.telegestion IS '*présen
 
 CREATE TABLE "stareau_ass".ass_canalisation (
   id_ass_canalisation TEXT NULL,
-  fonction_ass_canalisation text NOT NULL, -- fonction de la canalisation dans le réseau
-  visitable text NULL, -- possibilté de visite pedestre
+  fonction_ass_canalisation text NOT NULL, -- *fonction de la canalisation dans le réseau*
+  visitable text NULL, -- *possibilité de visite pedestre*
   altitude_fil_eau_amont float4 NULL, -- altitude fil d'eau amont
   altitude_fil_eau_aval float4 NULL, -- altitude fil d'eau aval
   bassin_collecte text NULL, -- identifiant bassin de collecte
@@ -158,7 +158,7 @@ COMMENT ON TABLE "stareau_ass".ass_canalisation IS 'canalisation assainissement'
 -- Column comments
 
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.fonction_ass_canalisation IS '*fonction de la canalisation dans le réseau*';
-COMMENT ON COLUMN "stareau_ass".ass_canalisation.visitable IS 'possibilté de visite pedestre';
+COMMENT ON COLUMN "stareau_ass".ass_canalisation.visitable IS '*possibilité de visite pedestre*';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.altitude_fil_eau_amont IS 'altitude fil d''eau amont';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.altitude_fil_eau_aval IS 'altitude fil d''eau aval';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.bassin_collecte IS 'identifiant bassin de collecte';
