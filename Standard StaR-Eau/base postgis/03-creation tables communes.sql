@@ -134,7 +134,7 @@ COMMENT ON COLUMN "stareau_commun".pluviometre.ref_meteo_france IS 'référence 
 CREATE TABLE "stareau_commun".piezometre (
   id_piezometre INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
 --id_piezometre TEXT NOT NULL,
-  type_piezometre text NOT NULL, -- type_de piezometre*
+--type_piezometre text NOT NULL, -- type_de piezometre*
   nom_usuel text NOT NULL, -- nom usuel
   diametre int4 NULL, -- diametre interne du forage
   cote_tn float4 NULL, -- cote terrain naturel
@@ -148,7 +148,7 @@ COMMENT ON TABLE "stareau_commun".piezometre IS 'forage non exploité qui permet
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_commun".piezometre.type_piezometre IS '*type_de piezometre*';
+--COMMENT ON COLUMN "stareau_commun".piezometre.type_piezometre IS '*type_de piezometre*';
 COMMENT ON COLUMN "stareau_commun".piezometre.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_commun".piezometre.diametre IS 'diametre interne du forage';
 COMMENT ON COLUMN "stareau_commun".piezometre.cote_tn IS 'cote terrain naturel';
