@@ -1,25 +1,27 @@
 /*
- * 02-creation tables communes.sql
+ * 02-creation tables principales.sql - 2024-05-17
  *
- * Copyright 2023 Alain <>
+ * ETALABV2 - Alain pour CNIG-2024
  *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
+ * Ce fichier est un document libre ; vous pouvez le redistribuer et/ou le modifier selon les termes de la
+ * Licence Publique LICENCE OUVERTE / OPEN LICENCE Version 2.0 telle que publiée par ETALAB
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * Le « Réutilisateur » est libre de réutiliser l’« Information » :
  *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA 02110-1301, USA.
+ * de la communiquer, la reproduire, la copier ;
+ * de l’adapter, la modifier, l’extraire et la transformer, notamment pour créer des « Informations dérivées » ;
+ * de la diffuser, la redistribuer, la publier et la transmettre, de l’exploiter à titre commercial, par exemple en la combinant avec d’autres informations, ou en l’incluant dans votre propre produit ou application.
+ * Sous réserve de :
  *
- * avril 2024
+ * mentionner la paternité de l’«Information» : sa source (a minima le nom du « Concédant ») et la date de la dernière mise à jour de l’« Information » réutilisée.
+ *
+ * Ce fichier est distribué dans l'espoir qu'il sera utile, mais SANS AUCUNE GARANTIE ; sans même la garantie implicite de
+ * COMMERCIALISATION ou d'ADAPTATION À UN USAGE PARTICULIER.  Voir la Licence publique générale GNU pour plus de détails.
+ *
+ * La licence, à date de ce fichier, est disponible sur
+ * https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf
  */
+
 
 ---tables principales
 
