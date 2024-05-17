@@ -93,7 +93,7 @@ COMMENT ON COLUMN stareau_principale.donnee_generale.maitre_ouvrage IS 'maitre d
 COMMENT ON COLUMN stareau_principale.donnee_generale.exploitant IS 'exploitant actuel';
 COMMENT ON COLUMN stareau_principale.donnee_generale.entreprise_pose IS 'entreprise de pose';
 COMMENT ON COLUMN stareau_principale.donnee_generale.an_pose_sup IS 'Année marquant la fin de la période de pose';
-COMMENT ON COLUMN stareau_principale.donnee_generale.an_pose_inf IS 'Année marquant la début de la période de pose';
+COMMENT ON COLUMN stareau_principale.donnee_generale.an_pose_inf IS 'Année marquant le début de la période de pose';
 COMMENT ON COLUMN stareau_principale.donnee_generale.an_service_sup IS 'Année marquant la fin de la période de mise en service';
 COMMENT ON COLUMN stareau_principale.donnee_generale.an_service_inf IS 'Année marquant le début de la période de mise en service';
 COMMENT ON COLUMN stareau_principale.donnee_generale.an_abandon_sup IS 'Année marquant la fin de la période d''arrêt définitif';
