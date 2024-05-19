@@ -259,7 +259,8 @@ CREATE TABLE stareau_aep.aep_station_alerte (
   nom_usuel text NULL, -- nom d'usage
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_aep_station_alerte PRIMARY KEY (id_aep_station_alerte)
-);
+)
+INHERITS (stareau_principale.donnee_generale);
 COMMENT ON TABLE stareau_aep.aep_station_alerte IS 'equipement permettent de déclencher une alerte en cas de pollution ou de dépassement de seuils';
 
 -- Column comments
