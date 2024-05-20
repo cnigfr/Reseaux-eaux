@@ -1,6 +1,12 @@
+> [!caution]
+> **TRAVAIL EN COURS**. Tous les fichiers sont ici à titre d'esssais. Vous utilisez ces fichiers à vos risques et périls
+
 # GEOPACKAGE
 
 Les fichiers sont séparés par métiers, ils contiennent toutefois les couches communes, également séparées dans un geopackage.
+ > [!warning]
+ > ATTENTION, la gestion des héritages, relations et des identifiants n'est pas mise en place dans les fichiers fournis
+
 
 ## Pas vides
 Par défaut, ces fichiers contiennent des objets qui servent de tests et au projet de démonstration qgis. Pensez à les effacer si vous utilisez ces fichiers.

@@ -513,7 +513,7 @@
     <alias index="14" name="Année marquant la fin de la période d'arrêt définitif" field="an_abandon_sup"/>
     <alias index="15" name="Année marquant le début de la période d'arrêt définitif" field="an_abandon_inf"/>
     <alias index="16" name="Année marquant la fin de la période de réhabilitation" field="an_rehab_sup"/>
-    <alias index="17" name="Année marquant le début de la période de mise en service" field="an_rehab_inf"/>
+    <alias index="17" name="Année marquant le début de la période de réhabilitation" field="an_rehab_inf"/>
     <alias index="18" name="date de la création de l'objet sig" field="date_creation"/>
     <alias index="19" name="document source de la création" field="origine_creation"/>
     <alias index="20" name="date de mise à jour de l'objet sig" field="date_maj"/>
@@ -678,7 +678,7 @@ ouvert.
 
 Utilisez cette fonction pour ajouter une logique supplémentaire à vos formulaires.
 
-Entrez le nom de la fonction dans le champ 
+Entrez le nom de la fonction dans le champ
 "Fonction d'initialisation Python".
 Voici un exemple:
 """
