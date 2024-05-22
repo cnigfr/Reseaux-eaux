@@ -1,18 +1,18 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis simplifyLocal="1" maxScale="0" readOnly="0" labelsEnabled="1" version="3.28.9-Firenze" symbologyReferenceScale="-1" styleCategories="AllStyleCategories" simplifyDrawingTol="1" minScale="0" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="0" simplifyAlgorithm="0">
+<qgis simplifyDrawingTol="1" styleCategories="AllStyleCategories" labelsEnabled="1" maxScale="0" minScale="100000000" simplifyAlgorithm="0" hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="0" simplifyLocal="1" simplifyMaxScale="1" symbologyReferenceScale="-1" version="3.28.9-Firenze" readOnly="0">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>1</Removable>
     <Searchable>1</Searchable>
     <Private>0</Private>
   </flags>
-  <temporal limitMode="0" enabled="0" startField="date_creation" endField="" durationUnit="min" startExpression="" durationField="an_pose_sup" accumulate="0" mode="0" endExpression="" fixedDuration="0">
+  <temporal startExpression="" fixedDuration="0" limitMode="0" mode="0" enabled="0" endField="" durationUnit="min" startField="date_creation" durationField="fid" accumulate="0" endExpression="">
     <fixedRange>
       <start></start>
       <end></end>
     </fixedRange>
   </temporal>
-  <elevation zoffset="0" respectLayerSymbol="1" showMarkerSymbolInSurfacePlots="0" extrusionEnabled="0" zscale="1" binding="Centroid" extrusion="0" clamping="Terrain" symbology="Line" type="IndividualFeatures">
+  <elevation zoffset="0" binding="Centroid" respectLayerSymbol="1" showMarkerSymbolInSurfacePlots="0" type="IndividualFeatures" extrusionEnabled="0" extrusion="0" clamping="Terrain" zscale="1" symbology="Line">
     <data-defined-properties>
       <Option type="Map">
         <Option name="name" type="QString" value=""/>
@@ -21,7 +21,7 @@
       </Option>
     </data-defined-properties>
     <profileLineSymbol>
-      <symbol alpha="1" name="" force_rhr="0" is_animated="0" type="line" frame_rate="10" clip_to_extent="1">
+      <symbol force_rhr="0" frame_rate="10" name="" alpha="1" type="line" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -29,7 +29,7 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" class="SimpleLine" pass="0">
+        <layer pass="0" enabled="1" class="SimpleLine" locked="0">
           <Option type="Map">
             <Option name="align_dash_pattern" type="QString" value="0"/>
             <Option name="capstyle" type="QString" value="square"/>
@@ -70,7 +70,7 @@
       </symbol>
     </profileLineSymbol>
     <profileFillSymbol>
-      <symbol alpha="1" name="" force_rhr="0" is_animated="0" type="fill" frame_rate="10" clip_to_extent="1">
+      <symbol force_rhr="0" frame_rate="10" name="" alpha="1" type="fill" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -78,7 +78,7 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" class="SimpleFill" pass="0">
+        <layer pass="0" enabled="1" class="SimpleFill" locked="0">
           <Option type="Map">
             <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
             <Option name="color" type="QString" value="183,72,75,255"/>
@@ -103,7 +103,7 @@
       </symbol>
     </profileFillSymbol>
     <profileMarkerSymbol>
-      <symbol alpha="1" name="" force_rhr="0" is_animated="0" type="marker" frame_rate="10" clip_to_extent="1">
+      <symbol force_rhr="0" frame_rate="10" name="" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -111,7 +111,7 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" class="SimpleMarker" pass="0">
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
             <Option name="cap_style" type="QString" value="square"/>
@@ -144,9 +144,26 @@
       </symbol>
     </profileMarkerSymbol>
   </elevation>
-  <renderer-v2 forceraster="0" referencescale="-1" type="singleSymbol" enableorderby="0" symbollevels="0">
+  <renderer-v2 enableorderby="0" forceraster="0" symbollevels="0" type="RuleRenderer" referencescale="-1">
+    <rules key="{7d9171da-338d-4733-976b-3bc72a109383}">
+      <rule key="{8db5a71e-f629-4bf3-aaa2-a27dfc009365}" description="Conduite en service ou arrêt momentané" filter="&quot;etat_service&quot; IN ( 'en_service','en_arret')" label="En service">
+        <rule scalemaxdenom="110000" key="{ab5a22a7-060f-4141-a75d-f4155d431a9a}" label="Vue d'ensemble" scalemindenom="2001">
+          <rule key="{65ffeccb-d665-463d-b452-9f03068be9ed}" filter="&quot;type_captage&quot; = 'forage'" label="forage" symbol="0"/>
+          <rule key="{9cf48233-0d66-4521-bf57-a845c8d94424}" filter="&quot;type_captage&quot; = 'prise_eau'" label="prise d'eau" symbol="1"/>
+          <rule key="{4059e1b6-8b9c-4b4b-a39c-70b9b8be11b9}" filter="&quot;type_captage&quot; = 'puits'" label="puits" symbol="2"/>
+        </rule>
+        <rule scalemaxdenom="2000" key="{12476d89-e51c-44f4-b989-88588868e278}" label="Détails">
+          <rule key="{070fc462-7491-4951-b94a-25ab37360474}" filter="&quot;type_captage&quot; = 'forage'" label="forage" symbol="3"/>
+          <rule key="{d0fb2dab-8bf9-4cdf-b59d-ab97cc400456}" filter="&quot;type_captage&quot; = 'prise_eau'" label="prise d'eau" symbol="4"/>
+          <rule key="{adcd7179-345f-40c7-8fb7-31808e119754}" filter="&quot;type_captage&quot; = 'puits'" label="puits" symbol="5"/>
+        </rule>
+      </rule>
+      <rule key="{b8bb3ded-c04f-4985-8c5c-e8abc0617f48}" filter=" &quot;etat_service&quot; IN ('abandon','depose','comble')" label="Abandon" symbol="6"/>
+      <rule key="{55bd9260-a539-449a-a5e4-0b7d3c3d3ef0}" filter=" &quot;etat_service&quot; IN ('projet','construction')" label="En projet/en construction" symbol="7"/>
+      <rule key="{0ac6b1e2-ea91-430b-ab23-20d6c3abe7ff}" description="Manque de renseignement sur l'état de service" filter="ELSE" label="Etat non renseigné" symbol="8"/>
+    </rules>
     <symbols>
-      <symbol alpha="1" name="0" force_rhr="0" is_animated="0" type="marker" frame_rate="10" clip_to_extent="1">
+      <symbol force_rhr="0" frame_rate="10" name="0" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -154,23 +171,366 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" class="SvgMarker" pass="0">
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
+          <Option type="Map">
+            <Option name="angle" type="QString" value="180"/>
+            <Option name="cap_style" type="QString" value="square"/>
+            <Option name="color" type="QString" value="20,101,208,255"/>
+            <Option name="horizontal_anchor_point" type="QString" value="1"/>
+            <Option name="joinstyle" type="QString" value="bevel"/>
+            <Option name="name" type="QString" value="triangle"/>
+            <Option name="offset" type="QString" value="0,0"/>
+            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="offset_unit" type="QString" value="MM"/>
+            <Option name="outline_color" type="QString" value="31,120,180,255"/>
+            <Option name="outline_style" type="QString" value="solid"/>
+            <Option name="outline_width" type="QString" value="0"/>
+            <Option name="outline_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="outline_width_unit" type="QString" value="MM"/>
+            <Option name="scale_method" type="QString" value="diameter"/>
+            <Option name="size" type="QString" value="5"/>
+            <Option name="size_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="size_unit" type="QString" value="MM"/>
+            <Option name="vertical_anchor_point" type="QString" value="0"/>
+          </Option>
+          <data_defined_properties>
+            <Option type="Map">
+              <Option name="name" type="QString" value=""/>
+              <Option name="properties"/>
+              <Option name="type" type="QString" value="collection"/>
+            </Option>
+          </data_defined_properties>
+        </layer>
+      </symbol>
+      <symbol force_rhr="0" frame_rate="10" name="1" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
+          <Option type="Map">
+            <Option name="angle" type="QString" value="180"/>
+            <Option name="cap_style" type="QString" value="square"/>
+            <Option name="color" type="QString" value="204,151,82,255"/>
+            <Option name="horizontal_anchor_point" type="QString" value="1"/>
+            <Option name="joinstyle" type="QString" value="bevel"/>
+            <Option name="name" type="QString" value="triangle"/>
+            <Option name="offset" type="QString" value="0,0"/>
+            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="offset_unit" type="QString" value="MM"/>
+            <Option name="outline_color" type="QString" value="31,120,180,255"/>
+            <Option name="outline_style" type="QString" value="solid"/>
+            <Option name="outline_width" type="QString" value="0"/>
+            <Option name="outline_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="outline_width_unit" type="QString" value="MM"/>
+            <Option name="scale_method" type="QString" value="diameter"/>
+            <Option name="size" type="QString" value="5"/>
+            <Option name="size_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="size_unit" type="QString" value="MM"/>
+            <Option name="vertical_anchor_point" type="QString" value="0"/>
+          </Option>
+          <data_defined_properties>
+            <Option type="Map">
+              <Option name="name" type="QString" value=""/>
+              <Option name="properties"/>
+              <Option name="type" type="QString" value="collection"/>
+            </Option>
+          </data_defined_properties>
+        </layer>
+      </symbol>
+      <symbol force_rhr="0" frame_rate="10" name="2" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
+          <Option type="Map">
+            <Option name="angle" type="QString" value="180"/>
+            <Option name="cap_style" type="QString" value="square"/>
+            <Option name="color" type="QString" value="52,52,52,255"/>
+            <Option name="horizontal_anchor_point" type="QString" value="1"/>
+            <Option name="joinstyle" type="QString" value="bevel"/>
+            <Option name="name" type="QString" value="triangle"/>
+            <Option name="offset" type="QString" value="0,0"/>
+            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="offset_unit" type="QString" value="MM"/>
+            <Option name="outline_color" type="QString" value="31,120,180,255"/>
+            <Option name="outline_style" type="QString" value="solid"/>
+            <Option name="outline_width" type="QString" value="0"/>
+            <Option name="outline_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="outline_width_unit" type="QString" value="MM"/>
+            <Option name="scale_method" type="QString" value="diameter"/>
+            <Option name="size" type="QString" value="5"/>
+            <Option name="size_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="size_unit" type="QString" value="MM"/>
+            <Option name="vertical_anchor_point" type="QString" value="0"/>
+          </Option>
+          <data_defined_properties>
+            <Option type="Map">
+              <Option name="name" type="QString" value=""/>
+              <Option name="properties"/>
+              <Option name="type" type="QString" value="collection"/>
+            </Option>
+          </data_defined_properties>
+        </layer>
+      </symbol>
+      <symbol force_rhr="0" frame_rate="10" name="3" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
+          <Option type="Map">
+            <Option name="angle" type="QString" value="180"/>
+            <Option name="cap_style" type="QString" value="square"/>
+            <Option name="color" type="QString" value="20,101,208,255"/>
+            <Option name="horizontal_anchor_point" type="QString" value="1"/>
+            <Option name="joinstyle" type="QString" value="bevel"/>
+            <Option name="name" type="QString" value="triangle"/>
+            <Option name="offset" type="QString" value="0,0"/>
+            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="offset_unit" type="QString" value="MM"/>
+            <Option name="outline_color" type="QString" value="31,120,180,255"/>
+            <Option name="outline_style" type="QString" value="solid"/>
+            <Option name="outline_width" type="QString" value="0"/>
+            <Option name="outline_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="outline_width_unit" type="QString" value="MM"/>
+            <Option name="scale_method" type="QString" value="diameter"/>
+            <Option name="size" type="QString" value="5"/>
+            <Option name="size_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="size_unit" type="QString" value="MM"/>
+            <Option name="vertical_anchor_point" type="QString" value="0"/>
+          </Option>
+          <data_defined_properties>
+            <Option type="Map">
+              <Option name="name" type="QString" value=""/>
+              <Option name="properties"/>
+              <Option name="type" type="QString" value="collection"/>
+            </Option>
+          </data_defined_properties>
+        </layer>
+      </symbol>
+      <symbol force_rhr="0" frame_rate="10" name="4" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
+          <Option type="Map">
+            <Option name="angle" type="QString" value="180"/>
+            <Option name="cap_style" type="QString" value="square"/>
+            <Option name="color" type="QString" value="204,151,82,255"/>
+            <Option name="horizontal_anchor_point" type="QString" value="1"/>
+            <Option name="joinstyle" type="QString" value="bevel"/>
+            <Option name="name" type="QString" value="triangle"/>
+            <Option name="offset" type="QString" value="0,0"/>
+            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="offset_unit" type="QString" value="MM"/>
+            <Option name="outline_color" type="QString" value="31,120,180,255"/>
+            <Option name="outline_style" type="QString" value="solid"/>
+            <Option name="outline_width" type="QString" value="0"/>
+            <Option name="outline_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="outline_width_unit" type="QString" value="MM"/>
+            <Option name="scale_method" type="QString" value="diameter"/>
+            <Option name="size" type="QString" value="5"/>
+            <Option name="size_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="size_unit" type="QString" value="MM"/>
+            <Option name="vertical_anchor_point" type="QString" value="0"/>
+          </Option>
+          <data_defined_properties>
+            <Option type="Map">
+              <Option name="name" type="QString" value=""/>
+              <Option name="properties"/>
+              <Option name="type" type="QString" value="collection"/>
+            </Option>
+          </data_defined_properties>
+        </layer>
+      </symbol>
+      <symbol force_rhr="0" frame_rate="10" name="5" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
+          <Option type="Map">
+            <Option name="angle" type="QString" value="180"/>
+            <Option name="cap_style" type="QString" value="square"/>
+            <Option name="color" type="QString" value="52,52,52,255"/>
+            <Option name="horizontal_anchor_point" type="QString" value="1"/>
+            <Option name="joinstyle" type="QString" value="bevel"/>
+            <Option name="name" type="QString" value="triangle"/>
+            <Option name="offset" type="QString" value="0,0"/>
+            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="offset_unit" type="QString" value="MM"/>
+            <Option name="outline_color" type="QString" value="31,120,180,255"/>
+            <Option name="outline_style" type="QString" value="solid"/>
+            <Option name="outline_width" type="QString" value="0"/>
+            <Option name="outline_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="outline_width_unit" type="QString" value="MM"/>
+            <Option name="scale_method" type="QString" value="diameter"/>
+            <Option name="size" type="QString" value="5"/>
+            <Option name="size_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="size_unit" type="QString" value="MM"/>
+            <Option name="vertical_anchor_point" type="QString" value="0"/>
+          </Option>
+          <data_defined_properties>
+            <Option type="Map">
+              <Option name="name" type="QString" value=""/>
+              <Option name="properties"/>
+              <Option name="type" type="QString" value="collection"/>
+            </Option>
+          </data_defined_properties>
+        </layer>
+      </symbol>
+      <symbol force_rhr="0" frame_rate="10" name="6" alpha="0.97" type="marker" clip_to_extent="1" is_animated="0">
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
-            <Option name="color" type="QString" value="0,192,255,255"/>
-            <Option name="fixedAspectRatio" type="QString" value="0"/>
+            <Option name="cap_style" type="QString" value="square"/>
+            <Option name="color" type="QString" value="125,139,143,255"/>
             <Option name="horizontal_anchor_point" type="QString" value="1"/>
-            <Option name="name" type="QString" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_PRISE_EAU.svg"/>
+            <Option name="joinstyle" type="QString" value="bevel"/>
+            <Option name="name" type="QString" value="circle"/>
+            <Option name="offset" type="QString" value="0,0"/>
+            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="offset_unit" type="QString" value="MM"/>
+            <Option name="outline_color" type="QString" value="255,255,255,255"/>
+            <Option name="outline_style" type="QString" value="solid"/>
+            <Option name="outline_width" type="QString" value="0"/>
+            <Option name="outline_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="outline_width_unit" type="QString" value="MM"/>
+            <Option name="scale_method" type="QString" value="diameter"/>
+            <Option name="size" type="QString" value="2.4"/>
+            <Option name="size_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="size_unit" type="QString" value="MM"/>
+            <Option name="vertical_anchor_point" type="QString" value="1"/>
+          </Option>
+          <data_defined_properties>
+            <Option type="Map">
+              <Option name="name" type="QString" value=""/>
+              <Option name="properties"/>
+              <Option name="type" type="QString" value="collection"/>
+            </Option>
+          </data_defined_properties>
+        </layer>
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
+          <Option type="Map">
+            <Option name="angle" type="QString" value="0"/>
+            <Option name="cap_style" type="QString" value="square"/>
+            <Option name="color" type="QString" value="255,0,0,255"/>
+            <Option name="horizontal_anchor_point" type="QString" value="1"/>
+            <Option name="joinstyle" type="QString" value="bevel"/>
+            <Option name="name" type="QString" value="cross2"/>
             <Option name="offset" type="QString" value="0,0"/>
             <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
             <Option name="offset_unit" type="QString" value="MM"/>
             <Option name="outline_color" type="QString" value="35,35,35,255"/>
+            <Option name="outline_style" type="QString" value="solid"/>
             <Option name="outline_width" type="QString" value="0"/>
             <Option name="outline_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
             <Option name="outline_width_unit" type="QString" value="MM"/>
-            <Option name="parameters"/>
             <Option name="scale_method" type="QString" value="diameter"/>
-            <Option name="size" type="QString" value="5"/>
+            <Option name="size" type="QString" value="2"/>
+            <Option name="size_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="size_unit" type="QString" value="MM"/>
+            <Option name="vertical_anchor_point" type="QString" value="1"/>
+          </Option>
+          <data_defined_properties>
+            <Option type="Map">
+              <Option name="name" type="QString" value=""/>
+              <Option name="properties"/>
+              <Option name="type" type="QString" value="collection"/>
+            </Option>
+          </data_defined_properties>
+        </layer>
+      </symbol>
+      <symbol force_rhr="0" frame_rate="10" name="7" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
+          <Option type="Map">
+            <Option name="angle" type="QString" value="0"/>
+            <Option name="cap_style" type="QString" value="square"/>
+            <Option name="color" type="QString" value="0,0,0,255"/>
+            <Option name="horizontal_anchor_point" type="QString" value="1"/>
+            <Option name="joinstyle" type="QString" value="bevel"/>
+            <Option name="name" type="QString" value="diamond"/>
+            <Option name="offset" type="QString" value="0,0"/>
+            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="offset_unit" type="QString" value="MM"/>
+            <Option name="outline_color" type="QString" value="255,170,0,255"/>
+            <Option name="outline_style" type="QString" value="solid"/>
+            <Option name="outline_width" type="QString" value="0.4"/>
+            <Option name="outline_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="outline_width_unit" type="QString" value="MM"/>
+            <Option name="scale_method" type="QString" value="diameter"/>
+            <Option name="size" type="QString" value="2.4"/>
+            <Option name="size_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="size_unit" type="QString" value="MM"/>
+            <Option name="vertical_anchor_point" type="QString" value="1"/>
+          </Option>
+          <data_defined_properties>
+            <Option type="Map">
+              <Option name="name" type="QString" value=""/>
+              <Option name="properties"/>
+              <Option name="type" type="QString" value="collection"/>
+            </Option>
+          </data_defined_properties>
+        </layer>
+      </symbol>
+      <symbol force_rhr="0" frame_rate="10" name="8" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
+          <Option type="Map">
+            <Option name="angle" type="QString" value="0"/>
+            <Option name="cap_style" type="QString" value="square"/>
+            <Option name="color" type="QString" value="139,139,139,255"/>
+            <Option name="horizontal_anchor_point" type="QString" value="1"/>
+            <Option name="joinstyle" type="QString" value="bevel"/>
+            <Option name="name" type="QString" value="triangle"/>
+            <Option name="offset" type="QString" value="0,0"/>
+            <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="offset_unit" type="QString" value="MM"/>
+            <Option name="outline_color" type="QString" value="255,0,0,255"/>
+            <Option name="outline_style" type="QString" value="solid"/>
+            <Option name="outline_width" type="QString" value="0.4"/>
+            <Option name="outline_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+            <Option name="outline_width_unit" type="QString" value="MM"/>
+            <Option name="scale_method" type="QString" value="diameter"/>
+            <Option name="size" type="QString" value="2.4"/>
             <Option name="size_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
             <Option name="size_unit" type="QString" value="MM"/>
             <Option name="vertical_anchor_point" type="QString" value="1"/>
@@ -185,17 +545,15 @@
         </layer>
       </symbol>
     </symbols>
-    <rotation/>
-    <sizescale/>
   </renderer-v2>
   <labeling type="simple">
     <settings calloutType="simple">
-      <text-style fontStrikeout="0" isExpression="0" fontSize="10" textColor="50,50,50,255" fieldName="nom_usuel" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontLetterSpacing="0" legendString="Aa" fontFamily="Open Sans" textOpacity="1" forcedItalic="0" forcedBold="0" fontKerning="1" fontItalic="0" fontSizeUnit="Point" blendMode="0" fontUnderline="0" allowHtml="0" useSubstitutions="0" namedStyle="Regular" fontWordSpacing="0" multilineHeight="1" previewBkgrdColor="255,255,255,255" multilineHeightUnit="Percentage" textOrientation="horizontal" capitalization="0" fontWeight="50">
+      <text-style fontSizeMapUnitScale="3x:0,0,0,0,0,0" textColor="50,50,50,255" fontWordSpacing="0" isExpression="0" fontWeight="50" capitalization="0" blendMode="0" multilineHeight="1" allowHtml="0" fieldName="nom_usuel" forcedBold="0" fontUnderline="0" legendString="Aa" textOpacity="1" fontSizeUnit="Point" fontKerning="1" namedStyle="Regular" fontItalic="0" fontStrikeout="0" forcedItalic="0" fontSize="10" useSubstitutions="0" fontFamily="Arial" fontLetterSpacing="0" previewBkgrdColor="255,255,255,255" textOrientation="horizontal" multilineHeightUnit="Percentage">
         <families/>
-        <text-buffer bufferBlendMode="0" bufferOpacity="1" bufferColor="250,250,250,255" bufferSizeUnits="MM" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferSize="1" bufferNoFill="1" bufferDraw="0" bufferJoinStyle="128"/>
-        <text-mask maskedSymbolLayers="" maskSizeUnits="MM" maskEnabled="0" maskSize="0" maskType="0" maskSizeMapUnitScale="3x:0,0,0,0,0,0" maskJoinStyle="128" maskOpacity="1"/>
-        <background shapeDraw="0" shapeType="0" shapeSVGFile="" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetY="0" shapeRotation="0" shapeJoinStyle="64" shapeSizeY="0" shapeBlendMode="0" shapeBorderWidthUnit="Point" shapeRadiiUnit="Point" shapeSizeUnit="Point" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeBorderWidth="0" shapeOpacity="1" shapeRadiiX="0" shapeOffsetUnit="Point" shapeOffsetX="0" shapeRadiiY="0" shapeBorderColor="128,128,128,255" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeFillColor="255,255,255,255" shapeSizeType="0" shapeRotationType="0" shapeSizeX="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0">
-          <symbol alpha="1" name="markerSymbol" force_rhr="0" is_animated="0" type="marker" frame_rate="10" clip_to_extent="1">
+        <text-buffer bufferOpacity="1" bufferDraw="0" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferSizeUnits="MM" bufferColor="250,250,250,255" bufferNoFill="1" bufferSize="1" bufferJoinStyle="128" bufferBlendMode="0"/>
+        <text-mask maskSizeUnits="MM" maskSize="0" maskedSymbolLayers="" maskEnabled="0" maskSizeMapUnitScale="3x:0,0,0,0,0,0" maskOpacity="1" maskJoinStyle="128" maskType="0"/>
+        <background shapeRadiiUnit="Point" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeSizeY="0" shapeOffsetUnit="Point" shapeSizeUnit="Point" shapeOffsetY="0" shapeSVGFile="" shapeFillColor="255,255,255,255" shapeJoinStyle="64" shapeBlendMode="0" shapeSizeX="0" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiY="0" shapeRadiiX="0" shapeRotationType="0" shapeOpacity="1" shapeType="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeBorderWidth="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetX="0" shapeDraw="0" shapeBorderWidthUnit="Point" shapeSizeType="0" shapeBorderColor="128,128,128,255">
+          <symbol force_rhr="0" frame_rate="10" name="markerSymbol" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
             <data_defined_properties>
               <Option type="Map">
                 <Option name="name" type="QString" value=""/>
@@ -203,11 +561,11 @@
                 <Option name="type" type="QString" value="collection"/>
               </Option>
             </data_defined_properties>
-            <layer enabled="1" locked="0" class="SimpleMarker" pass="0">
+            <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
               <Option type="Map">
                 <Option name="angle" type="QString" value="0"/>
                 <Option name="cap_style" type="QString" value="square"/>
-                <Option name="color" type="QString" value="232,113,141,255"/>
+                <Option name="color" type="QString" value="231,113,72,255"/>
                 <Option name="horizontal_anchor_point" type="QString" value="1"/>
                 <Option name="joinstyle" type="QString" value="bevel"/>
                 <Option name="name" type="QString" value="circle"/>
@@ -234,7 +592,7 @@
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" name="fillSymbol" force_rhr="0" is_animated="0" type="fill" frame_rate="10" clip_to_extent="1">
+          <symbol force_rhr="0" frame_rate="10" name="fillSymbol" alpha="1" type="fill" clip_to_extent="1" is_animated="0">
             <data_defined_properties>
               <Option type="Map">
                 <Option name="name" type="QString" value=""/>
@@ -242,7 +600,7 @@
                 <Option name="type" type="QString" value="collection"/>
               </Option>
             </data_defined_properties>
-            <layer enabled="1" locked="0" class="SimpleFill" pass="0">
+            <layer pass="0" enabled="1" class="SimpleFill" locked="0">
               <Option type="Map">
                 <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
                 <Option name="color" type="QString" value="255,255,255,255"/>
@@ -266,7 +624,7 @@
             </layer>
           </symbol>
         </background>
-        <shadow shadowDraw="0" shadowOffsetUnit="MM" shadowUnder="0" shadowRadiusUnit="MM" shadowScale="100" shadowOffsetDist="1" shadowOffsetAngle="135" shadowRadiusAlphaOnly="0" shadowOffsetGlobal="1" shadowRadius="1.5" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowBlendMode="6" shadowColor="0,0,0,255" shadowOpacity="0.69999999999999996" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0"/>
+        <shadow shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowOffsetAngle="135" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowRadius="1.5" shadowColor="0,0,0,255" shadowRadiusAlphaOnly="0" shadowScale="100" shadowUnder="0" shadowOpacity="0.69999999999999996" shadowBlendMode="6" shadowOffsetUnit="MM" shadowOffsetDist="1" shadowOffsetGlobal="1" shadowRadiusUnit="MM" shadowDraw="0"/>
         <dd_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -276,9 +634,9 @@
         </dd_properties>
         <substitutions/>
       </text-style>
-      <text-format reverseDirectionSymbol="0" decimals="3" addDirectionSymbol="0" formatNumbers="0" wrapChar="" autoWrapLength="0" rightDirectionSymbol=">" multilineAlign="3" useMaxLineLengthForAutoWrap="1" placeDirectionSymbol="0" leftDirectionSymbol="&lt;" plussign="0"/>
-      <placement labelOffsetMapUnitScale="3x:0,0,0,0,0,0" polygonPlacementFlags="2" lineAnchorClipping="0" geometryGeneratorType="PointGeometry" priority="5" lineAnchorPercent="0.5" offsetType="1" distMapUnitScale="3x:0,0,0,0,0,0" layerType="PointGeometry" overlapHandling="PreventOverlap" centroidInside="0" geometryGeneratorEnabled="0" maxCurvedCharAngleIn="25" repeatDistanceUnits="MM" overrunDistance="0" lineAnchorTextPoint="FollowPlacement" placementFlags="10" placement="6" distUnits="MM" overrunDistanceUnit="MM" rotationAngle="0" dist="0" rotationUnit="AngleDegrees" quadOffset="4" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" xOffset="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" centroidWhole="0" repeatDistance="0" allowDegraded="0" offsetUnits="MM" preserveRotation="1" lineAnchorType="0" maxCurvedCharAngleOut="-25" geometryGenerator="" yOffset="0" fitInPolygonOnly="0"/>
-      <rendering upsidedownLabels="0" fontMinPixelSize="3" obstacle="1" scaleMin="0" fontLimitPixelSize="0" scaleMax="0" drawLabels="1" minFeatureSize="0" mergeLines="0" limitNumLabels="0" labelPerPart="0" obstacleType="1" unplacedVisibility="0" obstacleFactor="1" scaleVisibility="0" maxNumLabels="2000" fontMaxPixelSize="10000" zIndex="0"/>
+      <text-format reverseDirectionSymbol="0" rightDirectionSymbol=">" plussign="0" wrapChar="" autoWrapLength="0" addDirectionSymbol="0" leftDirectionSymbol="&lt;" formatNumbers="0" decimals="3" multilineAlign="3" useMaxLineLengthForAutoWrap="1" placeDirectionSymbol="0"/>
+      <placement lineAnchorPercent="0.5" maxCurvedCharAngleIn="25" geometryGenerator="" overlapHandling="PreventOverlap" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" layerType="PointGeometry" distMapUnitScale="3x:0,0,0,0,0,0" offsetType="1" overrunDistanceUnit="MM" yOffset="0" dist="0" centroidWhole="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" priority="5" offsetUnits="MM" repeatDistanceUnits="MM" allowDegraded="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" placement="6" preserveRotation="1" lineAnchorTextPoint="FollowPlacement" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" maxCurvedCharAngleOut="-25" rotationAngle="0" geometryGeneratorEnabled="0" quadOffset="4" rotationUnit="AngleDegrees" repeatDistance="0" fitInPolygonOnly="0" xOffset="0" lineAnchorType="0" placementFlags="10" polygonPlacementFlags="2" overrunDistance="0" lineAnchorClipping="0" distUnits="MM" centroidInside="0" geometryGeneratorType="PointGeometry"/>
+      <rendering fontMinPixelSize="3" scaleVisibility="0" fontLimitPixelSize="0" scaleMin="0" minFeatureSize="0" obstacleFactor="1" labelPerPart="0" drawLabels="1" upsidedownLabels="0" obstacleType="1" obstacle="1" unplacedVisibility="0" limitNumLabels="0" maxNumLabels="2000" scaleMax="0" mergeLines="0" fontMaxPixelSize="10000" zIndex="0"/>
       <dd_properties>
         <Option type="Map">
           <Option name="name" type="QString" value=""/>
@@ -298,7 +656,7 @@
           <Option name="drawToAllParts" type="bool" value="false"/>
           <Option name="enabled" type="QString" value="0"/>
           <Option name="labelAnchorPoint" type="QString" value="point_on_exterior"/>
-          <Option name="lineSymbol" type="QString" value="&lt;symbol alpha=&quot;1&quot; name=&quot;symbol&quot; force_rhr=&quot;0&quot; is_animated=&quot;0&quot; type=&quot;line&quot; frame_rate=&quot;10&quot; clip_to_extent=&quot;1&quot;>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option name=&quot;name&quot; type=&quot;QString&quot; value=&quot;&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option name=&quot;type&quot; type=&quot;QString&quot; value=&quot;collection&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;layer enabled=&quot;1&quot; locked=&quot;0&quot; class=&quot;SimpleLine&quot; pass=&quot;0&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option name=&quot;align_dash_pattern&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;capstyle&quot; type=&quot;QString&quot; value=&quot;square&quot;/>&lt;Option name=&quot;customdash&quot; type=&quot;QString&quot; value=&quot;5;2&quot;/>&lt;Option name=&quot;customdash_map_unit_scale&quot; type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option name=&quot;customdash_unit&quot; type=&quot;QString&quot; value=&quot;MM&quot;/>&lt;Option name=&quot;dash_pattern_offset&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;dash_pattern_offset_map_unit_scale&quot; type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option name=&quot;dash_pattern_offset_unit&quot; type=&quot;QString&quot; value=&quot;MM&quot;/>&lt;Option name=&quot;draw_inside_polygon&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;joinstyle&quot; type=&quot;QString&quot; value=&quot;bevel&quot;/>&lt;Option name=&quot;line_color&quot; type=&quot;QString&quot; value=&quot;60,60,60,255&quot;/>&lt;Option name=&quot;line_style&quot; type=&quot;QString&quot; value=&quot;solid&quot;/>&lt;Option name=&quot;line_width&quot; type=&quot;QString&quot; value=&quot;0.3&quot;/>&lt;Option name=&quot;line_width_unit&quot; type=&quot;QString&quot; value=&quot;MM&quot;/>&lt;Option name=&quot;offset&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;offset_map_unit_scale&quot; type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option name=&quot;offset_unit&quot; type=&quot;QString&quot; value=&quot;MM&quot;/>&lt;Option name=&quot;ring_filter&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;trim_distance_end&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;trim_distance_end_map_unit_scale&quot; type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option name=&quot;trim_distance_end_unit&quot; type=&quot;QString&quot; value=&quot;MM&quot;/>&lt;Option name=&quot;trim_distance_start&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;trim_distance_start_map_unit_scale&quot; type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option name=&quot;trim_distance_start_unit&quot; type=&quot;QString&quot; value=&quot;MM&quot;/>&lt;Option name=&quot;tweak_dash_pattern_on_corners&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;use_custom_dash&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;width_map_unit_scale&quot; type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;/Option>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option name=&quot;name&quot; type=&quot;QString&quot; value=&quot;&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option name=&quot;type&quot; type=&quot;QString&quot; value=&quot;collection&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;/layer>&lt;/symbol>"/>
+          <Option name="lineSymbol" type="QString" value="&lt;symbol force_rhr=&quot;0&quot; frame_rate=&quot;10&quot; name=&quot;symbol&quot; alpha=&quot;1&quot; type=&quot;line&quot; clip_to_extent=&quot;1&quot; is_animated=&quot;0&quot;>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option name=&quot;name&quot; type=&quot;QString&quot; value=&quot;&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option name=&quot;type&quot; type=&quot;QString&quot; value=&quot;collection&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;layer pass=&quot;0&quot; enabled=&quot;1&quot; class=&quot;SimpleLine&quot; locked=&quot;0&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option name=&quot;align_dash_pattern&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;capstyle&quot; type=&quot;QString&quot; value=&quot;square&quot;/>&lt;Option name=&quot;customdash&quot; type=&quot;QString&quot; value=&quot;5;2&quot;/>&lt;Option name=&quot;customdash_map_unit_scale&quot; type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option name=&quot;customdash_unit&quot; type=&quot;QString&quot; value=&quot;MM&quot;/>&lt;Option name=&quot;dash_pattern_offset&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;dash_pattern_offset_map_unit_scale&quot; type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option name=&quot;dash_pattern_offset_unit&quot; type=&quot;QString&quot; value=&quot;MM&quot;/>&lt;Option name=&quot;draw_inside_polygon&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;joinstyle&quot; type=&quot;QString&quot; value=&quot;bevel&quot;/>&lt;Option name=&quot;line_color&quot; type=&quot;QString&quot; value=&quot;60,60,60,255&quot;/>&lt;Option name=&quot;line_style&quot; type=&quot;QString&quot; value=&quot;solid&quot;/>&lt;Option name=&quot;line_width&quot; type=&quot;QString&quot; value=&quot;0.3&quot;/>&lt;Option name=&quot;line_width_unit&quot; type=&quot;QString&quot; value=&quot;MM&quot;/>&lt;Option name=&quot;offset&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;offset_map_unit_scale&quot; type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option name=&quot;offset_unit&quot; type=&quot;QString&quot; value=&quot;MM&quot;/>&lt;Option name=&quot;ring_filter&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;trim_distance_end&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;trim_distance_end_map_unit_scale&quot; type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option name=&quot;trim_distance_end_unit&quot; type=&quot;QString&quot; value=&quot;MM&quot;/>&lt;Option name=&quot;trim_distance_start&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;trim_distance_start_map_unit_scale&quot; type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option name=&quot;trim_distance_start_unit&quot; type=&quot;QString&quot; value=&quot;MM&quot;/>&lt;Option name=&quot;tweak_dash_pattern_on_corners&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;use_custom_dash&quot; type=&quot;QString&quot; value=&quot;0&quot;/>&lt;Option name=&quot;width_map_unit_scale&quot; type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;/Option>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option name=&quot;name&quot; type=&quot;QString&quot; value=&quot;&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option name=&quot;type&quot; type=&quot;QString&quot; value=&quot;collection&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;/layer>&lt;/symbol>"/>
           <Option name="minLength" type="double" value="0"/>
           <Option name="minLengthMapUnitScale" type="QString" value="3x:0,0,0,0,0,0"/>
           <Option name="minLengthUnit" type="QString" value="MM"/>
@@ -315,19 +673,19 @@
   <customproperties>
     <Option type="Map">
       <Option name="embeddedWidgets/count" type="int" value="0"/>
-      <Option name="variableNames"/>
-      <Option name="variableValues"/>
+      <Option name="variableNames" type="invalid"/>
+      <Option name="variableValues" type="invalid"/>
     </Option>
   </customproperties>
   <blendMode>0</blendMode>
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
   <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
-    <DiagramCategory minScaleDenominator="0" maxScaleDenominator="0" scaleBasedVisibility="0" rotationOffset="270" lineSizeType="MM" enabled="0" diagramOrientation="Up" opacity="1" width="15" sizeType="MM" spacingUnit="MM" penAlpha="255" backgroundColor="#ffffff" minimumSize="0" spacingUnitScale="3x:0,0,0,0,0,0" labelPlacementMethod="XHeight" lineSizeScale="3x:0,0,0,0,0,0" height="15" penWidth="0" scaleDependency="Area" penColor="#000000" spacing="5" showAxis="1" direction="0" backgroundAlpha="255" sizeScale="3x:0,0,0,0,0,0" barWidth="5">
-      <fontProperties bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
-      <attribute field="" colorOpacity="1" label="" color="#000000"/>
+    <DiagramCategory scaleDependency="Area" diagramOrientation="Up" width="15" backgroundColor="#ffffff" minimumSize="0" sizeScale="3x:0,0,0,0,0,0" height="15" scaleBasedVisibility="0" maxScaleDenominator="1e+08" spacing="5" enabled="0" rotationOffset="270" spacingUnitScale="3x:0,0,0,0,0,0" penWidth="0" labelPlacementMethod="XHeight" lineSizeScale="3x:0,0,0,0,0,0" minScaleDenominator="0" direction="0" barWidth="5" spacingUnit="MM" sizeType="MM" backgroundAlpha="255" penAlpha="255" lineSizeType="MM" showAxis="1" opacity="1" penColor="#000000">
+      <fontProperties underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
+      <attribute colorOpacity="1" label="" color="#000000" field=""/>
       <axisSymbol>
-        <symbol alpha="1" name="" force_rhr="0" is_animated="0" type="line" frame_rate="10" clip_to_extent="1">
+        <symbol force_rhr="0" frame_rate="10" name="" alpha="1" type="line" clip_to_extent="1" is_animated="0">
           <data_defined_properties>
             <Option type="Map">
               <Option name="name" type="QString" value=""/>
@@ -335,7 +693,7 @@
               <Option name="type" type="QString" value="collection"/>
             </Option>
           </data_defined_properties>
-          <layer enabled="1" locked="0" class="SimpleLine" pass="0">
+          <layer pass="0" enabled="1" class="SimpleLine" locked="0">
             <Option type="Map">
               <Option name="align_dash_pattern" type="QString" value="0"/>
               <Option name="capstyle" type="QString" value="square"/>
@@ -377,7 +735,7 @@
       </axisSymbol>
     </DiagramCategory>
   </SingleCategoryDiagramRenderer>
-  <DiagramLayerSettings priority="0" linePlacementFlags="18" obstacle="0" dist="0" placement="0" showAll="1" zIndex="0">
+  <DiagramLayerSettings priority="0" zIndex="0" linePlacementFlags="18" dist="0" showAll="1" placement="0" obstacle="0">
     <properties>
       <Option type="Map">
         <Option name="name" type="QString" value=""/>
@@ -386,14 +744,21 @@
       </Option>
     </properties>
   </DiagramLayerSettings>
-  <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
+  <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
     <activeChecks/>
     <checkConfiguration/>
   </geometryOptions>
-  <legend showLabelLegend="0" type="default-vector"/>
+  <legend type="default-vector" showLabelLegend="0"/>
   <referencedLayers/>
   <fieldConfiguration>
-    <field configurationFlags="None" name="type_reseau">
+    <field name="fid" configurationFlags="None">
+      <editWidget type="TextEdit">
+        <config>
+          <Option/>
+        </config>
+      </editWidget>
+    </field>
+    <field name="type_reseau" configurationFlags="None">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
@@ -433,7 +798,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="fictif">
+    <field name="fictif" configurationFlags="None">
       <editWidget type="CheckBox">
         <config>
           <Option type="Map">
@@ -444,7 +809,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="etat_service">
+    <field name="etat_service" configurationFlags="None">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
@@ -490,7 +855,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="insee_commune">
+    <field name="insee_commune" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -500,7 +865,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="localisation">
+    <field name="localisation" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -510,7 +875,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="maitre_ouvrage">
+    <field name="maitre_ouvrage" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -520,7 +885,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="exploitant">
+    <field name="exploitant" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -530,7 +895,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="entreprise_pose">
+    <field name="entreprise_pose" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -540,7 +905,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="precision_xy">
+    <field name="precision_xy" configurationFlags="None">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
@@ -559,7 +924,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="precision_z">
+    <field name="precision_z" configurationFlags="None">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
@@ -578,7 +943,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="an_pose_sup">
+    <field name="an_pose_sup" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -588,7 +953,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="an_pose_inf">
+    <field name="an_pose_inf" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -598,7 +963,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="an_service_sup">
+    <field name="an_service_sup" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -608,7 +973,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="an_service_inf">
+    <field name="an_service_inf" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -618,7 +983,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="an_abandon_sup">
+    <field name="an_abandon_sup" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -628,7 +993,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="an_abandon_inf">
+    <field name="an_abandon_inf" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -638,7 +1003,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="an_rehab_sup">
+    <field name="an_rehab_sup" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -648,7 +1013,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="an_rehab_inf">
+    <field name="an_rehab_inf" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -658,7 +1023,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="date_creation">
+    <field name="date_creation" configurationFlags="None">
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
@@ -671,7 +1036,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="origine_creation">
+    <field name="origine_creation" configurationFlags="None">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
@@ -705,7 +1070,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="date_maj">
+    <field name="date_maj" configurationFlags="None">
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
@@ -718,7 +1083,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="origine_maj">
+    <field name="origine_maj" configurationFlags="None">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
@@ -752,7 +1117,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="lien_doc1">
+    <field name="lien_doc1" configurationFlags="None">
       <editWidget type="ExternalResource">
         <config>
           <Option type="Map">
@@ -775,7 +1140,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="lien_doc2">
+    <field name="lien_doc2" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -785,7 +1150,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="commentaire">
+    <field name="commentaire" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -795,7 +1160,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="id_noeud_reseau">
+    <field name="id_noeud_reseau" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -805,7 +1170,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="id_aep_captage">
+    <field name="id_aep_captage" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -815,7 +1180,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="nom_usuel">
+    <field name="nom_usuel" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -825,7 +1190,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="type_captage">
+    <field name="type_captage" configurationFlags="None">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
@@ -859,7 +1224,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="nom_ressource">
+    <field name="nom_ressource" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -869,7 +1234,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="type_ressource">
+    <field name="type_ressource" configurationFlags="None">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
@@ -927,7 +1292,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="ref_aac">
+    <field name="ref_aac" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -937,7 +1302,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="ref_dup">
+    <field name="ref_dup" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -947,7 +1312,7 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="debit_max_autorise">
+    <field name="debit_max_autorise" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -959,190 +1324,195 @@
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias name="type de réseau" field="type_reseau" index="0"/>
-    <alias name="fictif?" field="fictif" index="1"/>
-    <alias name="état de service" field="etat_service" index="2"/>
-    <alias name="INSEE" field="insee_commune" index="3"/>
-    <alias name="localisation ou adresse" field="localisation" index="4"/>
-    <alias name="Maitre d'ouvrage" field="maitre_ouvrage" index="5"/>
-    <alias name="Exploitant" field="exploitant" index="6"/>
-    <alias name="Entreprise de pose" field="entreprise_pose" index="7"/>
-    <alias name="Classe de précision XY" field="precision_xy" index="8"/>
-    <alias name="Classe de précision Z" field="precision_z" index="9"/>
-    <alias name="fin période de pose" field="an_pose_sup" index="10"/>
-    <alias name="début période de pose" field="an_pose_inf" index="11"/>
-    <alias name="fin période mise en service" field="an_service_sup" index="12"/>
-    <alias name="début période mise en service" field="an_service_inf" index="13"/>
-    <alias name="fin période abandon" field="an_abandon_sup" index="14"/>
-    <alias name="début période abandon" field="an_abandon_inf" index="15"/>
-    <alias name="fin période réhabiliation" field="an_rehab_sup" index="16"/>
-    <alias name="début période réhabilitation" field="an_rehab_inf" index="17"/>
-    <alias name="date création de l'objet" field="date_creation" index="18"/>
-    <alias name="source à l'origine" field="origine_creation" index="19"/>
-    <alias name="date de mise à jour" field="date_maj" index="20"/>
-    <alias name="source de la mise à jour" field="origine_maj" index="21"/>
-    <alias name="lien vers document" field="lien_doc1" index="22"/>
-    <alias name="lien 2 vers document" field="lien_doc2" index="23"/>
-    <alias name="" field="commentaire" index="24"/>
-    <alias name="" field="id_noeud_reseau" index="25"/>
-    <alias name="" field="id_aep_captage" index="26"/>
-    <alias name="" field="nom_usuel" index="27"/>
-    <alias name="type de captage" field="type_captage" index="28"/>
-    <alias name="" field="nom_ressource" index="29"/>
-    <alias name="type de ressource" field="type_ressource" index="30"/>
-    <alias name="Référence Aire alimentation Captage" field="ref_aac" index="31"/>
-    <alias name="Référénce Arrêté autorisation" field="ref_dup" index="32"/>
-    <alias name="débit max autorisé (avec unité)" field="debit_max_autorise" index="33"/>
+    <alias name="" index="0" field="fid"/>
+    <alias name="type de réseau" index="1" field="type_reseau"/>
+    <alias name="fictif?" index="2" field="fictif"/>
+    <alias name="état de service" index="3" field="etat_service"/>
+    <alias name="INSEE" index="4" field="insee_commune"/>
+    <alias name="localisation ou adresse" index="5" field="localisation"/>
+    <alias name="Maitre d'ouvrage" index="6" field="maitre_ouvrage"/>
+    <alias name="Exploitant" index="7" field="exploitant"/>
+    <alias name="Entreprise de pose" index="8" field="entreprise_pose"/>
+    <alias name="Classe de précision XY" index="9" field="precision_xy"/>
+    <alias name="Classe de précision Z" index="10" field="precision_z"/>
+    <alias name="fin période de pose" index="11" field="an_pose_sup"/>
+    <alias name="début période de pose" index="12" field="an_pose_inf"/>
+    <alias name="fin période mise en service" index="13" field="an_service_sup"/>
+    <alias name="début période mise en service" index="14" field="an_service_inf"/>
+    <alias name="fin période abandon" index="15" field="an_abandon_sup"/>
+    <alias name="début période abandon" index="16" field="an_abandon_inf"/>
+    <alias name="fin période réhabiliation" index="17" field="an_rehab_sup"/>
+    <alias name="début période réhabilitation" index="18" field="an_rehab_inf"/>
+    <alias name="date création de l'objet" index="19" field="date_creation"/>
+    <alias name="source à l'origine" index="20" field="origine_creation"/>
+    <alias name="date de mise à jour" index="21" field="date_maj"/>
+    <alias name="source de la mise à jour" index="22" field="origine_maj"/>
+    <alias name="lien vers document" index="23" field="lien_doc1"/>
+    <alias name="lien 2 vers document" index="24" field="lien_doc2"/>
+    <alias name="" index="25" field="commentaire"/>
+    <alias name="" index="26" field="id_noeud_reseau"/>
+    <alias name="" index="27" field="id_aep_captage"/>
+    <alias name="" index="28" field="nom_usuel"/>
+    <alias name="type de captage" index="29" field="type_captage"/>
+    <alias name="" index="30" field="nom_ressource"/>
+    <alias name="type de ressource" index="31" field="type_ressource"/>
+    <alias name="Référence Aire alimentation Captage" index="32" field="ref_aac"/>
+    <alias name="Référénce Arrêté autorisation" index="33" field="ref_dup"/>
+    <alias name="débit max autorisé (avec unité)" index="34" field="debit_max_autorise"/>
   </aliases>
   <defaults>
-    <default field="type_reseau" expression="'aep'" applyOnUpdate="0"/>
-    <default field="fictif" expression="false" applyOnUpdate="0"/>
-    <default field="etat_service" expression="'en_service'" applyOnUpdate="0"/>
-    <default field="insee_commune" expression="" applyOnUpdate="0"/>
-    <default field="localisation" expression="" applyOnUpdate="0"/>
-    <default field="maitre_ouvrage" expression="" applyOnUpdate="0"/>
-    <default field="exploitant" expression="" applyOnUpdate="0"/>
-    <default field="entreprise_pose" expression="" applyOnUpdate="0"/>
-    <default field="precision_xy" expression="'C'" applyOnUpdate="0"/>
-    <default field="precision_z" expression="'C'" applyOnUpdate="0"/>
-    <default field="an_pose_sup" expression="-9999" applyOnUpdate="0"/>
-    <default field="an_pose_inf" expression="" applyOnUpdate="0"/>
-    <default field="an_service_sup" expression="" applyOnUpdate="0"/>
-    <default field="an_service_inf" expression="" applyOnUpdate="0"/>
-    <default field="an_abandon_sup" expression="" applyOnUpdate="0"/>
-    <default field="an_abandon_inf" expression="" applyOnUpdate="0"/>
-    <default field="an_rehab_sup" expression="" applyOnUpdate="0"/>
-    <default field="an_rehab_inf" expression="" applyOnUpdate="0"/>
-    <default field="date_creation" expression="now()" applyOnUpdate="0"/>
-    <default field="origine_creation" expression="" applyOnUpdate="0"/>
-    <default field="date_maj" expression="now()" applyOnUpdate="1"/>
-    <default field="origine_maj" expression="" applyOnUpdate="0"/>
-    <default field="lien_doc1" expression="" applyOnUpdate="0"/>
-    <default field="lien_doc2" expression="" applyOnUpdate="0"/>
-    <default field="commentaire" expression="" applyOnUpdate="0"/>
-    <default field="id_noeud_reseau" expression="" applyOnUpdate="0"/>
-    <default field="id_aep_captage" expression="" applyOnUpdate="0"/>
-    <default field="nom_usuel" expression="" applyOnUpdate="0"/>
-    <default field="type_captage" expression="" applyOnUpdate="0"/>
-    <default field="nom_ressource" expression="" applyOnUpdate="0"/>
-    <default field="type_ressource" expression="" applyOnUpdate="0"/>
-    <default field="ref_aac" expression="" applyOnUpdate="0"/>
-    <default field="ref_dup" expression="" applyOnUpdate="0"/>
-    <default field="debit_max_autorise" expression="" applyOnUpdate="0"/>
+    <default expression="" applyOnUpdate="0" field="fid"/>
+    <default expression="'aep'" applyOnUpdate="0" field="type_reseau"/>
+    <default expression="false" applyOnUpdate="0" field="fictif"/>
+    <default expression="'en_service'" applyOnUpdate="0" field="etat_service"/>
+    <default expression="" applyOnUpdate="0" field="insee_commune"/>
+    <default expression="" applyOnUpdate="0" field="localisation"/>
+    <default expression="" applyOnUpdate="0" field="maitre_ouvrage"/>
+    <default expression="" applyOnUpdate="0" field="exploitant"/>
+    <default expression="" applyOnUpdate="0" field="entreprise_pose"/>
+    <default expression="'C'" applyOnUpdate="0" field="precision_xy"/>
+    <default expression="'C'" applyOnUpdate="0" field="precision_z"/>
+    <default expression="-9999" applyOnUpdate="0" field="an_pose_sup"/>
+    <default expression="" applyOnUpdate="0" field="an_pose_inf"/>
+    <default expression="" applyOnUpdate="0" field="an_service_sup"/>
+    <default expression="" applyOnUpdate="0" field="an_service_inf"/>
+    <default expression="" applyOnUpdate="0" field="an_abandon_sup"/>
+    <default expression="" applyOnUpdate="0" field="an_abandon_inf"/>
+    <default expression="" applyOnUpdate="0" field="an_rehab_sup"/>
+    <default expression="" applyOnUpdate="0" field="an_rehab_inf"/>
+    <default expression="now()" applyOnUpdate="0" field="date_creation"/>
+    <default expression="" applyOnUpdate="0" field="origine_creation"/>
+    <default expression="now()" applyOnUpdate="1" field="date_maj"/>
+    <default expression="" applyOnUpdate="0" field="origine_maj"/>
+    <default expression="" applyOnUpdate="0" field="lien_doc1"/>
+    <default expression="" applyOnUpdate="0" field="lien_doc2"/>
+    <default expression="" applyOnUpdate="0" field="commentaire"/>
+    <default expression="uuid()" applyOnUpdate="0" field="id_noeud_reseau"/>
+    <default expression="&quot;fid&quot;" applyOnUpdate="0" field="id_aep_captage"/>
+    <default expression="" applyOnUpdate="0" field="nom_usuel"/>
+    <default expression="" applyOnUpdate="0" field="type_captage"/>
+    <default expression="" applyOnUpdate="0" field="nom_ressource"/>
+    <default expression="" applyOnUpdate="0" field="type_ressource"/>
+    <default expression="" applyOnUpdate="0" field="ref_aac"/>
+    <default expression="" applyOnUpdate="0" field="ref_dup"/>
+    <default expression="" applyOnUpdate="0" field="debit_max_autorise"/>
   </defaults>
   <constraints>
-    <constraint notnull_strength="1" constraints="1" field="type_reseau" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="2" constraints="1" field="fictif" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="1" constraints="1" field="etat_service" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="1" constraints="1" field="insee_commune" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="localisation" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="1" constraints="1" field="maitre_ouvrage" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="1" constraints="1" field="exploitant" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="entreprise_pose" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="1" constraints="1" field="precision_xy" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="2" constraints="1" field="precision_z" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="1" constraints="1" field="an_pose_sup" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="an_pose_inf" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="an_service_sup" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="an_service_inf" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="an_abandon_sup" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="an_abandon_inf" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="an_rehab_sup" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="an_rehab_inf" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="1" constraints="1" field="date_creation" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="1" constraints="1" field="origine_creation" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="1" constraints="1" field="date_maj" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="origine_maj" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="lien_doc1" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="lien_doc2" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="commentaire" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="1" constraints="3" field="id_noeud_reseau" unique_strength="1" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="id_aep_captage" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="nom_usuel" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="1" constraints="1" field="type_captage" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="nom_ressource" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="1" constraints="1" field="type_ressource" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="ref_aac" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="ref_dup" unique_strength="0" exp_strength="0"/>
-    <constraint notnull_strength="0" constraints="0" field="debit_max_autorise" unique_strength="0" exp_strength="0"/>
+    <constraint constraints="3" unique_strength="1" exp_strength="0" notnull_strength="1" field="fid"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="type_reseau"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="2" field="fictif"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="etat_service"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="insee_commune"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="localisation"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="maitre_ouvrage"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="exploitant"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="entreprise_pose"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="precision_xy"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="2" field="precision_z"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="an_pose_sup"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_pose_inf"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_service_sup"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_service_inf"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_abandon_sup"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_abandon_inf"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_rehab_sup"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_rehab_inf"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="date_creation"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="origine_creation"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="date_maj"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="origine_maj"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="lien_doc1"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="lien_doc2"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="commentaire"/>
+    <constraint constraints="3" unique_strength="1" exp_strength="0" notnull_strength="1" field="id_noeud_reseau"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="id_aep_captage"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="nom_usuel"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="type_captage"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="nom_ressource"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="type_ressource"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="ref_aac"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="ref_dup"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="debit_max_autorise"/>
   </constraints>
   <constraintExpressions>
-    <constraint desc="" field="type_reseau" exp=""/>
-    <constraint desc="" field="fictif" exp=""/>
-    <constraint desc="" field="etat_service" exp=""/>
-    <constraint desc="" field="insee_commune" exp=""/>
-    <constraint desc="" field="localisation" exp=""/>
-    <constraint desc="" field="maitre_ouvrage" exp=""/>
-    <constraint desc="" field="exploitant" exp=""/>
-    <constraint desc="" field="entreprise_pose" exp=""/>
-    <constraint desc="" field="precision_xy" exp=""/>
-    <constraint desc="" field="precision_z" exp=""/>
-    <constraint desc="" field="an_pose_sup" exp=""/>
-    <constraint desc="" field="an_pose_inf" exp=""/>
-    <constraint desc="" field="an_service_sup" exp=""/>
-    <constraint desc="" field="an_service_inf" exp=""/>
-    <constraint desc="" field="an_abandon_sup" exp=""/>
-    <constraint desc="" field="an_abandon_inf" exp=""/>
-    <constraint desc="" field="an_rehab_sup" exp=""/>
-    <constraint desc="" field="an_rehab_inf" exp=""/>
-    <constraint desc="" field="date_creation" exp=""/>
-    <constraint desc="" field="origine_creation" exp=""/>
-    <constraint desc="" field="date_maj" exp=""/>
-    <constraint desc="" field="origine_maj" exp=""/>
-    <constraint desc="" field="lien_doc1" exp=""/>
-    <constraint desc="" field="lien_doc2" exp=""/>
-    <constraint desc="" field="commentaire" exp=""/>
-    <constraint desc="" field="id_noeud_reseau" exp=""/>
-    <constraint desc="" field="id_aep_captage" exp=""/>
-    <constraint desc="" field="nom_usuel" exp=""/>
-    <constraint desc="" field="type_captage" exp=""/>
-    <constraint desc="" field="nom_ressource" exp=""/>
-    <constraint desc="" field="type_ressource" exp=""/>
-    <constraint desc="" field="ref_aac" exp=""/>
-    <constraint desc="" field="ref_dup" exp=""/>
-    <constraint desc="" field="debit_max_autorise" exp=""/>
+    <constraint exp="" desc="" field="fid"/>
+    <constraint exp="" desc="" field="type_reseau"/>
+    <constraint exp="" desc="" field="fictif"/>
+    <constraint exp="" desc="" field="etat_service"/>
+    <constraint exp="" desc="" field="insee_commune"/>
+    <constraint exp="" desc="" field="localisation"/>
+    <constraint exp="" desc="" field="maitre_ouvrage"/>
+    <constraint exp="" desc="" field="exploitant"/>
+    <constraint exp="" desc="" field="entreprise_pose"/>
+    <constraint exp="" desc="" field="precision_xy"/>
+    <constraint exp="" desc="" field="precision_z"/>
+    <constraint exp="" desc="" field="an_pose_sup"/>
+    <constraint exp="" desc="" field="an_pose_inf"/>
+    <constraint exp="" desc="" field="an_service_sup"/>
+    <constraint exp="" desc="" field="an_service_inf"/>
+    <constraint exp="" desc="" field="an_abandon_sup"/>
+    <constraint exp="" desc="" field="an_abandon_inf"/>
+    <constraint exp="" desc="" field="an_rehab_sup"/>
+    <constraint exp="" desc="" field="an_rehab_inf"/>
+    <constraint exp="" desc="" field="date_creation"/>
+    <constraint exp="" desc="" field="origine_creation"/>
+    <constraint exp="" desc="" field="date_maj"/>
+    <constraint exp="" desc="" field="origine_maj"/>
+    <constraint exp="" desc="" field="lien_doc1"/>
+    <constraint exp="" desc="" field="lien_doc2"/>
+    <constraint exp="" desc="" field="commentaire"/>
+    <constraint exp="" desc="" field="id_noeud_reseau"/>
+    <constraint exp="" desc="" field="id_aep_captage"/>
+    <constraint exp="" desc="" field="nom_usuel"/>
+    <constraint exp="" desc="" field="type_captage"/>
+    <constraint exp="" desc="" field="nom_ressource"/>
+    <constraint exp="" desc="" field="type_ressource"/>
+    <constraint exp="" desc="" field="ref_aac"/>
+    <constraint exp="" desc="" field="ref_dup"/>
+    <constraint exp="" desc="" field="debit_max_autorise"/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
     <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
   </attributeactions>
-  <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+  <attributetableconfig sortOrder="0" actionWidgetStyle="dropDown" sortExpression="">
     <columns>
-      <column hidden="0" name="type_reseau" type="field" width="-1"/>
-      <column hidden="0" name="fictif" type="field" width="-1"/>
-      <column hidden="0" name="etat_service" type="field" width="-1"/>
-      <column hidden="0" name="insee_commune" type="field" width="-1"/>
-      <column hidden="0" name="localisation" type="field" width="-1"/>
-      <column hidden="0" name="maitre_ouvrage" type="field" width="-1"/>
-      <column hidden="0" name="exploitant" type="field" width="-1"/>
-      <column hidden="0" name="entreprise_pose" type="field" width="-1"/>
-      <column hidden="0" name="precision_xy" type="field" width="-1"/>
-      <column hidden="0" name="precision_z" type="field" width="-1"/>
-      <column hidden="0" name="an_pose_sup" type="field" width="-1"/>
-      <column hidden="0" name="an_pose_inf" type="field" width="-1"/>
-      <column hidden="0" name="an_service_sup" type="field" width="-1"/>
-      <column hidden="0" name="an_service_inf" type="field" width="-1"/>
-      <column hidden="0" name="an_abandon_sup" type="field" width="-1"/>
-      <column hidden="0" name="an_abandon_inf" type="field" width="-1"/>
-      <column hidden="0" name="an_rehab_sup" type="field" width="-1"/>
-      <column hidden="0" name="an_rehab_inf" type="field" width="-1"/>
-      <column hidden="0" name="date_creation" type="field" width="-1"/>
-      <column hidden="0" name="origine_creation" type="field" width="-1"/>
-      <column hidden="0" name="date_maj" type="field" width="-1"/>
-      <column hidden="0" name="origine_maj" type="field" width="-1"/>
-      <column hidden="0" name="lien_doc1" type="field" width="-1"/>
-      <column hidden="0" name="lien_doc2" type="field" width="-1"/>
-      <column hidden="0" name="commentaire" type="field" width="-1"/>
-      <column hidden="0" name="id_noeud_reseau" type="field" width="-1"/>
-      <column hidden="0" name="id_aep_captage" type="field" width="-1"/>
-      <column hidden="0" name="nom_usuel" type="field" width="-1"/>
-      <column hidden="0" name="type_captage" type="field" width="-1"/>
-      <column hidden="0" name="nom_ressource" type="field" width="-1"/>
-      <column hidden="0" name="type_ressource" type="field" width="-1"/>
-      <column hidden="0" name="ref_aac" type="field" width="-1"/>
-      <column hidden="0" name="ref_dup" type="field" width="-1"/>
-      <column hidden="0" name="debit_max_autorise" type="field" width="-1"/>
-      <column hidden="1" type="actions" width="-1"/>
+      <column name="type_reseau" hidden="0" width="-1" type="field"/>
+      <column name="fictif" hidden="0" width="-1" type="field"/>
+      <column name="etat_service" hidden="0" width="-1" type="field"/>
+      <column name="insee_commune" hidden="0" width="-1" type="field"/>
+      <column name="localisation" hidden="0" width="-1" type="field"/>
+      <column name="maitre_ouvrage" hidden="0" width="-1" type="field"/>
+      <column name="exploitant" hidden="0" width="-1" type="field"/>
+      <column name="entreprise_pose" hidden="0" width="-1" type="field"/>
+      <column name="precision_xy" hidden="0" width="-1" type="field"/>
+      <column name="precision_z" hidden="0" width="-1" type="field"/>
+      <column name="an_pose_sup" hidden="0" width="-1" type="field"/>
+      <column name="an_pose_inf" hidden="0" width="-1" type="field"/>
+      <column name="an_service_sup" hidden="0" width="-1" type="field"/>
+      <column name="an_service_inf" hidden="0" width="-1" type="field"/>
+      <column name="an_abandon_sup" hidden="0" width="-1" type="field"/>
+      <column name="an_abandon_inf" hidden="0" width="-1" type="field"/>
+      <column name="an_rehab_sup" hidden="0" width="-1" type="field"/>
+      <column name="an_rehab_inf" hidden="0" width="-1" type="field"/>
+      <column name="date_creation" hidden="0" width="-1" type="field"/>
+      <column name="origine_creation" hidden="0" width="-1" type="field"/>
+      <column name="date_maj" hidden="0" width="-1" type="field"/>
+      <column name="origine_maj" hidden="0" width="-1" type="field"/>
+      <column name="lien_doc1" hidden="0" width="-1" type="field"/>
+      <column name="lien_doc2" hidden="0" width="-1" type="field"/>
+      <column name="commentaire" hidden="0" width="-1" type="field"/>
+      <column name="id_noeud_reseau" hidden="0" width="-1" type="field"/>
+      <column name="id_aep_captage" hidden="0" width="-1" type="field"/>
+      <column name="nom_usuel" hidden="0" width="-1" type="field"/>
+      <column name="type_captage" hidden="0" width="-1" type="field"/>
+      <column name="nom_ressource" hidden="0" width="-1" type="field"/>
+      <column name="type_ressource" hidden="0" width="-1" type="field"/>
+      <column name="ref_aac" hidden="0" width="-1" type="field"/>
+      <column name="ref_dup" hidden="0" width="-1" type="field"/>
+      <column name="debit_max_autorise" hidden="0" width="-1" type="field"/>
+      <column name="fid" hidden="0" width="-1" type="field"/>
+      <column hidden="1" width="-1" type="actions"/>
     </columns>
   </attributetableconfig>
   <conditionalstyles>
@@ -1174,202 +1544,202 @@ def my_form_open(dialog, layer, feature):
   <featformsuppress>0</featformsuppress>
   <editorlayout>tablayout</editorlayout>
   <attributeEditorForm>
-    <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-      <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+    <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+      <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
     </labelStyle>
-    <attributeEditorField showLabel="1" name="type_reseau" index="0">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+    <attributeEditorField name="type_reseau" index="1" showLabel="1">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
     </attributeEditorField>
-    <attributeEditorField showLabel="1" name="fictif" index="1">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+    <attributeEditorField name="fictif" index="2" showLabel="1">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
     </attributeEditorField>
-    <attributeEditorContainer collapsedExpressionEnabled="0" collapsed="0" visibilityExpression="" showLabel="1" groupBox="0" name="essentiels" collapsedExpression="" visibilityExpressionEnabled="0" columnCount="1">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+    <attributeEditorContainer name="essentiels" columnCount="1" collapsedExpression="" visibilityExpression="" showLabel="1" collapsed="0" groupBox="0" visibilityExpressionEnabled="0" collapsedExpressionEnabled="0">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
-      <attributeEditorField showLabel="1" name="type_captage" index="28">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="type_captage" index="29" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="nom_usuel" index="27">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="nom_usuel" index="28" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="etat_service" index="2">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="etat_service" index="3" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="maitre_ouvrage" index="5">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="maitre_ouvrage" index="6" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="exploitant" index="6">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="exploitant" index="7" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="precision_xy" index="8">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="precision_xy" index="9" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="an_pose_inf" index="11">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="an_pose_inf" index="12" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="an_pose_sup" index="10">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="an_pose_sup" index="11" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="lien_doc1" index="22">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="lien_doc1" index="23" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="lien_doc2" index="23">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="lien_doc2" index="24" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
     </attributeEditorContainer>
-    <attributeEditorContainer collapsedExpressionEnabled="0" collapsed="0" visibilityExpression="" showLabel="1" groupBox="0" name="spécifiques" collapsedExpression="" visibilityExpressionEnabled="0" columnCount="1">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+    <attributeEditorContainer name="spécifiques" columnCount="1" collapsedExpression="" visibilityExpression="" showLabel="1" collapsed="0" groupBox="0" visibilityExpressionEnabled="0" collapsedExpressionEnabled="0">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
-      <attributeEditorField showLabel="1" name="nom_ressource" index="29">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="nom_ressource" index="30" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="type_ressource" index="30">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="type_ressource" index="31" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="ref_aac" index="31">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="ref_aac" index="32" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="ref_dup" index="32">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="ref_dup" index="33" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="debit_max_autorise" index="33">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="debit_max_autorise" index="34" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="entreprise_pose" index="7">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="entreprise_pose" index="8" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
     </attributeEditorContainer>
-    <attributeEditorContainer collapsedExpressionEnabled="0" collapsed="0" visibilityExpression="" showLabel="1" groupBox="0" name="données générales" collapsedExpression="" visibilityExpressionEnabled="0" columnCount="1">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+    <attributeEditorContainer name="données générales" columnCount="1" collapsedExpression="" visibilityExpression="" showLabel="1" collapsed="0" groupBox="0" visibilityExpressionEnabled="0" collapsedExpressionEnabled="0">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
-      <attributeEditorField showLabel="1" name="insee_commune" index="3">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="insee_commune" index="4" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="localisation" index="4">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="localisation" index="5" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="precision_z" index="9">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="precision_z" index="10" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorContainer collapsedExpressionEnabled="0" collapsed="0" visibilityExpression="" showLabel="1" groupBox="1" name="dates" collapsedExpression="" visibilityExpressionEnabled="0" columnCount="2">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorContainer name="dates" columnCount="2" collapsedExpression="" visibilityExpression="" showLabel="1" collapsed="0" groupBox="1" visibilityExpressionEnabled="0" collapsedExpressionEnabled="0">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
-        <attributeEditorField showLabel="1" name="an_service_inf" index="13">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+        <attributeEditorField name="an_service_inf" index="14" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField showLabel="1" name="an_service_sup" index="12">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+        <attributeEditorField name="an_service_sup" index="13" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField showLabel="1" name="an_abandon_inf" index="15">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+        <attributeEditorField name="an_abandon_inf" index="16" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField showLabel="1" name="an_abandon_sup" index="14">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+        <attributeEditorField name="an_abandon_sup" index="15" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField showLabel="1" name="an_rehab_inf" index="17">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+        <attributeEditorField name="an_rehab_inf" index="18" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField showLabel="1" name="an_rehab_sup" index="16">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+        <attributeEditorField name="an_rehab_sup" index="17" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
       </attributeEditorContainer>
     </attributeEditorContainer>
-    <attributeEditorContainer collapsedExpressionEnabled="0" collapsed="0" visibilityExpression="" showLabel="1" groupBox="0" name="SIG" collapsedExpression="" visibilityExpressionEnabled="0" columnCount="1">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+    <attributeEditorContainer name="SIG" columnCount="1" collapsedExpression="" visibilityExpression="" showLabel="1" collapsed="0" groupBox="0" visibilityExpressionEnabled="0" collapsedExpressionEnabled="0">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
-      <attributeEditorField showLabel="1" name="id_noeud_reseau" index="25">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="id_noeud_reseau" index="26" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="id_aep_captage" index="26">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="id_aep_captage" index="27" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="date_creation" index="18">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="date_creation" index="19" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="origine_creation" index="19">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="origine_creation" index="20" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="date_maj" index="20">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="date_maj" index="21" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField showLabel="1" name="origine_maj" index="21">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+      <attributeEditorField name="origine_maj" index="22" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
     </attributeEditorContainer>
-    <attributeEditorField showLabel="1" name="commentaire" index="24">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" italic="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style="" underline="0"/>
+    <attributeEditorField name="commentaire" index="25" showLabel="1">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
     </attributeEditorField>
   </attributeEditorForm>
@@ -1394,6 +1764,7 @@ def my_form_open(dialog, layer, feature):
     <field name="etat_service" editable="1"/>
     <field name="exploitant" editable="1"/>
     <field name="fictif" editable="1"/>
+    <field name="fid" editable="1"/>
     <field name="fonction_canalisation" editable="1"/>
     <field name="forme" editable="1"/>
     <field name="hauteur_exterieure" editable="1"/>
@@ -1438,63 +1809,64 @@ def my_form_open(dialog, layer, feature):
     <field name="visible" editable="1"/>
   </editable>
   <labelOnTop>
-    <field labelOnTop="0" name="an_abandon_inf"/>
-    <field labelOnTop="0" name="an_abandon_sup"/>
-    <field labelOnTop="0" name="an_pose_inf"/>
-    <field labelOnTop="0" name="an_pose_sup"/>
-    <field labelOnTop="0" name="an_rehab_inf"/>
-    <field labelOnTop="0" name="an_rehab_sup"/>
-    <field labelOnTop="0" name="an_service_inf"/>
-    <field labelOnTop="0" name="an_service_sup"/>
-    <field labelOnTop="0" name="commentaire"/>
-    <field labelOnTop="0" name="contenu_canalisation"/>
-    <field labelOnTop="0" name="cote_fin"/>
-    <field labelOnTop="0" name="date_creation"/>
-    <field labelOnTop="0" name="date_maj"/>
-    <field labelOnTop="0" name="debit_max_autorise"/>
-    <field labelOnTop="0" name="diametre_equivalent"/>
-    <field labelOnTop="0" name="entreprise_pose"/>
-    <field labelOnTop="0" name="etage_pression"/>
-    <field labelOnTop="0" name="etat_service"/>
-    <field labelOnTop="0" name="exploitant"/>
-    <field labelOnTop="0" name="fictif"/>
-    <field labelOnTop="0" name="fonction_canalisation"/>
-    <field labelOnTop="0" name="forme"/>
-    <field labelOnTop="0" name="hauteur_exterieure"/>
-    <field labelOnTop="0" name="hauteur_interieure"/>
-    <field labelOnTop="0" name="id_aep_captage"/>
-    <field labelOnTop="0" name="id_emprise"/>
-    <field labelOnTop="0" name="id_noeud_reseau"/>
-    <field labelOnTop="0" name="id_perimetre_gestion"/>
-    <field labelOnTop="0" name="insee_commune"/>
-    <field labelOnTop="0" name="largeur_exterieure"/>
-    <field labelOnTop="0" name="largeur_interieure"/>
-    <field labelOnTop="0" name="lien_doc1"/>
-    <field labelOnTop="0" name="lien_doc2"/>
-    <field labelOnTop="0" name="localisation"/>
-    <field labelOnTop="0" name="longueur_exterieure"/>
-    <field labelOnTop="0" name="longueur_interieure"/>
-    <field labelOnTop="0" name="longueur_terrain"/>
-    <field labelOnTop="0" name="maitre_ouvrage"/>
-    <field labelOnTop="0" name="materiau"/>
-    <field labelOnTop="0" name="mode_circulation"/>
-    <field labelOnTop="0" name="noeudinitial"/>
-    <field labelOnTop="0" name="noeudterminal"/>
-    <field labelOnTop="0" name="nom_ressource"/>
-    <field labelOnTop="0" name="nom_usuel"/>
-    <field labelOnTop="0" name="origine_creation"/>
-    <field labelOnTop="0" name="origine_maj"/>
-    <field labelOnTop="0" name="precision_xy"/>
-    <field labelOnTop="0" name="precision_z"/>
-    <field labelOnTop="0" name="ref_aac"/>
-    <field labelOnTop="0" name="ref_dup"/>
-    <field labelOnTop="0" name="type_acces"/>
-    <field labelOnTop="0" name="type_captage"/>
-    <field labelOnTop="0" name="type_perimetre_gestion"/>
-    <field labelOnTop="0" name="type_reseau"/>
-    <field labelOnTop="0" name="type_ressource"/>
-    <field labelOnTop="0" name="unite"/>
-    <field labelOnTop="0" name="visible"/>
+    <field name="an_abandon_inf" labelOnTop="0"/>
+    <field name="an_abandon_sup" labelOnTop="0"/>
+    <field name="an_pose_inf" labelOnTop="0"/>
+    <field name="an_pose_sup" labelOnTop="0"/>
+    <field name="an_rehab_inf" labelOnTop="0"/>
+    <field name="an_rehab_sup" labelOnTop="0"/>
+    <field name="an_service_inf" labelOnTop="0"/>
+    <field name="an_service_sup" labelOnTop="0"/>
+    <field name="commentaire" labelOnTop="0"/>
+    <field name="contenu_canalisation" labelOnTop="0"/>
+    <field name="cote_fin" labelOnTop="0"/>
+    <field name="date_creation" labelOnTop="0"/>
+    <field name="date_maj" labelOnTop="0"/>
+    <field name="debit_max_autorise" labelOnTop="0"/>
+    <field name="diametre_equivalent" labelOnTop="0"/>
+    <field name="entreprise_pose" labelOnTop="0"/>
+    <field name="etage_pression" labelOnTop="0"/>
+    <field name="etat_service" labelOnTop="0"/>
+    <field name="exploitant" labelOnTop="0"/>
+    <field name="fictif" labelOnTop="0"/>
+    <field name="fid" labelOnTop="0"/>
+    <field name="fonction_canalisation" labelOnTop="0"/>
+    <field name="forme" labelOnTop="0"/>
+    <field name="hauteur_exterieure" labelOnTop="0"/>
+    <field name="hauteur_interieure" labelOnTop="0"/>
+    <field name="id_aep_captage" labelOnTop="0"/>
+    <field name="id_emprise" labelOnTop="0"/>
+    <field name="id_noeud_reseau" labelOnTop="0"/>
+    <field name="id_perimetre_gestion" labelOnTop="0"/>
+    <field name="insee_commune" labelOnTop="0"/>
+    <field name="largeur_exterieure" labelOnTop="0"/>
+    <field name="largeur_interieure" labelOnTop="0"/>
+    <field name="lien_doc1" labelOnTop="0"/>
+    <field name="lien_doc2" labelOnTop="0"/>
+    <field name="localisation" labelOnTop="0"/>
+    <field name="longueur_exterieure" labelOnTop="0"/>
+    <field name="longueur_interieure" labelOnTop="0"/>
+    <field name="longueur_terrain" labelOnTop="0"/>
+    <field name="maitre_ouvrage" labelOnTop="0"/>
+    <field name="materiau" labelOnTop="0"/>
+    <field name="mode_circulation" labelOnTop="0"/>
+    <field name="noeudinitial" labelOnTop="0"/>
+    <field name="noeudterminal" labelOnTop="0"/>
+    <field name="nom_ressource" labelOnTop="0"/>
+    <field name="nom_usuel" labelOnTop="0"/>
+    <field name="origine_creation" labelOnTop="0"/>
+    <field name="origine_maj" labelOnTop="0"/>
+    <field name="precision_xy" labelOnTop="0"/>
+    <field name="precision_z" labelOnTop="0"/>
+    <field name="ref_aac" labelOnTop="0"/>
+    <field name="ref_dup" labelOnTop="0"/>
+    <field name="type_acces" labelOnTop="0"/>
+    <field name="type_captage" labelOnTop="0"/>
+    <field name="type_perimetre_gestion" labelOnTop="0"/>
+    <field name="type_reseau" labelOnTop="0"/>
+    <field name="type_ressource" labelOnTop="0"/>
+    <field name="unite" labelOnTop="0"/>
+    <field name="visible" labelOnTop="0"/>
   </labelOnTop>
   <reuseLastValue>
     <field name="an_abandon_inf" reuseLastValue="0"/>
@@ -1516,6 +1888,7 @@ def my_form_open(dialog, layer, feature):
     <field name="etat_service" reuseLastValue="1"/>
     <field name="exploitant" reuseLastValue="1"/>
     <field name="fictif" reuseLastValue="0"/>
+    <field name="fid" reuseLastValue="0"/>
     <field name="fonction_canalisation" reuseLastValue="0"/>
     <field name="forme" reuseLastValue="0"/>
     <field name="hauteur_exterieure" reuseLastValue="0"/>

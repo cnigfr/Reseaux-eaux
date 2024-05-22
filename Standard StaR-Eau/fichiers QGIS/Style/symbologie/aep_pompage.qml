@@ -1,25 +1,25 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis maxScale="0" hasScaleBasedVisibilityFlag="0" simplifyAlgorithm="0" simplifyDrawingTol="1" version="3.28.9-Firenze" styleCategories="Symbology|Symbology3D|Labeling|Rendering|Legend" minScale="100000000" labelsEnabled="0" simplifyMaxScale="1" symbologyReferenceScale="-1" simplifyDrawingHints="0" simplifyLocal="1">
-  <renderer-v2 referencescale="-1" forceraster="0" symbollevels="0" enableorderby="0" type="RuleRenderer">
+<qgis simplifyDrawingTol="1" styleCategories="Symbology|Symbology3D|Labeling|Rendering|Legend" labelsEnabled="0" maxScale="0" minScale="100000000" simplifyAlgorithm="0" hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="0" simplifyLocal="1" simplifyMaxScale="1" symbologyReferenceScale="-1" version="3.28.9-Firenze">
+  <renderer-v2 enableorderby="0" forceraster="0" symbollevels="0" type="RuleRenderer" referencescale="-1">
     <rules key="{7d9171da-338d-4733-976b-3bc72a109383}">
-      <rule filter="&quot;etat_service&quot; IN ( 'en_service','en_arret')" description="Conduite en service ou arrêt momentané" key="{8db5a71e-f629-4bf3-aaa2-a27dfc009365}" label="En service">
-        <rule scalemaxdenom="110000" key="{ca9712c6-fd75-4bab-b2e7-f56a84e21d68}" scalemindenom="2001" label="Vue d'ensemble">
-          <rule symbol="0" filter="&quot;fonction_pompage&quot;" key="{538599eb-70c5-4a2a-b910-861b0aadc72a}" label="Pompage"/>
+      <rule key="{8db5a71e-f629-4bf3-aaa2-a27dfc009365}" description="Conduite en service ou arrêt momentané" filter="&quot;etat_service&quot; IN ( 'en_service','en_arret')" label="En service">
+        <rule scalemaxdenom="110000" key="{ca9712c6-fd75-4bab-b2e7-f56a84e21d68}" label="Vue d'ensemble" scalemindenom="2001">
+          <rule key="{538599eb-70c5-4a2a-b910-861b0aadc72a}" filter="&quot;fonction_pompage&quot;" label="Pompage" symbol="0"/>
         </rule>
         <rule scalemaxdenom="2000" key="{12476d89-e51c-44f4-b989-88588868e278}" label="Détails">
-          <rule symbol="1" filter="&quot;fonction_pompage&quot; = 'exhaure'" key="{4d7fffba-6c1f-4bb9-8dc6-5caa916ffa22}" label="eaux d'exhaure"/>
-          <rule symbol="2" filter="&quot;fonction_pompage&quot; = 'transfert'" key="{27aced1c-b3c9-4b3e-b9d4-499ff52a29ec}" label="transfert"/>
-          <rule symbol="3" filter="&quot;fonction_pompage&quot; = 'reprise'" key="{706acf9f-af46-40a0-9aa5-8ebe57ba12b0}" label="reprise"/>
-          <rule symbol="4" filter="&quot;fonction_pompage&quot; = 'accelerateur'" key="{2608422d-43e7-45e9-afff-2dfd20af5f75}" label="accelerateur"/>
-          <rule symbol="5" filter="&quot;fonction_pompage&quot; = 'surpresseur'" key="{7904f622-063e-4148-95fb-4c64677549d8}" label="surpresseur"/>
+          <rule key="{4d7fffba-6c1f-4bb9-8dc6-5caa916ffa22}" filter="&quot;fonction_pompage&quot; = 'exhaure'" label="eaux d'exhaure" symbol="1"/>
+          <rule key="{27aced1c-b3c9-4b3e-b9d4-499ff52a29ec}" filter="&quot;fonction_pompage&quot; = 'transfert'" label="transfert" symbol="2"/>
+          <rule key="{706acf9f-af46-40a0-9aa5-8ebe57ba12b0}" filter="&quot;fonction_pompage&quot; = 'reprise'" label="reprise" symbol="3"/>
+          <rule key="{2608422d-43e7-45e9-afff-2dfd20af5f75}" filter="&quot;fonction_pompage&quot; = 'accelerateur'" label="accelerateur" symbol="4"/>
+          <rule key="{7904f622-063e-4148-95fb-4c64677549d8}" filter="&quot;fonction_pompage&quot; = 'surpresseur'" label="surpresseur" symbol="5"/>
         </rule>
       </rule>
-      <rule symbol="6" filter=" &quot;etat_service&quot; IN ('abandon','depose','comble')" key="{b8bb3ded-c04f-4985-8c5c-e8abc0617f48}" label="Abandon"/>
-      <rule symbol="7" filter=" &quot;etat_service&quot; IN ('projet','construction')" key="{55bd9260-a539-449a-a5e4-0b7d3c3d3ef0}" label="En projet/en construction"/>
-      <rule symbol="8" filter="ELSE" description="Manque de renseignement sur l'état de service" key="{0ac6b1e2-ea91-430b-ab23-20d6c3abe7ff}" label="Etat non renseigné"/>
+      <rule key="{b8bb3ded-c04f-4985-8c5c-e8abc0617f48}" filter=" &quot;etat_service&quot; IN ('abandon','depose','comble')" label="Abandon" symbol="6"/>
+      <rule key="{55bd9260-a539-449a-a5e4-0b7d3c3d3ef0}" filter=" &quot;etat_service&quot; IN ('projet','construction')" label="En projet/en construction" symbol="7"/>
+      <rule key="{0ac6b1e2-ea91-430b-ab23-20d6c3abe7ff}" description="Manque de renseignement sur l'état de service" filter="ELSE" label="Etat non renseigné" symbol="8"/>
     </rules>
     <symbols>
-      <symbol frame_rate="10" clip_to_extent="1" name="0" force_rhr="0" alpha="1" type="marker" is_animated="0">
+      <symbol force_rhr="0" frame_rate="10" name="0" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -27,7 +27,7 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SvgMarker" enabled="1" pass="0">
+        <layer pass="0" enabled="1" class="SvgMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
             <Option name="color" type="QString" value="255,255,255,255"/>
@@ -57,7 +57,7 @@
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol frame_rate="10" clip_to_extent="1" name="1" force_rhr="0" alpha="1" type="marker" is_animated="0">
+      <symbol force_rhr="0" frame_rate="10" name="1" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -65,7 +65,7 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SvgMarker" enabled="1" pass="0">
+        <layer pass="0" enabled="1" class="SvgMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
             <Option name="color" type="QString" value="22,211,110,255"/>
@@ -95,7 +95,7 @@
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol frame_rate="10" clip_to_extent="1" name="2" force_rhr="0" alpha="1" type="marker" is_animated="0">
+      <symbol force_rhr="0" frame_rate="10" name="2" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -103,7 +103,7 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SvgMarker" enabled="1" pass="0">
+        <layer pass="0" enabled="1" class="SvgMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
             <Option name="color" type="QString" value="255,127,0,255"/>
@@ -133,7 +133,7 @@
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol frame_rate="10" clip_to_extent="1" name="3" force_rhr="0" alpha="1" type="marker" is_animated="0">
+      <symbol force_rhr="0" frame_rate="10" name="3" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -141,7 +141,7 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SvgMarker" enabled="1" pass="0">
+        <layer pass="0" enabled="1" class="SvgMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
             <Option name="color" type="QString" value="255,105,255,255"/>
@@ -171,7 +171,7 @@
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol frame_rate="10" clip_to_extent="1" name="4" force_rhr="0" alpha="1" type="marker" is_animated="0">
+      <symbol force_rhr="0" frame_rate="10" name="4" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -179,7 +179,7 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SvgMarker" enabled="1" pass="0">
+        <layer pass="0" enabled="1" class="SvgMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
             <Option name="color" type="QString" value="0,192,255,255"/>
@@ -209,7 +209,7 @@
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol frame_rate="10" clip_to_extent="1" name="5" force_rhr="0" alpha="1" type="marker" is_animated="0">
+      <symbol force_rhr="0" frame_rate="10" name="5" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -217,7 +217,7 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SvgMarker" enabled="1" pass="0">
+        <layer pass="0" enabled="1" class="SvgMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
             <Option name="color" type="QString" value="166,206,227,255"/>
@@ -246,7 +246,7 @@
             </Option>
           </data_defined_properties>
         </layer>
-        <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
             <Option name="cap_style" type="QString" value="square"/>
@@ -277,7 +277,7 @@
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol frame_rate="10" clip_to_extent="1" name="6" force_rhr="0" alpha="0.97" type="marker" is_animated="0">
+      <symbol force_rhr="0" frame_rate="10" name="6" alpha="0.97" type="marker" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -285,7 +285,7 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
             <Option name="cap_style" type="QString" value="square"/>
@@ -315,7 +315,7 @@
             </Option>
           </data_defined_properties>
         </layer>
-        <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
             <Option name="cap_style" type="QString" value="square"/>
@@ -346,7 +346,7 @@
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol frame_rate="10" clip_to_extent="1" name="7" force_rhr="0" alpha="1" type="marker" is_animated="0">
+      <symbol force_rhr="0" frame_rate="10" name="7" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -354,7 +354,7 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
             <Option name="cap_style" type="QString" value="square"/>
@@ -385,7 +385,7 @@
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol frame_rate="10" clip_to_extent="1" name="8" force_rhr="0" alpha="1" type="marker" is_animated="0">
+      <symbol force_rhr="0" frame_rate="10" name="8" alpha="1" type="marker" clip_to_extent="1" is_animated="0">
         <data_defined_properties>
           <Option type="Map">
             <Option name="name" type="QString" value=""/>
@@ -393,7 +393,7 @@
             <Option name="type" type="QString" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
+        <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
           <Option type="Map">
             <Option name="angle" type="QString" value="0"/>
             <Option name="cap_style" type="QString" value="square"/>

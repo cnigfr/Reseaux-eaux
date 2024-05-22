@@ -1,33 +1,27 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis readOnly="0" styleCategories="LayerConfiguration|Fields|Forms|Actions|CustomProperties|Relations" version="3.28.9-Firenze">
-  <flags>
-    <Identifiable>1</Identifiable>
-    <Removable>1</Removable>
-    <Searchable>1</Searchable>
-    <Private>0</Private>
-  </flags>
-  <customproperties>
-    <Option type="Map">
-      <Option name="embeddedWidgets/count" value="0" type="int"/>
-      <Option name="variableNames"/>
-      <Option name="variableValues"/>
-    </Option>
-  </customproperties>
+<qgis styleCategories="Fields|Forms|Actions|AttributeTable|Relations" version="3.28.9-Firenze">
   <referencedLayers/>
   <fieldConfiguration>
+    <field name="fid" configurationFlags="None">
+      <editWidget type="TextEdit">
+        <config>
+          <Option/>
+        </config>
+      </editWidget>
+    </field>
     <field name="type_reseau" configurationFlags="None">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
             <Option name="map" type="List">
               <Option type="Map">
-                <Option name="Eau potable" value="aep" type="QString"/>
+                <Option name="Eau potable" type="QString" value="aep"/>
               </Option>
               <Option type="Map">
-                <Option name="Eaux pluviales" value="assaep" type="QString"/>
+                <Option name="Eaux pluviales" type="QString" value="assaep"/>
               </Option>
               <Option type="Map">
-                <Option name="Autre" value="autre" type="QString"/>
+                <Option name="Autre" type="QString" value="autre"/>
               </Option>
             </Option>
           </Option>
@@ -38,9 +32,9 @@
       <editWidget type="CheckBox">
         <config>
           <Option type="Map">
-            <Option name="CheckedState" value="" type="QString"/>
-            <Option name="TextDisplayMethod" value="0" type="int"/>
-            <Option name="UncheckedState" value="" type="QString"/>
+            <Option name="CheckedState" type="QString" value=""/>
+            <Option name="TextDisplayMethod" type="int" value="0"/>
+            <Option name="UncheckedState" type="QString" value=""/>
           </Option>
         </config>
       </editWidget>
@@ -51,40 +45,40 @@
           <Option type="Map">
             <Option name="map" type="List">
               <Option type="Map">
-                <Option name="en service" value="en_service" type="QString"/>
+                <Option name="en service" type="QString" value="en_service"/>
               </Option>
               <Option type="Map">
-                <Option name="en arrêt" value="en_arret" type="QString"/>
+                <Option name="en arrêt" type="QString" value="en_arret"/>
               </Option>
               <Option type="Map">
-                <Option name="abandon" value="abandon" type="QString"/>
+                <Option name="abandon" type="QString" value="abandon"/>
               </Option>
               <Option type="Map">
-                <Option name="en projet" value="en_projet" type="QString"/>
+                <Option name="en projet" type="QString" value="en_projet"/>
               </Option>
               <Option type="Map">
-                <Option name="en construction" value="en_construction" type="QString"/>
+                <Option name="en construction" type="QString" value="en_construction"/>
               </Option>
               <Option type="Map">
-                <Option name="comblé" value="comble" type="QString"/>
+                <Option name="comblé" type="QString" value="comble"/>
               </Option>
               <Option type="Map">
-                <Option name="déposé" value="depose" type="QString"/>
+                <Option name="déposé" type="QString" value="depose"/>
               </Option>
               <Option type="Map">
-                <Option name="Non renseigné(e)" value="non_renseigne" type="QString"/>
+                <Option name="Non renseigné(e)" type="QString" value="non_renseigne"/>
               </Option>
               <Option type="Map">
-                <Option name="Non concerné(e)" value="non_concerne" type="QString"/>
+                <Option name="Non concerné(e)" type="QString" value="non_concerne"/>
               </Option>
               <Option type="Map">
-                <Option name="Non validé(e)" value="non_valide" type="QString"/>
+                <Option name="Non validé(e)" type="QString" value="non_valide"/>
               </Option>
               <Option type="Map">
-                <Option name="Non déterminé(e)" value="non_determine" type="QString"/>
+                <Option name="Non déterminé(e)" type="QString" value="non_determine"/>
               </Option>
               <Option type="Map">
-                <Option name="Autre" value="autre" type="QString"/>
+                <Option name="Autre" type="QString" value="autre"/>
               </Option>
             </Option>
           </Option>
@@ -95,8 +89,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -105,8 +99,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -115,8 +109,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -125,8 +119,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -135,8 +129,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -147,13 +141,13 @@
           <Option type="Map">
             <Option name="map" type="List">
               <Option type="Map">
-                <Option name="A" value="A" type="QString"/>
+                <Option name="A" type="QString" value="A"/>
               </Option>
               <Option type="Map">
-                <Option name="B" value="B" type="QString"/>
+                <Option name="B" type="QString" value="B"/>
               </Option>
               <Option type="Map">
-                <Option name="C" value="C" type="QString"/>
+                <Option name="C" type="QString" value="C"/>
               </Option>
             </Option>
           </Option>
@@ -166,13 +160,13 @@
           <Option type="Map">
             <Option name="map" type="List">
               <Option type="Map">
-                <Option name="A" value="A" type="QString"/>
+                <Option name="A" type="QString" value="A"/>
               </Option>
               <Option type="Map">
-                <Option name="B" value="B" type="QString"/>
+                <Option name="B" type="QString" value="B"/>
               </Option>
               <Option type="Map">
-                <Option name="C" value="C" type="QString"/>
+                <Option name="C" type="QString" value="C"/>
               </Option>
             </Option>
           </Option>
@@ -183,8 +177,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -193,8 +187,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -203,8 +197,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -213,8 +207,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -223,8 +217,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -233,8 +227,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -243,8 +237,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -253,8 +247,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -263,11 +257,11 @@
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option name="allow_null" value="true" type="bool"/>
-            <Option name="calendar_popup" value="true" type="bool"/>
-            <Option name="display_format" value="dd/MM/yyyy HH:mm:ss" type="QString"/>
-            <Option name="field_format" value="dd/MM/yyyy HH:mm:ss" type="QString"/>
-            <Option name="field_iso_format" value="false" type="bool"/>
+            <Option name="allow_null" type="bool" value="true"/>
+            <Option name="calendar_popup" type="bool" value="true"/>
+            <Option name="display_format" type="QString" value="dd/MM/yyyy HH:mm:ss"/>
+            <Option name="field_format" type="QString" value="dd/MM/yyyy HH:mm:ss"/>
+            <Option name="field_iso_format" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -278,28 +272,28 @@
           <Option type="Map">
             <Option name="map" type="List">
               <Option type="Map">
-                <Option name="récolement certifié" value="recolt_certifie" type="QString"/>
+                <Option name="récolement certifié" type="QString" value="recolt_certifie"/>
               </Option>
               <Option type="Map">
-                <Option name="Récolement ancien" value="recolt_ancien" type="QString"/>
+                <Option name="Récolement ancien" type="QString" value="recolt_ancien"/>
               </Option>
               <Option type="Map">
-                <Option name="Projet vérifié ou certifié" value="projet_certifie" type="QString"/>
+                <Option name="Projet vérifié ou certifié" type="QString" value="projet_certifie"/>
               </Option>
               <Option type="Map">
-                <Option name="Plan réalisation" value="plan_realisation" type="QString"/>
+                <Option name="Plan réalisation" type="QString" value="plan_realisation"/>
               </Option>
               <Option type="Map">
-                <Option name="Croquis vérifié" value="croquis_certifie" type="QString"/>
+                <Option name="Croquis vérifié" type="QString" value="croquis_certifie"/>
               </Option>
               <Option type="Map">
-                <Option name="Plan non vérifié" value="plan_non_verifie" type="QString"/>
+                <Option name="Plan non vérifié" type="QString" value="plan_non_verifie"/>
               </Option>
               <Option type="Map">
-                <Option name="Croquis" value="croquis" type="QString"/>
+                <Option name="Croquis" type="QString" value="croquis"/>
               </Option>
               <Option type="Map">
-                <Option name="Source non vérifiée" value="non_fiable" type="QString"/>
+                <Option name="Source non vérifiée" type="QString" value="non_fiable"/>
               </Option>
             </Option>
           </Option>
@@ -310,11 +304,11 @@
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option name="allow_null" value="true" type="bool"/>
-            <Option name="calendar_popup" value="true" type="bool"/>
-            <Option name="display_format" value="dd/MM/yyyy HH:mm:ss" type="QString"/>
-            <Option name="field_format" value="dd/MM/yyyy HH:mm:ss" type="QString"/>
-            <Option name="field_iso_format" value="false" type="bool"/>
+            <Option name="allow_null" type="bool" value="true"/>
+            <Option name="calendar_popup" type="bool" value="true"/>
+            <Option name="display_format" type="QString" value="dd/MM/yyyy HH:mm:ss"/>
+            <Option name="field_format" type="QString" value="dd/MM/yyyy HH:mm:ss"/>
+            <Option name="field_iso_format" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -325,28 +319,28 @@
           <Option type="Map">
             <Option name="map" type="List">
               <Option type="Map">
-                <Option name="récolement certifié" value="recolt_certifie" type="QString"/>
+                <Option name="récolement certifié" type="QString" value="recolt_certifie"/>
               </Option>
               <Option type="Map">
-                <Option name="Récolement ancien" value="recolt_ancien" type="QString"/>
+                <Option name="Récolement ancien" type="QString" value="recolt_ancien"/>
               </Option>
               <Option type="Map">
-                <Option name="Projet vérifié ou certifié" value="projet_certifie" type="QString"/>
+                <Option name="Projet vérifié ou certifié" type="QString" value="projet_certifie"/>
               </Option>
               <Option type="Map">
-                <Option name="Plan réalisation" value="plan_realisation" type="QString"/>
+                <Option name="Plan réalisation" type="QString" value="plan_realisation"/>
               </Option>
               <Option type="Map">
-                <Option name="Croquis vérifié" value="croquis_certifie" type="QString"/>
+                <Option name="Croquis vérifié" type="QString" value="croquis_certifie"/>
               </Option>
               <Option type="Map">
-                <Option name="Plan non vérifié" value="plan_non_verifie" type="QString"/>
+                <Option name="Plan non vérifié" type="QString" value="plan_non_verifie"/>
               </Option>
               <Option type="Map">
-                <Option name="Croquis" value="croquis" type="QString"/>
+                <Option name="Croquis" type="QString" value="croquis"/>
               </Option>
               <Option type="Map">
-                <Option name="Source non vérifiée" value="non_fiable" type="QString"/>
+                <Option name="Source non vérifiée" type="QString" value="non_fiable"/>
               </Option>
             </Option>
           </Option>
@@ -357,22 +351,22 @@
       <editWidget type="ExternalResource">
         <config>
           <Option type="Map">
-            <Option name="DocumentViewer" value="0" type="int"/>
-            <Option name="DocumentViewerHeight" value="0" type="int"/>
-            <Option name="DocumentViewerWidth" value="0" type="int"/>
-            <Option name="FileWidget" value="true" type="bool"/>
-            <Option name="FileWidgetButton" value="true" type="bool"/>
-            <Option name="FileWidgetFilter" value="" type="QString"/>
+            <Option name="DocumentViewer" type="int" value="0"/>
+            <Option name="DocumentViewerHeight" type="int" value="0"/>
+            <Option name="DocumentViewerWidth" type="int" value="0"/>
+            <Option name="FileWidget" type="bool" value="true"/>
+            <Option name="FileWidgetButton" type="bool" value="true"/>
+            <Option name="FileWidgetFilter" type="QString" value=""/>
             <Option name="PropertyCollection" type="Map">
-              <Option name="name" value="" type="QString"/>
+              <Option name="name" type="QString" value=""/>
               <Option name="properties" type="invalid"/>
-              <Option name="type" value="collection" type="QString"/>
+              <Option name="type" type="QString" value="collection"/>
             </Option>
-            <Option name="RelativeStorage" value="0" type="int"/>
-            <Option name="StorageAuthConfigId" value="" type="QString"/>
-            <Option name="StorageMode" value="0" type="int"/>
-            <Option name="StorageType" value="" type="QString"/>
-            <Option name="UseLink" value="true" type="bool"/>
+            <Option name="RelativeStorage" type="int" value="0"/>
+            <Option name="StorageAuthConfigId" type="QString" value=""/>
+            <Option name="StorageMode" type="int" value="0"/>
+            <Option name="StorageType" type="QString" value=""/>
+            <Option name="UseLink" type="bool" value="true"/>
           </Option>
         </config>
       </editWidget>
@@ -381,8 +375,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -391,8 +385,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="true" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="true"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -401,8 +395,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
@@ -411,133 +405,175 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias name="type de réseau" field="type_reseau" index="0"/>
-    <alias name="fictif ?" field="fictif" index="1"/>
-    <alias name="état de service" field="etat_service" index="2"/>
-    <alias name="insee de la commune" field="insee_commune" index="3"/>
-    <alias name="adresse, nom de la rue principale, ou localisation relative du patrimoine" field="localisation" index="4"/>
-    <alias name="maitre d'ouvrage" field="maitre_ouvrage" index="5"/>
-    <alias name="exploitant actuel" field="exploitant" index="6"/>
-    <alias name="entreprise de pose" field="entreprise_pose" index="7"/>
-    <alias name="classe de précision XY" field="precision_xy" index="8"/>
-    <alias name="classe de précision Z" field="precision_z" index="9"/>
-    <alias name="Année marquant la fin de la période de pose" field="an_pose_sup" index="10"/>
-    <alias name="Année marquant la début de la période de pose" field="an_pose_inf" index="11"/>
-    <alias name="Année marquant la fin de la période de mise en service" field="an_service_sup" index="12"/>
-    <alias name="Année marquant le début de la période de mise en service" field="an_service_inf" index="13"/>
-    <alias name="Année marquant la fin de la période d'arrêt définitif" field="an_abandon_sup" index="14"/>
-    <alias name="Année marquant le début de la période d'arrêt définitif" field="an_abandon_inf" index="15"/>
-    <alias name="Année marquant la fin de la période de réhabilitation" field="an_rehab_sup" index="16"/>
-    <alias name="Année marquant le début de la période de mise en service" field="an_rehab_inf" index="17"/>
-    <alias name="date de la création de l'objet sig" field="date_creation" index="18"/>
-    <alias name="document source de la création" field="origine_creation" index="19"/>
-    <alias name="date de mise à jour de l'objet sig" field="date_maj" index="20"/>
-    <alias name="document source de la mise à jour" field="origine_maj" index="21"/>
-    <alias name="lien vers document" field="lien_doc1" index="22"/>
-    <alias name="lien 2 vers document" field="lien_doc2" index="23"/>
-    <alias name="" field="commentaire" index="24"/>
-    <alias name="identifiant" field="id_aep_station_alerte" index="25"/>
-    <alias name="nom usuel" field="nom_usuel" index="26"/>
+    <alias name="" index="0" field="fid"/>
+    <alias name="type de réseau" index="1" field="type_reseau"/>
+    <alias name="fictif ?" index="2" field="fictif"/>
+    <alias name="état de service" index="3" field="etat_service"/>
+    <alias name="insee de la commune" index="4" field="insee_commune"/>
+    <alias name="adresse, nom de la rue principale, ou localisation relative du patrimoine" index="5" field="localisation"/>
+    <alias name="maitre d'ouvrage" index="6" field="maitre_ouvrage"/>
+    <alias name="exploitant actuel" index="7" field="exploitant"/>
+    <alias name="entreprise de pose" index="8" field="entreprise_pose"/>
+    <alias name="classe de précision XY" index="9" field="precision_xy"/>
+    <alias name="classe de précision Z" index="10" field="precision_z"/>
+    <alias name="Année marquant la fin de la période de pose" index="11" field="an_pose_sup"/>
+    <alias name="Année marquant la début de la période de pose" index="12" field="an_pose_inf"/>
+    <alias name="Année marquant la fin de la période de mise en service" index="13" field="an_service_sup"/>
+    <alias name="Année marquant le début de la période de mise en service" index="14" field="an_service_inf"/>
+    <alias name="Année marquant la fin de la période d'arrêt définitif" index="15" field="an_abandon_sup"/>
+    <alias name="Année marquant le début de la période d'arrêt définitif" index="16" field="an_abandon_inf"/>
+    <alias name="Année marquant la fin de la période de réhabilitation" index="17" field="an_rehab_sup"/>
+    <alias name="Année marquant le début de la période de réhabilitation" index="18" field="an_rehab_inf"/>
+    <alias name="date de la création de l'objet sig" index="19" field="date_creation"/>
+    <alias name="document source de la création" index="20" field="origine_creation"/>
+    <alias name="date de mise à jour de l'objet sig" index="21" field="date_maj"/>
+    <alias name="document source de la mise à jour" index="22" field="origine_maj"/>
+    <alias name="lien vers document" index="23" field="lien_doc1"/>
+    <alias name="lien 2 vers document" index="24" field="lien_doc2"/>
+    <alias name="" index="25" field="commentaire"/>
+    <alias name="identifiant" index="26" field="id_aep_station_alerte"/>
+    <alias name="nom usuel" index="27" field="nom_usuel"/>
   </aliases>
   <defaults>
-    <default expression="" field="type_reseau" applyOnUpdate="0"/>
-    <default expression="'false'" field="fictif" applyOnUpdate="0"/>
-    <default expression="'en_service'" field="etat_service" applyOnUpdate="0"/>
-    <default expression="" field="insee_commune" applyOnUpdate="0"/>
-    <default expression="" field="localisation" applyOnUpdate="0"/>
-    <default expression="" field="maitre_ouvrage" applyOnUpdate="0"/>
-    <default expression="" field="exploitant" applyOnUpdate="0"/>
-    <default expression="" field="entreprise_pose" applyOnUpdate="0"/>
-    <default expression="'C'" field="precision_xy" applyOnUpdate="0"/>
-    <default expression="'C'" field="precision_z" applyOnUpdate="0"/>
-    <default expression="'-9999'" field="an_pose_sup" applyOnUpdate="0"/>
-    <default expression="" field="an_pose_inf" applyOnUpdate="0"/>
-    <default expression="" field="an_service_sup" applyOnUpdate="0"/>
-    <default expression="" field="an_service_inf" applyOnUpdate="0"/>
-    <default expression="" field="an_abandon_sup" applyOnUpdate="0"/>
-    <default expression="" field="an_abandon_inf" applyOnUpdate="0"/>
-    <default expression="" field="an_rehab_sup" applyOnUpdate="0"/>
-    <default expression="" field="an_rehab_inf" applyOnUpdate="0"/>
-    <default expression="now()" field="date_creation" applyOnUpdate="0"/>
-    <default expression="'non_renseigne'" field="origine_creation" applyOnUpdate="0"/>
-    <default expression="now()" field="date_maj" applyOnUpdate="1"/>
-    <default expression="" field="origine_maj" applyOnUpdate="0"/>
-    <default expression="" field="lien_doc1" applyOnUpdate="0"/>
-    <default expression="" field="lien_doc2" applyOnUpdate="0"/>
-    <default expression="" field="commentaire" applyOnUpdate="0"/>
-    <default expression="uuid()" field="id_aep_station_alerte" applyOnUpdate="0"/>
-    <default expression="" field="nom_usuel" applyOnUpdate="0"/>
+    <default expression="" applyOnUpdate="0" field="fid"/>
+    <default expression="" applyOnUpdate="0" field="type_reseau"/>
+    <default expression="'false'" applyOnUpdate="0" field="fictif"/>
+    <default expression="'en_service'" applyOnUpdate="0" field="etat_service"/>
+    <default expression="" applyOnUpdate="0" field="insee_commune"/>
+    <default expression="" applyOnUpdate="0" field="localisation"/>
+    <default expression="" applyOnUpdate="0" field="maitre_ouvrage"/>
+    <default expression="" applyOnUpdate="0" field="exploitant"/>
+    <default expression="" applyOnUpdate="0" field="entreprise_pose"/>
+    <default expression="'C'" applyOnUpdate="0" field="precision_xy"/>
+    <default expression="'C'" applyOnUpdate="0" field="precision_z"/>
+    <default expression="'-9999'" applyOnUpdate="0" field="an_pose_sup"/>
+    <default expression="" applyOnUpdate="0" field="an_pose_inf"/>
+    <default expression="" applyOnUpdate="0" field="an_service_sup"/>
+    <default expression="" applyOnUpdate="0" field="an_service_inf"/>
+    <default expression="" applyOnUpdate="0" field="an_abandon_sup"/>
+    <default expression="" applyOnUpdate="0" field="an_abandon_inf"/>
+    <default expression="" applyOnUpdate="0" field="an_rehab_sup"/>
+    <default expression="" applyOnUpdate="0" field="an_rehab_inf"/>
+    <default expression="now()" applyOnUpdate="0" field="date_creation"/>
+    <default expression="'non_renseigne'" applyOnUpdate="0" field="origine_creation"/>
+    <default expression="now()" applyOnUpdate="1" field="date_maj"/>
+    <default expression="" applyOnUpdate="0" field="origine_maj"/>
+    <default expression="" applyOnUpdate="0" field="lien_doc1"/>
+    <default expression="" applyOnUpdate="0" field="lien_doc2"/>
+    <default expression="" applyOnUpdate="0" field="commentaire"/>
+    <default expression="uuid()" applyOnUpdate="0" field="id_aep_station_alerte"/>
+    <default expression="" applyOnUpdate="0" field="nom_usuel"/>
   </defaults>
   <constraints>
-    <constraint exp_strength="0" field="type_reseau" notnull_strength="1" unique_strength="0" constraints="1"/>
-    <constraint exp_strength="0" field="fictif" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="etat_service" notnull_strength="1" unique_strength="0" constraints="1"/>
-    <constraint exp_strength="0" field="insee_commune" notnull_strength="1" unique_strength="0" constraints="1"/>
-    <constraint exp_strength="0" field="localisation" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="maitre_ouvrage" notnull_strength="1" unique_strength="0" constraints="1"/>
-    <constraint exp_strength="0" field="exploitant" notnull_strength="1" unique_strength="0" constraints="1"/>
-    <constraint exp_strength="0" field="entreprise_pose" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="precision_xy" notnull_strength="1" unique_strength="0" constraints="1"/>
-    <constraint exp_strength="0" field="precision_z" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="an_pose_sup" notnull_strength="1" unique_strength="0" constraints="1"/>
-    <constraint exp_strength="0" field="an_pose_inf" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="an_service_sup" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="an_service_inf" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="an_abandon_sup" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="an_abandon_inf" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="an_rehab_sup" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="an_rehab_inf" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="date_creation" notnull_strength="1" unique_strength="0" constraints="1"/>
-    <constraint exp_strength="0" field="origine_creation" notnull_strength="1" unique_strength="0" constraints="1"/>
-    <constraint exp_strength="0" field="date_maj" notnull_strength="1" unique_strength="0" constraints="1"/>
-    <constraint exp_strength="0" field="origine_maj" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="lien_doc1" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="lien_doc2" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="commentaire" notnull_strength="0" unique_strength="0" constraints="0"/>
-    <constraint exp_strength="0" field="id_aep_station_alerte" notnull_strength="1" unique_strength="1" constraints="3"/>
-    <constraint exp_strength="0" field="nom_usuel" notnull_strength="0" unique_strength="0" constraints="0"/>
+    <constraint constraints="3" unique_strength="1" exp_strength="0" notnull_strength="1" field="fid"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="type_reseau"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="fictif"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="etat_service"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="insee_commune"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="localisation"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="maitre_ouvrage"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="exploitant"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="entreprise_pose"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="precision_xy"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="precision_z"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="an_pose_sup"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_pose_inf"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_service_sup"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_service_inf"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_abandon_sup"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_abandon_inf"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_rehab_sup"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="an_rehab_inf"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="date_creation"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="origine_creation"/>
+    <constraint constraints="1" unique_strength="0" exp_strength="0" notnull_strength="1" field="date_maj"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="origine_maj"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="lien_doc1"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="lien_doc2"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="commentaire"/>
+    <constraint constraints="3" unique_strength="1" exp_strength="0" notnull_strength="1" field="id_aep_station_alerte"/>
+    <constraint constraints="0" unique_strength="0" exp_strength="0" notnull_strength="0" field="nom_usuel"/>
   </constraints>
   <constraintExpressions>
-    <constraint field="type_reseau" desc="" exp=""/>
-    <constraint field="fictif" desc="" exp=""/>
-    <constraint field="etat_service" desc="" exp=""/>
-    <constraint field="insee_commune" desc="" exp=""/>
-    <constraint field="localisation" desc="" exp=""/>
-    <constraint field="maitre_ouvrage" desc="" exp=""/>
-    <constraint field="exploitant" desc="" exp=""/>
-    <constraint field="entreprise_pose" desc="" exp=""/>
-    <constraint field="precision_xy" desc="" exp=""/>
-    <constraint field="precision_z" desc="" exp=""/>
-    <constraint field="an_pose_sup" desc="" exp=""/>
-    <constraint field="an_pose_inf" desc="" exp=""/>
-    <constraint field="an_service_sup" desc="" exp=""/>
-    <constraint field="an_service_inf" desc="" exp=""/>
-    <constraint field="an_abandon_sup" desc="" exp=""/>
-    <constraint field="an_abandon_inf" desc="" exp=""/>
-    <constraint field="an_rehab_sup" desc="" exp=""/>
-    <constraint field="an_rehab_inf" desc="" exp=""/>
-    <constraint field="date_creation" desc="" exp=""/>
-    <constraint field="origine_creation" desc="" exp=""/>
-    <constraint field="date_maj" desc="" exp=""/>
-    <constraint field="origine_maj" desc="" exp=""/>
-    <constraint field="lien_doc1" desc="" exp=""/>
-    <constraint field="lien_doc2" desc="" exp=""/>
-    <constraint field="commentaire" desc="" exp=""/>
-    <constraint field="id_aep_station_alerte" desc="" exp=""/>
-    <constraint field="nom_usuel" desc="" exp=""/>
+    <constraint exp="" desc="" field="fid"/>
+    <constraint exp="" desc="" field="type_reseau"/>
+    <constraint exp="" desc="" field="fictif"/>
+    <constraint exp="" desc="" field="etat_service"/>
+    <constraint exp="" desc="" field="insee_commune"/>
+    <constraint exp="" desc="" field="localisation"/>
+    <constraint exp="" desc="" field="maitre_ouvrage"/>
+    <constraint exp="" desc="" field="exploitant"/>
+    <constraint exp="" desc="" field="entreprise_pose"/>
+    <constraint exp="" desc="" field="precision_xy"/>
+    <constraint exp="" desc="" field="precision_z"/>
+    <constraint exp="" desc="" field="an_pose_sup"/>
+    <constraint exp="" desc="" field="an_pose_inf"/>
+    <constraint exp="" desc="" field="an_service_sup"/>
+    <constraint exp="" desc="" field="an_service_inf"/>
+    <constraint exp="" desc="" field="an_abandon_sup"/>
+    <constraint exp="" desc="" field="an_abandon_inf"/>
+    <constraint exp="" desc="" field="an_rehab_sup"/>
+    <constraint exp="" desc="" field="an_rehab_inf"/>
+    <constraint exp="" desc="" field="date_creation"/>
+    <constraint exp="" desc="" field="origine_creation"/>
+    <constraint exp="" desc="" field="date_maj"/>
+    <constraint exp="" desc="" field="origine_maj"/>
+    <constraint exp="" desc="" field="lien_doc1"/>
+    <constraint exp="" desc="" field="lien_doc2"/>
+    <constraint exp="" desc="" field="commentaire"/>
+    <constraint exp="" desc="" field="id_aep_station_alerte"/>
+    <constraint exp="" desc="" field="nom_usuel"/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
     <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
   </attributeactions>
+  <attributetableconfig sortOrder="0" actionWidgetStyle="dropDown" sortExpression="">
+    <columns>
+      <column name="type_reseau" hidden="0" width="-1" type="field"/>
+      <column name="fictif" hidden="0" width="-1" type="field"/>
+      <column name="etat_service" hidden="0" width="-1" type="field"/>
+      <column name="insee_commune" hidden="0" width="-1" type="field"/>
+      <column name="localisation" hidden="0" width="-1" type="field"/>
+      <column name="maitre_ouvrage" hidden="0" width="-1" type="field"/>
+      <column name="exploitant" hidden="0" width="-1" type="field"/>
+      <column name="entreprise_pose" hidden="0" width="-1" type="field"/>
+      <column name="precision_xy" hidden="0" width="-1" type="field"/>
+      <column name="precision_z" hidden="0" width="-1" type="field"/>
+      <column name="an_pose_sup" hidden="0" width="-1" type="field"/>
+      <column name="an_pose_inf" hidden="0" width="-1" type="field"/>
+      <column name="an_service_sup" hidden="0" width="-1" type="field"/>
+      <column name="an_service_inf" hidden="0" width="-1" type="field"/>
+      <column name="an_abandon_sup" hidden="0" width="-1" type="field"/>
+      <column name="an_abandon_inf" hidden="0" width="-1" type="field"/>
+      <column name="an_rehab_sup" hidden="0" width="-1" type="field"/>
+      <column name="an_rehab_inf" hidden="0" width="-1" type="field"/>
+      <column name="date_creation" hidden="0" width="-1" type="field"/>
+      <column name="origine_creation" hidden="0" width="-1" type="field"/>
+      <column name="date_maj" hidden="0" width="-1" type="field"/>
+      <column name="origine_maj" hidden="0" width="-1" type="field"/>
+      <column name="lien_doc1" hidden="0" width="-1" type="field"/>
+      <column name="lien_doc2" hidden="0" width="-1" type="field"/>
+      <column name="commentaire" hidden="0" width="-1" type="field"/>
+      <column name="id_aep_station_alerte" hidden="0" width="-1" type="field"/>
+      <column name="nom_usuel" hidden="0" width="-1" type="field"/>
+      <column name="fid" hidden="0" width="-1" type="field"/>
+      <column hidden="1" width="-1" type="actions"/>
+    </columns>
+  </attributetableconfig>
+  <conditionalstyles>
+    <rowstyles/>
+    <fieldstyles/>
+  </conditionalstyles>
+  <storedexpressions/>
   <editform tolerant="1"></editform>
   <editforminit/>
   <editforminitcodesource>0</editforminitcodesource>
@@ -562,177 +598,177 @@ def my_form_open(dialog, layer, feature):
   <featformsuppress>0</featformsuppress>
   <editorlayout>tablayout</editorlayout>
   <attributeEditorForm>
-    <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-      <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+    <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+      <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
     </labelStyle>
-    <attributeEditorField name="type_reseau" index="0" showLabel="1">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+    <attributeEditorField name="type_reseau" index="1" showLabel="1">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
     </attributeEditorField>
-    <attributeEditorField name="fictif" index="1" showLabel="1">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+    <attributeEditorField name="fictif" index="2" showLabel="1">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
     </attributeEditorField>
-    <attributeEditorContainer name="essentiels" collapsedExpression="" collapsed="0" visibilityExpressionEnabled="0" groupBox="0" showLabel="1" collapsedExpressionEnabled="0" columnCount="1" visibilityExpression="">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+    <attributeEditorContainer name="essentiels" columnCount="1" collapsedExpression="" visibilityExpression="" showLabel="1" collapsed="0" groupBox="0" visibilityExpressionEnabled="0" collapsedExpressionEnabled="0">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
-      <attributeEditorField name="nom_usuel" index="26" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="nom_usuel" index="27" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="etat_service" index="2" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="etat_service" index="3" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="precision_xy" index="8" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="precision_xy" index="9" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="an_pose_inf" index="11" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="an_pose_inf" index="12" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="an_pose_sup" index="10" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="an_pose_sup" index="11" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="lien_doc1" index="22" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="lien_doc1" index="23" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="lien_doc2" index="23" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="lien_doc2" index="24" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
     </attributeEditorContainer>
-    <attributeEditorContainer name="spécifiques" collapsedExpression="" collapsed="0" visibilityExpressionEnabled="0" groupBox="0" showLabel="1" collapsedExpressionEnabled="0" columnCount="1" visibilityExpression="">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+    <attributeEditorContainer name="spécifiques" columnCount="1" collapsedExpression="" visibilityExpression="" showLabel="1" collapsed="0" groupBox="0" visibilityExpressionEnabled="0" collapsedExpressionEnabled="0">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
-      <attributeEditorField name="precision_z" index="9" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="precision_z" index="10" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
       <attributeEditorField name="telegestion" index="-1" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
     </attributeEditorContainer>
-    <attributeEditorContainer name="données générales" collapsedExpression="" collapsed="0" visibilityExpressionEnabled="0" groupBox="0" showLabel="1" collapsedExpressionEnabled="0" columnCount="1" visibilityExpression="">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+    <attributeEditorContainer name="données générales" columnCount="1" collapsedExpression="" visibilityExpression="" showLabel="1" collapsed="0" groupBox="0" visibilityExpressionEnabled="0" collapsedExpressionEnabled="0">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
-      <attributeEditorContainer name="situation" collapsedExpression="" collapsed="0" visibilityExpressionEnabled="0" groupBox="1" showLabel="1" collapsedExpressionEnabled="0" columnCount="1" visibilityExpression="">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorContainer name="situation" columnCount="1" collapsedExpression="" visibilityExpression="" showLabel="1" collapsed="0" groupBox="1" visibilityExpressionEnabled="0" collapsedExpressionEnabled="0">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
-        <attributeEditorField name="insee_commune" index="3" showLabel="1">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+        <attributeEditorField name="insee_commune" index="4" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField name="localisation" index="4" showLabel="1">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+        <attributeEditorField name="localisation" index="5" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField name="maitre_ouvrage" index="5" showLabel="1">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+        <attributeEditorField name="maitre_ouvrage" index="6" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField name="exploitant" index="6" showLabel="1">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+        <attributeEditorField name="exploitant" index="7" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField name="entreprise_pose" index="7" showLabel="1">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+        <attributeEditorField name="entreprise_pose" index="8" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
       </attributeEditorContainer>
-      <attributeEditorContainer name="dates" collapsedExpression="" collapsed="0" visibilityExpressionEnabled="0" groupBox="1" showLabel="1" collapsedExpressionEnabled="0" columnCount="2" visibilityExpression="">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorContainer name="dates" columnCount="2" collapsedExpression="" visibilityExpression="" showLabel="1" collapsed="0" groupBox="1" visibilityExpressionEnabled="0" collapsedExpressionEnabled="0">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
-        <attributeEditorField name="an_service_inf" index="13" showLabel="1">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+        <attributeEditorField name="an_service_inf" index="14" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField name="an_service_sup" index="12" showLabel="1">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+        <attributeEditorField name="an_service_sup" index="13" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField name="an_abandon_inf" index="15" showLabel="1">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+        <attributeEditorField name="an_abandon_inf" index="16" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField name="an_abandon_sup" index="14" showLabel="1">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+        <attributeEditorField name="an_abandon_sup" index="15" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField name="an_rehab_inf" index="17" showLabel="1">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+        <attributeEditorField name="an_rehab_inf" index="18" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField name="an_rehab_sup" index="16" showLabel="1">
-          <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-            <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+        <attributeEditorField name="an_rehab_sup" index="17" showLabel="1">
+          <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+            <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
           </labelStyle>
         </attributeEditorField>
       </attributeEditorContainer>
     </attributeEditorContainer>
-    <attributeEditorContainer name="SIG" collapsedExpression="" collapsed="0" visibilityExpressionEnabled="0" groupBox="0" showLabel="1" collapsedExpressionEnabled="0" columnCount="2" visibilityExpression="">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+    <attributeEditorContainer name="SIG" columnCount="2" collapsedExpression="" visibilityExpression="" showLabel="1" collapsed="0" groupBox="0" visibilityExpressionEnabled="0" collapsedExpressionEnabled="0">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
-      <attributeEditorField name="id_aep_station_alerte" index="25" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="id_aep_station_alerte" index="26" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="date_creation" index="18" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="date_creation" index="19" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="origine_creation" index="19" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="origine_creation" index="20" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="date_maj" index="20" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="date_maj" index="21" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="origine_maj" index="21" showLabel="1">
-        <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-          <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+      <attributeEditorField name="origine_maj" index="22" showLabel="1">
+        <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+          <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
         </labelStyle>
       </attributeEditorField>
     </attributeEditorContainer>
-    <attributeEditorField name="commentaire" index="24" showLabel="1">
-      <labelStyle labelColor="0,0,0,255" overrideLabelColor="0" overrideLabelFont="0">
-        <labelFont bold="0" strikethrough="0" italic="0" underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" style=""/>
+    <attributeEditorField name="commentaire" index="25" showLabel="1">
+      <labelStyle labelColor="0,0,0,255" overrideLabelFont="0" overrideLabelColor="0">
+        <labelFont underline="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" bold="0"/>
       </labelStyle>
     </attributeEditorField>
   </attributeEditorForm>
@@ -752,6 +788,7 @@ def my_form_open(dialog, layer, feature):
     <field name="etat_service" editable="1"/>
     <field name="exploitant" editable="1"/>
     <field name="fictif" editable="1"/>
+    <field name="fid" editable="1"/>
     <field name="forme" editable="1"/>
     <field name="hauteur_exterieure" editable="1"/>
     <field name="hauteur_interieure" editable="1"/>
@@ -792,6 +829,7 @@ def my_form_open(dialog, layer, feature):
     <field name="etat_service" labelOnTop="0"/>
     <field name="exploitant" labelOnTop="0"/>
     <field name="fictif" labelOnTop="0"/>
+    <field name="fid" labelOnTop="0"/>
     <field name="forme" labelOnTop="0"/>
     <field name="hauteur_exterieure" labelOnTop="0"/>
     <field name="hauteur_interieure" labelOnTop="0"/>
@@ -832,6 +870,7 @@ def my_form_open(dialog, layer, feature):
     <field name="etat_service" reuseLastValue="1"/>
     <field name="exploitant" reuseLastValue="1"/>
     <field name="fictif" reuseLastValue="1"/>
+    <field name="fid" reuseLastValue="0"/>
     <field name="forme" reuseLastValue="1"/>
     <field name="hauteur_exterieure" reuseLastValue="0"/>
     <field name="hauteur_interieure" reuseLastValue="0"/>
@@ -858,6 +897,5 @@ def my_form_open(dialog, layer, feature):
   </reuseLastValue>
   <dataDefinedFieldProperties/>
   <widgets/>
-  <previewExpression>"nom_usuel"</previewExpression>
   <layerGeometryType>0</layerGeometryType>
 </qgis>
