@@ -11,3 +11,6 @@
 - Les valeurs -9999,-8888... compliquent la possibilité de check dans la base type an_pose_sup>=an_pose_inf
 
 - symbole aep pompage avec stock mais pas d'attribut dans modele pour indiquer si stock ou pas
+
+- les tables perimetre_gestion, protection_mecanique, genie_civil, affleurant,point_geolocalisation, doivent être dédiée à un réseau, il faudra prévoir de faire 2 tables 1 aep, 1 ass. Cela semble plus simple que de gérer des filtres !
+- seul pluviometre et piezometre ne sont pas à affecter à un réseau.

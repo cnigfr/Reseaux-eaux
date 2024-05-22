@@ -7,7 +7,7 @@
         <rule scalemaxdenom="2000" key="{c0d0f8a6-5ac7-4c70-853e-306131aa1948}" label="Détails"/>
       </rule>
       <rule symbol="0" filter=" &quot;etat_service&quot; IN ('abandon','depose','comble')" key="{76dc541c-bd21-422e-a2c3-514fb517d69f}" label="Abandon"/>
-      <rule filter=" &quot;etat_service&quot; IN ('projet','construction')" key="{2bdd11ec-6f11-4726-add5-7bd84d9a4ba8}" label="Projet/en construction"/>
+      <rule filter=" &quot;etat_service&quot; IN ('en_projet','en_construction')" key="{2bdd11ec-6f11-4726-add5-7bd84d9a4ba8}" label="Projet/en construction"/>
       <rule description="Manque de renseignement sur l'état de service" symbol="1" filter="ELSE" key="{112a9d03-83f6-43d3-8a97-5eed8a786626}" label="Etat non renseigné"/>
     </rules>
     <symbols>
