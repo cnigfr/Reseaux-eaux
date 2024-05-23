@@ -15,6 +15,10 @@ suivants :
 - Assurer une interopérabilité / compatibilité avec les autres standards ou normes d’échanges de données dont le RAEPA, StaR-DT, PCRS, …
 - Faciliter le calcul des indicateurs de connaissance patrimoniale
 
+# Modèle standard de données
+Vous trouverez dans le répertoire Standard Star-Eau, les fichiers du modèle standard de données issue du groupe de travail ASTEE à la demande de la CNIG.
+Vous trouverez la documentation dans la partie documentation et des aides dans le wiki.
+
 # Symbologie
 Le premier chantier de ce groupe a abouti à une symbologie SIG des réseaux d’eau et d’assainissement prête à l’emploi, disponible depuis septembre 2020 et téléchargeable ici [RELEASE](https://github.com/cnigfr/Reseaux-eaux/releases/), et retrouver l'actu sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html), ou l’[ASTEE](https://www.astee.org/publications/symbologies-des-reseaux-deau-et-dassainissement-applicables-aux-systemes-dinformation-geographique-sig/)
 
