@@ -210,7 +210,8 @@ CREATE TABLE "stareau_ass".ass_point_mesure (
   telegestion text NOT null,
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_ass_point_mesure PRIMARY KEY (id_ass_point_mesure)
-);
+)
+INHERITS (stareau_principale.donnee_generale);
 COMMENT ON TABLE "stareau_ass".ass_point_mesure IS 'Point de suivi remarquable du fonctionnement d''un ouvrage d''assainissement';
 
 -- Column comments

@@ -22,12 +22,10 @@
  * https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf
  */
 
---com
-
 --table des affleurants--
 
-CREATE TABLE stareau_commun.affleurant (
-  id_affleurant text NULL,
+CREATE TABLE stareau_commun.aep_affleurant (
+  id_aep_affleurant text NULL,
   --id_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
   type_affleurant text NOT NULL,
   id_affleurant_pcrs text NULL,
@@ -35,12 +33,12 @@ CREATE TABLE stareau_commun.affleurant (
   id_noeud_reseau text NULL, -- lien vers élèment ponctuel
   id_canalisation text NULL, -- lien vers élément linéaire
   geom public.geometry(point, 2154) NOT NULL,
-  CONSTRAINT pk_affleurant PRIMARY KEY (id_affleurant)
+  CONSTRAINT pk_aep_affleurant PRIMARY KEY (id_aep_affleurant)
 )
 INHERITS (stareau_principale.donnee_generale,stareau_principale.dimension);
-CREATE INDEX sidx_affleurant_geom ON stareau_commun.affleurant USING gist (geom);
+CREATE INDEX sidx_aep_affleurant_geom ON stareau_commun.aep_affleurant USING gist (geom);
 
-COMMENT ON TABLE stareau_commun.affleurant IS 'table des affleurant des réseaux';
+COMMENT ON TABLE stareau_commun.aep_affleurant IS 'table des affleurant des réseaux';
 
 -- Column comments
 
@@ -48,64 +46,147 @@ COMMENT ON COLUMN stareau_commun.affleurant.id_emprise IS 'lien vers emprise';
 COMMENT ON COLUMN stareau_commun.affleurant.id_noeud_reseau IS 'lien vers élèment ponctuel';
 COMMENT ON COLUMN stareau_commun.affleurant.id_canalisation IS 'lien vers élément linéaire';
 
+--table des affleurants--
+
+CREATE TABLE stareau_commun.ass_affleurant (
+  id_ass_affleurant text NULL,
+  --id_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
+  type_affleurant text NOT NULL,
+  id_affleurant_pcrs text NULL,
+  id_emprise text NULL, -- lien vers emprise
+  id_noeud_reseau text NULL, -- lien vers élèment ponctuel
+  id_canalisation text NULL, -- lien vers élément linéaire
+  geom public.geometry(point, 2154) NOT NULL,
+  CONSTRAINT pk_ass_affleurant PRIMARY KEY (id_ass_affleurant)
+)
+INHERITS (stareau_principale.donnee_generale,stareau_principale.dimension);
+CREATE INDEX sidx_ass_affleurant_geom ON stareau_commun.ass_affleurant USING gist (geom);
+
+COMMENT ON TABLE stareau_commun.ass_affleurant IS 'table des affleurant des réseaux';
+
+-- Column comments
+
+COMMENT ON COLUMN stareau_commun.affleurant.id_emprise IS 'lien vers emprise';
+COMMENT ON COLUMN stareau_commun.affleurant.id_noeud_reseau IS 'lien vers élèment ponctuel';
+COMMENT ON COLUMN stareau_commun.affleurant.id_canalisation IS 'lien vers élément linéaire';
 
 --GENIE CIVIL
 
-CREATE TABLE "stareau_commun".genie_civil(
-  id_genie_civil text NULL,
+CREATE TABLE "stareau_commun".aep_genie_civil(
+  id_aep_genie_civil text NULL,
   materiau TEXT NOT NULL,
   niveau int2 NOT null default 0 ,-- niveau par rapport au sol
-  CONSTRAINT pk_genie_civil PRIMARY KEY (id_emprise)
+  CONSTRAINT pk_aep_genie_civil PRIMARY KEY (id_emprise)
 )
 INHERITS ("stareau_principale".emprise);
-COMMENT ON TABLE "stareau_commun".genie_civil IS 'enveloppe externe de génie civil';
+COMMENT ON TABLE "stareau_commun".aep_genie_civil IS 'enveloppe externe de génie civil';
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_commun".genie_civil.materiau IS '*materiau constitutif du GC*';
-COMMENT ON COLUMN "stareau_commun".genie_civil.niveau IS 'niveau par rapport au sol';
+COMMENT ON COLUMN "stareau_commun".aep_genie_civil.materiau IS '*materiau constitutif du GC*';
+COMMENT ON COLUMN "stareau_commun".aep_genie_civil.niveau IS 'niveau par rapport au sol';
 
---perimetre_gestion
+--GENIE CIVIL
 
-CREATE TABLE "stareau_commun".perimetre_gestion (
-  id_perimetre_gestion text NULL,
+CREATE TABLE "stareau_commun".ass_genie_civil(
+  id_ass_genie_civil text NULL,
+  materiau TEXT NOT NULL,
+  niveau int2 NOT null default 0 ,-- niveau par rapport au sol
+  CONSTRAINT pk_ass_genie_civil PRIMARY KEY (id_emprise)
+)
+INHERITS ("stareau_principale".emprise);
+COMMENT ON TABLE "stareau_commun".ass_genie_civil IS 'enveloppe externe de génie civil';
+
+-- Column comments
+
+COMMENT ON COLUMN "stareau_commun".ass_genie_civil.materiau IS '*materiau constitutif du GC*';
+COMMENT ON COLUMN "stareau_commun".ass_genie_civil.niveau IS 'niveau par rapport au sol';
+
+--PERIMETRE_GESTION
+
+CREATE TABLE "stareau_commun".aep_perimetre_gestion (
+  id_aep_perimetre_gestion text NULL,
   type_perimetre_gestion text NOT NULL, -- >type de périmètre
   type_acces text NOT NULL, -- >type d'accès
-  CONSTRAINT pk_perimetre_gestion PRIMARY KEY (id_emprise)
+  CONSTRAINT pk_aep_perimetre_gestion PRIMARY KEY (id_emprise)
 )
 INHERITS ("stareau_principale".emprise);
-COMMENT ON TABLE "stareau_commun".perimetre_gestion IS 'périmètre virtuel ou administratif autour des installations ou des ouvrages.';
+COMMENT ON TABLE "stareau_commun".aep_perimetre_gestion IS 'périmètre virtuel ou administratif autour des installations ou des ouvrages.';
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_commun".perimetre_gestion.type_perimetre_gestion IS '*type de périmètre*';
-COMMENT ON COLUMN "stareau_commun".perimetre_gestion.type_acces IS '*type d''accès*';
+COMMENT ON COLUMN "stareau_commun".aep_perimetre_gestion.type_perimetre_gestion IS '*type de périmètre*';
+COMMENT ON COLUMN "stareau_commun".aep_perimetre_gestion.type_acces IS '*type d''accès*';
 
--- protection mecanique (hors topologie)
+--PERIMETRE_GESTION
 
-CREATE TABLE stareau_commun.protection_mecanique (
-  id_protection_mecanique int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
+CREATE TABLE "stareau_commun".ass_perimetre_gestion (
+  id_ass_perimetre_gestion text NULL,
+  type_perimetre_gestion text NOT NULL, -- >type de périmètre
+  type_acces text NOT NULL, -- >type d'accès
+  CONSTRAINT pk_ass_perimetre_gestion PRIMARY KEY (id_emprise)
+)
+INHERITS ("stareau_principale".emprise);
+COMMENT ON TABLE "stareau_commun".ass_perimetre_gestion IS 'périmètre virtuel ou administratif autour des installations ou des ouvrages.';
+
+-- Column comments
+
+COMMENT ON COLUMN "stareau_commun".ass_perimetre_gestion.type_perimetre_gestion IS '*type de périmètre*';
+COMMENT ON COLUMN "stareau_commun".ass_perimetre_gestion.type_acces IS '*type d''accès*';
+
+-- PROTECTION MECANIQUE (HORS TOPOLOGIE)
+
+CREATE TABLE stareau_commun.aep_protection_mecanique (
+--id_aep_protection_mecanique int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
+  id_ass_protection_mecanique text NOT NULL DEFAULT gen_random_uuid(), -- uuid par défaut peut-être retirer pour autre identifiant
   type_protection text NOT NULL, -- * type de protection *
   materiau text NOT NULL, -- * materiau * constitutif de la protection
   geom public.geometry(linestring, 2154) NOT NULL,
-  CONSTRAINT pk_protect_meca PRIMARY KEY (id_protection_mecanique)
+  CONSTRAINT pk_aep_protect_meca PRIMARY KEY (id_aep_protection_mecanique)
 )
 INHERITS (stareau_principale.donnee_generale,stareau_principale.dimension);
-COMMENT ON TABLE stareau_commun.protection_mecanique IS 'Construction dans laquelle les canalisations sont protégées et/ou guidées. (hors topologie)';
+COMMENT ON TABLE stareau_commun.aep_protection_mecanique IS 'Construction dans laquelle les canalisations sont protégées et/ou guidées. (hors topologie)';
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_commun.protection_mecanique.type_protection IS '*type de protection*';
-COMMENT ON COLUMN stareau_commun.protection_mecanique.materiau IS '*materiau* constitutif de la protection';
+COMMENT ON COLUMN stareau_commun.aep_protection_mecanique.type_protection IS '*type de protection*';
+COMMENT ON COLUMN stareau_commun.aep_protection_mecanique.materiau IS '*materiau* constitutif de la protection';
 
--- table relation canalisation - protection
+-- PROTECTION MECANIQUE (HORS TOPOLOGIE)
 
-CREATE TABLE "stareau_commun".mm_cana_protection (
-  fk_protection_meca int4 NULL,
+CREATE TABLE stareau_commun.ass_protection_mecanique (
+--id_ass_protection_mecanique int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
+  id_ass_protection_mecanique text NOT NULL DEFAULT gen_random_uuid(), -- uuid par défaut peut-être retirer pour autre identifiant
+  type_protection text NOT NULL, -- * type de protection *
+  materiau text NOT NULL, -- * materiau constitutif de la protection*
+  geom public.geometry(linestring, 2154) NOT NULL,
+  CONSTRAINT pk_ass_protect_meca PRIMARY KEY (id_ass_protection_mecanique)
+)
+INHERITS (stareau_principale.donnee_generale,stareau_principale.dimension);
+COMMENT ON TABLE stareau_commun.ass_protection_mecanique IS 'Construction dans laquelle les canalisations sont protégées et/ou guidées. (hors topologie)';
+
+-- Column comments
+
+COMMENT ON COLUMN stareau_commun.ass_protection_mecanique.type_protection IS '*type de protection*';
+COMMENT ON COLUMN stareau_commun.ass_protection_mecanique.materiau IS '*materiau constitutif de la protection*';
+
+-- TABLE RELATION CANALISATION - PROTECTION
+
+CREATE TABLE "stareau_commun".mm_aep_cana_protection (
+  fk_aep_protection_meca text NULL,
   fk_canalisation text NULL,
   nb_cana int2 NULL DEFAULT 1
 );
-COMMENT ON TABLE "stareau_commun".mm_cana_protection IS 'table de relation entre canalisation et protection mecanique';
+COMMENT ON TABLE "stareau_commun".mm_cana_protection IS 'table de relation entre canalisation aep et protection mecanique';
+
+-- TABLE RELATION CANALISATION - PROTECTION
+
+CREATE TABLE "stareau_commun".mm_ass_cana_protection (
+  fk_ass_protection_meca text NULL,
+  fk_canalisation text NULL,
+  nb_cana int2 NULL DEFAULT 1
+);
+COMMENT ON TABLE "stareau_commun".mm_cana_protection IS 'table de relation entre canalisation ass et protection mecanique';
 
 --- pluviometre (hors topologie)
 
