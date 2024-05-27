@@ -52,4 +52,4 @@
 "metal","Métal Inconnu","type non identifié fer ou acier","métal","","ACDAQ"
 "beton","Béton","béton inconnu","assemblage","concrete","ACDAG"
 "autre","Autre","autre","autre","other","ACDZ"
-"nr","Non Identifié","non identifié","autre","","ACDAZ"
+"inc","Non Identifié","non identifié","autre","","ACDAZ"
