@@ -29,10 +29,19 @@ ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_service_che
 ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_abandon_check CHECK (((an_abandon_sup)::integer >= (an_abandon_inf)::integer));
 ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_rehab_check CHECK (((an_rehab_sup)::integer >= (an_rehab_inf)::integer));
 
--- "stareau_commun".affleurant foreign keys
-ALTER TABLE stareau_commun.affleurant ADD CONSTRAINT affleurant_canalisation_fk FOREIGN KEY (id_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON UPDATE CASCADE;
-ALTER TABLE stareau_commun.affleurant ADD CONSTRAINT affleurant_emprise_fk FOREIGN KEY (id_emprise) REFERENCES stareau_principale.emprise(id_emprise) ON UPDATE CASCADE;
-ALTER TABLE stareau_commun.affleurant ADD CONSTRAINT affleurant_noeud_reseau_fk FOREIGN KEY (id_noeud_reseau) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON UPDATE CASCADE;
+ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_hauteur_check CHECK (((hauteur_exterieure)::real >= (hauteur_interieure)::real));
+ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_longueur_check CHECK (((longueur_exterieure)::real >= (longueur_interieure)::real));
+ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_largeur_check CHECK (((largeur_exterieure)::real >= (largeur_interieure)::real));
+
+-- "stareau_commun".aep_affleurant foreign keys
+ALTER TABLE stareau_commun.aep_affleurant ADD CONSTRAINT aep_affleurant_canalisation_fk FOREIGN KEY (id_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON UPDATE CASCADE;
+ALTER TABLE stareau_commun.aep_affleurant ADD CONSTRAINT aep_affleurant_emprise_fk FOREIGN KEY (id_emprise) REFERENCES stareau_principale.emprise(id_emprise) ON UPDATE CASCADE;
+ALTER TABLE stareau_commun.aep_affleurant ADD CONSTRAINT aep_affleurant_noeud_reseau_fk FOREIGN KEY (id_noeud_reseau) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON UPDATE CASCADE;
+
+-- "stareau_commun".ass_affleurant foreign keys
+ALTER TABLE stareau_commun.ass_affleurant ADD CONSTRAINT ass_affleurant_canalisation_fk FOREIGN KEY (id_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON UPDATE CASCADE;
+ALTER TABLE stareau_commun.ass_affleurant ADD CONSTRAINT ass_affleurant_emprise_fk FOREIGN KEY (id_emprise) REFERENCES stareau_principale.emprise(id_emprise) ON UPDATE CASCADE;
+ALTER TABLE stareau_commun.ass_affleurant ADD CONSTRAINT ass_affleurant_noeud_reseau_fk FOREIGN KEY (id_noeud_reseau) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON UPDATE CASCADE;
 
 -- "stareau_ass".ass_piece foreign keys
 ALTER TABLE "stareau_ass".ass_piece ADD CONSTRAINT ass_piece_fk FOREIGN KEY (fk_ass_canalisation) REFERENCES "stareau_ass".ass_canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
@@ -45,9 +54,13 @@ ALTER TABLE "stareau_aep".aep_piece_hors_topo ADD CONSTRAINT aep_pieceht_fk FORE
 ALTER TABLE stareau_aep_brcht.aep_raccord_branchement ADD CONSTRAINT aep_raccord_branchement_canalisation_fk FOREIGN KEY (ref_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass_brcht.ass_raccord_branchement ADD CONSTRAINT ass_raccord_branchement_canalisation_fk FOREIGN KEY (ref_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON UPDATE CASCADE;
 
--- "stareau_commun".mm_cana_protection foreign keys
-ALTER TABLE "stareau_commun".mm_cana_protection ADD CONSTRAINT mm_cana_protection_fk FOREIGN KEY (fk_protection_meca) REFERENCES "stareau_commun".protection_mecanique(id_protection_mecanique) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE "stareau_commun".mm_cana_protection ADD CONSTRAINT mm_cana_protection_fk_1 FOREIGN KEY (fk_canalisation) REFERENCES "stareau_principale".canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
+-- "stareau_commun".mm_aep_cana_protection foreign keys
+ALTER TABLE "stareau_commun".mm_aep_cana_protection ADD CONSTRAINT mm_aep_cana_protection_fk FOREIGN KEY (fk_aep_protection_meca) REFERENCES "stareau_commun".protection_mecanique(id_aep_protection_mecanique) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "stareau_commun".mm_aep_cana_protection ADD CONSTRAINT mm_aep_cana_protection_fk_1 FOREIGN KEY (fk_canalisation) REFERENCES "stareau_principale".canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE
+
+-- "stareau_commun".mm_ass_cana_protection foreign keys
+ALTER TABLE "stareau_commun".mm_ass_cana_protection ADD CONSTRAINT mm_ass_cana_protection_fk FOREIGN KEY (fk_ass_protection_meca) REFERENCES "stareau_commun".protection_mecanique(id_ass_protection_mecanique) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "stareau_commun".mm_ass_cana_protection ADD CONSTRAINT mm_ass_cana_protection_fk_1 FOREIGN KEY (fk_canalisation) REFERENCES "stareau_principale".canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- stareau_principale.mm_emprise_ponctuel foreign keys
 ALTER TABLE stareau_principale.mm_emprise_ponctuel ADD CONSTRAINT mm_emprise_ponctuel_emprise_fk FOREIGN KEY (id_emprise) REFERENCES stareau_principale.emprise(id_emprise) ON DELETE CASCADE ON UPDATE CASCADE;

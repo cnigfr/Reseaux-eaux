@@ -58,14 +58,14 @@ AS SELECT ac.id_canalisation AS identifiant,
         END AS "typeCanalisationEau",
     ac.geom AS geometry,
     false AS xyschematique,
-    false AS sensible,
+    false AS sensible, --à ajouter à Star-Eau ?
     NULL::text AS code,
     false AS "visibleSurface",
     false AS exceptionic,
-    'reseau'::text AS hierarchie,
+    'type_reseau'::text AS hierarchie,
     NULL::text AS profondeurminreg,
     NULL::text AS profondeurminnonreg,
-    NULL::text AS dispositifprotection,
+    NULL::text AS dispositifprotection, -- à ajouter à Star-Eau ?
     NULL::text AS hauteurminreg
    FROM stareau_aep.aep_canalisation ac
   WHERE ac.fictif = false;

@@ -96,4 +96,4 @@ INSERT INTO stareau_valeur.com_materiau (code,valeur,description,categorie,stard
    ('metal','Métal Inconnu','type non identifié fer ou acier','métal','','ACDAQ'),
    ('beton','Béton','béton inconnu','assemblage','concrete','ACDAG'),
    ('autre','Autre','autre','autre','other','ACDZ'),
-   ('nr','Non Identifié','non identifié','autre','','ACDAZ');
+   ('ni','Non Identifié','non identifié','autre','','ACDAZ');
