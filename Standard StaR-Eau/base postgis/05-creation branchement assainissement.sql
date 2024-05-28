@@ -54,10 +54,10 @@ COMMENT ON TABLE "stareau_ass_brcht".ass_point_collecte IS 'Interface physique f
 
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.type_point_collecte IS '*type de boite de branchement*';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.ref_externe IS 'référence externe';
-COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.type_usager IS '*type d''usagers raccordé*';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.type_usager IS '*type d''usager raccordé*';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.materiau IS '*materiau*';
-COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.z_tampon IS 'z tampon';
-COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.z_radier IS 'z radier';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.z_tampon IS 'z NGF tampon';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.z_radier IS 'z NGF radier';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.profondeur IS 'profondeur mesurée ou calculée';
 
 --ass_raccord
@@ -73,4 +73,4 @@ COMMENT ON TABLE "stareau_ass_brcht".ass_raccord_branchement IS 'pièce de racco
 -- Column comments
 
 COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord_branchement.type_raccord_branchement IS '*type de raccord*';
-COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord_branchement.ref_canalisation IS 'identifiant de la cana principale';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord_branchement.ref_canalisation IS 'canalisation de référence';

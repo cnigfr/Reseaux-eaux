@@ -49,8 +49,8 @@ COMMENT ON COLUMN "stareau_aep".aep_canalisation.protection_cathodique IS '*pré
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.etage_pression IS 'référence etage de pression';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.secteur_hydraulique IS 'secteur ou ilot de distribution';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.ref_udi IS 'référence unité de distribution (référence ARS)';
-COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_debut IS 'cote de la génératrice superieure';
-COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_fin IS 'cote génératrice supérieure';
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_debut IS 'cote NGF de la génératrice superieure';
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_fin IS 'cote NGF génératrice supérieure';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.type_pression IS '*type de pression de distribution*';
 
 --CAPTAGE
@@ -83,7 +83,7 @@ COMMENT ON COLUMN "stareau_aep".aep_captage.debit_max_autorise IS 'Débit max au
 --- RESERVOIR
 
 CREATE TABLE "stareau_aep".aep_reservoir (
- id_aep_reservoir TEXT NULL,
+  id_aep_reservoir TEXT NULL,
   nom_usuel text NULL, -- nom d'usage
   type_reservoir text NOT NULL, -- >type réservoir
   nb_cuves int2 NOT NULL DEFAULT 1, -- nombre de cuves
