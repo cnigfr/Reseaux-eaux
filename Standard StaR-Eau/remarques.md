@@ -1,6 +1,6 @@
 # remarques en vrac
 
-- Pourquoi pas de contenu_canalisation dans cana assainissement (ex pour eaux industrielles)?
+- [ ] Pourquoi pas de contenu_canalisation dans cana assainissement (ex pour eaux industrielles)?
 - [x] ajout de lien1 et lien2 vers documents dans donnée générale.
 - [ ] Est-ce que certains attributs peuvent être en nullables (ex. origine_modification) ?
 - [x] Noeud_branchement pas vraiment utile ou alors il faut créer aussi canalisation_branchement Donc 2 modeles différents
