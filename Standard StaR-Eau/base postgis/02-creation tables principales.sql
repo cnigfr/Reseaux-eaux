@@ -112,8 +112,8 @@ COMMENT ON COLUMN stareau_principale.donnee_generale.precision_z IS '*classe de 
 --ÉLÉMENTS PONCTUELS - NOEUDS-RÉSEAU
 
 CREATE TABLE "stareau_principale".noeud_reseau (
-  id_noeud_reseau text NOT NULL DEFAULT gen_random_uuid(), -- uuid par défaut peut-être retirer pour autre identifiant
-  --id_noeud_reseau INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_noeud_reseau text NOT NULL DEFAULT gen_random_uuid(), -- uuid par défaut peut-être retirer pour autre identifiant
+  id_noeud_reseau INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_noeud_reseau TEXT NOT NULL,  -- pour personnalisation ou récupération de l'id existant
   fictif bool DEFAULT false NULL,
   geom public.geometry(point, 2154) NOT NULL,
@@ -127,8 +127,8 @@ COMMENT ON TABLE "stareau_principale".noeud_reseau IS 'table mére des élèment
 --ÉLÉMENTS LINÉAIRES - CANALISATION--
 
 CREATE TABLE "stareau_principale".canalisation (
-  id_canalisation text NOT NULL DEFAULT gen_random_uuid(),  -- uuid par défaut peut-être retirer pour autre identifiant
-  --id_canalisation INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_canalisation text NOT NULL DEFAULT gen_random_uuid(),  -- uuid par défaut peut-être retirer pour autre identifiant
+  id_canalisation INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_canalisation TEXT NOT NULL, -- pour personnalisation ou récupération de l'id existant
   geom public.geometry(linestring, 2154) NOT NULL,
   mode_circulation text NULL, -- mode de circulation
@@ -157,8 +157,8 @@ COMMENT ON COLUMN "stareau_principale".canalisation.longueur_terrain IS 'longueu
 -- ÉLÉMENTS SURFACIQUES - EMPRISE--
 
 CREATE TABLE "stareau_principale".emprise (
-  id_emprise text NOT NULL DEFAULT gen_random_uuid(), -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
-  --id_emprise INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_emprise text NOT NULL DEFAULT gen_random_uuid(), -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+  id_emprise INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_emprise text NOT NULL, -- pour personnalisation ou récupération de l'id existant
   visible bool NULL, -- visible de la surface ?
   geom public.geometry(polygon, 2154) NOT NULL,
