@@ -27,8 +27,9 @@
 --table des affleurants--
 
 CREATE TABLE stareau_aep.aep_affleurant (
-  id_aep_affleurant text NULL,
-  --id_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
+  id_aep_affleurant text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+--id_aep_affleurant text NULL,
+--id_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
   type_affleurant text NOT NULL,
   id_affleurant_pcrs text NULL,
   id_emprise text NULL, -- lien vers emprise
@@ -51,8 +52,9 @@ COMMENT ON COLUMN stareau_aep.aep_affleurant.id_canalisation IS 'lien vers élé
 --table des affleurants--
 
 CREATE TABLE stareau_ass.ass_affleurant (
-  id_ass_affleurant text NULL,
-  --id_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
+  id_ass_affleurant text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+--id_ass_affleurant text NULL,
+--id_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
   type_affleurant text NOT NULL,
   id_affleurant_pcrs text NULL,
   id_emprise text NULL, -- lien vers emprise
@@ -75,8 +77,9 @@ COMMENT ON COLUMN stareau_ass.ass_affleurant.id_canalisation IS 'lien vers élé
 --GENIE CIVIL
 
 CREATE TABLE stareau_aep.aep_genie_civil(
-  id_aep_genie_civil text NULL,
-  --id_aep_genie_civil INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
+  id_aep_genie_civil text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+--id_aep_genie_civil text NULL,
+--id_aep_genie_civil INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
   materiau TEXT NOT NULL,
   niveau int2 NOT null default 0 ,-- niveau par rapport au sol
   CONSTRAINT pk_aep_genie_civil PRIMARY KEY (id_emprise)
@@ -92,7 +95,8 @@ COMMENT ON COLUMN stareau_aep.aep_genie_civil.niveau IS 'niveau par rapport au s
 --GENIE CIVIL
 
 CREATE TABLE stareau_ass.ass_genie_civil(
-  id_ass_genie_civil text NULL,
+  id_ass_genie_civil text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+--id_ass_genie_civil text NULL,
 --id_ass_genie_civil INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
   materiau TEXT NOT NULL,
   niveau int2 NOT null default 0 ,-- niveau par rapport au sol
@@ -109,7 +113,8 @@ COMMENT ON COLUMN stareau_ass.ass_genie_civil.niveau IS 'niveau par rapport au s
 --PERIMETRE_GESTION
 
 CREATE TABLE stareau_aep.aep_perimetre_gestion (
-  id_aep_perimetre_gestion text NULL,
+  id_aep_perimetre_gestion text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+--id_aep_perimetre_gestion text NULL,
 --id_aep_perimetre_gestion INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
   type_perimetre_gestion text NOT NULL, --*type de périmètre*
   type_acces text NOT NULL, --*type d'accès*
@@ -126,7 +131,8 @@ COMMENT ON COLUMN stareau_aep.aep_perimetre_gestion.type_acces IS '*type d''acc�
 --PERIMETRE_GESTION
 
 CREATE TABLE stareau_ass.ass_perimetre_gestion (
-  id_ass_perimetre_gestion text NULL,
+  id_ass_perimetre_gestion text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+--id_ass_perimetre_gestion text NULL,
 --id_ass_perimetre_gestion INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
   type_perimetre_gestion text NOT NULL, -- >type de périmètre
   type_acces text NOT NULL, -- >type d'accès
@@ -143,8 +149,9 @@ COMMENT ON COLUMN stareau_ass.ass_perimetre_gestion.type_acces IS '*type d''acc�
 -- PROTECTION MECANIQUE (HORS TOPOLOGIE)
 
 CREATE TABLE stareau_aep.aep_protection_mecanique (
+  id_aep_protection_mecanique text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
 --id_aep_protection_mecanique int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
-  id_aep_protection_mecanique text NOT NULL, -- DEFAULT gen_random_uuid(), -- uuid par défaut peut-être retirer pour autre identifiant
+--id_aep_protection_mecanique text NOT NULL, -- DEFAULT gen_random_uuid(), -- uuid par défaut peut-être retirer pour autre identifiant
   type_protection text NOT NULL, -- * type de protection *
   materiau text NOT NULL, -- * materiau * constitutif de la protection
   geom public.geometry(linestring, 2154) NOT NULL,
@@ -161,8 +168,9 @@ COMMENT ON COLUMN stareau_aep.aep_protection_mecanique.materiau IS '*materiau* c
 -- PROTECTION MECANIQUE (HORS TOPOLOGIE)
 
 CREATE TABLE stareau_ass.ass_protection_mecanique (
+  id_ass_protection_mecanique text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
 --id_ass_protection_mecanique int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
-  id_ass_protection_mecanique text NOT NULL, -- DEFAULT gen_random_uuid(), -- uuid par défaut peut-être retirer pour autre identifiant
+--id_ass_protection_mecanique text NOT NULL, -- DEFAULT gen_random_uuid(), -- uuid par défaut peut-être retirer pour autre identifiant
   type_protection text NOT NULL, -- * type de protection *
   materiau text NOT NULL, -- * materiau constitutif de la protection*
   geom public.geometry(linestring, 2154) NOT NULL,
@@ -197,7 +205,8 @@ COMMENT ON TABLE stareau_ass.mm_ass_cana_protection IS 'table de relation entre 
 --- pluviometre (hors topologie)
 
 CREATE TABLE "stareau_commun".pluviometre (
-  id_pluviometre INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
+  id_pluviometre text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+--id_pluviometre INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
 --id_pluviometre text NOT NULL,
   type_pluviometre text NOT NULL, -- type de pluviometre*
   nom_usuel text NOT NULL, -- nom usuel
@@ -220,7 +229,8 @@ COMMENT ON COLUMN "stareau_commun".pluviometre.ref_meteo_france IS 'référence 
 ----piezometre de nappe (hors topologie)
 
 CREATE TABLE "stareau_commun".piezometre (
-  id_piezometre INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
+  id_piezometre text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+--id_piezometre INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
 --id_piezometre TEXT NOT NULL,
 --type_piezometre text NOT NULL, -- type_de piezometre*
   nom_usuel text NOT NULL, -- nom usuel

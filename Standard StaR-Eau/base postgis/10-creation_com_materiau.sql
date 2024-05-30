@@ -71,7 +71,7 @@ INSERT INTO stareau_valeur.com_materiau (code,valeur,description,categorie,stard
    ('pebd','Pebd','Pebd','plastique','','');
 INSERT INTO stareau_valeur.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
    ('pehda','Pehd Annelé','Pehd Annelé','plastique','',''),
-   ('pehdl','Pehd Lisse','Pehd Lisse','plastique','',''),
+   ('pehd','Pehd Lisse','Pehd Lisse','plastique','',''),
    ('pex','Polyéthylène Réticulé','polyéthylène réticulé à haute densité (PEX)','plastique','PEX',''),
    ('pp','Polypropylène','polypropylène','plastique','PP','ACDAW'),
    ('ppa','Polypropylène Annelé','Polypropylène Annelé','plastique','',''),

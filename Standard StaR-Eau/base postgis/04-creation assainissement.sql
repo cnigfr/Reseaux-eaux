@@ -201,8 +201,9 @@ COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.fk_ass_canalisation IS 'réf
 ---POINT DE MESURE (hors topologie)
 
 CREATE TABLE "stareau_ass".ass_point_mesure (
-  id_ass_point_mesure INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
-  --id_ass_point_mesure TEXT NOt NULL, --
+  id_ass_point_mesure text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+--id_ass_point_mesure INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+--id_ass_point_mesure TEXT NOt NULL, --
   type_point_mesure text NOT NULL, -- >type du point de mesure
   code_sandre text NOT NULL, -- >code sandre officiel
   id_sandre text NULL, -- identifiant SANDRE
