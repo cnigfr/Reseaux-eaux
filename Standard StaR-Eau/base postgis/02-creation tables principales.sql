@@ -115,7 +115,6 @@ CREATE TABLE "stareau_principale".noeud_reseau (
   id_noeud_reseau text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_noeud_reseau INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_noeud_reseau TEXT NOT NULL,  -- pour personnalisation ou récupération de l'id existant
-  fictif bool DEFAULT false NULL,
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_noeud_reseau PRIMARY KEY (id_noeud_reseau)
 )
@@ -136,7 +135,7 @@ CREATE TABLE "stareau_principale".canalisation (
   raison_pose text NULL, -- raison de la pose
   materiau text NULL, -- materiau
   revetement_interieur text NULL, -- revêtement intérieur
-  diametre_equivalent int2 NOT NULL, -- diametre nominale ou commercial
+  diametre_equivalent int2 NOT NULL, -- diametre nominal
   longueur_terrain numeric(15, 2) NULL, -- longueur réelle terrain
   noeudterminal text NOT NULL, -- noeud terminal
   noeudinitial text NOT NULL, -- noeud initial
@@ -151,7 +150,7 @@ COMMENT ON COLUMN "stareau_principale".canalisation.type_pose IS '*type de pose*
 COMMENT ON COLUMN "stareau_principale".canalisation.raison_pose IS '*raison de la pose*';
 COMMENT ON COLUMN "stareau_principale".canalisation.materiau IS '*materiau*';
 COMMENT ON COLUMN "stareau_principale".canalisation.revetement_interieur IS '*revêtement intérieur*';
-COMMENT ON COLUMN "stareau_principale".canalisation.diametre_equivalent IS 'diametre nominale ou équivalent';
+COMMENT ON COLUMN "stareau_principale".canalisation.diametre_equivalent IS 'diametre nominal ou équivalent';
 COMMENT ON COLUMN "stareau_principale".canalisation.longueur_terrain IS 'longueur réelle terrain';
 
 -- ÉLÉMENTS SURFACIQUES - EMPRISE--
