@@ -16,7 +16,3 @@ Essais de la base pour calcul des indcateurs SISPEA
 # star-dt
 
 Creation de vues pour compatibilité Star-Dt
-
-# utilitaire
-
-Contient actuellement le fichier d'audit des bases, utilisation optionnelle
