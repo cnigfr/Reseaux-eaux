@@ -83,7 +83,20 @@ ALTER TABLE stareau_aep.aep_traitement ALTER COLUMN type_reseau SET DEFAULT 'aep
 ALTER TABLE stareau_aep.aep_vanne ALTER COLUMN type_reseau SET DEFAULT 'aep';
 ALTER TABLE stareau_aep_brcht.aep_vanne_branchement ALTER COLUMN type_reseau SET DEFAULT 'aep';
 
----à débloquer à la fin
+---efface autre valeurs pour precision
+DELETE FROM stareau_valeur.com_precision
+  WHERE code='non_renseigne';
+DELETE FROM stareau_valeur.com_precision
+  WHERE code='non_concerne';
+DELETE FROM stareau_valeur.com_precision
+  WHERE code='non_valide';
+DELETE FROM stareau_valeur.com_precision
+  WHERE code='non_determine';
+DELETE FROM stareau_valeur.com_precision
+  WHERE code='autre';
+
+---à débloquer à la fin après peuplement
+
 -- "stareau_principale".canalisation foreign keys
 --ALTER TABLE "stareau_principale".canalisation ADD CONSTRAINT fk_canalisation_noeud_reseau_ndinitial FOREIGN KEY (noeudinitial) REFERENCES "stareau_principale".noeud_reseau(id_noeud_reseau);
 --ALTER TABLE "stareau_principale".canalisation ADD CONSTRAINT fk_canalisation_noeud_reseau_ndterminal FOREIGN KEY (noeudterminal) REFERENCES "stareau_principale".noeud_reseau(id_noeud_reseau);

@@ -60,7 +60,7 @@ COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.type_usager IS '*type 
 
 CREATE TABLE stareau_aep_brcht.aep_raccord_branchement (
   id_raccord_branchement text null,
-  type_raccord_branchement text NULL, -- > type de raccord
+--type_raccord_branchement text NULL, -- > type de raccord
   ref_canalisation text NOT NULL, -- lien vers canalisation
   CONSTRAINT pk_aep_raccord_brcht PRIMARY KEY (id_noeud_reseau)
 )
@@ -69,8 +69,8 @@ COMMENT ON TABLE stareau_aep_brcht.aep_raccord_branchement IS 'Point de raccorde
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep_brcht.aep_raccord_branchement.type_raccord_branchement IS '*type de raccord*';
-COMMENT ON COLUMN stareau_aep_brcht.aep_raccord_branchement.ref_canalisation IS 'lien vers canalisation';
+--COMMENT ON COLUMN stareau_aep_brcht.aep_raccord_branchement.type_raccord_branchement IS '*type de raccord*';
+COMMENT ON COLUMN stareau_aep_brcht.aep_raccord_branchement.ref_canalisation IS 'lien vers canalisation principale';
 
 ---- PIECE BRANCHEMENT
 

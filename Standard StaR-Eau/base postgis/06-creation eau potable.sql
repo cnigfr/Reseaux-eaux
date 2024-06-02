@@ -167,7 +167,7 @@ CREATE TABLE "stareau_aep".aep_vanne (
   diametre float4 NULL, -- diametre nominal
   sens_fermeture text NOT NULL, -- sens fermeture
   etat_ouverture text NOT NULL, -- état ouverture
-  motorisation bool NULL, -- motorisation
+  motorisation text NULL, -- motorisation
   telegestion text NULL, -- gestion à distance
   CONSTRAINT pk_aep_vanne PRIMARY KEY (id_noeud_reseau)
 )
@@ -181,7 +181,7 @@ COMMENT ON COLUMN "stareau_aep".aep_vanne.fonction_vanne IS '*fonction vanne*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.diametre IS 'diametre nominal';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.sens_fermeture IS '*sens fermeture*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.etat_ouverture IS '*état ouverture*';
-COMMENT ON COLUMN "stareau_aep".aep_vanne.motorisation IS 'motorisation';
+COMMENT ON COLUMN "stareau_aep".aep_vanne.motorisation IS '*motorisation*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.telegestion IS '*présence d''une gestion à distance*';
 
 --REGULATION
@@ -257,6 +257,7 @@ COMMENT ON COLUMN "stareau_aep".aep_appareillage.telegestion IS '*Présence d''u
 CREATE TABLE stareau_aep.aep_station_alerte (
   id_aep_station_alerte TEXT NULL, -- identifiant
   nom_usuel text NULL, -- nom d'usage
+  telegestion text NOT NULL,
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_aep_station_alerte PRIMARY KEY (id_aep_station_alerte)
 )
@@ -266,6 +267,7 @@ COMMENT ON TABLE stareau_aep.aep_station_alerte IS 'equipement permettent de dé
 -- Column comments
 
 COMMENT ON COLUMN stareau_aep.aep_station_alerte.nom_usuel IS 'nom d''usage';
+COMMENT ON COLUMN stareau_aep.aep_station_alerte.telegestion IS '*Présence d''une gestion à distance*';
 
 --- PIECE
 

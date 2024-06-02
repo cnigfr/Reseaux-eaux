@@ -6,3 +6,8 @@
 "plan_non_verifie","Plan non vérifié","Plan ou projet non vérifié ou connu"
 "croquis","Croquis","Croquis/mémoire – à postériori"
 "non_fiable","Source non vérifiée","Source inconnue et non vérifiée"
+"non_renseigne","Non renseigné(e)","information en recherche ou disponible mais non saisie"
+"non_concerne","Non concerné(e)","information non possible ou non pertinente pour l'élément décrit"
+"non_valide","Non validé(e)","information existe mais n'est pas officiellement validée"
+"non_determine","Non déterminé(e)","information inconnue ou non disponible et ne peut pas l'être"
+"autre","Autre","ne figure pas dans la liste ci-dessus. cf. observations"
