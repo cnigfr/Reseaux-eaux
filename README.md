@@ -16,8 +16,25 @@ suivants :
 - Faciliter le calcul des indicateurs de connaissance patrimoniale
 
 # Modèle standard de données
-Vous trouverez dans le répertoire Standard Star-Eau, les fichiers du modèle standard de données issue du groupe de travail ASTEE à la demande de la CNIG.
-Vous trouverez la documentation dans la partie documentation et des aides dans le wiki.
+
+# APPEL A COMMENTAIRE
+![appel](https://github.com/cnigfr/Reseaux-eaux/blob/main/Documentation/image_documentation/logo/appel_commentaire.png)
+
+**Appel ouvert jusqu'au 04 octobre 2024 à 18h**
+
+> [!IMPORTANT]
+> Utiliser **__la pré-version d'appel à commentaire__** [release], si vous téléchargez le github (via le bouton <code>), la version peut différer (travail toujours en cours).
+
+## Comment commenter
+Vous pouvez commenter le travail sur  : [appel à commentaire]
+
+La pré-version demande encore du travail. Vos commentaires nous sont précieux pour réaliser un standard utile.
+
+N'hésiter pas à signaler, commenter, proposer, mais aussi à participer. Soyez critique, courtois, précis et souvenez-vous qu'il s'agit d'un standard, aucune demande de personnalisation ne sera prise en compte.
+
+> [!WARNING]
+> l'appel à commentaires en portent pas sur la symbologie
+
 
 # Symbologie
 Le premier chantier de ce groupe a abouti à une symbologie SIG des réseaux d’eau et d’assainissement prête à l’emploi, disponible depuis septembre 2020 et téléchargeable ici [RELEASE](https://github.com/cnigfr/Reseaux-eaux/releases/), et retrouver l'actu sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html), ou l’[ASTEE](https://www.astee.org/publications/symbologies-des-reseaux-deau-et-dassainissement-applicables-aux-systemes-dinformation-geographique-sig/)

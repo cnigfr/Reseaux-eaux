@@ -23,6 +23,9 @@
  */
 
 
+ ----------à débloquer à la fin après peuplement, nettoyage et vérification-------------------------------------
+
+
 --contraintes sur donnee_generale
 ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_pose_check CHECK (((an_pose_sup)::integer >= (an_pose_inf)::integer));
 ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_service_check CHECK (((an_service_sup)::integer >= (an_service_inf)::integer));
@@ -83,7 +86,7 @@ ALTER TABLE stareau_aep.aep_traitement ALTER COLUMN type_reseau SET DEFAULT 'aep
 ALTER TABLE stareau_aep.aep_vanne ALTER COLUMN type_reseau SET DEFAULT 'aep';
 ALTER TABLE stareau_aep_brcht.aep_vanne_branchement ALTER COLUMN type_reseau SET DEFAULT 'aep';
 
----efface autre valeurs pour precision
+---efface autres valeurs de la table com_precision
 DELETE FROM stareau_valeur.com_precision
   WHERE code='non_renseigne';
 DELETE FROM stareau_valeur.com_precision
@@ -95,8 +98,16 @@ DELETE FROM stareau_valeur.com_precision
 DELETE FROM stareau_valeur.com_precision
   WHERE code='autre';
 
----à débloquer à la fin après peuplement
+--vérifiez bien vos noeuds et leur existence !
 
--- "stareau_principale".canalisation foreign keys
---ALTER TABLE "stareau_principale".canalisation ADD CONSTRAINT fk_canalisation_noeud_reseau_ndinitial FOREIGN KEY (noeudinitial) REFERENCES "stareau_principale".noeud_reseau(id_noeud_reseau);
---ALTER TABLE "stareau_principale".canalisation ADD CONSTRAINT fk_canalisation_noeud_reseau_ndterminal FOREIGN KEY (noeudterminal) REFERENCES "stareau_principale".noeud_reseau(id_noeud_reseau);
+ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_noeud_terminal_fk FOREIGN KEY (noeudterminal) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_noeud_initial_fk FOREIGN KEY (noeudinitial) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+ALTER TABLE stareau_ass.ass_canalisation ADD CONSTRAINT ass_canalisation_noeud_initial_fk FOREIGN KEY (noeudinitial) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE stareau_ass.ass_canalisation ADD CONSTRAINT ass_canalisation_noeud_terminal_fk FOREIGN KEY (noeudterminal) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+ALTER TABLE stareau_aep_brcht.aep_canalisation_branchement ADD CONSTRAINT aep_canalisation_noeud_terminal_fk FOREIGN KEY (noeudterminal) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE stareau_aep_brcht.aep_canalisation_branchement ADD CONSTRAINT aep_canalisation_noeud_initial_fk FOREIGN KEY (noeudinitial) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+ALTER TABLE stareau_ass_brcht.ass_canalisation_branchement ADD CONSTRAINT ass_canalisation_noeud_initial_fk FOREIGN KEY (noeudinitial) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE stareau_ass_brcht.ass_canalisation_branchement ADD CONSTRAINT ass_canalisation_noeud_terminal_fk FOREIGN KEY (noeudterminal) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON DELETE RESTRICT ON UPDATE CASCADE;
