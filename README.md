@@ -23,10 +23,13 @@ suivants :
 **Appel ouvert jusqu'au 04 octobre 2024 à 18h**
 
 > [!IMPORTANT]
-> Utiliser **__la pré-version d'appel à commentaire__** [release], si vous téléchargez le github (via le bouton <code>), la version peut différer (travail toujours en cours).
+> Utiliser **_la pré-version d'appel à commentaire_** [release AC_juin_2024](https://github.com/cnigfr/Reseaux-eaux/releases/tag/AC_juin_2024)
+
+si vous téléchargez le github (via le bouton code), la version peut différer (travail toujours en cours).
+
 
 ## Comment commenter
-Vous pouvez commenter le travail sur  : [appel à commentaire]
+Vous pouvez commenter le travail sur  : [appel à commentaire](https://cryptpad.fr/sheet/#/2/sheet/edit/wfNUCXes-vLBmd1O1kalH-T2/embed/)
 
 La pré-version demande encore du travail. Vos commentaires nous sont précieux pour réaliser un standard utile.
 
