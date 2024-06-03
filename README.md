@@ -23,10 +23,7 @@ suivants :
 **Appel ouvert jusqu'au 04 octobre 2024 à 18h**
 
 > [!IMPORTANT]
-> Utiliser **_la pré-version d'appel à commentaire_** [release AC_juin_2024](https://github.com/cnigfr/Reseaux-eaux/releases/tag/AC_juin_2024)
-
-si vous téléchargez le github (via le bouton code), la version peut différer (travail toujours en cours).
-
+> Utiliser **_la pré-version d'appel à commentaire_** [release AC_juin_2024](https://github.com/cnigfr/Reseaux-eaux/releases/tag/AC_juin_2024), si vous téléchargez le github (via le bouton code), la version peut différer (travail toujours en cours).
 
 ## Comment commenter
 Vous pouvez commenter le travail sur  : [appel à commentaire](https://cryptpad.fr/sheet/#/2/sheet/edit/wfNUCXes-vLBmd1O1kalH-T2/embed/)
@@ -36,8 +33,9 @@ La pré-version demande encore du travail. Vos commentaires nous sont précieux 
 N'hésiter pas à signaler, commenter, proposer, mais aussi à participer. Soyez critique, courtois, précis et souvenez-vous qu'il s'agit d'un standard, aucune demande de personnalisation ne sera prise en compte.
 
 > [!WARNING]
-> l'appel à commentaires en portent pas sur la symbologie
+> l'appel à commentaires ne porte pas sur la symbologie
 
+***
 
 # Symbologie
 Le premier chantier de ce groupe a abouti à une symbologie SIG des réseaux d’eau et d’assainissement prête à l’emploi, disponible depuis septembre 2020 et téléchargeable ici [RELEASE](https://github.com/cnigfr/Reseaux-eaux/releases/), et retrouver l'actu sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html), ou l’[ASTEE](https://www.astee.org/publications/symbologies-des-reseaux-deau-et-dassainissement-applicables-aux-systemes-dinformation-geographique-sig/)
