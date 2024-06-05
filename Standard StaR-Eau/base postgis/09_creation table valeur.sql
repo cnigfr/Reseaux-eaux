@@ -47,7 +47,7 @@ CREATE TABLE stareau_valeur.aep_type_reservoir (code VARCHAR(50) NOT NULL, valeu
 CREATE TABLE stareau_valeur.aep_type_ressource (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT aep_type_ressource_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.aep_type_usager (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT aep_type_usager_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.aep_type_vanne (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT aep_type_vanne_pk PRIMARY KEY (code));
-CREATE TABLE stareau_valeur.aep_usage (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT aep_usage_pk PRIMARY KEY (code));
+
 ---ASS---
 CREATE TABLE stareau_valeur.ass_code_sandre (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT ass_code_sandre_pk PRIMARY KEY (code));
 CREATE TABLE stareau_valeur.ass_destination (code VARCHAR(50) NOT NULL, valeur VARCHAR(100) NOT NULL, description TEXT,CONSTRAINT ass_destination_pk PRIMARY KEY (code));

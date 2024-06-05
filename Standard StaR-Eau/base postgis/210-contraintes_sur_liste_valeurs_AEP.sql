@@ -40,6 +40,7 @@ ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_com_uni
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_aep_fonction_canalisation_fk FOREIGN KEY (fonction_canalisation) REFERENCES stareau_valeur.aep_fonction_canalisation(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_aep_contenu_canalisation_fk FOREIGN KEY (contenu_canalisation) REFERENCES stareau_valeur.aep_contenu_canalisation(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_aep_protection_cathodique_fk FOREIGN KEY (protection_cathodique) REFERENCES stareau_valeur.com_oui_non(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_aep_type_pression_fk FOREIGN KEY (type_pression) REFERENCES stareau_valeur.aep_type_pression(code) ON UPDATE CASCADE;
 
 --aep_affleurant
 ALTER TABLE stareau_aep.aep_affleurant ADD CONSTRAINT aep_affleurant_com_forme_fk FOREIGN KEY (forme) REFERENCES stareau_valeur.com_forme(code) ON UPDATE CASCADE;
