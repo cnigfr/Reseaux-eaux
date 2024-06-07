@@ -17,13 +17,13 @@ suivants :
 
 # Modèle standard de données
 
-# APPEL A COMMENTAIRE
+# APPEL A COMMENTAIRES
 ![appel](https://github.com/cnigfr/Reseaux-eaux/blob/main/Documentation/image_documentation/logo/appel_commentaire.png)
 
 **Appel ouvert jusqu'au 04 octobre 2024 à 18h**
 
 > [!IMPORTANT]
-> Utiliser **_la pré-version d'appel à commentaire_** [release AC_juin_2024](https://github.com/cnigfr/Reseaux-eaux/releases/tag/AC_juin_2024)
+> Utiliser **_la pré-version d'appel à commentaires_** [release AC_juin_2024](https://github.com/cnigfr/Reseaux-eaux/releases/tag/AC_juin_2024)
 si vous téléchargez le github (via le bouton code), la version peut différer (travail toujours en cours).
 
 ## Comment commenter

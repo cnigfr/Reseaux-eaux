@@ -11,7 +11,7 @@ DDL initial depuis postgresl 13 / postgis 3
 
 # indicateurs
 
-Essais de la base pour calcul des indcateurs SISPEA
+Essai de la base pour calcul des indicateurs SISPEA
 
 # star-dt
 
