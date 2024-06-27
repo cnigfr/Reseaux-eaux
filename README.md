@@ -26,6 +26,9 @@ suivants :
 > Utiliser **_la pré-version d'appel à commentaires_** [release AC_juin_2024](https://github.com/cnigfr/Reseaux-eaux/releases/tag/AC_juin_2024)
 si vous téléchargez le github (via le bouton code), la version peut différer (travail toujours en cours).
 
+## Comment tester
+Vous pouvez tester les couches grâce aux fichiers fournis dans la pré-version, [suivez le tuto ici](https://github.com/cnigfr/Reseaux-eaux/wiki/Tutoriel-d'installation)
+
 ## Comment commenter
 Vous pouvez commenter le travail sur  : [appel à commentaire](https://cryptpad.fr/sheet/#/2/sheet/edit/wfNUCXes-vLBmd1O1kalH-T2/embed/)
 
