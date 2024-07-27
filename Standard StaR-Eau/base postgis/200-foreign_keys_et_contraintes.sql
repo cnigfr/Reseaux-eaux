@@ -59,7 +59,7 @@ ALTER TABLE stareau_ass_brcht.ass_raccord_branchement ADD CONSTRAINT ass_raccord
 
 -- "stareau_commun".mm_aep_cana_protection foreign keys
 ALTER TABLE stareau_aep.mm_aep_cana_protection ADD CONSTRAINT mm_aep_cana_protection_fk FOREIGN KEY (fk_aep_protection_meca) REFERENCES stareau_aep.aep_protection_mecanique(id_aep_protection_mecanique) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE stareau_aep.mm_aep_cana_protection ADD CONSTRAINT mm_aep_cana_protection_fk_1 FOREIGN KEY (fk_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE
+ALTER TABLE stareau_aep.mm_aep_cana_protection ADD CONSTRAINT mm_aep_cana_protection_fk_1 FOREIGN KEY (fk_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- "stareau_commun".mm_ass_cana_protection foreign keys
 ALTER TABLE stareau_ass.mm_ass_cana_protection ADD CONSTRAINT mm_ass_cana_protection_fk FOREIGN KEY (fk_ass_protection_meca) REFERENCES stareau_ass.ass_protection_mecanique(id_ass_protection_mecanique) ON DELETE CASCADE ON UPDATE CASCADE;
