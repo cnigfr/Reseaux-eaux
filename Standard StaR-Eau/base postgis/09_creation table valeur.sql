@@ -1,5 +1,8 @@
 /*
- * 09_creation table valeur.sql - 2024-05-17
+ * 09_creation table valeur.sql
+ *
+ * // Created: 2024/07/01 05:48:52
+ * // Last modified: 2024/09/25 00:01:48
  *
  * ETALABV2 - Alain pour CNIG-2024
  *

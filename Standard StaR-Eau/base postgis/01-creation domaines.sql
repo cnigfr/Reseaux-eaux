@@ -1,5 +1,8 @@
 /*
- * 01-creation domaines.sql - 2024-05-17
+ * 01-creation domaines.sql
+ *
+ * // Created: 2024/07/01 05:48:52
+ * // Last modified: 2024/09/25 00:00:13
  *
  * ETALABV2 - Alain pour CNIG-2024
  *

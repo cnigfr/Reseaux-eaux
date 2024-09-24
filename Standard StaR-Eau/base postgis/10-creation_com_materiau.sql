@@ -1,5 +1,8 @@
 /*
- * 10-creation_com_materiau.sql - 2024-05-17
+ * 10-creation_com_materiau.sql
+ *
+ * // Created: 2024/07/01 05:48:52
+ * // Last modified: 2024/09/25 00:02:32
  *
  * ETALABV2 - Alain pour CNIG-2024
  *

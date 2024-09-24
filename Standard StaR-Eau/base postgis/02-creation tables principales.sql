@@ -1,5 +1,8 @@
 /*
- * 02-creation tables principales.sql - 2024-05-17
+ * 02-creation tables principales.sql
+ *
+ * // Created: 2024/07/01 05:48:52
+ * // Last modified: 2024/09/25 00:00:23
  *
  * ETALABV2 - Alain pour CNIG-2024
  *

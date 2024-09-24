@@ -1,5 +1,8 @@
 /*
- * 200-foreign_keys_et_contraintes.sql - 2024-05-17
+ * 200-foreign_keys_et_contraintes.sql
+ *
+ * // Created: 2024/07/01 05:48:52
+ * // Last modified: 2024/09/25 00:02:45
  *
  * ETALABV2 - Alain pour CNIG-2024
  *

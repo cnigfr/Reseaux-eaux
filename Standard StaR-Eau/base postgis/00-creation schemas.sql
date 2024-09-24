@@ -1,6 +1,7 @@
 /*
  * 00-creation schemas.sql - 2024-05-17
- *
+ * // Created: 2024/07/01 05:48:52
+ * // Last modified: 2024/09/24 23:59:36
  * ETALABV2 - Alain pour CNIG-2024
  *
  * Ce fichier est un document libre ; vous pouvez le redistribuer et/ou le modifier selon les termes de la
