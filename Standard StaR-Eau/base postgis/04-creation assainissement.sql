@@ -268,7 +268,7 @@ COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special.ref_ouvrage IS 'ouvrage ou c
 CREATE TABLE stareau_ass.ass_exutoire (
   id_ass_exutoire text NULL, -- identifiant
   code_topage text NULL, -- Code TOPAGE du milieu récepteur
-  destination text NOT NULL, -- >type de milieu récepteur
+  destination text NOT NULL, --type de milieu récepteur
   CONSTRAINT pk_ass_exutoire PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);

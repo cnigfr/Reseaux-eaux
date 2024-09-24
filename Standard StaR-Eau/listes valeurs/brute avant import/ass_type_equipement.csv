@@ -2,6 +2,7 @@
 "batardeau","batardeau","barrage provisoire permettant la baisse du niveau d'eau en aval"
 "ventouse","ventouse","element permettant de chasse rles gaz d'une conduite"
 "vanne","vanne","element d'ouverture ou fermeture d'un réseau"
+"vanne_regul","Vanne de régulation","Vanne permettant la régulation de l'écoulement"
 "orifice","orifice","ouverture calibrée permettant l'évacuation des eaux à une débit déterminé"
 "barrage_poutrelle","barrage à poutrelle","ensemble de poutre assemblée formant une embâcle sur l'écoulement des eaux"
 "porte_flots","porte à flots","element de régulation pouvant être ouverrt ou fermé suivant le niveau d'eau"
