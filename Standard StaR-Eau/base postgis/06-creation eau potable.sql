@@ -2,7 +2,7 @@
  * 06-creation eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/25 00:01:27
+ * // Last modified: 2024/09/27 14:37:05
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -264,7 +264,7 @@ CREATE TABLE stareau_aep.aep_station_alerte (
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_aep_station_alerte PRIMARY KEY (id_aep_station_alerte)
 )
-INHERITS (stareau_principale.donnee_generale);
+INHERITS (stareau_principale.champ_commun);
 COMMENT ON TABLE stareau_aep.aep_station_alerte IS 'equipement permettent de déclencher une alerte en cas de pollution ou de dépassement de seuils';
 
 -- Column comments
@@ -297,7 +297,7 @@ CREATE TABLE "stareau_aep".aep_piece_hors_topo (
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT aep_piece_ht_pk PRIMARY KEY (id_aep_pieceht)
 )
-INHERITS (stareau_principale.donnee_generale);
+INHERITS (stareau_principale.champ_commun);
 COMMENT ON TABLE "stareau_aep".aep_piece_hors_topo IS 'Pièces sur canalisations principales HORS TOPOLOGIE (pas sur un noeud réseau)';
 
 -- Column comments

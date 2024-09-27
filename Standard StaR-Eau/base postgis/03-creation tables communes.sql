@@ -38,7 +38,7 @@ CREATE TABLE stareau_aep.aep_affleurant (
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_aep_affleurant PRIMARY KEY (id_aep_affleurant)
 )
-INHERITS (stareau_principale.donnee_generale,stareau_principale.dimension);
+INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
 CREATE INDEX sidx_aep_affleurant_geom ON stareau_aep.aep_affleurant USING gist (geom);
 
 COMMENT ON TABLE stareau_aep.aep_affleurant IS 'table des affleurant des réseaux';
@@ -63,7 +63,7 @@ CREATE TABLE stareau_ass.ass_affleurant (
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_ass_affleurant PRIMARY KEY (id_ass_affleurant)
 )
-INHERITS (stareau_principale.donnee_generale,stareau_principale.dimension);
+INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
 CREATE INDEX sidx_ass_affleurant_geom ON stareau_ass.ass_affleurant USING gist (geom);
 
 COMMENT ON TABLE stareau_ass.ass_affleurant IS 'table des affleurant des réseaux';
@@ -157,7 +157,7 @@ CREATE TABLE stareau_aep.aep_protection_mecanique (
   geom public.geometry(linestring, 2154) NOT NULL,
   CONSTRAINT pk_aep_protect_meca PRIMARY KEY (id_aep_protection_mecanique)
 )
-INHERITS (stareau_principale.donnee_generale,stareau_principale.dimension);
+INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
 COMMENT ON TABLE stareau_aep.aep_protection_mecanique IS 'Construction dans laquelle les canalisations sont protégées et/ou guidées. (hors topologie)';
 
 -- Column comments
@@ -176,7 +176,7 @@ CREATE TABLE stareau_ass.ass_protection_mecanique (
   geom public.geometry(linestring, 2154) NOT NULL,
   CONSTRAINT pk_ass_protect_meca PRIMARY KEY (id_ass_protection_mecanique)
 )
-INHERITS (stareau_principale.donnee_generale,stareau_principale.dimension);
+INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
 COMMENT ON TABLE stareau_ass.ass_protection_mecanique IS 'Construction dans laquelle les canalisations sont protégées et/ou guidées. (hors topologie)';
 
 -- Column comments
@@ -215,7 +215,7 @@ CREATE TABLE "stareau_commun".pluviometre (
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_pluviometre PRIMARY KEY (id_pluviometre)
 )
-INHERITS ("stareau_principale".donnee_generale);
+INHERITS ("stareau_principale".champ_commun);
 COMMENT ON TABLE "stareau_commun".pluviometre IS 'pluviometre';
 
 -- Column comments
@@ -241,7 +241,7 @@ CREATE TABLE "stareau_commun".piezometre (
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_piezometre PRIMARY KEY (id_piezometre)
 )
-INHERITS ("stareau_principale".donnee_generale);
+INHERITS ("stareau_principale".champ_commun);
 COMMENT ON TABLE "stareau_commun".piezometre IS 'forage non exploité qui permet la mesure du niveau de l''eau souterraine en un point donné de la nappe';
 
 -- Column comments
@@ -269,7 +269,7 @@ CREATE TABLE "stareau_commun".point_geolocalisation (
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_point_geolocalisation PRIMARY KEY (id_point_geolocalisation)
 )
-INHERITS ("stareau_principale".donnee_generale);
+INHERITS ("stareau_principale".champ_commun);
 CREATE INDEX sidx_geolocalisation_geom ON stareau_commun.point_geolocalisation USING gist (geom);
 
 COMMENT ON TABLE "stareau_commun".point_geolocalisation IS 'point géoréférencé en planimétrie ou planimétrie/altimétrie, servant de support à une cotation';

@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/25 00:00:23
+ * // Last modified: 2024/09/27 14:37:50
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -56,8 +56,8 @@ COMMENT ON COLUMN stareau_principale.dimension.longueur_exterieure IS 'longueur 
 
 --DONNÉES GÉNÉRALES
 
-CREATE TABLE "stareau_principale".donnee_generale(
-   --id_donnee_generale INT GENERATED ALWAYS AS IDENTITY,
+CREATE TABLE "stareau_principale".champ_commun(
+   --id_champ_commun INT GENERATED ALWAYS AS IDENTITY,
    type_reseau TEXT NOT NULL, --type de réseau (com_type_reseau)
    fictif BOOL DEFAULT false NULL,
    etat_service TEXT NOT NULL, --etat de service (com_etat_service)
@@ -84,33 +84,33 @@ CREATE TABLE "stareau_principale".donnee_generale(
    lien_doc1 TEXT,
    lien_doc2 TEXT,
    commentaire TEXT
-   --,CONSTRAINT PK_donnee_generale PRIMARY KEY(id_donnee_generale)
+   --,CONSTRAINT PK_champ_commun PRIMARY KEY(id_champ_commun)
 );
-COMMENT ON TABLE stareau_principale.donnee_generale IS 'table de champs communs à toutes les tables';
+COMMENT ON TABLE stareau_principale.champ_commun IS 'table de champs communs à toutes les tables';
 
-COMMENT ON COLUMN stareau_principale.donnee_generale.type_reseau IS '*type de réseau*';
-COMMENT ON COLUMN stareau_principale.donnee_generale.etat_service IS '*état de service*';
-COMMENT ON COLUMN stareau_principale.donnee_generale.insee_commune IS 'insee de la commune';
-COMMENT ON COLUMN stareau_principale.donnee_generale.localisation IS 'adresse, nom de la rue principale, ou localisation relative du patrimoine';
-COMMENT ON COLUMN stareau_principale.donnee_generale.maitre_ouvrage IS 'maitre d''ouvrage';
-COMMENT ON COLUMN stareau_principale.donnee_generale.exploitant IS 'exploitant actuel';
-COMMENT ON COLUMN stareau_principale.donnee_generale.entreprise_pose IS 'entreprise de pose';
-COMMENT ON COLUMN stareau_principale.donnee_generale.an_pose_sup IS 'Année marquant la fin de la période de pose';
-COMMENT ON COLUMN stareau_principale.donnee_generale.an_pose_inf IS 'Année marquant le début de la période de pose';
-COMMENT ON COLUMN stareau_principale.donnee_generale.an_service_sup IS 'Année marquant la fin de la période de mise en service';
-COMMENT ON COLUMN stareau_principale.donnee_generale.an_service_inf IS 'Année marquant le début de la période de mise en service';
-COMMENT ON COLUMN stareau_principale.donnee_generale.an_abandon_sup IS 'Année marquant la fin de la période d''arrêt définitif';
-COMMENT ON COLUMN stareau_principale.donnee_generale.an_abandon_inf IS 'Année marquant le début de la période d''arrêt définitif';
-COMMENT ON COLUMN stareau_principale.donnee_generale.an_rehab_sup IS 'Année marquant la fin de la période de réhabilitation';
-COMMENT ON COLUMN stareau_principale.donnee_generale.an_rehab_inf IS 'Année marquant le début de la période de mise en service';
-COMMENT ON COLUMN stareau_principale.donnee_generale.date_creation IS 'date de la création de l''objet sig';
-COMMENT ON COLUMN stareau_principale.donnee_generale.origine_creation IS '*document source de la création*';
-COMMENT ON COLUMN stareau_principale.donnee_generale.date_maj IS 'date de mise à jour de l''objet sig';
-COMMENT ON COLUMN stareau_principale.donnee_generale.origine_maj IS '*document source de la mise à jour*';
-COMMENT ON COLUMN stareau_principale.donnee_generale.lien_doc1 IS 'lien vers document';
-COMMENT ON COLUMN stareau_principale.donnee_generale.lien_doc2 IS 'lien 2 vers document';
-COMMENT ON COLUMN stareau_principale.donnee_generale.precision_xy IS '*classe de précision XY*';
-COMMENT ON COLUMN stareau_principale.donnee_generale.precision_z IS '*classe de précision Z*';
+COMMENT ON COLUMN stareau_principale.champ_commun.type_reseau IS '*type de réseau*';
+COMMENT ON COLUMN stareau_principale.champ_commun.etat_service IS '*état de service*';
+COMMENT ON COLUMN stareau_principale.champ_commun.insee_commune IS 'insee de la commune';
+COMMENT ON COLUMN stareau_principale.champ_commun.localisation IS 'adresse, nom de la rue principale, ou localisation relative du patrimoine';
+COMMENT ON COLUMN stareau_principale.champ_commun.maitre_ouvrage IS 'maitre d''ouvrage';
+COMMENT ON COLUMN stareau_principale.champ_commun.exploitant IS 'exploitant actuel';
+COMMENT ON COLUMN stareau_principale.champ_commun.entreprise_pose IS 'entreprise de pose';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_pose_sup IS 'Année marquant la fin de la période de pose';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_pose_inf IS 'Année marquant le début de la période de pose';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_service_sup IS 'Année marquant la fin de la période de mise en service';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_service_inf IS 'Année marquant le début de la période de mise en service';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_abandon_sup IS 'Année marquant la fin de la période d''arrêt définitif';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_abandon_inf IS 'Année marquant le début de la période d''arrêt définitif';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_rehab_sup IS 'Année marquant la fin de la période de réhabilitation';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_rehab_inf IS 'Année marquant le début de la période de mise en service';
+COMMENT ON COLUMN stareau_principale.champ_commun.date_creation IS 'date de la création de l''objet sig';
+COMMENT ON COLUMN stareau_principale.champ_commun.origine_creation IS '*document source de la création*';
+COMMENT ON COLUMN stareau_principale.champ_commun.date_maj IS 'date de mise à jour de l''objet sig';
+COMMENT ON COLUMN stareau_principale.champ_commun.origine_maj IS '*document source de la mise à jour*';
+COMMENT ON COLUMN stareau_principale.champ_commun.lien_doc1 IS 'lien vers document';
+COMMENT ON COLUMN stareau_principale.champ_commun.lien_doc2 IS 'lien 2 vers document';
+COMMENT ON COLUMN stareau_principale.champ_commun.precision_xy IS '*classe de précision XY*';
+COMMENT ON COLUMN stareau_principale.champ_commun.precision_z IS '*classe de précision Z*';
 
 --ÉLÉMENTS PONCTUELS - NOEUDS-RÉSEAU
 
@@ -121,7 +121,7 @@ CREATE TABLE "stareau_principale".noeud_reseau (
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_noeud_reseau PRIMARY KEY (id_noeud_reseau)
 )
-INHERITS ("stareau_principale".donnee_generale);
+INHERITS ("stareau_principale".champ_commun);
 CREATE INDEX sidx_noeud_geom ON stareau_principale.noeud_reseau USING gist (geom);  ---indexation
 
 COMMENT ON TABLE "stareau_principale".noeud_reseau IS 'table mére des élèments ponctuels';
@@ -144,7 +144,7 @@ CREATE TABLE "stareau_principale".canalisation (
   noeudinitial text NOT NULL, -- noeud initial
   CONSTRAINT pk_canalisation PRIMARY KEY (id_canalisation)
 )
-INHERITS ("stareau_principale".donnee_generale);
+INHERITS ("stareau_principale".champ_commun);
 CREATE INDEX sidx_canalisation_geom ON stareau_principale.canalisation USING gist (geom); --- indexation
 
 COMMENT ON TABLE "stareau_principale".canalisation IS 'table mère des éléments linéaire';
@@ -167,7 +167,7 @@ CREATE TABLE "stareau_principale".emprise (
   --geom public.geometry(polygonZ, 2154) NOT NULL,
   CONSTRAINT pk_emprise PRIMARY KEY (id_emprise)
 )
-INHERITS ("stareau_principale".donnee_generale);
+INHERITS ("stareau_principale".champ_commun);
 CREATE INDEX sidx_emprise_geom ON stareau_principale.emprise USING gist (geom);  ---indexation
 
 COMMENT ON TABLE "stareau_principale".emprise IS 'table mère des éléments ayant une surface réelle ou projetée au sol';

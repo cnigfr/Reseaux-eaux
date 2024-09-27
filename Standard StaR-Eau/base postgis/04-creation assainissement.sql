@@ -190,7 +190,7 @@ CREATE TABLE "stareau_ass".ass_piece_hors_topo (
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT ass_piece_ht_pk PRIMARY KEY (id_ass_pieceht)
 )
-INHERITS (stareau_principale.donnee_generale);
+INHERITS (stareau_principale.champ_commun);
 COMMENT ON TABLE "stareau_ass".ass_piece_hors_topo IS 'Pièces sur canalisations principales HORS TOPOLOGIE (pas sur un noeud réseau)';
 
 -- Column comments
@@ -212,7 +212,7 @@ CREATE TABLE "stareau_ass".ass_point_mesure (
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_ass_point_mesure PRIMARY KEY (id_ass_point_mesure)
 )
-INHERITS (stareau_principale.donnee_generale);
+INHERITS (stareau_principale.champ_commun);
 COMMENT ON TABLE "stareau_ass".ass_point_mesure IS 'Point de suivi remarquable du fonctionnement d''un ouvrage d''assainissement';
 
 -- Column comments

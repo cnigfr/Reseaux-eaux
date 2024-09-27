@@ -2,7 +2,7 @@
  * 200-foreign_keys_et_contraintes.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/25 00:02:45
+ * // Last modified: 2024/09/27 14:37:05
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -29,11 +29,11 @@
  ----------à débloquer à la fin après peuplement, nettoyage et vérification-------------------------------------
 
 
---contraintes sur donnee_generale
-ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_pose_check CHECK (((an_pose_sup)::integer >= (an_pose_inf)::integer));
-ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_service_check CHECK (((an_service_sup)::integer >= (an_service_inf)::integer));
-ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_abandon_check CHECK (((an_abandon_sup)::integer >= (an_abandon_inf)::integer));
-ALTER TABLE stareau_principale.donnee_generale ADD CONSTRAINT donnee_rehab_check CHECK (((an_rehab_sup)::integer >= (an_rehab_inf)::integer));
+--contraintes sur champ_commun
+ALTER TABLE stareau_principale.champ_commun ADD CONSTRAINT donnee_pose_check CHECK (((an_pose_sup)::integer >= (an_pose_inf)::integer));
+ALTER TABLE stareau_principale.champ_commun ADD CONSTRAINT donnee_service_check CHECK (((an_service_sup)::integer >= (an_service_inf)::integer));
+ALTER TABLE stareau_principale.champ_commun ADD CONSTRAINT donnee_abandon_check CHECK (((an_abandon_sup)::integer >= (an_abandon_inf)::integer));
+ALTER TABLE stareau_principale.champ_commun ADD CONSTRAINT donnee_rehab_check CHECK (((an_rehab_sup)::integer >= (an_rehab_inf)::integer));
 
 ALTER TABLE stareau_principale.dimension ADD CONSTRAINT donnee_hauteur_check CHECK (((hauteur_exterieure)::real >= (hauteur_interieure)::real));
 ALTER TABLE stareau_principale.dimension ADD CONSTRAINT donnee_longueur_check CHECK (((longueur_exterieure)::real >= (longueur_interieure)::real));
