@@ -1,10 +1,10 @@
 # Changelog
 
-## [En cours](https://github.com/cnigfr/Reseaux-eaux/tree/HEAD)
+## [Unreleased](https://github.com/cnigfr/Reseaux-eaux/tree/HEAD)
 
 [Full Changelog](https://github.com/cnigfr/Reseaux-eaux/compare/AC_juin_2024...HEAD)
 
-**Questions vite répondues :**
+**Closed issues:**
 
 - Mauvais lien d'accès au cryptpad [\#4](https://github.com/cnigfr/Reseaux-eaux/issues/4)
 
@@ -12,7 +12,7 @@
 
 [Full Changelog](https://github.com/cnigfr/Reseaux-eaux/compare/V2022.10...AC_juin_2024)
 
-**pull requests fusionnés :**
+**Merged pull requests:**
 
 - modif erreur [\#3](https://github.com/cnigfr/Reseaux-eaux/pull/3) ([AlainPasquier](https://github.com/AlainPasquier))
 - Rédaction du document du standard [\#2](https://github.com/cnigfr/Reseaux-eaux/pull/2) ([jbhebbrecht-dea](https://github.com/jbhebbrecht-dea))
