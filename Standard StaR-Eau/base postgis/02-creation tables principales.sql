@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/27 14:37:50
+ * // Last modified: 2024/09/27 17:49:24
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -33,6 +33,7 @@
 CREATE TABLE stareau_principale.dimension (
   forme text DEFAULT 'circulaire'::text NOT NULL, -- *forme générale de l'objet*
   unite text DEFAULT 'mm'::text NOT NULL, -- *unité des mesures*
+  lien_detail text NULL,
   hauteur_interieure float8 NULL, -- hauteur max interieure
   hauteur_exterieure float8 NULL, -- hauteur max exterieure
   largeur_interieure float8 NULL, -- largeur max interieure
@@ -46,6 +47,7 @@ COMMENT ON TABLE stareau_principale.dimension IS 'table mére des dimensions des
 
 COMMENT ON COLUMN stareau_principale.dimension.forme IS '*forme générale de l''objet*';
 COMMENT ON COLUMN stareau_principale.dimension.unite IS '*unité des mesures*';
+COMMENT ON COLUMN stareau_principale.dimension.lien_detail IS 'lien vers fichier descriptif des formes complexes';
 COMMENT ON COLUMN stareau_principale.dimension.hauteur_interieure IS 'hauteur max interieure';
 COMMENT ON COLUMN stareau_principale.dimension.hauteur_exterieure IS 'hauteur max exterieure';
 COMMENT ON COLUMN stareau_principale.dimension.largeur_interieure IS 'largeur max interieure';

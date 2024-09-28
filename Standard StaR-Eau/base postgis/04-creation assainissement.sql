@@ -49,6 +49,7 @@ COMMENT ON COLUMN "stareau_ass".ass_traitement.telegestion IS '*présence d''une
 
 CREATE TABLE "stareau_ass".ass_pretraitement (
   id_ass_pretraitement TEXT NULL, -- identifiant
+  nom_usuel text NULL, -- nom usuel
   type_pretraitement text NOT NULL, -- > type de prétraitement
   capacite int4 NOT NULL, -- capacité du prétraitement
   volume float4 NOT NULL, -- volume total du stockage éventuel
@@ -64,6 +65,7 @@ COMMENT ON COLUMN "stareau_ass".ass_pretraitement.type_pretraitement IS '*type d
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.capacite IS 'capacité du prétraitement';
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.volume IS 'volume total du stockage éventuel';
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.telegestion IS '*présence d''une gestion à distance*';
+COMMENT ON COLUMN "stareau_ass".ass_pretraitement.nom_usuel IS 'nom d''usage du prétraitement';
 
 ---EQUIPEMENT
 
@@ -233,6 +235,7 @@ CREATE TABLE "stareau_ass".ass_regard (
   nb_paliers int2 NULL, -- nombre de paliers
   z_tampon float4 NULL, -- cote NGF du tampon
   z_radier float4 NULL, -- cote NGF du point le plus bas du regard
+  profondeur_mesure float4 NULL, 
   CONSTRAINT pk_ass_regard PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau,"stareau_principale".dimension);
@@ -246,6 +249,7 @@ COMMENT ON COLUMN "stareau_ass".ass_regard.type_descente IS '*élèment de desce
 COMMENT ON COLUMN "stareau_ass".ass_regard.nb_paliers IS 'nombre de paliers';
 COMMENT ON COLUMN "stareau_ass".ass_regard.z_tampon IS 'cote NGF du tampon';
 COMMENT ON COLUMN "stareau_ass".ass_regard.z_radier IS 'cote NGF du point le plus bas du regard';
+COMMENT ON COLUMN "stareau_ass".ass_regard.profondeur_mesure IS 'profondeur mesurée ou évaluée sur le terrain';
 
 ---OUVRAGE SPECIAL
 
