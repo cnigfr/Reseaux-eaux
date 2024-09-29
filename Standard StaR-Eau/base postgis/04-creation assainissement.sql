@@ -363,3 +363,61 @@ COMMENT ON TABLE stareau_ass.ass_engouffrement_surface IS 'Élément du système
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.type_engouffrement IS '*type d''engouffrement*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.decantation IS '*présence décantation*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.siphon IS '*présence d''un siphon*';
+
+---GESTION PLUVIALES
+
+CREATE TABLE stareau_ass.ass_gestion_epl_point (
+	id_ass_gestion_epl_point text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+  --id_ass_gestion_epl_point INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_ass_gestion_epl_point TEXT NOt NULL, --
+	type_gestion text NOT NULL, -- *type d'ouvrage de gestion*
+	fonction_gestion_epl text NOT NULL, -- *fonction de l'ouvrage de gestion*
+	geom public.geometry(point, 2154) NOT NULL,
+	CONSTRAINT pk_ass_gestion_epl_point PRIMARY KEY (id_ass_gestion_epl_point)
+)
+INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
+COMMENT ON TABLE stareau_ass.ass_gestion_epl_point IS 'gestion des ouvrages pluviaux surfaciques';
+
+-- Column comments
+
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.id_ass_gestion_epl_point IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.type_gestion IS '*type d''ouvrage de gestion*';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
+
+--
+CREATE TABLE stareau_ass.ass_gestion_epl_ligne (
+	id_ass_gestion_epl_ligne text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+  --id_ass_gestion_epl_ligne INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_ass_gestion_epl_ligne TEXT NOt NULL, --
+	type_gestion text NOT NULL, -- *type d'ouvrage de gestion*
+	fonction_gestion_epl text NOT NULL, -- *fonction de l'ouvrage de gestion*
+	geom public.geometry(linestring, 2154) NOT NULL,
+	CONSTRAINT pk_ass_gestion_epl_ligne PRIMARY KEY (id_ass_gestion_epl_ligne)
+)
+INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
+COMMENT ON TABLE stareau_ass.ass_gestion_epl_ligne IS 'gestion des ouvrages pluviaux surfaciques';
+
+-- Column comments
+
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.id_ass_gestion_epl_ligne IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.type_gestion IS '*type d''ouvrage de gestion*';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
+
+--
+CREATE TABLE stareau_ass.ass_gestion_epl_surface (
+	id_ass_gestion_epl_surface text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+  --id_ass_gestion_epl_surface INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_ass_gestion_epl_surface TEXT NOt NULL, --
+	type_gestion text NOT NULL, -- *type d'ouvrage de gestion*
+	fonction_gestion_epl text NOT NULL, -- *fonction de l'ouvrage de gestion*
+	geom public.geometry(polygon, 2154) NOT NULL,
+	CONSTRAINT pk_ass_gestion_epl_surface PRIMARY KEY (id_ass_gestion_epl_surface)
+)
+INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
+COMMENT ON TABLE stareau_ass.ass_gestion_epl_surface IS 'gestion des ouvrages pluviaux surfaciques';
+
+-- Column comments
+
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.id_ass_gestion_epl_surface IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.type_gestion IS '*type d''ouvrage de gestion*';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
