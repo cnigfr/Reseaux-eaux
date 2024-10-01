@@ -4,3 +4,4 @@
 "stockage","Stockage","canalisation permettant le stockage ou la rétention des effluents"
 "transport","Transport","canalisation de transit entre 2 ouvrages sans branchement."
 "trop_plein","Trop-plein","canalisation d'évacuation d'un trop-plein d'ouvrage"
+"drain","Drain","canalisation perforée pour retirer le surplus d'eau du sol"

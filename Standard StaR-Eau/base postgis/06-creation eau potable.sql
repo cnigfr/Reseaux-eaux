@@ -2,7 +2,7 @@
  * 06-creation eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/27 14:37:05
+ * // Last modified: 2024/10/02 00:33:59
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -70,7 +70,7 @@ CREATE TABLE "stareau_aep".aep_captage (
   CONSTRAINT pk_aep_captage PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);
-COMMENT ON TABLE "stareau_aep".aep_captage IS 'Ouvrage de prélèvement exploitant une ressource en eau, que ce soit en surface (prise d''eau en rivière) ou dans le sous-sol (forage ou puit atteignant un aquifère';
+COMMENT ON TABLE "stareau_aep".aep_captage IS 'Ouvrage de prélèvement exploitant une ressource en eau, que ce soit en surface (prise d''eau en rivière) ou dans le sous-sol (forage ou puits atteignant un aquifère';
 
 -- Column comments
 
