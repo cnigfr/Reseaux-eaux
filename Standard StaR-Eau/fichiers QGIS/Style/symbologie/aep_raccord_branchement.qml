@@ -5,7 +5,7 @@
       <rule filter="&quot;etat_service&quot; IN ( 'en_service','en_arret')" description="Conduite en service ou arrêt momentané" key="{8db5a71e-f629-4bf3-aaa2-a27dfc009365}" label="En service">
         <rule scalemindenom="2001" key="{ca9712c6-fd75-4bab-b2e7-f56a84e21d68}" label="Vue d'ensemble" scalemaxdenom="110000"/>
         <rule key="{12476d89-e51c-44f4-b989-88588868e278}" label="Détails" scalemaxdenom="2000">
-          <rule filter="&quot;type_raccord_branchement&quot; IS NULL" key="{7b1ef0b5-fbce-43ca-b4c1-a8b387687589}" symbol="0"/>
+          <rule filter="&quot;type_raccord&quot; IS NULL" key="{7b1ef0b5-fbce-43ca-b4c1-a8b387687589}" symbol="0"/>
         </rule>
       </rule>
       <rule filter=" &quot;etat_service&quot; IN ('abandon','depose','comble')" key="{b8bb3ded-c04f-4985-8c5c-e8abc0617f48}" symbol="1" label="Abandon"/>

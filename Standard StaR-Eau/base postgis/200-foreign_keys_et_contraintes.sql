@@ -2,7 +2,7 @@
  * 200-foreign_keys_et_contraintes.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/27 14:37:05
+ * // Last modified: 2024/10/03 00:09:09
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -57,8 +57,8 @@ ALTER TABLE "stareau_aep".aep_piece ADD CONSTRAINT aep_piece_fk FOREIGN KEY (fk_
 ALTER TABLE "stareau_aep".aep_piece_hors_topo ADD CONSTRAINT aep_pieceht_fk FOREIGN KEY (fk_aep_canalisation) REFERENCES "stareau_aep".aep_canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --raccord branchement
-ALTER TABLE stareau_aep_brcht.aep_raccord_branchement ADD CONSTRAINT aep_raccord_branchement_canalisation_fk FOREIGN KEY (ref_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON UPDATE CASCADE;
-ALTER TABLE stareau_ass_brcht.ass_raccord_branchement ADD CONSTRAINT ass_raccord_branchement_canalisation_fk FOREIGN KEY (ref_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON UPDATE CASCADE;
+ALTER TABLE stareau_aep_brcht.aep_raccord ADD CONSTRAINT aep_raccord_canalisation_fk FOREIGN KEY (ref_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass_brcht.ass_raccord ADD CONSTRAINT ass_raccord_canalisation_fk FOREIGN KEY (ref_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON UPDATE CASCADE;
 
 -- "stareau_commun".mm_aep_cana_protection foreign keys
 ALTER TABLE stareau_aep.mm_aep_cana_protection ADD CONSTRAINT mm_aep_cana_protection_fk FOREIGN KEY (fk_aep_protection_meca) REFERENCES stareau_aep.aep_protection_mecanique(id_aep_protection_mecanique) ON DELETE CASCADE ON UPDATE CASCADE;

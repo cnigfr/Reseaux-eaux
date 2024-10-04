@@ -5,11 +5,11 @@
       <rule filter="&quot;etat_service&quot; IN ( 'en_service','en_arret')" description="Conduite en service ou arrêt momentané" key="{8db5a71e-f629-4bf3-aaa2-a27dfc009365}" label="En service">
         <rule key="{ca9712c6-fd75-4bab-b2e7-f56a84e21d68}" scalemaxdenom="110000" scalemindenom="2001" label="Vue d'ensemble"/>
         <rule key="{12476d89-e51c-44f4-b989-88588868e278}" scalemaxdenom="2000" label="Détails">
-          <rule symbol="0" filter="&quot;type_raccord_branchement&quot; = 'culotte'" key="{c22edb1c-5fdf-4886-8faa-32b734bcca68}" label="culotte"/>
-          <rule symbol="1" filter="&quot;type_raccord_branchement&quot; = 'piquage_direct'" key="{ae8eb162-978e-4db9-9615-8ac4587b6092}" label="piquage direct"/>
-          <rule symbol="2" filter="&quot;type_raccord_branchement&quot; = 'selle'" key="{ed2f5a31-c085-456f-9750-77dc67f38102}" label="selle"/>
-          <rule symbol="3" filter="&quot;type_raccord_branchement&quot; = 'te'" key="{7b43a9b2-8394-4978-8931-ce67a9488d4d}" label="té"/>
-          <rule symbol="4" filter="&quot;type_raccord_branchement&quot; = 'tulipe'" key="{47470803-6782-4828-b917-aaac03740bdf}" label="tulipe"/>
+          <rule symbol="0" filter="&quot;type_raccord&quot; = 'culotte'" key="{c22edb1c-5fdf-4886-8faa-32b734bcca68}" label="culotte"/>
+          <rule symbol="1" filter="&quot;type_raccord&quot; = 'piquage_direct'" key="{ae8eb162-978e-4db9-9615-8ac4587b6092}" label="piquage direct"/>
+          <rule symbol="2" filter="&quot;type_raccord&quot; = 'selle'" key="{ed2f5a31-c085-456f-9750-77dc67f38102}" label="selle"/>
+          <rule symbol="3" filter="&quot;type_raccord&quot; = 'te'" key="{7b43a9b2-8394-4978-8931-ce67a9488d4d}" label="té"/>
+          <rule symbol="4" filter="&quot;type_raccord&quot; = 'tulipe'" key="{47470803-6782-4828-b917-aaac03740bdf}" label="tulipe"/>
         </rule>
       </rule>
       <rule symbol="5" filter=" &quot;etat_service&quot; IN ('abandon','depose','comble')" key="{b8bb3ded-c04f-4985-8c5c-e8abc0617f48}" label="Abandon"/>

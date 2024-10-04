@@ -10458,7 +10458,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol name="ass_raccord_branchement Abandon" clip_to_extent="1" is_animated="0" type="marker" alpha="0.97" force_rhr="0" frame_rate="10">
+    <symbol name="ass_raccord Abandon" clip_to_extent="1" is_animated="0" type="marker" alpha="0.97" force_rhr="0" frame_rate="10">
       <data_defined_properties>
         <Option type="Map">
           <Option name="name" value="" type="QString"/>
@@ -10527,7 +10527,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol name="ass_raccord_branchement En projet/en construction" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
+    <symbol name="ass_raccord En projet/en construction" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
       <data_defined_properties>
         <Option type="Map">
           <Option name="name" value="" type="QString"/>
@@ -10566,7 +10566,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol name="ass_raccord_branchement En service Détails culotte" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
+    <symbol name="ass_raccord En service Détails culotte" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
       <data_defined_properties>
         <Option type="Map">
           <Option name="name" value="" type="QString"/>
@@ -10611,7 +10611,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol name="ass_raccord_branchement En service Détails piquage direct" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
+    <symbol name="ass_raccord En service Détails piquage direct" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
       <data_defined_properties>
         <Option type="Map">
           <Option name="name" value="" type="QString"/>
@@ -10656,7 +10656,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol name="ass_raccord_branchement En service Détails selle" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
+    <symbol name="ass_raccord En service Détails selle" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
       <data_defined_properties>
         <Option type="Map">
           <Option name="name" value="" type="QString"/>
@@ -10701,7 +10701,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol name="ass_raccord_branchement En service Détails tulipe" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
+    <symbol name="ass_raccord En service Détails tulipe" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
       <data_defined_properties>
         <Option type="Map">
           <Option name="name" value="" type="QString"/>
@@ -10746,7 +10746,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol name="ass_raccord_branchement En service Détails té" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
+    <symbol name="ass_raccord En service Détails té" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
       <data_defined_properties>
         <Option type="Map">
           <Option name="name" value="" type="QString"/>
@@ -10791,7 +10791,7 @@
         </data_defined_properties>
       </layer>
     </symbol>
-    <symbol name="ass_raccord_branchement Etat non renseigné" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
+    <symbol name="ass_raccord Etat non renseigné" clip_to_extent="1" is_animated="0" type="marker" alpha="1" force_rhr="0" frame_rate="10">
       <data_defined_properties>
         <Option type="Map">
           <Option name="name" value="" type="QString"/>

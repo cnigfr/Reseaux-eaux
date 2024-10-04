@@ -149,11 +149,11 @@
       <rule filter="&quot;etat_service&quot; IN ( 'en_service','en_arret')" description="Conduite en service ou arrêt momentané" key="{8db5a71e-f629-4bf3-aaa2-a27dfc009365}" label="En service">
         <rule key="{ca9712c6-fd75-4bab-b2e7-f56a84e21d68}" scalemaxdenom="110000" scalemindenom="2001" label="Vue d'ensemble"/>
         <rule key="{12476d89-e51c-44f4-b989-88588868e278}" scalemaxdenom="2000" label="Détails">
-          <rule symbol="0" filter="&quot;type_raccord_branchement&quot; = 'culotte'" key="{c22edb1c-5fdf-4886-8faa-32b734bcca68}" label="culotte"/>
-          <rule symbol="1" filter="&quot;type_raccord_branchement&quot; = 'piquage_direct'" key="{ae8eb162-978e-4db9-9615-8ac4587b6092}" label="piquage direct"/>
-          <rule symbol="2" filter="&quot;type_raccord_branchement&quot; = 'selle'" key="{ed2f5a31-c085-456f-9750-77dc67f38102}" label="selle"/>
-          <rule symbol="3" filter="&quot;type_raccord_branchement&quot; = 'te'" key="{7b43a9b2-8394-4978-8931-ce67a9488d4d}" label="té"/>
-          <rule symbol="4" filter="&quot;type_raccord_branchement&quot; = 'tulipe'" key="{47470803-6782-4828-b917-aaac03740bdf}" label="tulipe"/>
+          <rule symbol="0" filter="&quot;type_raccord&quot; = 'culotte'" key="{c22edb1c-5fdf-4886-8faa-32b734bcca68}" label="culotte"/>
+          <rule symbol="1" filter="&quot;type_raccord&quot; = 'piquage_direct'" key="{ae8eb162-978e-4db9-9615-8ac4587b6092}" label="piquage direct"/>
+          <rule symbol="2" filter="&quot;type_raccord&quot; = 'selle'" key="{ed2f5a31-c085-456f-9750-77dc67f38102}" label="selle"/>
+          <rule symbol="3" filter="&quot;type_raccord&quot; = 'te'" key="{7b43a9b2-8394-4978-8931-ce67a9488d4d}" label="té"/>
+          <rule symbol="4" filter="&quot;type_raccord&quot; = 'tulipe'" key="{47470803-6782-4828-b917-aaac03740bdf}" label="tulipe"/>
         </rule>
       </rule>
       <rule symbol="5" filter=" &quot;etat_service&quot; IN ('abandon','depose','comble')" key="{b8bb3ded-c04f-4985-8c5c-e8abc0617f48}" label="Abandon"/>
@@ -1018,7 +1018,7 @@
         </config>
       </editWidget>
     </field>
-    <field name="id_ass_raccord_branchement" configurationFlags="None">
+    <field name="id_ass_raccord" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -1028,7 +1028,7 @@
         </config>
       </editWidget>
     </field>
-    <field name="type_raccord_branchement" configurationFlags="None">
+    <field name="type_raccord" configurationFlags="None">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
@@ -1107,8 +1107,8 @@
     <alias field="lien_doc2" name="lien 2 vers document" index="24"/>
     <alias field="commentaire" name="" index="25"/>
     <alias field="id_noeud_reseau" name="" index="26"/>
-    <alias field="id_ass_raccord_branchement" name="" index="27"/>
-    <alias field="type_raccord_branchement" name="type de raccord" index="28"/>
+    <alias field="id_ass_raccord" name="" index="27"/>
+    <alias field="type_raccord" name="type de raccord" index="28"/>
     <alias field="ref_canalisation" name="canalisation de référence" index="29"/>
   </aliases>
   <defaults>
@@ -1139,8 +1139,8 @@
     <default field="lien_doc2" applyOnUpdate="0" expression=""/>
     <default field="commentaire" applyOnUpdate="0" expression=""/>
     <default field="id_noeud_reseau" applyOnUpdate="0" expression="uuid()"/>
-    <default field="id_ass_raccord_branchement" applyOnUpdate="0" expression="&quot;fid&quot;"/>
-    <default field="type_raccord_branchement" applyOnUpdate="0" expression="'non_renseigne'"/>
+    <default field="id_ass_raccord" applyOnUpdate="0" expression="&quot;fid&quot;"/>
+    <default field="type_raccord" applyOnUpdate="0" expression="'non_renseigne'"/>
     <default field="ref_canalisation" applyOnUpdate="0" expression="array_to_string(overlay_nearest('ass_canalisation',&quot;id_canalisation&quot;,0.3),1)"/>
   </defaults>
   <constraints>
@@ -1171,8 +1171,8 @@
     <constraint field="lien_doc2" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
     <constraint field="commentaire" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
     <constraint field="id_noeud_reseau" unique_strength="0" notnull_strength="1" exp_strength="0" constraints="1"/>
-    <constraint field="id_ass_raccord_branchement" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
-    <constraint field="type_raccord_branchement" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
+    <constraint field="id_ass_raccord" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
+    <constraint field="type_raccord" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
     <constraint field="ref_canalisation" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
   </constraints>
   <constraintExpressions>
@@ -1203,8 +1203,8 @@
     <constraint field="lien_doc2" exp="" desc=""/>
     <constraint field="commentaire" exp="" desc=""/>
     <constraint field="id_noeud_reseau" exp="" desc=""/>
-    <constraint field="id_ass_raccord_branchement" exp="" desc=""/>
-    <constraint field="type_raccord_branchement" exp="" desc=""/>
+    <constraint field="id_ass_raccord" exp="" desc=""/>
+    <constraint field="type_raccord" exp="" desc=""/>
     <constraint field="ref_canalisation" exp="" desc=""/>
   </constraintExpressions>
   <expressionfields/>
@@ -1240,8 +1240,8 @@
       <column hidden="0" name="lien_doc2" width="-1" type="field"/>
       <column hidden="0" name="commentaire" width="-1" type="field"/>
       <column hidden="0" name="id_noeud_reseau" width="-1" type="field"/>
-      <column hidden="0" name="id_ass_raccord_branchement" width="-1" type="field"/>
-      <column hidden="0" name="type_raccord_branchement" width="-1" type="field"/>
+      <column hidden="0" name="id_ass_raccord" width="-1" type="field"/>
+      <column hidden="0" name="type_raccord" width="-1" type="field"/>
       <column hidden="0" name="ref_canalisation" width="-1" type="field"/>
       <column hidden="1" width="-1" type="actions"/>
     </columns>
@@ -1292,7 +1292,7 @@ def my_form_open(dialog, layer, feature):
       <labelStyle overrideLabelColor="0" labelColor="0,0,0,255" overrideLabelFont="0">
         <labelFont description="Noto Sans,10,-1,5,50,0,0,0,0,0" strikethrough="0" italic="0" underline="0" bold="0" style=""/>
       </labelStyle>
-      <attributeEditorField name="type_raccord_branchement" showLabel="1" index="28">
+      <attributeEditorField name="type_raccord" showLabel="1" index="28">
         <labelStyle overrideLabelColor="0" labelColor="0,0,0,255" overrideLabelFont="0">
           <labelFont description="Noto Sans,10,-1,5,50,0,0,0,0,0" strikethrough="0" italic="0" underline="0" bold="0" style=""/>
         </labelStyle>
@@ -1427,7 +1427,7 @@ def my_form_open(dialog, layer, feature):
           <labelFont description="Noto Sans,10,-1,5,50,0,0,0,0,0" strikethrough="0" italic="0" underline="0" bold="0" style=""/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField name="id_ass_raccord_branchement" showLabel="1" index="27">
+      <attributeEditorField name="id_ass_raccord" showLabel="1" index="27">
         <labelStyle overrideLabelColor="0" labelColor="0,0,0,255" overrideLabelFont="0">
           <labelFont description="Noto Sans,10,-1,5,50,0,0,0,0,0" strikethrough="0" italic="0" underline="0" bold="0" style=""/>
         </labelStyle>
@@ -1480,7 +1480,7 @@ def my_form_open(dialog, layer, feature):
     <field editable="1" name="hauteur_exterieure"/>
     <field editable="1" name="hauteur_interieure"/>
     <field editable="1" name="id"/>
-    <field editable="1" name="id_ass_raccord_branchement"/>
+    <field editable="1" name="id_ass_raccord"/>
     <field editable="0" name="id_noeud_reseau"/>
     <field editable="1" name="insee_commune"/>
     <field editable="1" name="largeur_exterieure"/>
@@ -1498,7 +1498,7 @@ def my_form_open(dialog, layer, feature):
     <field editable="1" name="precision_z"/>
     <field editable="1" name="ref_canalisation"/>
     <field editable="1" name="telegestion"/>
-    <field editable="1" name="type_raccord_branchement"/>
+    <field editable="1" name="type_raccord"/>
     <field editable="1" name="type_reseau"/>
     <field editable="1" name="unite"/>
   </editable>
@@ -1523,7 +1523,7 @@ def my_form_open(dialog, layer, feature):
     <field name="hauteur_exterieure" labelOnTop="0"/>
     <field name="hauteur_interieure" labelOnTop="0"/>
     <field name="id" labelOnTop="0"/>
-    <field name="id_ass_raccord_branchement" labelOnTop="0"/>
+    <field name="id_ass_raccord" labelOnTop="0"/>
     <field name="id_noeud_reseau" labelOnTop="0"/>
     <field name="insee_commune" labelOnTop="0"/>
     <field name="largeur_exterieure" labelOnTop="0"/>
@@ -1541,7 +1541,7 @@ def my_form_open(dialog, layer, feature):
     <field name="precision_z" labelOnTop="0"/>
     <field name="ref_canalisation" labelOnTop="0"/>
     <field name="telegestion" labelOnTop="0"/>
-    <field name="type_raccord_branchement" labelOnTop="0"/>
+    <field name="type_raccord" labelOnTop="0"/>
     <field name="type_reseau" labelOnTop="0"/>
     <field name="unite" labelOnTop="0"/>
   </labelOnTop>
@@ -1566,7 +1566,7 @@ def my_form_open(dialog, layer, feature):
     <field reuseLastValue="0" name="hauteur_exterieure"/>
     <field reuseLastValue="0" name="hauteur_interieure"/>
     <field reuseLastValue="0" name="id"/>
-    <field reuseLastValue="0" name="id_ass_raccord_branchement"/>
+    <field reuseLastValue="0" name="id_ass_raccord"/>
     <field reuseLastValue="0" name="id_noeud_reseau"/>
     <field reuseLastValue="1" name="insee_commune"/>
     <field reuseLastValue="0" name="largeur_exterieure"/>
@@ -1584,7 +1584,7 @@ def my_form_open(dialog, layer, feature):
     <field reuseLastValue="1" name="precision_z"/>
     <field reuseLastValue="0" name="ref_canalisation"/>
     <field reuseLastValue="1" name="telegestion"/>
-    <field reuseLastValue="1" name="type_raccord_branchement"/>
+    <field reuseLastValue="1" name="type_raccord"/>
     <field reuseLastValue="1" name="type_reseau"/>
     <field reuseLastValue="1" name="unite"/>
   </reuseLastValue>

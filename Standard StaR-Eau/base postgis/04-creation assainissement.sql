@@ -421,3 +421,26 @@ COMMENT ON TABLE stareau_ass.ass_gestion_epl_surface IS 'gestion des ouvrages pl
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.id_ass_gestion_epl_surface IS 'identifiant local';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.type_gestion IS '*type d''ouvrage de gestion*';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
+
+
+
+/* ------------Table combinée-------------------
+CREATE TABLE stareau_ass.ass_gestion_epl (
+	id_ass_gestion_epl text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local
+  --id_ass_gestion_epl INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_ass_gestion_epl TEXT NOt NULL, --
+	type_gestion text NOT NULL, -- *type d'ouvrage de gestion*
+	fonction_gestion_epl text NOT NULL, -- *fonction de l'ouvrage de gestion*
+	geomp public.geometry(point, 2154) NOT NULL,
+	geoml public.geometry(linestring, 2154) NOT NULL,
+	geoms public.geometry(polygon, 2154) NOT NULL,
+	CONSTRAINT pk_ass_gestion_epl PRIMARY KEY (id_ass_gestion_epl)
+)
+INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
+COMMENT ON TABLE stareau_ass.ass_gestion_epl IS 'gestion des ouvrages pluviaux';
+
+-- Column comments
+
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl.id_ass_gestion_epl IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl.type_gestion IS '*type d''ouvrage de gestion*';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*'; */

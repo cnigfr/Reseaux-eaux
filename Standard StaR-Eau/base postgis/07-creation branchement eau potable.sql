@@ -2,7 +2,7 @@
  * 07-creation branchement eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/25 00:01:29
+ * // Last modified: 2024/10/03 00:09:09
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -61,19 +61,19 @@ COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.type_usager IS '*type 
 
 --RACCORD BRANCHEMENT
 
-CREATE TABLE stareau_aep_brcht.aep_raccord_branchement (
-  id_raccord_branchement text null,
---type_raccord_branchement text NULL, -- > type de raccord
+CREATE TABLE stareau_aep_brcht.aep_raccord (
+  id_raccord text null,
+--type_raccord text NULL, -- > type de raccord
   ref_canalisation text NOT NULL, -- lien vers canalisation
   CONSTRAINT pk_aep_raccord_brcht PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS (stareau_principale.noeud_reseau);
-COMMENT ON TABLE stareau_aep_brcht.aep_raccord_branchement IS 'Point de raccordement entre le branchement et la canalisation (non sécant)';
+COMMENT ON TABLE stareau_aep_brcht.aep_raccord IS 'Point de raccordement entre le branchement et la canalisation (non sécant)';
 
 -- Column comments
 
---COMMENT ON COLUMN stareau_aep_brcht.aep_raccord_branchement.type_raccord_branchement IS '*type de raccord*';
-COMMENT ON COLUMN stareau_aep_brcht.aep_raccord_branchement.ref_canalisation IS 'lien vers canalisation principale';
+--COMMENT ON COLUMN stareau_aep_brcht.aep_raccord.type_raccord IS '*type de raccord*';
+COMMENT ON COLUMN stareau_aep_brcht.aep_raccord.ref_canalisation IS 'lien vers canalisation principale';
 
 ---- PIECE BRANCHEMENT
 

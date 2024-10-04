@@ -2,7 +2,7 @@
  * 05-creation branchement assainissement.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/25 00:01:25
+ * // Last modified: 2024/10/03 00:09:09
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -64,16 +64,16 @@ COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.z_radier IS 'z NGF radi
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.profondeur IS 'profondeur mesurée ou calculée';
 
 --ass_raccord
-CREATE TABLE "stareau_ass_brcht".ass_raccord_branchement (
-  id_ass_raccord_branchement TEXT NULL,
-  type_raccord_branchement text NULL, -- type de raccord
+CREATE TABLE "stareau_ass_brcht".ass_raccord (
+  id_ass_raccord TEXT NULL,
+  type_raccord text NULL, -- type de raccord
   ref_canalisation text NULL, -- identifiant de la cana principale
   CONSTRAINT pk_ass_raccord_brcht PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);
-COMMENT ON TABLE "stareau_ass_brcht".ass_raccord_branchement IS 'pièce de raccordement sur la conduite principale';
+COMMENT ON TABLE "stareau_ass_brcht".ass_raccord IS 'pièce de raccordement sur la conduite principale';
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord_branchement.type_raccord_branchement IS '*type de raccord*';
-COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord_branchement.ref_canalisation IS 'canalisation de référence';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord.type_raccord IS '*type de raccord*';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord.ref_canalisation IS 'canalisation de référence';

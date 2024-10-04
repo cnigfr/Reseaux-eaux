@@ -2,7 +2,7 @@
  * 220-contraintes_sur_liste_valeurs_ASS.sql - 2024-06-02
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/25 00:03:27
+ * // Last modified: 2024/10/03 00:09:09
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -295,14 +295,14 @@ ALTER TABLE stareau_ass_brcht.ass_point_collecte ADD CONSTRAINT ass_point_collec
 ALTER TABLE stareau_ass_brcht.ass_point_collecte ADD CONSTRAINT ass_point_collecte_com_materiau_fk FOREIGN KEY (materiau) REFERENCES stareau_valeur.com_materiau(code) ON UPDATE CASCADE;
 
 --ass_raccord branchement
-ALTER TABLE stareau_ass_brcht.ass_raccord_branchement ADD CONSTRAINT ass_raccord_branchement_com_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_ass_brcht.ass_raccord_branchement ADD CONSTRAINT ass_raccord_branchement_com_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_ass_brcht.ass_raccord_branchement ADD CONSTRAINT ass_raccord_branchement_com_precision_xy_fk FOREIGN KEY (precision_xy) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_ass_brcht.ass_raccord_branchement ADD CONSTRAINT ass_raccord_branchement_com_precision_z_fk FOREIGN KEY (precision_z) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_ass_brcht.ass_raccord_branchement ADD CONSTRAINT ass_raccord_branchement_com_origine_creation_fk FOREIGN KEY (origine_creation) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_ass_brcht.ass_raccord_branchement ADD CONSTRAINT ass_raccord_branchement_com_origine_maj_fk FOREIGN KEY (origine_maj) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass_brcht.ass_raccord ADD CONSTRAINT ass_raccord_com_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass_brcht.ass_raccord ADD CONSTRAINT ass_raccord_com_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass_brcht.ass_raccord ADD CONSTRAINT ass_raccord_com_precision_xy_fk FOREIGN KEY (precision_xy) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass_brcht.ass_raccord ADD CONSTRAINT ass_raccord_com_precision_z_fk FOREIGN KEY (precision_z) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass_brcht.ass_raccord ADD CONSTRAINT ass_raccord_com_origine_creation_fk FOREIGN KEY (origine_creation) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass_brcht.ass_raccord ADD CONSTRAINT ass_raccord_com_origine_maj_fk FOREIGN KEY (origine_maj) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 
-ALTER TABLE stareau_ass_brcht.ass_raccord_branchement ADD CONSTRAINT ass_raccord_branchement_ass_type_raccord_branchement_fk FOREIGN KEY (type_raccord_branchement) REFERENCES stareau_valeur.ass_type_raccord(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass_brcht.ass_raccord ADD CONSTRAINT ass_raccord_ass_type_raccord_fk FOREIGN KEY (type_raccord) REFERENCES stareau_valeur.ass_type_raccord(code) ON UPDATE CASCADE;
 
 
 --enjoy more !

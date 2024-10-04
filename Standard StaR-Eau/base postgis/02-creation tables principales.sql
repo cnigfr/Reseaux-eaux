@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/27 17:49:24
+ * // Last modified: 2024/10/03 00:20:06
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -62,6 +62,7 @@ CREATE TABLE "stareau_principale".champ_commun(
    --id_champ_commun INT GENERATED ALWAYS AS IDENTITY,
    type_reseau TEXT NOT NULL, --type de réseau (com_type_reseau)
    fictif BOOL DEFAULT false NULL,
+   sensible BOOL DEFAULT false NULL,
    etat_service TEXT NOT NULL, --etat de service (com_etat_service)
    --insee_commune varchar(5) NOT NULL, --Insee de la commune
    insee_commune c_insee NOT NULL, --Insee de la commune
