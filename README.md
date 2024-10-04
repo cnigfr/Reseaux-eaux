@@ -20,30 +20,7 @@ suivants :
 
 # MODÈLE STANDARD DE DONNÉES - STAR-EAU
 
-# Appel à commentaires
-
-![appel](https://github.com/cnigfr/Reseaux-eaux/blob/main/Documentation/image_documentation/logo/appel_commentaire.png)
-
-**Appel ouvert jusqu'au 04 octobre 2024 à 18h**
-
-> [!IMPORTANT]
-> Utiliser **_la pré-version d'appel à commentaires_** [release AC_juin_2024](https://github.com/cnigfr/Reseaux-eaux/releases/tag/AC_juin_2024)
-> si vous téléchargez le github (via le bouton code), la version peut différer (travail toujours en cours).
-
-## Comment tester
-
-Vous pouvez tester les couches grâce aux fichiers fournis dans la pré-version, [suivez le tuto ici](https://github.com/cnigfr/Reseaux-eaux/wiki/Tutoriel-d'installation)
-
-## Comment commenter
-
-Vous pouvez commenter le travail sur : [appel à commentaire](https://cryptpad.fr/sheet/#/2/sheet/edit/wfNUCXes-vLBmd1O1kalH-T2/embed/)
-
-La pré-version demande encore du travail. Vos commentaires nous sont précieux pour réaliser un standard utile.
-
-N'hésiter pas à signaler, commenter, proposer, mais aussi à participer. Soyez critique, courtois, précis et souvenez-vous qu'il s'agit d'un standard, aucune demande de personnalisation ne sera prise en compte.
-
-> [!WARNING]
-> l'appel à commentaires ne porte pas sur la symbologie
+appel à commentaire terminé - merci de votre participation.
 
 ---
 
