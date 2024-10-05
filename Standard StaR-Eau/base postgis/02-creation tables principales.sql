@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/03 00:20:06
+ * // Last modified: 2024/10/04 16:37:52
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -154,7 +154,7 @@ COMMENT ON TABLE "stareau_principale".canalisation IS 'table mère des élément
 COMMENT ON COLUMN "stareau_principale".canalisation.mode_circulation IS '*mode de circulation*';
 COMMENT ON COLUMN "stareau_principale".canalisation.type_pose IS '*type de pose*';
 COMMENT ON COLUMN "stareau_principale".canalisation.raison_pose IS '*raison de la pose*';
-COMMENT ON COLUMN "stareau_principale".canalisation.materiau IS '*materiau*';
+COMMENT ON COLUMN "stareau_principale".canalisation.materiau IS '*materiau constitutif*';
 COMMENT ON COLUMN "stareau_principale".canalisation.revetement_interieur IS '*revêtement intérieur*';
 COMMENT ON COLUMN "stareau_principale".canalisation.diametre_equivalent IS 'diametre nominal ou équivalent';
 COMMENT ON COLUMN "stareau_principale".canalisation.longueur_terrain IS 'longueur réelle terrain';
