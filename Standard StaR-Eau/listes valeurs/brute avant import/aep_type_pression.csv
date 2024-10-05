@@ -1,3 +1,4 @@
 "gravitaire","gravitaire","ecoulement suivant la gravité"
 "surpresse","surpressé","secteur ou étage après surpresseur"
 "reduit","réduit","secteur ou étage où la pression est réduite"
+"surpresse_reduit","surpressé - réduit","pression réduite après la phase de surpression"

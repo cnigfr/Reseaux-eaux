@@ -2,7 +2,7 @@
  * 07-creation branchement eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/03 00:09:09
+ * // Last modified: 2024/10/05 16:11:03
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -46,7 +46,7 @@ CREATE TABLE "stareau_aep_brcht".aep_point_livraison (
   id_point_livraison text NULL,
   type_point_livraison text NULL, -- >type point livraison
   type_usager text NOT NULL, -- >type usager desservis
-  ref_externe text NULL, -- référence externe (sdis, expoitation...)
+  ref_externe text NULL, -- référence externe (sdis, exploitation...)
   ref_client text NULL, -- référence client
   CONSTRAINT pk_aep_point_livraison PRIMARY KEY (id_noeud_reseau)
 )
@@ -55,7 +55,7 @@ COMMENT ON TABLE "stareau_aep_brcht".aep_point_livraison IS 'point de livraison'
 
 -- Column comments
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.type_point_livraison IS '*type point livraison*';
-COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.ref_externe IS 'référence externe (sdis, expoitation...)';
+COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.ref_externe IS 'référence externe (sdis, exploitation...)';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.ref_client IS 'référence client';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.type_usager IS '*type usager desservis*';
 

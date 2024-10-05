@@ -2,7 +2,7 @@
  * 06-creation eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/02 00:33:59
+ * // Last modified: 2024/10/05 16:37:20
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -170,6 +170,7 @@ CREATE TABLE "stareau_aep".aep_vanne (
   diametre float4 NULL, -- diametre nominal
   sens_fermeture text NOT NULL, -- sens fermeture
   etat_ouverture text NOT NULL, -- état ouverture
+  blocage text NOT NULL, --vanne bloquée
   motorisation text NULL, -- motorisation
   telegestion text NULL, -- gestion à distance
   CONSTRAINT pk_aep_vanne PRIMARY KEY (id_noeud_reseau)
@@ -183,6 +184,7 @@ COMMENT ON COLUMN "stareau_aep".aep_vanne.type_vanne IS '*type_vanne*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.fonction_vanne IS '*fonction vanne*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.diametre IS 'diametre nominal';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.sens_fermeture IS '*sens fermeture*';
+COMMENT ON COLUMN "stareau_aep".aep_vanne.blocage IS '*vanne bloquée*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.etat_ouverture IS '*état ouverture*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.motorisation IS '*motorisation*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.telegestion IS '*présence d''une gestion à distance*';
@@ -291,7 +293,9 @@ COMMENT ON COLUMN "stareau_aep".aep_piece.fk_aep_canalisation IS 'référence à
 --- PIECE (HORS TOPOLOGIE)
 
 CREATE TABLE "stareau_aep".aep_piece_hors_topo (
-  id_aep_pieceht INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  id_aep_pieceht text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+  --id_aep_pieceht INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_aep_pieceht TEXT NOT NULL,  -- ou INT -- pour personnalisation ou récupération de l'id existant
   type_piece text NOT NULL, -- > type de pièce
   fk_aep_canalisation text NULL, -- référence à la conduite de rattachement
   geom public.geometry(point, 2154) NOT NULL,

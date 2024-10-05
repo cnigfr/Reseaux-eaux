@@ -7,7 +7,7 @@ import os
 import psycopg
 import csv
 
-# Script permettent de s'affeanchir des permissions de lecture serveur de postgresql / nécessite psycopg3
+# Script permettent de s'affranchir des permissions de lecture serveur de postgresql / nécessite psycopg3
 
 # Informations de connexion à la base de données PostgreSQL
 conn_params = {

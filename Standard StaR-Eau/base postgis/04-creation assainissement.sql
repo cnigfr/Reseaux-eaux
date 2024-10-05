@@ -186,7 +186,9 @@ COMMENT ON COLUMN "stareau_ass".ass_piece.fk_ass_canalisation IS 'référence à
 --- PIECE (HORS TOPOLOGIE)
 
 CREATE TABLE "stareau_ass".ass_piece_hors_topo (
-  id_ass_pieceht INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  id_pieceht text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+  --id_pieceht INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_pieceht TEXT NOT NULL,  -- ou INT -- pour personnalisation ou récupération de l'id existant
   type_piece text NOT NULL, -- > type de pièce
   fk_ass_canalisation text NULL, -- référence à la conduite de rattachement
   geom public.geometry(point, 2154) NOT NULL,

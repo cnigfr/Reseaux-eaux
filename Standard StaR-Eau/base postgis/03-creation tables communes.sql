@@ -257,8 +257,9 @@ COMMENT ON COLUMN "stareau_commun".piezometre.ref_bss IS 'référence à la banq
 ----point geolocalisation (hors topologie)
 
 CREATE TABLE "stareau_commun".point_geolocalisation (
-  id_point_geolocalisation INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
---id_point_geolocalisation TEXT NOT NULL,
+  id_point_geolocalisation text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+  --id_point_geolocalisation INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_point_geolocalisation TEXT NOT NULL,  -- ou INT -- pour personnalisation ou récupération de l'id existant
   z_objet float4 NULL, -- cote altimétrique de l'objet
   reference_z text NULL, -- lieu de lever du Z*
   mode_lever text NULL, -- mode de lever*
@@ -272,7 +273,7 @@ CREATE TABLE "stareau_commun".point_geolocalisation (
 INHERITS ("stareau_principale".champ_commun);
 CREATE INDEX sidx_geolocalisation_geom ON stareau_commun.point_geolocalisation USING gist (geom);
 
-COMMENT ON TABLE "stareau_commun".point_geolocalisation IS 'point géoréférencé en planimétrie ou planimétrie/altimétrie, servant de support à une cotation';
+COMMENT ON TABLE "stareau_commun".point_geolocalisation IS 'point géoréférencé en planimétrie ou planimétrie/altimétrie, relatif à la position d''un patrimoine';
 
 -- Column comments
 
