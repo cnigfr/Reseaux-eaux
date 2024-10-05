@@ -425,6 +425,7 @@ COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.fonction_gestion_epl IS '*
 
 
 /* ------------Table combinée-------------------
+
 CREATE TABLE stareau_ass.ass_gestion_epl (
 	id_ass_gestion_epl text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local
   --id_ass_gestion_epl INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto

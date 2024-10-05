@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/04 16:37:52
+ * // Last modified: 2024/10/05 10:18:57
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -89,7 +89,7 @@ CREATE TABLE "stareau_principale".champ_commun(
    commentaire TEXT
    --,CONSTRAINT PK_champ_commun PRIMARY KEY(id_champ_commun)
 );
-COMMENT ON TABLE stareau_principale.champ_commun IS 'table de champs communs à toutes les tables';
+COMMENT ON TABLE stareau_principale.champ_commun IS 'table des champs communs à toutes les tables';
 
 COMMENT ON COLUMN stareau_principale.champ_commun.type_reseau IS '*type de réseau*';
 COMMENT ON COLUMN stareau_principale.champ_commun.etat_service IS '*état de service*';

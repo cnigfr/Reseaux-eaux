@@ -20,8 +20,9 @@ suivants :
 
 # MODÈLE STANDARD DE DONNÉES - STAR-EAU
 
-appel à commentaire terminé - merci de votre participation.
+**appel à commentaire terminé - merci de votre participation.**
 Vous pouvez consulter le wiki : https://github.com/cnigfr/Reseaux-eaux/wiki
+
 et nous restons disponible sur star-eau arobase@ gmx.fr
 
 ---
