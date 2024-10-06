@@ -38,7 +38,9 @@ INHERITS ("stareau_principale".noeud_reseau);
 COMMENT ON TABLE "stareau_ass".ass_traitement IS 'Ensemble des installations chargées de traiter les eaux collectées par le réseau de collecte des eaux usées avant rejet au milieu naturel et dans le respect de la réglementation.';
 
 -- Column comments
-
+COMMENT ON COLUMN "stareau_ass".ass_traitement.id_ass_traitement IS 'identifiant local'
+;
+COMMENT ON COLUMN "stareau_ass".ass_traitement.nom_usuel IS 'nom de l''ouvrage (nomouvragedepollution)';
 COMMENT ON COLUMN "stareau_ass".ass_traitement.nom_usuel IS 'nom de l''ouvrage (nomouvragedepollution)';
 COMMENT ON COLUMN "stareau_ass".ass_traitement.code_ouvrage_sandre IS 'code sandre de l''ouvrage (cdouvragedepollution)';
 COMMENT ON COLUMN "stareau_ass".ass_traitement.techno_traitement IS '*technologie du traitement*';
@@ -61,6 +63,8 @@ COMMENT ON TABLE "stareau_ass".ass_pretraitement IS 'Les prétraitements ont pou
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_ass".ass_pretraitement.id_ass_pretraitement IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.type_pretraitement IS '*type de prétraitement*';
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.capacite IS 'capacité du prétraitement';
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.volume IS 'volume total du stockage éventuel';
@@ -81,6 +85,8 @@ COMMENT ON TABLE "stareau_ass".ass_equipement IS 'Composant associé à un ouvra
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_ass".ass_equipement.id_ass_equipement IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_ass".ass_equipement.type_equipement IS '*type équipement*';
 COMMENT ON COLUMN "stareau_ass".ass_equipement.fonction_equipement IS '*fonction de l''équipement*';
 COMMENT ON COLUMN "stareau_ass".ass_equipement.telegestion IS '*présence d''''une gestion à distance*';
@@ -110,6 +116,8 @@ On distingue habituellement plusieurs types :
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_ass".ass_pompage.id_ass_pompage IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_ass".ass_pompage.type_pompage IS '*type de pompage*';
 COMMENT ON COLUMN "stareau_ass".ass_pompage.fonction_pompage IS '*fonction du pompage*';
 COMMENT ON COLUMN "stareau_ass".ass_pompage.nb_pompe IS 'nombre de pompe';
@@ -137,6 +145,8 @@ COMMENT ON TABLE "stareau_ass".ass_chambre_depollution IS 'Une installation ou u
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.id_ass_chambre_depollution IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.type_chambre_depollution IS '*type de chambre de dépollution*';
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.bypass IS 'présence d''un by-pass';
@@ -160,6 +170,8 @@ COMMENT ON TABLE "stareau_ass".ass_canalisation IS 'canalisation assainissement'
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_ass".ass_canalisation.id_ass_canalisation IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.fonction_canalisation IS '*fonction de la canalisation dans le réseau*';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.visitable IS '*possibilité de visite pedestre*';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.altitude_fil_eau_amont IS 'altitude fil d''eau amont';
@@ -180,6 +192,8 @@ COMMENT ON TABLE "stareau_ass".ass_piece IS 'Pièces sur canalisations principal
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_ass".ass_piece.id_ass_piece IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_ass".ass_piece.type_piece IS '*type de pièce*';
 COMMENT ON COLUMN "stareau_ass".ass_piece.fk_ass_canalisation IS 'référence à la conduite de rattachement';
 
@@ -199,6 +213,8 @@ COMMENT ON TABLE "stareau_ass".ass_piece_hors_topo IS 'Pièces sur canalisations
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_ass".ass_piece.id_ass_pieceht IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.type_piece IS '*type de pièce*';
 COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.fk_ass_canalisation IS 'référence à la conduite de rattachement(id_canalisation)';
 
@@ -221,6 +237,8 @@ COMMENT ON TABLE "stareau_ass".ass_point_mesure IS 'Point de suivi remarquable d
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_ass".ass_point_mesure.id_ass_point_mesure IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.type_point_mesure IS '*type du point de mesure*';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.code_sandre IS '*code sandre officiel*';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.ref_ouvrage IS 'référence à l''ouvrage de rattachement';
@@ -244,6 +262,9 @@ INHERITS ("stareau_principale".noeud_reseau,"stareau_principale".dimension);
 COMMENT ON TABLE "stareau_ass".ass_regard IS 'enceinte munie d''un tampon amovible, réalisé sur un branchement ou un collecteur afin de permettre l''entrée du personnel';
 
 -- Column comments
+
+COMMENT ON COLUMN "stareau_ass".ass_regard.id_ass_regard IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_ass".ass_regard.type_regard IS '*type de regard*';
 COMMENT ON COLUMN "stareau_ass".ass_regard.materiau IS '*materiau constitutif du regard*';
 COMMENT ON COLUMN "stareau_ass".ass_regard."position" IS '*position par rapport à la canalisation*';
@@ -266,6 +287,8 @@ COMMENT ON TABLE "stareau_ass".ass_ouvrage_special IS 'Ouvrage particulier ne re
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special.id_ass_ouvrage_special IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special.type_ouvrage_special IS '*type d''ouvrage spécial*';
 COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special.ref_ouvrage IS 'ouvrage ou canalisation de rattachement';
 
@@ -282,9 +305,10 @@ COMMENT ON TABLE stareau_ass.ass_exutoire IS 'Point de rejet dans le milieu réc
 
 -- Column comments
 
+COMMENT ON COLUMN stareau_ass.ass_exutoire.id_ass_exutoire IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_ass.ass_exutoire.code_topage IS 'Code TOPAGE (CdOH) du milieu récepteur';
 COMMENT ON COLUMN stareau_ass.ass_exutoire.destination IS '*type de milieu récepteur*';
-
 
 ----BASSIN
 
@@ -307,6 +331,8 @@ COMMENT ON TABLE stareau_ass.ass_bassin IS 'Ouvrage retenant momentanément des 
 
 -- Column comments
 
+COMMENT ON COLUMN stareau_ass.ass_bassin.id_ass_bassin IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_ass.ass_bassin.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN stareau_ass.ass_bassin.type_bassin IS '*type de bassin*';
 COMMENT ON COLUMN stareau_ass.ass_bassin.fonction_bassin IS '*fonction du bassin*';
@@ -329,7 +355,10 @@ CREATE TABLE stareau_ass.ass_engouffrement_point (
 INHERITS ("stareau_principale".noeud_reseau,"stareau_principale".dimension);
 
 -- Column comments
+
 COMMENT ON TABLE stareau_ass.ass_engouffrement_point IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
+COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.id_ass_engouffrement_point IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.type_engouffrement IS '*type d''engouffrement*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.decantation IS '*présence décantation*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.siphon IS '*présence d''un siphon*';
@@ -346,6 +375,8 @@ INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
 
 -- Column comments
 COMMENT ON TABLE stareau_ass.ass_engouffrement_ligne IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
+COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.id_ass_engouffrement_ligne IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.type_engouffrement IS '*type d''engouffrement*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.decantation IS '*présence décantation*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.siphon IS '*présence d''un siphon*';
@@ -362,6 +393,8 @@ INHERITS ("stareau_principale".emprise,"stareau_principale".dimension);
 
 -- Column comments
 COMMENT ON TABLE stareau_ass.ass_engouffrement_surface IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
+COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.id_ass_engouffrement_surface IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.type_engouffrement IS '*type d''engouffrement*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.decantation IS '*présence décantation*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.siphon IS '*présence d''un siphon*';

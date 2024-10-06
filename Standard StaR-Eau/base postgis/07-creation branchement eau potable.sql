@@ -2,7 +2,7 @@
  * 07-creation branchement eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/05 16:11:03
+ * // Last modified: 2024/10/06 19:17:19
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -38,6 +38,8 @@ INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
 COMMENT ON TABLE "stareau_aep_brcht".aep_canalisation_branchement IS 'conduite et accessoire mis en oeuvre pour amener l''eau du réseau de desserte jusqu''au point de livraison à l''usager, à l''exception des conduites et accessoires privés des immeubles collectifs';
 
 -- Column comments
+COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.id_aep_canalisation_branchement IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.fonction_canalisation_branchement IS '*fonction du branchement*';
 
 --POINT LIVRAISON
@@ -54,6 +56,8 @@ INHERITS ("stareau_principale".noeud_reseau);
 COMMENT ON TABLE "stareau_aep_brcht".aep_point_livraison IS 'point de livraison';
 
 -- Column comments
+
+COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.id_point_livraison IS '*type point livraison*';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.type_point_livraison IS '*type point livraison*';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.ref_externe IS 'référence externe (sdis, exploitation...)';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.ref_client IS 'référence client';
@@ -73,6 +77,8 @@ COMMENT ON TABLE stareau_aep_brcht.aep_raccord IS 'Point de raccordement entre l
 -- Column comments
 
 --COMMENT ON COLUMN stareau_aep_brcht.aep_raccord.type_raccord IS '*type de raccord*';
+COMMENT ON COLUMN stareau_aep_brcht.aep_raccord.id_raccord IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_aep_brcht.aep_raccord.ref_canalisation IS 'lien vers canalisation principale';
 
 ---- PIECE BRANCHEMENT
@@ -86,7 +92,8 @@ INHERITS (stareau_principale.noeud_reseau);
 COMMENT ON TABLE stareau_aep_brcht.aep_piece_branchement IS 'Pièces de branchement qui impactent le modèle hydraulique, et donc associées à des noeuds';
 
 -- Column comments
-
+COMMENT ON COLUMN stareau_aep_brcht.aep_piece_branchement.id_piece_branchement IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_aep_brcht.aep_piece_branchement.type_piece_branchement IS '*type de pièce*';
 
 ---VANNE BRANCHEMENT
@@ -103,8 +110,10 @@ INHERITS (stareau_principale.noeud_reseau);
 COMMENT ON TABLE stareau_aep_brcht.aep_vanne_branchement IS 'élément de coupure sur le branchement';
 -- Column comments
 
+COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.id_vanne_branchement IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.type_vanne_branchement IS '*type de vanne*';
-COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.diametre IS 'diametre nominale de la vanne';
+COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.diametre IS 'diamétre nominal de la vanne';
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.sens_fermeture IS '*sens de fermeture*';
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.etat_ouverture IS '*état d''ouverture*';
 

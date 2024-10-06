@@ -2,7 +2,7 @@
  * 06-creation eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/05 16:37:20
+ * // Last modified: 2024/10/06 19:17:19
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -46,6 +46,8 @@ COMMENT ON TABLE "stareau_aep".aep_canalisation IS 'assemblage de tuyau, de leur
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.id_aep_canalisation IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.fonction_canalisation IS '*fonction canalisation dans le réseau*';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.contenu_canalisation IS '*type d''eau transportée*';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.protection_cathodique IS '*présence protection cathodique*';
@@ -74,6 +76,8 @@ COMMENT ON TABLE "stareau_aep".aep_captage IS 'Ouvrage de prélèvement exploita
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_aep".aep_captage.id_aep_captage IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_aep".aep_captage.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN "stareau_aep".aep_captage.type_captage IS '*type de captage*';
 COMMENT ON COLUMN "stareau_aep".aep_captage.nom_ressource IS 'nom ressource';
@@ -94,7 +98,7 @@ CREATE TABLE "stareau_aep".aep_reservoir (
   cote_sol float4 NULL, -- cote NGF sol du reservoir
   cote_radier float4 NULL, -- cote NGF du fond de cuve la plus basse
   cote_trop_plein float4 NULL, -- cote NGF du trop-plein
-  telegestion text NULL, -- >présence d'une gestion à distance
+  telegestion text NOT NULL,-- >présence d'une gestion à distance
   CONSTRAINT pk_aep_reservoir PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau,"stareau_principale".dimension);
@@ -102,6 +106,8 @@ COMMENT ON TABLE "stareau_aep".aep_reservoir IS 'installation destinée au stock
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_aep".aep_reservoir.id_aep_reservoir IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.type_reservoir IS '*type réservoir*';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.nb_cuves IS 'nombre de cuves';
@@ -129,6 +135,8 @@ COMMENT ON TABLE "stareau_aep".aep_traitement IS 'ensemble des installations cha
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_aep".aep_traitement.id_aep_traitement IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_aep".aep_traitement.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN "stareau_aep".aep_traitement.fonction_traitement IS '*fonction traitement*';
 COMMENT ON COLUMN "stareau_aep".aep_traitement.type_desinfection IS '*type désinfection*';
@@ -147,12 +155,14 @@ CREATE TABLE stareau_aep.aep_point_mesure (
   annee_fabrication int4 NULL, -- année fabrication
   marque text NULL, -- marque compteur
   numero_serie text NULL, -- numéro série
-  telegestion text NULL, -- >présence d'une gestion à distance
+  telegestion text NOT NULL,-- >présence d'une gestion à distance
   CONSTRAINT pk_aep_point_mesure PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS (stareau_principale.noeud_reseau);
 COMMENT ON TABLE stareau_aep.aep_point_mesure IS 'table des point de mesure (compteurs) sur réseaux';
 
+COMMENT ON COLUMN stareau_aep.aep_point_mesure.id_aep_point_mesure IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.type_point_mesure IS '*type point de mesure*';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.fonction_point_mesure IS '*fonction point de mesure*';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.calibre IS 'calibre/diametre';
@@ -172,7 +182,7 @@ CREATE TABLE "stareau_aep".aep_vanne (
   etat_ouverture text NOT NULL, -- état ouverture
   blocage text NOT NULL, --vanne bloquée
   motorisation text NULL, -- motorisation
-  telegestion text NULL, -- gestion à distance
+  telegestion text NOT NULL,-- Présence d'une gestion à distance
   CONSTRAINT pk_aep_vanne PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);
@@ -180,6 +190,8 @@ COMMENT ON TABLE "stareau_aep".aep_vanne IS 'Appareillage capable d''intercepter
 
 
 COMMENT ON TABLE "stareau_aep".aep_vanne IS 'vanne réseau';
+COMMENT ON COLUMN "stareau_aep".aep_vanne.id_aep_vanne IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_aep".aep_vanne.type_vanne IS '*type_vanne*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.fonction_vanne IS '*fonction vanne*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.diametre IS 'diametre nominal';
@@ -201,12 +213,14 @@ CREATE TABLE "stareau_aep".aep_regulation (
   marque text NULL, -- marque de l'appareil
   diametre float4 NULL, -- diametre nominal
   annee_fabrication int2 NULL, -- année de fabrication
-  telegestion text NULL, -- telegestion/telereleve*
+  telegestion text NOT NULL,-- telegestion/telereleve*
   CONSTRAINT pk_aep_regulation PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);
 
 COMMENT ON TABLE "stareau_aep".aep_regulation IS 'appareil de régulation du débit ou de la pression';
+COMMENT ON COLUMN "stareau_aep".aep_regulation.id_aep_regulation IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_aep".aep_regulation.nom_usuel IS 'nom usage';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.type_regulation IS '*type régulation*';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.type_consigne IS '*type consigne*';
@@ -226,13 +240,15 @@ CREATE TABLE "stareau_aep".aep_pompage (
   installation_pompage text NOT NULL, -- >mode installation
   nb_pompes int2 null default 1, -- nombre de pompes
   capacite float4 NULL, -- capacite nominale de pompage m3/j
-  telegestion text NULL,
+  telegestion text NOT NULL,-- Présence d'une gestion à distance
   CONSTRAINT pk_aep_pompage PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);
 COMMENT ON TABLE "stareau_aep".aep_pompage IS 'ensemble des dispositifs permettant d''aspirer, de refouler ou de comprimer des eaux';
 
 -- Column comments
+COMMENT ON COLUMN "stareau_aep".aep_pompage.id_aep_pompage IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_aep".aep_pompage.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN "stareau_aep".aep_pompage.fonction_pompage IS '*fonction du pompage*';
 COMMENT ON COLUMN "stareau_aep".aep_pompage.installation_pompage IS '*mode installation*';
@@ -245,7 +261,7 @@ CREATE TABLE "stareau_aep".aep_appareillage (
   id_aep_appareillage TEXT NULL,
   type_appareillage text NOT NULL, -- >type d'appariellage
   diametre float4 NULL, -- diametre nominal
-  telegestion text NULL, -- Présence d'une gestion à distance
+  telegestion text NOT NULL, -- Présence d'une gestion à distance
   CONSTRAINT pk_noeud_reseau PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);
@@ -253,6 +269,8 @@ COMMENT ON TABLE "stareau_aep".aep_appareillage IS 'Equipements divers sur le r�
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_aep".aep_appareillage.id_aep_appareillage IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_aep".aep_appareillage.type_appareillage IS '*type d''appareillage*';
 COMMENT ON COLUMN "stareau_aep".aep_appareillage.diametre IS 'diametre nominal';
 COMMENT ON COLUMN "stareau_aep".aep_appareillage.telegestion IS '*Présence d''une gestion à distance*';
@@ -271,6 +289,8 @@ COMMENT ON TABLE stareau_aep.aep_station_alerte IS 'equipement permettent de dé
 
 -- Column comments
 
+COMMENT ON COLUMN stareau_aep.aep_station_alerte.id_aep_station_alerte IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_aep.aep_station_alerte.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN stareau_aep.aep_station_alerte.telegestion IS '*Présence d''une gestion à distance*';
 
@@ -287,6 +307,8 @@ COMMENT ON TABLE "stareau_aep".aep_piece IS 'Pièces sur canalisation principale
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_aep".aep_piece.id_aep_piece IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_aep".aep_piece.type_piece IS '*type de pièce*';
 COMMENT ON COLUMN "stareau_aep".aep_piece.fk_aep_canalisation IS 'référence à la conduite de rattachement';
 
@@ -306,5 +328,7 @@ COMMENT ON TABLE "stareau_aep".aep_piece_hors_topo IS 'Pièces sur canalisations
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.id_aep_pieceht IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.type_piece IS '*type de pièce*';
 COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.fk_aep_canalisation IS 'référence à la conduite de rattachement(id_canalisation)';

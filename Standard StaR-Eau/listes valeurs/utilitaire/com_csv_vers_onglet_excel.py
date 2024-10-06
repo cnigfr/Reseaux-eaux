@@ -7,7 +7,7 @@ import os
 dossier_csv = '.../Reseaux-eaux/Standard StaR-Eau/listes valeurs/brute avant import/'
 
 # Nom du fichier Excel de sortie
-fichier_excel = 'fichier_combine.xlsx'
+fichier_excel = 'com_listes_valeurs.xlsx'
 
 # Créer un nouveau classeur Excel
 workbook = openpyxl.Workbook()
@@ -18,7 +18,7 @@ en_tete = ["code", "valeur", "description"]
 
 # Parcourir tous les fichiers CSV dans le dossier
 for fichier in os.listdir(dossier_csv):
-    if fichier.endswith('.csv'):
+    if fichier.startswith('com_') and fichier.endswith('.csv'):
         # Lire le fichier CSV
         chemin_fichier = os.path.join(dossier_csv, fichier)
         df = pd.read_csv(chemin_fichier, header=None)

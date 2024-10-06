@@ -45,8 +45,12 @@ COMMENT ON TABLE stareau_aep.aep_affleurant IS 'table des affleurant des réseau
 
 -- Column comments
 
+COMMENT ON COLUMN stareau_aep.aep_affleurant.id_aep_affleurant IS 'identifiant local'
+;
+COMMENT ON COLUMN stareau_aep.aep_affleurant.type_affleurant IS '*type d''affleurant*';
+COMMENT ON COLUMN stareau_aep.aep_affleurant.id_affleurant_pcrs IS 'lien vers identifiant PCRS';
 COMMENT ON COLUMN stareau_aep.aep_affleurant.id_emprise IS 'lien vers emprise';
-COMMENT ON COLUMN stareau_aep.aep_affleurant.id_noeud_reseau IS 'lien vers élèment ponctuel';
+COMMENT ON COLUMN stareau_aep.aep_affleurant.id_noeud_reseau IS 'lien vers élément ponctuel';
 COMMENT ON COLUMN stareau_aep.aep_affleurant.id_canalisation IS 'lien vers élément linéaire';
 
 --table des affleurants--
@@ -70,9 +74,13 @@ COMMENT ON TABLE stareau_ass.ass_affleurant IS 'table des affleurant des réseau
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_affleurant.id_emprise IS 'lien vers emprise';
-COMMENT ON COLUMN stareau_ass.ass_affleurant.id_noeud_reseau IS 'lien vers élèment ponctuel';
-COMMENT ON COLUMN stareau_ass.ass_affleurant.id_canalisation IS 'lien vers élément linéaire';
+COMMENT ON COLUMN stareau_aep.aep_affleurant.id_aep_affleurant IS 'identifiant local'
+;
+COMMENT ON COLUMN stareau_aep.aep_affleurant.type_affleurant IS '*type d''affleurant*';
+COMMENT ON COLUMN stareau_aep.aep_affleurant.id_affleurant_pcrs IS 'lien vers identifiant PCRS';
+COMMENT ON COLUMN stareau_aep.aep_affleurant.id_emprise IS 'lien vers emprise';
+COMMENT ON COLUMN stareau_aep.aep_affleurant.id_noeud_reseau IS 'lien vers élément ponctuel';
+COMMENT ON COLUMN stareau_aep.aep_affleurant.id_canalisation IS 'lien vers élément linéaire';
 
 --GENIE CIVIL
 
@@ -89,6 +97,8 @@ COMMENT ON TABLE stareau_aep.aep_genie_civil IS 'enveloppe externe de génie civ
 
 -- Column comments
 
+COMMENT ON COLUMN stareau_aep.aep_genie_civil.id_aep_genie_civil IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_aep.aep_genie_civil.materiau IS '*materiau constitutif du GC*';
 COMMENT ON COLUMN stareau_aep.aep_genie_civil.niveau IS 'niveau par rapport au sol';
 
@@ -107,6 +117,8 @@ COMMENT ON TABLE stareau_ass.ass_genie_civil IS 'enveloppe externe de génie civ
 
 -- Column comments
 
+COMMENT ON COLUMN stareau_ass.ass_genie_civil.id_ass_genie_civil IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_ass.ass_genie_civil.materiau IS '*materiau constitutif du GC*';
 COMMENT ON COLUMN stareau_ass.ass_genie_civil.niveau IS 'niveau par rapport au sol';
 
@@ -125,6 +137,8 @@ COMMENT ON TABLE stareau_aep.aep_perimetre_gestion IS 'périmètre virtuel ou ad
 
 -- Column comments
 
+COMMENT ON COLUMN stareau_aep.aep_genie_civil.id_aep_perimetre_gestion IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_aep.aep_perimetre_gestion.type_perimetre_gestion IS '*type de périmètre*';
 COMMENT ON COLUMN stareau_aep.aep_perimetre_gestion.type_acces IS '*type d''accès*';
 
@@ -143,6 +157,8 @@ COMMENT ON TABLE stareau_ass.ass_perimetre_gestion IS 'périmètre virtuel ou ad
 
 -- Column comments
 
+COMMENT ON COLUMN stareau_ass.ass_genie_civil.id_ass_perimetre_gestion IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_ass.ass_perimetre_gestion.type_perimetre_gestion IS '*type de périmètre*';
 COMMENT ON COLUMN stareau_ass.ass_perimetre_gestion.type_acces IS '*type d''accès*';
 
@@ -162,6 +178,8 @@ COMMENT ON TABLE stareau_aep.aep_protection_mecanique IS 'Construction dans laqu
 
 -- Column comments
 
+COMMENT ON COLUMN stareau_aep.aep_protection_mecanique.id_aep_protection_mecanique IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_aep.aep_protection_mecanique.type_protection IS '*type de protection*';
 COMMENT ON COLUMN stareau_aep.aep_protection_mecanique.materiau IS '*materiau* constitutif de la protection';
 
@@ -181,6 +199,8 @@ COMMENT ON TABLE stareau_ass.ass_protection_mecanique IS 'Construction dans laqu
 
 -- Column comments
 
+COMMENT ON COLUMN stareau_ass.ass_protection_mecanique.id_ass_protection_mecanique IS 'identifiant local'
+;
 COMMENT ON COLUMN stareau_ass.ass_protection_mecanique.type_protection IS '*type de protection*';
 COMMENT ON COLUMN stareau_ass.ass_protection_mecanique.materiau IS '*materiau constitutif de la protection*';
 
@@ -191,7 +211,9 @@ CREATE TABLE stareau_aep.mm_aep_cana_protection (
   fk_canalisation text NULL,
   nb_cana int2 NULL DEFAULT 1
 );
+
 COMMENT ON TABLE stareau_aep.mm_aep_cana_protection IS 'table de relation entre canalisation aep et protection mecanique';
+COMMENT ON COLUMN stareau_aep.mm_aep_cana_protection.nb_cana IS 'nombre de canalisation concernée';
 
 -- TABLE RELATION CANALISATION - PROTECTION
 
@@ -201,6 +223,7 @@ CREATE TABLE stareau_ass.mm_ass_cana_protection (
   nb_cana int2 NULL DEFAULT 1
 );
 COMMENT ON TABLE stareau_ass.mm_ass_cana_protection IS 'table de relation entre canalisation ass et protection mecanique';
+COMMENT ON COLUMN stareau_ass.mm_ass_cana_protection.nb_cana IS 'nombre de canalisation concernée';
 
 --- pluviometre (hors topologie)
 
@@ -220,9 +243,12 @@ COMMENT ON TABLE "stareau_commun".pluviometre IS 'pluviometre';
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_commun".pluviometre.type_pluviometre IS '*type de pluviometre*';
+COMMENT ON COLUMN "stareau_commun".pluviometre.id_pluviometre IS 'identifiant local'
+;
+COMMENT ON COLUMN "stareau_commun".pluviometre.type_pluviometre IS '*type de pluviométre*';
 COMMENT ON COLUMN "stareau_commun".pluviometre.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_commun".pluviometre.ref_meteo_france IS 'référence MétéoFrance';
+COMMENT ON COLUMN stareau_commun.pluviometre.telegestion IS '*présence d''une gestion à distance*';
 
 ----
 
@@ -247,6 +273,8 @@ COMMENT ON TABLE "stareau_commun".piezometre IS 'forage non exploité qui permet
 -- Column comments
 
 --COMMENT ON COLUMN "stareau_commun".piezometre.type_piezometre IS '*type_de piezometre*';
+COMMENT ON COLUMN "stareau_commun".piezometre.id_piezometre IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_commun".piezometre.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_commun".piezometre.diametre IS 'diametre interne du forage';
 COMMENT ON COLUMN "stareau_commun".piezometre.cote_tn IS 'cote terrain naturel';
@@ -277,6 +305,8 @@ COMMENT ON TABLE "stareau_commun".point_geolocalisation IS 'point géoréférenc
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_commun".point_geolocalisation.id_point_geolocalisation IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.z_objet IS 'cote altimétrique de l''objet';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.reference_z IS '*lieu de lever du Z*';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mode_lever IS '*mode de lever*';
@@ -284,4 +314,3 @@ COMMENT ON COLUMN "stareau_commun".point_geolocalisation.date_lever IS 'date du 
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mesure_precision_xy IS 'qualité précision GPS HRMS en cm/m';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mesure_precision_z IS 'qualité précision GPS HRMS en cm/m';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.qualite_outil IS 'pourcent d''erreur de l''appareil';
-

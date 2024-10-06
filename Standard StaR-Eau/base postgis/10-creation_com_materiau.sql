@@ -2,7 +2,7 @@
  * 10-creation_com_materiau.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/25 00:02:32
+ * // Last modified: 2024/10/06 19:17:19
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -38,6 +38,15 @@ CREATE TABLE stareau_valeur.com_materiau (
   CONSTRAINT com_materiau_unique UNIQUE (code)
 );
 COMMENT ON TABLE stareau_valeur.com_materiau IS 'liste des matériaux';
+COMMENT ON COLUMN stareau_valeur.com_materiau.code IS 'identifiant local'
+;
+COMMENT ON COLUMN stareau_valeur.com_materiau.valeur IS 'valeur';
+COMMENT ON COLUMN stareau_valeur.com_materiau.description IS 'description longue';
+COMMENT ON COLUMN stareau_valeur.com_materiau.categorie IS 'catégorie ou famille de matériau';
+COMMENT ON COLUMN stareau_valeur.com_materiau.stardt IS 'référence à STAR-DT';
+COMMENT ON COLUMN stareau_valeur.com_materiau.ref13508 IS 'référence à la Norme ITV NF EN 13508';
+
+----valeurs
 
 INSERT INTO stareau_valeur.com_materiau (code,valeur,description,categorie,stardt,ref13508) VALUES
 	 ('acier','Acier','acier','métal','steel','ACDAP'),

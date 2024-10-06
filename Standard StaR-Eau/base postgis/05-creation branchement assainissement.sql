@@ -2,7 +2,7 @@
  * 05-creation branchement assainissement.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/03 00:09:09
+ * // Last modified: 2024/10/06 19:17:19
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -36,7 +36,8 @@ COMMENT ON TABLE "stareau_ass_brcht".ass_canalisation_branchement IS 'Ensemble d
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass_brcht".ass_canalisation_branchement.id_ass_canalisation_branchement IS 'identifiant';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_canalisation_branchement.id_ass_canalisation_branchement IS 'identifiant local'
+;
 
 --point de collecte assainissement
 CREATE TABLE "stareau_ass_brcht".ass_point_collecte (
@@ -55,6 +56,8 @@ COMMENT ON TABLE "stareau_ass_brcht".ass_point_collecte IS 'Interface physique f
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.id_point_collecte IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.type_point_collecte IS '*type de boite de branchement*';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.ref_externe IS 'référence externe';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.type_usager IS '*type d''usager raccordé*';
@@ -75,5 +78,7 @@ COMMENT ON TABLE "stareau_ass_brcht".ass_raccord IS 'pièce de raccordement sur 
 
 -- Column comments
 
+COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord.id_ass_raccord IS 'identifiant local'
+;
 COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord.type_raccord IS '*type de raccord*';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord.ref_canalisation IS 'canalisation de référence';
