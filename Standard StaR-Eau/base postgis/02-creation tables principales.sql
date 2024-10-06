@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/06 19:18:59
+ * // Last modified: 2024/10/06 22:19:00
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -41,7 +41,9 @@ CREATE TABLE stareau_principale.dimension (
   longueur_interieure float8 NULL, -- longueur max interieure
   longueur_exterieure float8 NULL -- longueur max exterieure
 );
-COMMENT ON TABLE stareau_principale.dimension IS 'table mére des dimensions des élèments';
+COMMENT ON TABLE stareau_principale.dimension IS 'table mère
+ des dimensions des éléments
+';
 
 -- Column comments
 
@@ -126,9 +128,10 @@ CREATE TABLE "stareau_principale".noeud_reseau (
 INHERITS ("stareau_principale".champ_commun);
 CREATE INDEX sidx_noeud_geom ON stareau_principale.noeud_reseau USING gist (geom);  ---indexation
 
-COMMENT ON TABLE "stareau_principale".noeud_reseau IS 'table mére des élèments ponctuels';
-COMMENT ON COLUMN "stareau_principale".id_noeud_reseau IS 'identifiant noeud'
-;
+COMMENT ON TABLE "stareau_principale".noeud_reseau IS 'table mère
+ des éléments
+ ponctuels';
+COMMENT ON COLUMN "stareau_principale".noeud_reseau.id_noeud_reseau IS 'identifiant noeud';
 
 --ÉLÉMENTS LINÉAIRES - CANALISATION--
 
@@ -153,8 +156,7 @@ INHERITS ("stareau_principale".champ_commun);
 CREATE INDEX sidx_canalisation_geom ON stareau_principale.canalisation USING gist (geom); --- indexation
 
 COMMENT ON TABLE "stareau_principale".canalisation IS 'table mère des éléments linéaire';
-COMMENT ON COLUMN "stareau_principale".canalisation.id_circulation IS 'identifiant canalisation'
-;
+COMMENT ON COLUMN "stareau_principale".canalisation.id_canalisation IS 'identifiant canalisation';
 COMMENT ON COLUMN "stareau_principale".canalisation.mode_circulation IS '*mode de circulation*';
 COMMENT ON COLUMN "stareau_principale".canalisation.type_pose IS '*type de pose*';
 COMMENT ON COLUMN "stareau_principale".canalisation.raison_pose IS '*raison de la pose*';

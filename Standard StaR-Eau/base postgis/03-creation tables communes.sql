@@ -33,7 +33,8 @@ CREATE TABLE stareau_aep.aep_affleurant (
   type_affleurant text NOT NULL,
   id_affleurant_pcrs text NULL,
   id_emprise text NULL, -- lien vers emprise
-  id_noeud_reseau text NULL, -- lien vers élèment ponctuel
+  id_noeud_reseau text NULL, -- lien vers élément
+ ponctuel
   id_canalisation text NULL, -- lien vers élément linéaire
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_aep_affleurant PRIMARY KEY (id_aep_affleurant)
@@ -62,7 +63,8 @@ CREATE TABLE stareau_ass.ass_affleurant (
   type_affleurant text NOT NULL,
   id_affleurant_pcrs text NULL,
   id_emprise text NULL, -- lien vers emprise
-  id_noeud_reseau text NULL, -- lien vers élèment ponctuel
+  id_noeud_reseau text NULL, -- lien vers élément
+ ponctuel
   id_canalisation text NULL, -- lien vers élément linéaire
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_ass_affleurant PRIMARY KEY (id_ass_affleurant)
@@ -137,8 +139,7 @@ COMMENT ON TABLE stareau_aep.aep_perimetre_gestion IS 'périmètre virtuel ou ad
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep.aep_genie_civil.id_aep_perimetre_gestion IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_aep.aep_perimetre_gestion.id_aep_perimetre_gestion IS 'identifiant local';
 COMMENT ON COLUMN stareau_aep.aep_perimetre_gestion.type_perimetre_gestion IS '*type de périmètre*';
 COMMENT ON COLUMN stareau_aep.aep_perimetre_gestion.type_acces IS '*type d''accès*';
 
@@ -157,8 +158,7 @@ COMMENT ON TABLE stareau_ass.ass_perimetre_gestion IS 'périmètre virtuel ou ad
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_genie_civil.id_ass_perimetre_gestion IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_ass.ass_perimetre_gestion.id_ass_perimetre_gestion IS 'identifiant local';
 COMMENT ON COLUMN stareau_ass.ass_perimetre_gestion.type_perimetre_gestion IS '*type de périmètre*';
 COMMENT ON COLUMN stareau_ass.ass_perimetre_gestion.type_acces IS '*type d''accès*';
 
@@ -178,8 +178,7 @@ COMMENT ON TABLE stareau_aep.aep_protection_mecanique IS 'Construction dans laqu
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep.aep_protection_mecanique.id_aep_protection_mecanique IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_aep.aep_protection_mecanique.id_aep_protection_mecanique IS 'identifiant local';
 COMMENT ON COLUMN stareau_aep.aep_protection_mecanique.type_protection IS '*type de protection*';
 COMMENT ON COLUMN stareau_aep.aep_protection_mecanique.materiau IS '*materiau* constitutif de la protection';
 
@@ -199,8 +198,7 @@ COMMENT ON TABLE stareau_ass.ass_protection_mecanique IS 'Construction dans laqu
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_protection_mecanique.id_ass_protection_mecanique IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_ass.ass_protection_mecanique.id_ass_protection_mecanique IS 'identifiant local';
 COMMENT ON COLUMN stareau_ass.ass_protection_mecanique.type_protection IS '*type de protection*';
 COMMENT ON COLUMN stareau_ass.ass_protection_mecanique.materiau IS '*materiau constitutif de la protection*';
 
@@ -243,8 +241,7 @@ COMMENT ON TABLE "stareau_commun".pluviometre IS 'pluviometre';
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_commun".pluviometre.id_pluviometre IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_commun".pluviometre.id_pluviometre IS 'identifiant local';
 COMMENT ON COLUMN "stareau_commun".pluviometre.type_pluviometre IS '*type de pluviométre*';
 COMMENT ON COLUMN "stareau_commun".pluviometre.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_commun".pluviometre.ref_meteo_france IS 'référence MétéoFrance';

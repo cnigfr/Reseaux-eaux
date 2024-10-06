@@ -1,7 +1,7 @@
 /*
  * 00-creation schemas.sql - 2024-05-17
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/24 23:59:36
+ * // Last modified: 2024/10/06 22:20:15
  * ETALABV2 - Alain pour CNIG-2024
  *
  * Ce fichier est un document libre ; vous pouvez le redistribuer et/ou le modifier selon les termes de la
@@ -49,4 +49,4 @@ COMMENT ON SCHEMA "stareau_aep_brcht" IS 'schéma des tables spécifiques EAU PO
 CREATE EXTENSION IF NOT EXISTS postgis;
 CREATE EXTENSION IF NOT EXISTS hstore;
 --CREATE EXTENSION IF NOT EXISTS pgrouting; --pas indispensable cf. installation de pgrouting
---CREATE EXTENSION IF NOT EXISTS plpython3u; -- seuelement avec postgreSQL >11
+--CREATE EXTENSION IF NOT EXISTS plpython3u; -- seulement avec postgreSQL >11

@@ -200,9 +200,9 @@ COMMENT ON COLUMN "stareau_ass".ass_piece.fk_ass_canalisation IS 'référence à
 --- PIECE (HORS TOPOLOGIE)
 
 CREATE TABLE "stareau_ass".ass_piece_hors_topo (
-  id_pieceht text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
-  --id_pieceht INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
-  --id_pieceht TEXT NOT NULL,  -- ou INT -- pour personnalisation ou récupération de l'id existant
+  id_ass_pieceht text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+  --id_ass_pieceht INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_ass_pieceht TEXT NOT NULL,  -- ou INT -- pour personnalisation ou récupération de l'id existant
   type_piece text NOT NULL, -- > type de pièce
   fk_ass_canalisation text NULL, -- référence à la conduite de rattachement
   geom public.geometry(point, 2154) NOT NULL,
@@ -213,8 +213,7 @@ COMMENT ON TABLE "stareau_ass".ass_piece_hors_topo IS 'Pièces sur canalisations
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_piece.id_ass_pieceht IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.id_ass_pieceht IS 'identifiant local';
 COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.type_piece IS '*type de pièce*';
 COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.fk_ass_canalisation IS 'référence à la conduite de rattachement(id_canalisation)';
 
@@ -237,8 +236,7 @@ COMMENT ON TABLE "stareau_ass".ass_point_mesure IS 'Point de suivi remarquable d
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_point_mesure.id_ass_point_mesure IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_ass".ass_point_mesure.id_ass_point_mesure IS 'identifiant local';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.type_point_mesure IS '*type du point de mesure*';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.code_sandre IS '*code sandre officiel*';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.ref_ouvrage IS 'référence à l''ouvrage de rattachement';
@@ -251,7 +249,8 @@ CREATE TABLE "stareau_ass".ass_regard (
   type_regard text NOT NULL, -- type de regard *
   materiau text NOT NULL, -- materiau constitutif du regard *
   "position" text NOT NULL, -- position par rapport à la canalisation *
-  type_descente text NOT NULL, -- élèment de descente dans le regard *
+  type_descente text NOT NULL, -- élément
+ de descente dans le regard *
   nb_paliers int2 NULL, -- nombre de paliers
   z_tampon float4 NULL, -- cote NGF du tampon
   z_radier float4 NULL, -- cote NGF du point le plus bas du regard
@@ -263,12 +262,12 @@ COMMENT ON TABLE "stareau_ass".ass_regard IS 'enceinte munie d''un tampon amovib
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_regard.id_ass_regard IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_ass".ass_regard.id_ass_regard IS 'identifiant local';
 COMMENT ON COLUMN "stareau_ass".ass_regard.type_regard IS '*type de regard*';
 COMMENT ON COLUMN "stareau_ass".ass_regard.materiau IS '*materiau constitutif du regard*';
 COMMENT ON COLUMN "stareau_ass".ass_regard."position" IS '*position par rapport à la canalisation*';
-COMMENT ON COLUMN "stareau_ass".ass_regard.type_descente IS '*élèment de descente dans le regard*';
+COMMENT ON COLUMN "stareau_ass".ass_regard.type_descente IS '*élément
+ de descente dans le regard*';
 COMMENT ON COLUMN "stareau_ass".ass_regard.nb_paliers IS 'nombre de paliers';
 COMMENT ON COLUMN "stareau_ass".ass_regard.z_tampon IS 'cote NGF du tampon';
 COMMENT ON COLUMN "stareau_ass".ass_regard.z_radier IS 'cote NGF du point le plus bas du regard';
@@ -287,8 +286,7 @@ COMMENT ON TABLE "stareau_ass".ass_ouvrage_special IS 'Ouvrage particulier ne re
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special.id_ass_ouvrage_special IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special.id_ass_ouvrage_special IS 'identifiant local';
 COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special.type_ouvrage_special IS '*type d''ouvrage spécial*';
 COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special.ref_ouvrage IS 'ouvrage ou canalisation de rattachement';
 
@@ -305,8 +303,7 @@ COMMENT ON TABLE stareau_ass.ass_exutoire IS 'Point de rejet dans le milieu réc
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_exutoire.id_ass_exutoire IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_ass.ass_exutoire.id_ass_exutoire IS 'identifiant local';
 COMMENT ON COLUMN stareau_ass.ass_exutoire.code_topage IS 'Code TOPAGE (CdOH) du milieu récepteur';
 COMMENT ON COLUMN stareau_ass.ass_exutoire.destination IS '*type de milieu récepteur*';
 
@@ -331,8 +328,7 @@ COMMENT ON TABLE stareau_ass.ass_bassin IS 'Ouvrage retenant momentanément des 
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_bassin.id_ass_bassin IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_ass.ass_bassin.id_ass_bassin IS 'identifiant local';
 COMMENT ON COLUMN stareau_ass.ass_bassin.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN stareau_ass.ass_bassin.type_bassin IS '*type de bassin*';
 COMMENT ON COLUMN stareau_ass.ass_bassin.fonction_bassin IS '*fonction du bassin*';
@@ -357,8 +353,7 @@ INHERITS ("stareau_principale".noeud_reseau,"stareau_principale".dimension);
 -- Column comments
 
 COMMENT ON TABLE stareau_ass.ass_engouffrement_point IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.id_ass_engouffrement_point IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.id_ass_engouffrement_point IS 'identifiant local';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.type_engouffrement IS '*type d''engouffrement*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.decantation IS '*présence décantation*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.siphon IS '*présence d''un siphon*';
@@ -375,8 +370,7 @@ INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
 
 -- Column comments
 COMMENT ON TABLE stareau_ass.ass_engouffrement_ligne IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.id_ass_engouffrement_ligne IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.id_ass_engouffrement_ligne IS 'identifiant local';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.type_engouffrement IS '*type d''engouffrement*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.decantation IS '*présence décantation*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.siphon IS '*présence d''un siphon*';
@@ -393,8 +387,7 @@ INHERITS ("stareau_principale".emprise,"stareau_principale".dimension);
 
 -- Column comments
 COMMENT ON TABLE stareau_ass.ass_engouffrement_surface IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.id_ass_engouffrement_surface IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.id_ass_engouffrement_surface IS 'identifiant local';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.type_engouffrement IS '*type d''engouffrement*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.decantation IS '*présence décantation*';
 COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.siphon IS '*présence d''un siphon*';
