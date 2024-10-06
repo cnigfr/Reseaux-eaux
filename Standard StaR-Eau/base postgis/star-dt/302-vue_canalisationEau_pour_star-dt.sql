@@ -43,7 +43,7 @@ AS SELECT ac.id_canalisation AS identifiant,
     ac.commentaire,
         CASE
             WHEN ac.mode_circulation = 'gravitaire'::text THEN 'enChargeGravite'::text
-            WHEN ac.mode_circulation = 'sous_pression'::text THEN 'enChargePressurisation'::text
+            WHEN ac.mode_circulation = 'refoulement'::text THEN 'enChargePressurisation'::text
             ELSE NULL::text
         END AS ecoulement,
     ac.materiau,
@@ -53,12 +53,12 @@ AS SELECT ac.id_canalisation AS identifiant,
         CASE
             WHEN ac.contenu_canalisation = 'eau_potable'::text THEN 'potable'::text
             WHEN ac.contenu_canalisation = 'eau_brute'::text THEN 'raw'::text
-            WHEN ac.contenu_canalisation = 'eau_industrielle'::text THEN 'treated'::text
+            WHEN ac.contenu_canalisation = 'eau_impropre'::text THEN 'treated'::text
             ELSE NULL::text
         END AS "typeCanalisationEau",
     ac.geom AS geometry,
     false AS xyschematique,
-    false AS sensible, --à ajouter à Star-Eau ?
+    ac.sensible AS sensible, --à ajouter à Star-Eau ?
     NULL::text AS code,
     false AS "visibleSurface",
     false AS exceptionic,

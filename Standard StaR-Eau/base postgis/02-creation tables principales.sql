@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/05 10:18:57
+ * // Last modified: 2024/10/06 16:23:01
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -62,7 +62,6 @@ CREATE TABLE "stareau_principale".champ_commun(
    --id_champ_commun INT GENERATED ALWAYS AS IDENTITY,
    type_reseau TEXT NOT NULL, --type de réseau (com_type_reseau)
    fictif BOOL DEFAULT false NULL,
-   sensible BOOL DEFAULT false NULL,
    etat_service TEXT NOT NULL, --etat de service (com_etat_service)
    --insee_commune varchar(5) NOT NULL, --Insee de la commune
    insee_commune c_insee NOT NULL, --Insee de la commune
@@ -143,6 +142,7 @@ CREATE TABLE "stareau_principale".canalisation (
   revetement_interieur text NULL, -- revêtement intérieur
   diametre_equivalent int2 NOT NULL, -- diametre nominal
   longueur_terrain numeric(15, 2) NULL, -- longueur réelle terrain
+  sensible BOOL DEFAULT false NULL,
   noeudterminal text NOT NULL, -- noeud terminal
   noeudinitial text NOT NULL, -- noeud initial
   CONSTRAINT pk_canalisation PRIMARY KEY (id_canalisation)
