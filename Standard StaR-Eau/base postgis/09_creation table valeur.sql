@@ -2,7 +2,7 @@
  * 09_creation table valeur.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/05 15:09:52
+ * // Last modified: 2024/10/11 23:30:34
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -317,17 +317,21 @@ CREATE TABLE stareau_valeur.aep_type_ressource (
 );
 
 
--- stareau_valeur.aep_type_usager definition
+-- stareau_valeur.com_type_usager
+ definition
 
 -- Drop table
 
--- DROP TABLE stareau_valeur.aep_type_usager;
+-- DROP TABLE stareau_valeur.com_type_usager
+;
 
-CREATE TABLE stareau_valeur.aep_type_usager (
+CREATE TABLE stareau_valeur.com_type_usager
+ (
 	code text NOT NULL,
 	valeur text NULL,
 	description text NULL,
-	CONSTRAINT aep_type_usager_pk PRIMARY KEY (code)
+	CONSTRAINT com_type_usager
+_pk PRIMARY KEY (code)
 );
 
 
@@ -723,17 +727,21 @@ CREATE TABLE stareau_valeur.ass_type_regard (
 );
 
 
--- stareau_valeur.ass_type_usager definition
+-- stareau_valeur.com_type_usager
+ definition
 
 -- Drop table
 
--- DROP TABLE stareau_valeur.ass_type_usager;
+-- DROP TABLE stareau_valeur.com_type_usager
+;
 
-CREATE TABLE stareau_valeur.ass_type_usager (
+CREATE TABLE stareau_valeur.com_type_usager
+ (
 	code text NOT NULL,
 	valeur text NULL,
 	description text NULL,
-	CONSTRAINT ass_type_usager_pk PRIMARY KEY (code)
+	CONSTRAINT com_type_usager
+_pk PRIMARY KEY (code)
 );
 
 

@@ -2,7 +2,7 @@
  * contrainte liste de valeurs AEP
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/25 00:03:11
+ * // Last modified: 2024/10/11 23:30:34
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -240,7 +240,9 @@ ALTER TABLE stareau_aep_brcht.aep_point_livraison ADD CONSTRAINT aep_point_livra
 ALTER TABLE stareau_aep_brcht.aep_point_livraison ADD CONSTRAINT aep_point_livraison_com_origine_maj_fk FOREIGN KEY (origine_maj) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 
 ALTER TABLE stareau_aep_brcht.aep_point_livraison ADD CONSTRAINT aep_point_livraison_aep_type_point_livraison_fk FOREIGN KEY (type_point_livraison) REFERENCES stareau_valeur.aep_type_point_livraison(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_aep_brcht.aep_point_livraison ADD CONSTRAINT aep_point_livraison_aep_type_usager_fk FOREIGN KEY (type_usager) REFERENCES stareau_valeur.aep_type_usager(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_aep_brcht.aep_point_livraison ADD CONSTRAINT aep_point_livraison_com_type_usager
+_fk FOREIGN KEY (type_usager) REFERENCES stareau_valeur.com_type_usager
+(code) ON UPDATE CASCADE;
 
 --vanne branchement
 

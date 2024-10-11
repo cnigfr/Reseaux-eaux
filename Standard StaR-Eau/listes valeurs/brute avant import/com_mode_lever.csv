@@ -1,5 +1,7 @@
 "gnss","GNSS","GNSS (GPS) standard"
-"rtk","GPS-RTK","GNSS centimétrique"
+"rtk","GnSS-RTK","GNSS centimétrique"
 "station","Station totale","théodolite de lever"
 "lidar","Lidar","télédétection par laser"
+"georadar","georadar","Géoradar"
+"Orthophoto","Orthophotographie","Orthophotographie ou photogrammétrie"
 "manuelle","Saisie manuelle","saisie faite à la main"

@@ -2,7 +2,7 @@
  * 220-contraintes_sur_liste_valeurs_ASS.sql - 2024-06-02
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/03 00:09:09
+ * // Last modified: 2024/10/11 23:30:20
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -291,7 +291,9 @@ ALTER TABLE stareau_ass_brcht.ass_point_collecte ADD CONSTRAINT ass_point_collec
 ALTER TABLE stareau_ass_brcht.ass_point_collecte ADD CONSTRAINT ass_point_collecte_com_origine_maj_fk FOREIGN KEY (origine_maj) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 
 ALTER TABLE stareau_ass_brcht.ass_point_collecte ADD CONSTRAINT ass_point_collecte_ass_type_point_collecte_fk FOREIGN KEY (type_point_collecte) REFERENCES stareau_valeur.ass_type_point_collecte(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_ass_brcht.ass_point_collecte ADD CONSTRAINT ass_point_collecte_ass_type_usager_fk FOREIGN KEY (type_usager) REFERENCES stareau_valeur.ass_type_usager(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass_brcht.ass_point_collecte ADD CONSTRAINT ass_point_collecte_com_type_usager
+_fk FOREIGN KEY (type_usager) REFERENCES stareau_valeur.com_type_usager
+(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass_brcht.ass_point_collecte ADD CONSTRAINT ass_point_collecte_com_materiau_fk FOREIGN KEY (materiau) REFERENCES stareau_valeur.com_materiau(code) ON UPDATE CASCADE;
 
 --ass_raccord branchement

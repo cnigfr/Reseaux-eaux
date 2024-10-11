@@ -23,6 +23,8 @@ suivants :
 # MODÈLE STANDARD DE DONNÉES - STAR-EAU
 
 **appel à commentaire terminé - merci de votre participation.**
+Le fichier reste ouvert à cette adresse [commentaire](https://cryptpad.fr/sheet/#/2/sheet/edit/ew31VKDhicOB2gzORdItaF6W/embed/). Les commentaires peuvent encore être déposé mais ne seront pas pris en compte pour la version 2024 à venir.
+
 Vous pouvez consulter le wiki : https://github.com/cnigfr/Reseaux-eaux/wiki
 
 Pour toutes questions, utilisez les [ISSUES](https://github.com/cnigfr/Reseaux-eaux/issues) ou @ASTEE
