@@ -1,4 +1,6 @@
 ![logo](https://github.com/cnigfr/Reseaux-eaux/blob/main/Documentation/image_documentation/logo/logo.png "logo")
+![logo-astee-2](https://github.com/user-attachments/assets/de90a9e7-a8ad-4648-92be-8f2b2cfaaebe)
+
 
 # GT Réseaux enterrés des eaux
 
@@ -23,7 +25,7 @@ suivants :
 **appel à commentaire terminé - merci de votre participation.**
 Vous pouvez consulter le wiki : https://github.com/cnigfr/Reseaux-eaux/wiki
 
-et nous restons disponible sur star-eau arobase@ gmx.fr
+Pour toutes questions, utilisez les [ISSUES](https://github.com/cnigfr/Reseaux-eaux/issues) ou @ASTEE
 
 ---
 
