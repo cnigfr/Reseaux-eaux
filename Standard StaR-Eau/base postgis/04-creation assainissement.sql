@@ -135,7 +135,7 @@ CREATE TABLE "stareau_ass".ass_chambre_depollution (
   id_ass_chambre_depollution TEXT NULL,
   nom_usuel text NULL, -- nom usuel
   type_chambre_depollution text NOT NULL, -- > type de chambre de dépollution
-  bypass bool NULL, -- présence d'un by-pass
+  bypass TEXT NOT NULL, -- présence d'un by-pass
   volume_chambre float4 NULL, -- volume totale en m3
   telegestion text NOT NULL, -- >présence ou non d'une télégestion
   CONSTRAINT pk_ass_chambre PRIMARY KEY (id_noeud_reseau)
@@ -149,7 +149,7 @@ COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.id_ass_chambre_depolluti
 ;
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.type_chambre_depollution IS '*type de chambre de dépollution*';
-COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.bypass IS 'présence d''un by-pass';
+COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.bypass IS '*présence d''un by-pass*';
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.volume_chambre IS 'volume totale en m3';
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.telegestion IS '*présence ou non d''une télégestion*';
 
@@ -158,7 +158,8 @@ COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.telegestion IS '*présen
 CREATE TABLE "stareau_ass".ass_canalisation (
   id_ass_canalisation TEXT NULL,
   fonction_canalisation text NOT NULL, -- *fonction de la canalisation dans le réseau*
-  visitable text NULL, -- *possibilité de visite pedestre*
+  contenu_canalisation text NOT NULL,
+  visitable text NOT NULL, -- *possibilité de visite pedestre*
   altitude_fil_eau_amont float4 NULL, -- altitude fil d'eau amont
   altitude_fil_eau_aval float4 NULL, -- altitude fil d'eau aval
   bassin_collecte text NULL, -- identifiant bassin de collecte
@@ -170,9 +171,9 @@ COMMENT ON TABLE "stareau_ass".ass_canalisation IS 'canalisation assainissement'
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_canalisation.id_ass_canalisation IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_ass".ass_canalisation.id_ass_canalisation IS 'identifiant local';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.fonction_canalisation IS '*fonction de la canalisation dans le réseau*';
+COMMENT ON COLUMN "stareau_ass".ass_canalisation.contenu_canalisation IS '*type d''eau transportée*';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.visitable IS '*possibilité de visite pedestre*';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.altitude_fil_eau_amont IS 'altitude fil d''eau amont';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.altitude_fil_eau_aval IS 'altitude fil d''eau aval';
@@ -227,7 +228,7 @@ CREATE TABLE "stareau_ass".ass_point_mesure (
   code_sandre text NOT NULL, -- >code sandre officiel
   id_sandre text NULL, -- identifiant SANDRE
   ref_ouvrage text NULL, -- référence à l'ouvrage de rattachement
-  telegestion text NOT null,
+  telegestion text NOT NULL, -- >présence ou non d'une télégestion
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_ass_point_mesure PRIMARY KEY (id_ass_point_mesure)
 )
@@ -241,6 +242,7 @@ COMMENT ON COLUMN "stareau_ass".ass_point_mesure.type_point_mesure IS '*type du 
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.code_sandre IS '*code sandre officiel*';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.ref_ouvrage IS 'référence à l''ouvrage de rattachement';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.id_sandre IS 'identifiant SANDRE';
+COMMENT ON COLUMN stareau_ass.ass_point_mesure.telegestion IS '*présence d''une gestion à distance*';
 
 --- REGARD
 
@@ -249,8 +251,7 @@ CREATE TABLE "stareau_ass".ass_regard (
   type_regard text NOT NULL, -- type de regard *
   materiau text NOT NULL, -- materiau constitutif du regard *
   "position" text NOT NULL, -- position par rapport à la canalisation *
-  type_descente text NOT NULL, -- élément
- de descente dans le regard *
+  type_descente text NOT NULL, -- élément de descente dans le regard *
   nb_paliers int2 NULL, -- nombre de paliers
   z_tampon float4 NULL, -- cote NGF du tampon
   z_radier float4 NULL, -- cote NGF du point le plus bas du regard
@@ -266,8 +267,7 @@ COMMENT ON COLUMN "stareau_ass".ass_regard.id_ass_regard IS 'identifiant local';
 COMMENT ON COLUMN "stareau_ass".ass_regard.type_regard IS '*type de regard*';
 COMMENT ON COLUMN "stareau_ass".ass_regard.materiau IS '*materiau constitutif du regard*';
 COMMENT ON COLUMN "stareau_ass".ass_regard."position" IS '*position par rapport à la canalisation*';
-COMMENT ON COLUMN "stareau_ass".ass_regard.type_descente IS '*élément
- de descente dans le regard*';
+COMMENT ON COLUMN "stareau_ass".ass_regard.type_descente IS '*élément de descente dans le regard*';
 COMMENT ON COLUMN "stareau_ass".ass_regard.nb_paliers IS 'nombre de paliers';
 COMMENT ON COLUMN "stareau_ass".ass_regard.z_tampon IS 'cote NGF du tampon';
 COMMENT ON COLUMN "stareau_ass".ass_regard.z_radier IS 'cote NGF du point le plus bas du regard';
@@ -339,66 +339,13 @@ COMMENT ON COLUMN stareau_ass.ass_bassin.cote_radier IS 'Cote NGF du point le pl
 COMMENT ON COLUMN stareau_ass.ass_bassin.cote_trop_plein IS 'cote NGF de débordement du bassin';
 COMMENT ON COLUMN stareau_ass.ass_bassin.telegestion IS '*présence d''une gestion à distance*';
 
---- ENGOUFFREMENTS
----point
-CREATE TABLE stareau_ass.ass_engouffrement_point (
-  id_ass_engouffrement_point TEXT NULL, -- identifiant
-  type_engouffrement text NULL, -- >type d'engouffrement
-  decantation text NOT NULL, -- >présence décantation
-  siphon text NOT NULL, -- > présence d'un siphon
-  CONSTRAINT pk_ass_engouf_pt PRIMARY KEY (id_noeud_reseau)
-)
-INHERITS ("stareau_principale".noeud_reseau,"stareau_principale".dimension);
-
--- Column comments
-
-COMMENT ON TABLE stareau_ass.ass_engouffrement_point IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.id_ass_engouffrement_point IS 'identifiant local';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.type_engouffrement IS '*type d''engouffrement*';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.decantation IS '*présence décantation*';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_point.siphon IS '*présence d''un siphon*';
-
-----ligne
-CREATE TABLE stareau_ass.ass_engouffrement_ligne (
-  id_ass_engouffrement_ligne text NULL, -- identifiant
-  type_engouffrement text NULL, -- >type d'engouffrement
-  decantation text NOT NULL, -- >présence décantation
-  siphon text NOT NULL, -- > présence d'un siphon
-  CONSTRAINT pk_ass_engouf_ln PRIMARY KEY (id_canalisation)
-)
-INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
-
--- Column comments
-COMMENT ON TABLE stareau_ass.ass_engouffrement_ligne IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.id_ass_engouffrement_ligne IS 'identifiant local';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.type_engouffrement IS '*type d''engouffrement*';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.decantation IS '*présence décantation*';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_ligne.siphon IS '*présence d''un siphon*';
-
----surface
-CREATE TABLE stareau_ass.ass_engouffrement_surface (
-  id_ass_engouffrement_surface text NULL, -- identifiant
-  type_engouffrement text NULL, -- >type d'engouffrement
-  decantation text NOT NULL, -- >présence décantation
-  siphon text NOT NULL, -- > présence d'un siphon
-  CONSTRAINT pk_ass_engouf_sf PRIMARY KEY (id_emprise)
-)
-INHERITS ("stareau_principale".emprise,"stareau_principale".dimension);
-
--- Column comments
-COMMENT ON TABLE stareau_ass.ass_engouffrement_surface IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.id_ass_engouffrement_surface IS 'identifiant local';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.type_engouffrement IS '*type d''engouffrement*';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.decantation IS '*présence décantation*';
-COMMENT ON COLUMN stareau_ass.ass_engouffrement_surface.siphon IS '*présence d''un siphon*';
-
----GESTION PLUVIALES
+---GESTION PLUVIAL
 
 CREATE TABLE stareau_ass.ass_gestion_epl_point (
 	id_ass_gestion_epl_point text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_ass_gestion_epl_point INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl_point TEXT NOt NULL, --
-	type_gestion text NOT NULL, -- *type d'ouvrage de gestion*
+	type_gestion_epl text NOT NULL, -- *type d'ouvrage de gestion*
 	fonction_gestion_epl text NOT NULL, -- *fonction de l'ouvrage de gestion*
 	geom public.geometry(point, 2154) NOT NULL,
 	CONSTRAINT pk_ass_gestion_epl_point PRIMARY KEY (id_ass_gestion_epl_point)
@@ -409,7 +356,7 @@ COMMENT ON TABLE stareau_ass.ass_gestion_epl_point IS 'gestion des ouvrages pluv
 -- Column comments
 
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.id_ass_gestion_epl_point IS 'identifiant local';
-COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.type_gestion IS '*type d''ouvrage de gestion*';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.type_gestion_epl IS '*type d''ouvrage de gestion*';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
 
 --
@@ -417,7 +364,7 @@ CREATE TABLE stareau_ass.ass_gestion_epl_ligne (
 	id_ass_gestion_epl_ligne text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_ass_gestion_epl_ligne INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl_ligne TEXT NOt NULL, --
-	type_gestion text NOT NULL, -- *type d'ouvrage de gestion*
+	type_gestion_epl text NOT NULL, -- *type d'ouvrage de gestion*
 	fonction_gestion_epl text NOT NULL, -- *fonction de l'ouvrage de gestion*
 	geom public.geometry(linestring, 2154) NOT NULL,
 	CONSTRAINT pk_ass_gestion_epl_ligne PRIMARY KEY (id_ass_gestion_epl_ligne)
@@ -428,7 +375,7 @@ COMMENT ON TABLE stareau_ass.ass_gestion_epl_ligne IS 'gestion des ouvrages pluv
 -- Column comments
 
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.id_ass_gestion_epl_ligne IS 'identifiant local';
-COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.type_gestion IS '*type d''ouvrage de gestion*';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.type_gestion_epl IS '*type d''ouvrage de gestion*';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
 
 --
@@ -436,7 +383,7 @@ CREATE TABLE stareau_ass.ass_gestion_epl_surface (
 	id_ass_gestion_epl_surface text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_ass_gestion_epl_surface INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl_surface TEXT NOt NULL, --
-	type_gestion text NOT NULL, -- *type d'ouvrage de gestion*
+	type_gestion_epl text NOT NULL, -- *type d'ouvrage de gestion*
 	fonction_gestion_epl text NOT NULL, -- *fonction de l'ouvrage de gestion*
 	geom public.geometry(polygon, 2154) NOT NULL,
 	CONSTRAINT pk_ass_gestion_epl_surface PRIMARY KEY (id_ass_gestion_epl_surface)
@@ -447,7 +394,7 @@ COMMENT ON TABLE stareau_ass.ass_gestion_epl_surface IS 'gestion des ouvrages pl
 -- Column comments
 
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.id_ass_gestion_epl_surface IS 'identifiant local';
-COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.type_gestion IS '*type d''ouvrage de gestion*';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.type_gestion_epl IS '*type d''ouvrage de gestion*';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
 
 
@@ -458,7 +405,7 @@ CREATE TABLE stareau_ass.ass_gestion_epl (
 	id_ass_gestion_epl text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local
   --id_ass_gestion_epl INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl TEXT NOt NULL, --
-	type_gestion text NOT NULL, -- *type d'ouvrage de gestion*
+	type_gestion_epl text NOT NULL, -- *type d'ouvrage de gestion*
 	fonction_gestion_epl text NOT NULL, -- *fonction de l'ouvrage de gestion*
 	geomp public.geometry(point, 2154) NOT NULL,
 	geoml public.geometry(linestring, 2154) NOT NULL,
@@ -471,5 +418,5 @@ COMMENT ON TABLE stareau_ass.ass_gestion_epl IS 'gestion des ouvrages pluviaux';
 -- Column comments
 
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl.id_ass_gestion_epl IS 'identifiant local';
-COMMENT ON COLUMN stareau_ass.ass_gestion_epl.type_gestion IS '*type d''ouvrage de gestion*';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl.type_gestion_epl IS '*type d''ouvrage de gestion*';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*'; */

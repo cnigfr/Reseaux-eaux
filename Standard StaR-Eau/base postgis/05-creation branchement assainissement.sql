@@ -2,7 +2,7 @@
  * 05-creation branchement assainissement.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/06 19:17:19
+ * // Last modified: 2024/10/13 18:31:17
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -45,7 +45,7 @@ CREATE TABLE "stareau_ass_brcht".ass_point_collecte (
   type_point_collecte text NOT NULL, -- >type de boite de branchement
   type_usager text NOT NULL, -- >type d''usagers raccordé
   ref_externe text NULL, -- référence externe
-  materiau text NULL, -- materiau
+  materiau text NOT NULL, -- materiau
   z_tampon float4 NULL, -- z tampon
   z_radier float4 NULL, -- z radier
   profondeur float4 NULL, -- profondeur mesurée ou calculée
@@ -69,7 +69,7 @@ COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.profondeur IS 'profonde
 --ass_raccord
 CREATE TABLE "stareau_ass_brcht".ass_raccord (
   id_ass_raccord TEXT NULL,
-  type_raccord text NULL, -- type de raccord
+  type_raccord text NOT NULL, -- type de raccord
   ref_canalisation text NULL, -- identifiant de la cana principale
   CONSTRAINT pk_ass_raccord_brcht PRIMARY KEY (id_noeud_reseau)
 )
@@ -82,3 +82,56 @@ COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord.id_ass_raccord IS 'identifiant
 ;
 COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord.type_raccord IS '*type de raccord*';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord.ref_canalisation IS 'canalisation de référence';
+
+--- ENGOUFFREMENTS
+---point
+CREATE TABLE stareau_ass_brcht.ass_engouffrement_point (
+  id_ass_engouffrement_point TEXT NULL, -- identifiant
+  type_engouffrement text NOT NULL, -- >type d'engouffrement
+  decantation text NOT NULL, -- >présence décantation
+  siphon text NOT NULL, -- > présence d'un siphon
+  CONSTRAINT pk_ass_engouf_pt PRIMARY KEY (id_noeud_reseau)
+)
+INHERITS ("stareau_principale".noeud_reseau,"stareau_principale".dimension);
+
+-- Column comments
+
+COMMENT ON TABLE stareau_ass_brcht.ass_engouffrement_point IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_point.id_ass_engouffrement_point IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_point.type_engouffrement IS '*type d''engouffrement*';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_point.decantation IS '*présence décantation*';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_point.siphon IS '*présence d''un siphon*';
+
+----ligne
+CREATE TABLE stareau_ass_brcht.ass_engouffrement_ligne (
+  id_ass_engouffrement_ligne text NULL, -- identifiant
+  type_engouffrement text NOT NULL, -- >type d'engouffrement
+  decantation text NOT NULL, -- >présence décantation
+  siphon text NOT NULL, -- > présence d'un siphon
+  CONSTRAINT pk_ass_engouf_ln PRIMARY KEY (id_canalisation)
+)
+INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
+
+-- Column comments
+COMMENT ON TABLE stareau_ass_brcht.ass_engouffrement_ligne IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_ligne.id_ass_engouffrement_ligne IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_ligne.type_engouffrement IS '*type d''engouffrement*';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_ligne.decantation IS '*présence décantation*';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_ligne.siphon IS '*présence d''un siphon*';
+
+---surface
+CREATE TABLE stareau_ass_brcht.ass_engouffrement_surface (
+  id_ass_engouffrement_surface text NULL, -- identifiant
+  type_engouffrement text NOT NULL, -- >type d'engouffrement
+  decantation text NOT NULL, -- >présence décantation
+  siphon text NOT NULL, -- > présence d'un siphon
+  CONSTRAINT pk_ass_engouf_sf PRIMARY KEY (id_emprise)
+)
+INHERITS ("stareau_principale".emprise,"stareau_principale".dimension);
+
+-- Column comments
+COMMENT ON TABLE stareau_ass_brcht.ass_engouffrement_surface IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_surface.id_ass_engouffrement_surface IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_surface.type_engouffrement IS '*type d''engouffrement*';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_surface.decantation IS '*présence décantation*';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_surface.siphon IS '*présence d''un siphon*';

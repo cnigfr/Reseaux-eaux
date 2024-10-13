@@ -33,8 +33,7 @@ CREATE TABLE stareau_aep.aep_affleurant (
   type_affleurant text NOT NULL,
   id_affleurant_pcrs text NULL,
   id_emprise text NULL, -- lien vers emprise
-  id_noeud_reseau text NULL, -- lien vers élément
- ponctuel
+  id_noeud_reseau text NULL, -- lien vers élément ponctuel
   id_canalisation text NULL, -- lien vers élément linéaire
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_aep_affleurant PRIMARY KEY (id_aep_affleurant)
@@ -63,8 +62,7 @@ CREATE TABLE stareau_ass.ass_affleurant (
   type_affleurant text NOT NULL,
   id_affleurant_pcrs text NULL,
   id_emprise text NULL, -- lien vers emprise
-  id_noeud_reseau text NULL, -- lien vers élément
- ponctuel
+  id_noeud_reseau text NULL, -- lien vers élément ponctuel
   id_canalisation text NULL, -- lien vers élément linéaire
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_ass_affleurant PRIMARY KEY (id_ass_affleurant)
@@ -76,8 +74,7 @@ COMMENT ON TABLE stareau_ass.ass_affleurant IS 'table des affleurant des réseau
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep.aep_affleurant.id_aep_affleurant IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_aep.aep_affleurant.id_aep_affleurant IS 'identifiant local';
 COMMENT ON COLUMN stareau_aep.aep_affleurant.type_affleurant IS '*type d''affleurant*';
 COMMENT ON COLUMN stareau_aep.aep_affleurant.id_affleurant_pcrs IS 'lien vers identifiant PCRS';
 COMMENT ON COLUMN stareau_aep.aep_affleurant.id_emprise IS 'lien vers emprise';
@@ -119,8 +116,7 @@ COMMENT ON TABLE stareau_ass.ass_genie_civil IS 'enveloppe externe de génie civ
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_genie_civil.id_ass_genie_civil IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_ass.ass_genie_civil.id_ass_genie_civil IS 'identifiant local';
 COMMENT ON COLUMN stareau_ass.ass_genie_civil.materiau IS '*materiau constitutif du GC*';
 COMMENT ON COLUMN stareau_ass.ass_genie_civil.niveau IS 'niveau par rapport au sol';
 
@@ -256,7 +252,7 @@ CREATE TABLE "stareau_commun".piezometre (
 --id_piezometre INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
 --id_piezometre TEXT NOT NULL,
 --type_piezometre text NOT NULL, -- type_de piezometre*
-  nom_usuel text NOT NULL, -- nom usuel
+  nom_usuel text NULL, -- nom usuel
   diametre int4 NULL, -- diametre interne du forage
   cote_tn float4 NULL, -- cote terrain naturel
   cote_fin_crepine float4 NULL, -- cote de fin de crépine
@@ -270,8 +266,7 @@ COMMENT ON TABLE "stareau_commun".piezometre IS 'forage non exploité qui permet
 -- Column comments
 
 --COMMENT ON COLUMN "stareau_commun".piezometre.type_piezometre IS '*type_de piezometre*';
-COMMENT ON COLUMN "stareau_commun".piezometre.id_piezometre IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_commun".piezometre.id_piezometre IS 'identifiant local';
 COMMENT ON COLUMN "stareau_commun".piezometre.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_commun".piezometre.diametre IS 'diametre interne du forage';
 COMMENT ON COLUMN "stareau_commun".piezometre.cote_tn IS 'cote terrain naturel';
@@ -286,7 +281,7 @@ CREATE TABLE "stareau_commun".point_geolocalisation (
   --id_point_geolocalisation INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_point_geolocalisation TEXT NOT NULL,  -- ou INT -- pour personnalisation ou récupération de l'id existant
   z_objet float4 NULL, -- cote altimétrique de l'objet
-  reference_z text NULL, -- lieu de lever du Z*
+  reference_z text NOT NULL, -- lieu de lever du Z*
   mode_lever text NULL, -- mode de lever*
   date_lever timestamp NULL, -- date du lever
   mesure_precision_xy float4 NULL, -- qualité précision GPS HRMS en cm/m
@@ -302,8 +297,7 @@ COMMENT ON TABLE "stareau_commun".point_geolocalisation IS 'point géoréférenc
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_commun".point_geolocalisation.id_point_geolocalisation IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_commun".point_geolocalisation.id_point_geolocalisation IS 'identifiant local';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.z_objet IS 'cote altimétrique de l''objet';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.reference_z IS '*lieu de lever du Z*';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mode_lever IS '*mode de lever*';

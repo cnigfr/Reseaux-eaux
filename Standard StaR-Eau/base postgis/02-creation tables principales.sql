@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/06 22:19:00
+ * // Last modified: 2024/10/13 10:54:36
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -72,7 +72,7 @@ CREATE TABLE "stareau_principale".champ_commun(
    exploitant TEXT NOT NULL, --exploitant actuel du patrimoine
    entreprise_pose TEXT, --entreprise ayant effectué les travaux de mise en place
    precision_xy VARCHAR(1) NOT NULL,
-   precision_z VARCHAR(1) NULL,
+   precision_z VARCHAR(1) NOT NULL,
    an_pose_sup c_annee NOT NULL, --Année marquant la fin de la période de pose
    an_pose_inf c_annee, --Année marquant la début de la période de pose
    an_service_sup c_annee, --Année marquant la fin de la période de mise en service
@@ -140,11 +140,11 @@ CREATE TABLE "stareau_principale".canalisation (
   --id_canalisation INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_canalisation TEXT NOT NULL, -- pour personnalisation ou récupération de l'id existant
   geom public.geometry(linestring, 2154) NOT NULL,
-  mode_circulation text NULL, -- mode de circulation
-  type_pose text NULL, -- type de pose
-  raison_pose text NULL, -- raison de la pose
-  materiau text NULL, -- materiau
-  revetement_interieur text NULL, -- revêtement intérieur
+  mode_circulation text NOT NULL, -- mode de circulation
+  type_pose text NOT NULL, -- type de pose
+  raison_pose text NOT NULL, -- raison de la pose
+  materiau text NOT NULL, -- materiau
+  revetement_interieur text NOT NULL, -- revêtement intérieur
   diametre_equivalent int2 NOT NULL, -- diametre nominal
   longueur_terrain numeric(15, 2) NULL, -- longueur réelle terrain
   sensible BOOL DEFAULT false NULL,
@@ -171,7 +171,7 @@ CREATE TABLE "stareau_principale".emprise (
   id_emprise text NOT NULL DEFAULT gen_random_uuid(), -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_emprise INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_emprise text NOT NULL, -- pour personnalisation ou récupération de l'id existant
-  visible bool NULL, -- visible de la surface ?
+  visible TEXT NOT NULL, -- visible de la surface ?
   geom public.geometry(polygon, 2154) NOT NULL,
   --geom public.geometry(polygonZ, 2154) NOT NULL,
   CONSTRAINT pk_emprise PRIMARY KEY (id_emprise)
@@ -182,7 +182,7 @@ CREATE INDEX sidx_emprise_geom ON stareau_principale.emprise USING gist (geom); 
 COMMENT ON TABLE "stareau_principale".emprise IS 'table mère des éléments ayant une surface réelle ou projetée au sol';
 COMMENT ON COLUMN stareau_principale.emprise.id_emprise IS 'identifiant emprise'
 ;
-COMMENT ON COLUMN stareau_principale.emprise.visible IS 'visible de la surface ?';
+COMMENT ON COLUMN stareau_principale.emprise.visible IS '*visible de la surface ?*';
 
 --- TABLE DE RELATION NOEUD-EMPRISE
 CREATE TABLE stareau_principale.mm_emprise_ponctuel (

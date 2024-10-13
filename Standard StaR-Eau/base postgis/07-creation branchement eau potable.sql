@@ -2,7 +2,7 @@
  * 07-creation branchement eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/06 19:17:19
+ * // Last modified: 2024/10/13 18:31:11
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -31,22 +31,21 @@
 
 CREATE TABLE "stareau_aep_brcht".aep_canalisation_branchement (
   id_aep_canalisation_branchement text null,
-  fonction_canalisation_branchement text NULL, -- >fonction du branchement
+  fonction_canalisation_branchement text NOT NULL, -- >fonction du branchement
   CONSTRAINT pk_aep_cana_brcht PRIMARY KEY (id_canalisation)
 )
 INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
 COMMENT ON TABLE "stareau_aep_brcht".aep_canalisation_branchement IS 'conduite et accessoire mis en oeuvre pour amener l''eau du réseau de desserte jusqu''au point de livraison à l''usager, à l''exception des conduites et accessoires privés des immeubles collectifs';
 
 -- Column comments
-COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.id_aep_canalisation_branchement IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.id_aep_canalisation_branchement IS 'identifiant local';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.fonction_canalisation_branchement IS '*fonction du branchement*';
 
 --POINT LIVRAISON
 
 CREATE TABLE "stareau_aep_brcht".aep_point_livraison (
   id_point_livraison text NULL,
-  type_point_livraison text NULL, -- >type point livraison
+  type_point_livraison text NOT NULL, -- >type point livraison
   type_usager text NOT NULL, -- >type usager desservis
   ref_externe text NULL, -- référence externe (sdis, exploitation...)
   ref_client text NULL, -- référence client
@@ -57,7 +56,7 @@ COMMENT ON TABLE "stareau_aep_brcht".aep_point_livraison IS 'point de livraison'
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.id_point_livraison IS '*type point livraison*';
+COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.id_point_livraison IS 'identifiant local';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.type_point_livraison IS '*type point livraison*';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.ref_externe IS 'référence externe (sdis, exploitation...)';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.ref_client IS 'référence client';
@@ -85,33 +84,31 @@ COMMENT ON COLUMN stareau_aep_brcht.aep_raccord.ref_canalisation IS 'lien vers c
 
 CREATE TABLE stareau_aep_brcht.aep_piece_branchement (
   id_piece_branchement text NULL,
-  type_piece_branchement text NULL, -- >type de pièce
+  type_piece_branchement text NOT NULL, -- >type de pièce
   CONSTRAINT pk_aep_piece_brcht PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS (stareau_principale.noeud_reseau);
 COMMENT ON TABLE stareau_aep_brcht.aep_piece_branchement IS 'Pièces de branchement qui impactent le modèle hydraulique, et donc associées à des noeuds';
 
 -- Column comments
-COMMENT ON COLUMN stareau_aep_brcht.aep_piece_branchement.id_piece_branchement IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_aep_brcht.aep_piece_branchement.id_piece_branchement IS 'identifiant local';
 COMMENT ON COLUMN stareau_aep_brcht.aep_piece_branchement.type_piece_branchement IS '*type de pièce*';
 
 ---VANNE BRANCHEMENT
 
 CREATE TABLE stareau_aep_brcht.aep_vanne_branchement (
   id_vanne_branchement text null,
-  type_vanne_branchement text NULL, -- >type de vanne
+  type_vanne_branchement text NOT NULL, -- >type de vanne
   diametre float4 NULL, -- diametre nominale de la vanne
-  etat_ouverture text NULL, -- >état d'ouverture
-  sens_fermeture text NULL, -- >sens de fermeture
+  etat_ouverture text NOT NULL, -- >état d'ouverture
+  sens_fermeture text NOT NULL, -- >sens de fermeture
   CONSTRAINT pk_aep_vanne_brcht PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS (stareau_principale.noeud_reseau);
 COMMENT ON TABLE stareau_aep_brcht.aep_vanne_branchement IS 'élément de coupure sur le branchement';
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.id_vanne_branchement IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.id_vanne_branchement IS 'identifiant local';
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.type_vanne_branchement IS '*type de vanne*';
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.diametre IS 'diamétre nominal de la vanne';
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.sens_fermeture IS '*sens de fermeture*';

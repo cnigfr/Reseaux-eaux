@@ -2,7 +2,7 @@
  * 200-foreign_keys_et_contraintes.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/03 00:09:09
+ * // Last modified: 2024/10/13 18:59:32
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -70,7 +70,7 @@ ALTER TABLE stareau_ass.mm_ass_cana_protection ADD CONSTRAINT mm_ass_cana_protec
 
 -- stareau_principale.mm_emprise_ponctuel foreign keys
 ALTER TABLE stareau_principale.mm_emprise_ponctuel ADD CONSTRAINT mm_emprise_ponctuel_emprise_fk FOREIGN KEY (id_emprise) REFERENCES stareau_principale.emprise(id_emprise) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE stareau_principale.mm_emprise_ponctuel ADD CONSTRAINT mm_emprise_ponctuel_noeud_reseau_fk FOREIGN KEY (id_noeud) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE stareau_principale.mm_emprise_ponctuel ADD CONSTRAINT mm_emprise_ponctuel_noeud_reseau_fk FOREIGN KEY (id_noeud_reseau) REFERENCES stareau_principale.noeud_reseau(id_noeud_reseau) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
 --set defaut pour réseau aep

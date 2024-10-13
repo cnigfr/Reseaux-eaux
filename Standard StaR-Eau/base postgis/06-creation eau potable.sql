@@ -2,7 +2,7 @@
  * 06-creation eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/06 19:17:19
+ * // Last modified: 2024/10/13 18:31:19
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -106,8 +106,7 @@ COMMENT ON TABLE "stareau_aep".aep_reservoir IS 'installation destinée au stock
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep".aep_reservoir.id_aep_reservoir IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_aep".aep_reservoir.id_aep_reservoir IS 'identifiant local';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.type_reservoir IS '*type réservoir*';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.nb_cuves IS 'nombre de cuves';
@@ -127,7 +126,7 @@ CREATE TABLE "stareau_aep".aep_traitement (
   type_desinfection text NOT NULL, -- >type désinfection
   capacite float4 NULL, -- capacité de traitement m3/j
   debit_ref float4 NULL, -- débit de référence m3/j
-  telegestion varchar NULL, -- >présence d'une gestion à distance
+  telegestion text NOT NULL, -- >présence d'une gestion à distance
   CONSTRAINT pk_aep_traitement PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);
@@ -181,7 +180,7 @@ CREATE TABLE "stareau_aep".aep_vanne (
   sens_fermeture text NOT NULL, -- sens fermeture
   etat_ouverture text NOT NULL, -- état ouverture
   blocage text NOT NULL, --vanne bloquée
-  motorisation text NULL, -- motorisation
+  motorisation text NOT NULL, -- motorisation
   telegestion text NOT NULL,-- Présence d'une gestion à distance
   CONSTRAINT pk_aep_vanne PRIMARY KEY (id_noeud_reseau)
 )
@@ -219,8 +218,7 @@ CREATE TABLE "stareau_aep".aep_regulation (
 INHERITS ("stareau_principale".noeud_reseau);
 
 COMMENT ON TABLE "stareau_aep".aep_regulation IS 'appareil de régulation du débit ou de la pression';
-COMMENT ON COLUMN "stareau_aep".aep_regulation.id_aep_regulation IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_aep".aep_regulation.id_aep_regulation IS 'identifiant local';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.nom_usuel IS 'nom usage';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.type_regulation IS '*type régulation*';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.type_consigne IS '*type consigne*';
