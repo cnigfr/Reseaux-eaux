@@ -840,7 +840,8 @@ def my_form_open(dialog, layer, feature):
     <field name="exploitant" editable="1"/>
     <field name="fictif" editable="1"/>
     <field name="fid" editable="1"/>
-    <field name="fk_aep_canalisation" editable="1"/>
+    <field name="ref_canalisation
+" editable="1"/>
     <field name="forme" editable="1"/>
     <field name="hauteur_exterieure" editable="1"/>
     <field name="hauteur_interieure" editable="1"/>
@@ -885,7 +886,8 @@ def my_form_open(dialog, layer, feature):
     <field name="exploitant" labelOnTop="0"/>
     <field name="fictif" labelOnTop="0"/>
     <field name="fid" labelOnTop="0"/>
-    <field name="fk_aep_canalisation" labelOnTop="0"/>
+    <field name="ref_canalisation
+" labelOnTop="0"/>
     <field name="forme" labelOnTop="0"/>
     <field name="hauteur_exterieure" labelOnTop="0"/>
     <field name="hauteur_interieure" labelOnTop="0"/>
@@ -930,7 +932,8 @@ def my_form_open(dialog, layer, feature):
     <field name="exploitant" reuseLastValue="1"/>
     <field name="fictif" reuseLastValue="1"/>
     <field name="fid" reuseLastValue="0"/>
-    <field name="fk_aep_canalisation" reuseLastValue="0"/>
+    <field name="ref_canalisation
+" reuseLastValue="0"/>
     <field name="forme" reuseLastValue="1"/>
     <field name="hauteur_exterieure" reuseLastValue="0"/>
     <field name="hauteur_interieure" reuseLastValue="0"/>

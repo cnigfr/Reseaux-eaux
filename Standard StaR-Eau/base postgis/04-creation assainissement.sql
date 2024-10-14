@@ -185,7 +185,6 @@ COMMENT ON COLUMN "stareau_ass".ass_canalisation.ref_ouvrage_aval IS 'reference 
 CREATE TABLE "stareau_ass".ass_piece (
   id_ass_piece TEXT NULL,
   type_piece text NOT NULL, -- > type de pièce
-  fk_ass_canalisation text null, -- référence à la conduite de rattachement
   CONSTRAINT pk_ass_piece PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);
@@ -193,10 +192,8 @@ COMMENT ON TABLE "stareau_ass".ass_piece IS 'Pièces sur canalisations principal
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_piece.id_ass_piece IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_ass".ass_piece.id_ass_piece IS 'identifiant local';
 COMMENT ON COLUMN "stareau_ass".ass_piece.type_piece IS '*type de pièce*';
-COMMENT ON COLUMN "stareau_ass".ass_piece.fk_ass_canalisation IS 'référence à la conduite de rattachement';
 
 --- PIECE (HORS TOPOLOGIE)
 
@@ -205,7 +202,8 @@ CREATE TABLE "stareau_ass".ass_piece_hors_topo (
   --id_ass_pieceht INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_pieceht TEXT NOT NULL,  -- ou INT -- pour personnalisation ou récupération de l'id existant
   type_piece text NOT NULL, -- > type de pièce
-  fk_ass_canalisation text NULL, -- référence à la conduite de rattachement
+  ref_canalisation
+ text NULL, -- référence à la conduite de rattachement
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT ass_piece_ht_pk PRIMARY KEY (id_ass_pieceht)
 )
@@ -216,7 +214,8 @@ COMMENT ON TABLE "stareau_ass".ass_piece_hors_topo IS 'Pièces sur canalisations
 
 COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.id_ass_pieceht IS 'identifiant local';
 COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.type_piece IS '*type de pièce*';
-COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.fk_ass_canalisation IS 'référence à la conduite de rattachement(id_canalisation)';
+COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.ref_canalisation
+ IS 'référence à la conduite de rattachement(id_canalisation)';
 
 ---POINT DE MESURE (hors topologie)
 

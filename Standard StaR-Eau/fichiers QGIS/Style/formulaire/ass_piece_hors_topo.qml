@@ -447,7 +447,8 @@
         </config>
       </editWidget>
     </field>
-    <field name="fk_ass_canalisation" configurationFlags="None">
+    <field name="ref_canalisation
+" configurationFlags="None">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -494,7 +495,8 @@
     <alias field="commentaire" name="" index="25"/>
     <alias field="id_ass_pieceht" name="" index="26"/>
     <alias field="type_piece" name="type de pièce" index="27"/>
-    <alias field="fk_ass_canalisation" name="canalisation de référence" index="28"/>
+    <alias field="ref_canalisation
+" name="canalisation de référence" index="28"/>
     <alias field="auxiliary_storage_symbol_angle" name="" index="29"/>
   </aliases>
   <defaults>
@@ -526,7 +528,8 @@
     <default field="commentaire" applyOnUpdate="0" expression=""/>
     <default field="id_ass_pieceht" applyOnUpdate="0" expression="&quot;fid&quot;"/>
     <default field="type_piece" applyOnUpdate="0" expression=""/>
-    <default field="fk_ass_canalisation" applyOnUpdate="0" expression="array_to_string(overlay_nearest('ass_canalisation',&quot;id_canalisation&quot;,0.3),1)"/>
+    <default field="ref_canalisation
+" applyOnUpdate="0" expression="array_to_string(overlay_nearest('ass_canalisation',&quot;id_canalisation&quot;,0.3),1)"/>
     <default field="auxiliary_storage_symbol_angle" applyOnUpdate="0" expression=""/>
   </defaults>
   <constraints>
@@ -558,7 +561,8 @@
     <constraint field="commentaire" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
     <constraint field="id_ass_pieceht" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
     <constraint field="type_piece" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
-    <constraint field="fk_ass_canalisation" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
+    <constraint field="ref_canalisation
+" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
     <constraint field="auxiliary_storage_symbol_angle" unique_strength="0" notnull_strength="0" exp_strength="0" constraints="0"/>
   </constraints>
   <constraintExpressions>
@@ -590,7 +594,8 @@
     <constraint field="commentaire" exp="" desc=""/>
     <constraint field="id_ass_pieceht" exp="" desc=""/>
     <constraint field="type_piece" exp="" desc=""/>
-    <constraint field="fk_ass_canalisation" exp="" desc=""/>
+    <constraint field="ref_canalisation
+" exp="" desc=""/>
     <constraint field="auxiliary_storage_symbol_angle" exp="" desc=""/>
   </constraintExpressions>
   <expressionfields/>
@@ -626,7 +631,8 @@
       <column hidden="0" name="lien_doc2" width="-1" type="field"/>
       <column hidden="0" name="commentaire" width="-1" type="field"/>
       <column hidden="0" name="type_piece" width="-1" type="field"/>
-      <column hidden="0" name="fk_ass_canalisation" width="-1" type="field"/>
+      <column hidden="0" name="ref_canalisation
+" width="-1" type="field"/>
       <column hidden="0" name="id_ass_pieceht" width="-1" type="field"/>
       <column hidden="1" name="auxiliary_storage_symbol_angle" width="-1" type="field"/>
       <column hidden="1" width="-1" type="actions"/>
@@ -718,7 +724,8 @@ def my_form_open(dialog, layer, feature):
       <labelStyle overrideLabelColor="0" labelColor="0,0,0,255" overrideLabelFont="0">
         <labelFont description="Noto Sans,10,-1,5,50,0,0,0,0,0" strikethrough="0" italic="0" underline="0" bold="0" style=""/>
       </labelStyle>
-      <attributeEditorField name="fk_ass_canalisation" showLabel="1" index="28">
+      <attributeEditorField name="ref_canalisation
+" showLabel="1" index="28">
         <labelStyle overrideLabelColor="0" labelColor="0,0,0,255" overrideLabelFont="0">
           <labelFont description="Noto Sans,10,-1,5,50,0,0,0,0,0" strikethrough="0" italic="0" underline="0" bold="0" style=""/>
         </labelStyle>
@@ -858,7 +865,8 @@ def my_form_open(dialog, layer, feature):
     <field editable="1" name="exploitant"/>
     <field editable="1" name="fictif"/>
     <field editable="1" name="fid"/>
-    <field editable="1" name="fk_ass_canalisation"/>
+    <field editable="1" name="ref_canalisation
+"/>
     <field editable="1" name="forme"/>
     <field editable="1" name="hauteur_exterieure"/>
     <field editable="1" name="hauteur_interieure"/>
@@ -903,7 +911,8 @@ def my_form_open(dialog, layer, feature):
     <field name="exploitant" labelOnTop="0"/>
     <field name="fictif" labelOnTop="0"/>
     <field name="fid" labelOnTop="0"/>
-    <field name="fk_ass_canalisation" labelOnTop="0"/>
+    <field name="ref_canalisation
+" labelOnTop="0"/>
     <field name="forme" labelOnTop="0"/>
     <field name="hauteur_exterieure" labelOnTop="0"/>
     <field name="hauteur_interieure" labelOnTop="0"/>
@@ -948,7 +957,8 @@ def my_form_open(dialog, layer, feature):
     <field reuseLastValue="1" name="exploitant"/>
     <field reuseLastValue="1" name="fictif"/>
     <field reuseLastValue="0" name="fid"/>
-    <field reuseLastValue="0" name="fk_ass_canalisation"/>
+    <field reuseLastValue="0" name="ref_canalisation
+"/>
     <field reuseLastValue="1" name="forme"/>
     <field reuseLastValue="0" name="hauteur_exterieure"/>
     <field reuseLastValue="0" name="hauteur_interieure"/>

@@ -2,7 +2,7 @@
  * 06-creation eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/14 03:35:32
+ * // Last modified: 2024/10/14 04:33:08
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -297,7 +297,6 @@ COMMENT ON COLUMN stareau_aep.aep_station_alerte.telegestion IS '*Présence d''u
 CREATE TABLE "stareau_aep".aep_piece (
   id_aep_piece TEXT NULL,
   type_piece text NOT NULL, -- > type de pièce
-  fk_aep_canalisation text null, -- référence à la conduite de rattachement
   CONSTRAINT pk_aep_piece PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);
@@ -305,10 +304,8 @@ COMMENT ON TABLE "stareau_aep".aep_piece IS 'Pièces sur canalisation principale
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep".aep_piece.id_aep_piece IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_aep".aep_piece.id_aep_piece IS 'identifiant local';
 COMMENT ON COLUMN "stareau_aep".aep_piece.type_piece IS '*type de pièce*';
-COMMENT ON COLUMN "stareau_aep".aep_piece.fk_aep_canalisation IS 'référence à la conduite de rattachement';
 
 --- PIECE (HORS TOPOLOGIE)
 
@@ -317,7 +314,8 @@ CREATE TABLE "stareau_aep".aep_piece_hors_topo (
   --id_aep_pieceht INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_aep_pieceht TEXT NOT NULL,  -- ou INT -- pour personnalisation ou récupération de l'id existant
   type_piece text NOT NULL, -- > type de pièce
-  fk_aep_canalisation text NULL, -- référence à la conduite de rattachement
+  ref_canalisation
+ text NULL, -- référence à la conduite de rattachement
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT aep_piece_ht_pk PRIMARY KEY (id_aep_pieceht)
 )
@@ -326,7 +324,7 @@ COMMENT ON TABLE "stareau_aep".aep_piece_hors_topo IS 'Pièces sur canalisations
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.id_aep_pieceht IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.id_aep_pieceht IS 'identifiant local';
 COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.type_piece IS '*type de pièce*';
-COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.fk_aep_canalisation IS 'référence à la conduite de rattachement(id_canalisation)';
+COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.ref_canalisation
+ IS 'référence à la conduite de rattachement(id_canalisation)';

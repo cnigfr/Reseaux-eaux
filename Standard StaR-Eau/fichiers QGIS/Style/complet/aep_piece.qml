@@ -1517,7 +1517,8 @@
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="fk_aep_canalisation">
+    <field configurationFlags="None" name="ref_canalisation
+">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
@@ -1558,7 +1559,8 @@
     <alias index="26" name="" field="id_noeud_reseau"/>
     <alias index="27" name="" field="id_aep_piece"/>
     <alias index="28" name="type de pièce" field="type_piece"/>
-    <alias index="29" name="" field="fk_aep_canalisation"/>
+    <alias index="29" name="" field="ref_canalisation
+"/>
   </aliases>
   <defaults>
     <default field="fid" applyOnUpdate="0" expression=""/>
@@ -1590,7 +1592,8 @@
     <default field="id_noeud_reseau" applyOnUpdate="0" expression="uuid()"/>
     <default field="id_aep_piece" applyOnUpdate="0" expression="&quot;fid&quot;"/>
     <default field="type_piece" applyOnUpdate="0" expression="'non_renseigne'"/>
-    <default field="fk_aep_canalisation" applyOnUpdate="0" expression=" overlay_nearest('aep_canalisation',id_canalisation,max_distance:=0.5)"/>
+    <default field="ref_canalisation
+" applyOnUpdate="0" expression=" overlay_nearest('aep_canalisation',id_canalisation,max_distance:=0.5)"/>
   </defaults>
   <constraints>
     <constraint exp_strength="0" constraints="3" unique_strength="1" notnull_strength="1" field="fid"/>
@@ -1622,7 +1625,8 @@
     <constraint exp_strength="0" constraints="1" unique_strength="0" notnull_strength="1" field="id_noeud_reseau"/>
     <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="id_aep_piece"/>
     <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="type_piece"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="fk_aep_canalisation"/>
+    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="ref_canalisation
+"/>
   </constraints>
   <constraintExpressions>
     <constraint exp="" field="fid" desc=""/>
@@ -1654,7 +1658,8 @@
     <constraint exp="" field="id_noeud_reseau" desc=""/>
     <constraint exp="" field="id_aep_piece" desc=""/>
     <constraint exp="" field="type_piece" desc=""/>
-    <constraint exp="" field="fk_aep_canalisation" desc=""/>
+    <constraint exp="" field="ref_canalisation
+" desc=""/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
@@ -1691,7 +1696,8 @@
       <column hidden="0" name="id_noeud_reseau" width="-1" type="field"/>
       <column hidden="0" name="id_aep_piece" width="-1" type="field"/>
       <column hidden="0" name="type_piece" width="-1" type="field"/>
-      <column hidden="0" name="fk_aep_canalisation" width="-1" type="field"/>
+      <column hidden="0" name="ref_canalisation
+" width="-1" type="field"/>
       <column hidden="1" width="-1" type="actions"/>
     </columns>
   </attributetableconfig>
@@ -1781,7 +1787,8 @@ def my_form_open(dialog, layer, feature):
       <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
         <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
       </labelStyle>
-      <attributeEditorField index="29" name="fk_aep_canalisation" showLabel="1">
+      <attributeEditorField index="29" name="ref_canalisation
+" showLabel="1">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
           <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
         </labelStyle>
@@ -1920,7 +1927,8 @@ def my_form_open(dialog, layer, feature):
     <field name="exploitant" editable="1"/>
     <field name="fictif" editable="1"/>
     <field name="fid" editable="1"/>
-    <field name="fk_aep_canalisation" editable="1"/>
+    <field name="ref_canalisation
+" editable="1"/>
     <field name="forme" editable="1"/>
     <field name="hauteur_exterieure" editable="1"/>
     <field name="hauteur_interieure" editable="1"/>
@@ -1963,7 +1971,8 @@ def my_form_open(dialog, layer, feature):
     <field name="exploitant" labelOnTop="0"/>
     <field name="fictif" labelOnTop="0"/>
     <field name="fid" labelOnTop="0"/>
-    <field name="fk_aep_canalisation" labelOnTop="0"/>
+    <field name="ref_canalisation
+" labelOnTop="0"/>
     <field name="forme" labelOnTop="0"/>
     <field name="hauteur_exterieure" labelOnTop="0"/>
     <field name="hauteur_interieure" labelOnTop="0"/>
@@ -2006,7 +2015,8 @@ def my_form_open(dialog, layer, feature):
     <field name="exploitant" reuseLastValue="1"/>
     <field name="fictif" reuseLastValue="1"/>
     <field name="fid" reuseLastValue="0"/>
-    <field name="fk_aep_canalisation" reuseLastValue="0"/>
+    <field name="ref_canalisation
+" reuseLastValue="0"/>
     <field name="forme" reuseLastValue="1"/>
     <field name="hauteur_exterieure" reuseLastValue="0"/>
     <field name="hauteur_interieure" reuseLastValue="0"/>

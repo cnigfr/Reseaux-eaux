@@ -2,7 +2,7 @@
  * 200-foreign_keys_et_contraintes.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/14 03:57:41
+ * // Last modified: 2024/10/14 04:33:24
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -69,11 +69,11 @@ ALTER TABLE stareau_ass.ass_affleurant ADD CONSTRAINT ass_affleurant_noeud_resea
 
 -- "stareau_ass".ass_piece foreign keys
 -- /!\ ON DELETE EN PLACE : efface les pièces si cana est effacée, vérifier que c'est bien le comportement souhaité
-ALTER TABLE "stareau_ass".ass_piece ADD CONSTRAINT ass_piece_fk FOREIGN KEY (fk_ass_canalisation) REFERENCES "stareau_ass".ass_canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE "stareau_ass".ass_piece_hors_topo ADD CONSTRAINT ass_pieceht_fk FOREIGN KEY (fk_ass_canalisation) REFERENCES "stareau_ass".ass_canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "stareau_ass".ass_piece_hors_topo ADD CONSTRAINT ass_pieceht_fk FOREIGN KEY (ref_canalisation
+) REFERENCES "stareau_ass".ass_canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE "stareau_aep".aep_piece ADD CONSTRAINT aep_piece_fk FOREIGN KEY (fk_aep_canalisation) REFERENCES "stareau_aep".aep_canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE "stareau_aep".aep_piece_hors_topo ADD CONSTRAINT aep_pieceht_fk FOREIGN KEY (fk_aep_canalisation) REFERENCES "stareau_aep".aep_canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "stareau_aep".aep_piece_hors_topo ADD CONSTRAINT aep_pieceht_fk FOREIGN KEY (ref_canalisation
+) REFERENCES "stareau_aep".aep_canalisation(id_canalisation) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --raccord branchement
 ALTER TABLE stareau_aep_brcht.aep_raccord ADD CONSTRAINT aep_raccord_canalisation_fk FOREIGN KEY (ref_canalisation) REFERENCES stareau_principale.canalisation(id_canalisation) ON UPDATE CASCADE;
