@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/13 10:54:36
+ * // Last modified: 2024/10/14 04:00:59
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -128,9 +128,7 @@ CREATE TABLE "stareau_principale".noeud_reseau (
 INHERITS ("stareau_principale".champ_commun);
 CREATE INDEX sidx_noeud_geom ON stareau_principale.noeud_reseau USING gist (geom);  ---indexation
 
-COMMENT ON TABLE "stareau_principale".noeud_reseau IS 'table mère
- des éléments
- ponctuels';
+COMMENT ON TABLE "stareau_principale".noeud_reseau IS 'table mère des éléments ponctuels';
 COMMENT ON COLUMN "stareau_principale".noeud_reseau.id_noeud_reseau IS 'identifiant noeud';
 
 --ÉLÉMENTS LINÉAIRES - CANALISATION--
@@ -180,11 +178,11 @@ INHERITS ("stareau_principale".champ_commun);
 CREATE INDEX sidx_emprise_geom ON stareau_principale.emprise USING gist (geom);  ---indexation
 
 COMMENT ON TABLE "stareau_principale".emprise IS 'table mère des éléments ayant une surface réelle ou projetée au sol';
-COMMENT ON COLUMN stareau_principale.emprise.id_emprise IS 'identifiant emprise'
-;
+COMMENT ON COLUMN stareau_principale.emprise.id_emprise IS 'identifiant emprise';
 COMMENT ON COLUMN stareau_principale.emprise.visible IS '*visible de la surface ?*';
 
 --- TABLE DE RELATION NOEUD-EMPRISE
+--- /!\ changer le type de donnée si identifiant numerique
 CREATE TABLE stareau_principale.mm_emprise_ponctuel (
   id_emprise text NOT NULL,
   id_noeud_reseau text NOT NULL

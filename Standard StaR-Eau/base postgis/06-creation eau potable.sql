@@ -2,7 +2,7 @@
  * 06-creation eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/13 18:31:19
+ * // Last modified: 2024/10/14 03:35:32
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -42,7 +42,7 @@ CREATE TABLE "stareau_aep".aep_canalisation (
   CONSTRAINT pk_aep_canalisation PRIMARY KEY (id_canalisation)
 )
 INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
-COMMENT ON TABLE "stareau_aep".aep_canalisation IS 'assemblage de tuyau, de leurs pièces et des ouvrages qui permet les transport des eaux entre deux points';
+COMMENT ON TABLE "stareau_aep".aep_canalisation IS 'assemblage de tuyau, de leurs pièces et des ouvrages qui permet le transport des eaux entre deux points';
 
 -- Column comments
 
