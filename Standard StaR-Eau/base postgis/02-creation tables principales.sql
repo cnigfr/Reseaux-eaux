@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/14 04:00:59
+ * // Last modified: 2024/10/14 23:22:46
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -144,7 +144,7 @@ CREATE TABLE "stareau_principale".canalisation (
   materiau text NOT NULL, -- materiau
   revetement_interieur text NOT NULL, -- revêtement intérieur
   diametre_equivalent int2 NOT NULL, -- diametre nominal
-  longueur_terrain numeric(15, 2) NULL, -- longueur réelle terrain
+  longueur_terrain real NULL, -- longueur réelle terrain
   sensible BOOL DEFAULT false NULL,
   noeudterminal text NOT NULL, -- noeud terminal
   noeudinitial text NOT NULL, -- noeud initial

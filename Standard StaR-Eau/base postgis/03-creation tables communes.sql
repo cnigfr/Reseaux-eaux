@@ -256,7 +256,7 @@ CREATE TABLE "stareau_commun".piezometre (
   diametre int4 NULL, -- diametre interne du forage
   cote_tn float4 NULL, -- cote terrain naturel
   cote_fin_crepine float4 NULL, -- cote de fin de crépine
-  ref_bss text NULL, -- référence à la banque du sous-sol (BRGM)
+  ref_bss text NULL, -- référence dans la banque du sous-sol (BRGM)
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT pk_piezometre PRIMARY KEY (id_piezometre)
 )
@@ -271,7 +271,7 @@ COMMENT ON COLUMN "stareau_commun".piezometre.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_commun".piezometre.diametre IS 'diametre interne du forage';
 COMMENT ON COLUMN "stareau_commun".piezometre.cote_tn IS 'cote terrain naturel';
 COMMENT ON COLUMN "stareau_commun".piezometre.cote_fin_crepine IS 'cote de fin de crépine';
-COMMENT ON COLUMN "stareau_commun".piezometre.ref_bss IS 'référence à la banque du sous-sol (BRGM)';
+COMMENT ON COLUMN "stareau_commun".piezometre.ref_bss IS 'référence dans la banque du sous-sol (BRGM)';
 
 
 ----point geolocalisation (hors topologie)
@@ -304,4 +304,4 @@ COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mode_lever IS '*mode de
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.date_lever IS 'date du lever';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mesure_precision_xy IS 'qualité précision GPS HRMS en cm/m';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mesure_precision_z IS 'qualité précision GPS HRMS en cm/m';
-COMMENT ON COLUMN "stareau_commun".point_geolocalisation.qualite_outil IS 'pourcent d''erreur de l''appareil';
+COMMENT ON COLUMN "stareau_commun".point_geolocalisation.qualite_outil IS 'pourcent d''erreur de l''appareil ou dela mesure';

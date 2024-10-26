@@ -30,3 +30,4 @@
 
 CREATE DOMAIN public.c_insee AS TEXT CHECK(VALUE ~ '^([013-9]d|2[AB1-9])\d{3}$'); --check si Insee valide
 CREATE DOMAIN public.c_annee AS int CHECK ((VALUE::TEXT ~ '^[1|2][0|8-9]\d{2}$') OR VALUE IN (-9999,-8888,-7777,-6666)); --check annee entre 1800 et 2099 + autres valeurs
+--CREATE DOMAIN public.c_sirent AS TEXT ((VALUE::text ~ '^(?:\d{9}|\d{14})$')); - vérifie si SIREN ou SIRET a bien 9 ou 14 chiffres

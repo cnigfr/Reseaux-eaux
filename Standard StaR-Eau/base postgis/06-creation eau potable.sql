@@ -2,7 +2,7 @@
  * 06-creation eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/14 04:33:08
+ * // Last modified: 2024/10/26 09:49:44
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -196,7 +196,7 @@ COMMENT ON COLUMN "stareau_aep".aep_vanne.fonction_vanne IS '*fonction vanne*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.diametre IS 'diametre nominal';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.sens_fermeture IS '*sens fermeture*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.blocage IS '*vanne bloquée*';
-COMMENT ON COLUMN "stareau_aep".aep_vanne.etat_ouverture IS '*état ouverture*';
+COMMENT ON COLUMN "stareau_aep".aep_vanne.etat_ouverture IS '*état ouverture en focntionnement normal*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.motorisation IS '*motorisation*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.telegestion IS '*présence d''une gestion à distance*';
 
@@ -314,8 +314,7 @@ CREATE TABLE "stareau_aep".aep_piece_hors_topo (
   --id_aep_pieceht INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_aep_pieceht TEXT NOT NULL,  -- ou INT -- pour personnalisation ou récupération de l'id existant
   type_piece text NOT NULL, -- > type de pièce
-  ref_canalisation
- text NULL, -- référence à la conduite de rattachement
+  ref_canalisation text NULL, -- référence à la conduite de rattachement
   geom public.geometry(point, 2154) NOT NULL,
   CONSTRAINT aep_piece_ht_pk PRIMARY KEY (id_aep_pieceht)
 )
