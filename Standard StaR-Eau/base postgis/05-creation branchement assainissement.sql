@@ -2,7 +2,7 @@
  * 05-creation branchement assainissement.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/13 18:31:17
+ * // Last modified: 2024/10/26 17:40:06
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -29,15 +29,24 @@
 --canalisation de branchement
 CREATE TABLE "stareau_ass_brcht".ass_canalisation_branchement (
   id_ass_canalisation_branchement TEXT NULL, -- identifiant
+  fonction_canalisation text NOT NULL, -- *fonction de la canalisation dans le réseau*
+  contenu_canalisation text NOT NULL,
+  altitude_fil_eau_amont float4 NULL, -- altitude fil d'eau amont
+  altitude_fil_eau_aval float4 NULL, -- altitude fil d'eau aval
   CONSTRAINT pk_ass_cana_brcht PRIMARY KEY (id_canalisation)
 )
 INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
-COMMENT ON TABLE "stareau_ass_brcht".ass_canalisation_branchement IS 'Ensemble des éléments physiques assurant le raccordement entre le point de collecte (2.25) et le réseau d’assainissement';
+COMMENT ON TABLE "stareau_ass_brcht".ass_canalisation_branchement IS 'Ensemble des éléments physiques assurant le raccordement entre le point de collecte et le réseau d’assainissement';
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass_brcht".ass_canalisation_branchement.id_ass_canalisation_branchement IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_ass_brcht".ass_canalisation_branchement.id_ass_canalisation_branchement IS 'identifiant métier';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_canalisation_branchement.fonction_canalisation IS '*fonction de la canalisation dans le réseau*';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_canalisation_branchement.contenu_canalisation IS '*type d''eau transportée*';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_canalisation_branchement.altitude_fil_eau_amont IS 'altitude fil d''eau amont';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_canalisation_branchement.altitude_fil_eau_aval IS 'altitude fil d''eau aval';
+--COMMENT ON COLUMN "stareau_ass_brcht".ass_canalisation.ref_ouvrage_aval IS 'référence de l''ouvrage en aval';
+
 
 --point de collecte assainissement
 CREATE TABLE "stareau_ass_brcht".ass_point_collecte (
@@ -56,7 +65,8 @@ COMMENT ON TABLE "stareau_ass_brcht".ass_point_collecte IS 'Interface physique f
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.id_point_collecte IS 'identifiant local'
+COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.id_point_collecte IS 'identifiant métier
+'
 ;
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.type_point_collecte IS '*type de boite de branchement*';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.ref_externe IS 'référence externe';
@@ -78,7 +88,8 @@ COMMENT ON TABLE "stareau_ass_brcht".ass_raccord IS 'pièce de raccordement sur 
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord.id_ass_raccord IS 'identifiant local'
+COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord.id_ass_raccord IS 'identifiant métier
+'
 ;
 COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord.type_raccord IS '*type de raccord*';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_raccord.ref_canalisation IS 'canalisation de référence';
@@ -97,7 +108,8 @@ INHERITS ("stareau_principale".noeud_reseau,"stareau_principale".dimension);
 -- Column comments
 
 COMMENT ON TABLE stareau_ass_brcht.ass_engouffrement_point IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
-COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_point.id_ass_engouffrement_point IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_point.id_ass_engouffrement_point IS 'identifiant métier
+';
 COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_point.type_engouffrement IS '*type d''engouffrement*';
 COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_point.decantation IS '*présence décantation*';
 COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_point.siphon IS '*présence d''un siphon*';
@@ -114,7 +126,8 @@ INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
 
 -- Column comments
 COMMENT ON TABLE stareau_ass_brcht.ass_engouffrement_ligne IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
-COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_ligne.id_ass_engouffrement_ligne IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_ligne.id_ass_engouffrement_ligne IS 'identifiant métier
+';
 COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_ligne.type_engouffrement IS '*type d''engouffrement*';
 COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_ligne.decantation IS '*présence décantation*';
 COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_ligne.siphon IS '*présence d''un siphon*';
@@ -131,7 +144,8 @@ INHERITS ("stareau_principale".emprise,"stareau_principale".dimension);
 
 -- Column comments
 COMMENT ON TABLE stareau_ass_brcht.ass_engouffrement_surface IS 'Élément du système d’assainissement permettant l''introduction des eaux de ruissellement';
-COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_surface.id_ass_engouffrement_surface IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_surface.id_ass_engouffrement_surface IS 'identifiant métier
+';
 COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_surface.type_engouffrement IS '*type d''engouffrement*';
 COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_surface.decantation IS '*présence décantation*';
 COMMENT ON COLUMN stareau_ass_brcht.ass_engouffrement_surface.siphon IS '*présence d''un siphon*';

@@ -2,7 +2,7 @@
  * 200-foreign_keys_et_contraintes.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/14 04:33:24
+ * // Last modified: 2024/10/26 17:18:00
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -33,7 +33,8 @@
 ALTER TABLE stareau_aep.aep_canalisation ADD ref_reservoir text NOT NULL;
 --ALTER TABLE stareau_aep.aep_canalisation ADD ref_reservoir integer NOT NULL;
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_aep_reservoir_fk FOREIGN KEY (ref_reservoir) REFERENCES stareau_aep.aep_reservoir(id_noeud_reseau) ON UPDATE CASCADE;
---référence à l'identifiant local
+--référence à l'identifiant métier
+
 --ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_aep_reservoir_fk FOREIGN KEY (ref_reservoir) REFERENCES stareau_aep.aep_reservoir(id_aep_reservoir) ON UPDATE CASCADE;
 
 --ajout lien vers traitement pour ass_canalisation

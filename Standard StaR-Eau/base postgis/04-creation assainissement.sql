@@ -38,8 +38,7 @@ INHERITS ("stareau_principale".noeud_reseau);
 COMMENT ON TABLE "stareau_ass".ass_traitement IS 'Ensemble des installations chargées de traiter les eaux collectées par le réseau de collecte des eaux usées avant rejet au milieu naturel et dans le respect de la réglementation.';
 
 -- Column comments
-COMMENT ON COLUMN "stareau_ass".ass_traitement.id_ass_traitement IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_ass".ass_traitement.id_ass_traitement IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_traitement.nom_usuel IS 'nom de l''ouvrage (nomouvragedepollution)';
 COMMENT ON COLUMN "stareau_ass".ass_traitement.nom_usuel IS 'nom de l''ouvrage (nomouvragedepollution)';
 COMMENT ON COLUMN "stareau_ass".ass_traitement.code_ouvrage_sandre IS 'code sandre de l''ouvrage (cdouvragedepollution)';
@@ -63,8 +62,7 @@ COMMENT ON TABLE "stareau_ass".ass_pretraitement IS 'Les prétraitements ont pou
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_pretraitement.id_ass_pretraitement IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_ass".ass_pretraitement.id_ass_pretraitement IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.type_pretraitement IS '*type de prétraitement*';
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.capacite IS 'capacité du prétraitement';
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.volume IS 'volume total du stockage éventuel';
@@ -85,8 +83,7 @@ COMMENT ON TABLE "stareau_ass".ass_equipement IS 'Composant associé à un ouvra
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_equipement.id_ass_equipement IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_ass".ass_equipement.id_ass_equipement IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_equipement.type_equipement IS '*type équipement*';
 COMMENT ON COLUMN "stareau_ass".ass_equipement.fonction_equipement IS '*fonction de l''équipement*';
 COMMENT ON COLUMN "stareau_ass".ass_equipement.telegestion IS '*présence d''''une gestion à distance*';
@@ -116,8 +113,7 @@ On distingue habituellement plusieurs types :
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_pompage.id_ass_pompage IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_ass".ass_pompage.id_ass_pompage IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_pompage.type_pompage IS '*type de pompage*';
 COMMENT ON COLUMN "stareau_ass".ass_pompage.fonction_pompage IS '*fonction du pompage*';
 COMMENT ON COLUMN "stareau_ass".ass_pompage.nb_pompe IS 'nombre de pompe';
@@ -145,7 +141,8 @@ COMMENT ON TABLE "stareau_ass".ass_chambre_depollution IS 'Une installation ou u
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.id_ass_chambre_depollution IS 'identifiant local'
+COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.id_ass_chambre_depollution IS 'identifiant métier
+'
 ;
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.type_chambre_depollution IS '*type de chambre de dépollution*';
@@ -163,7 +160,8 @@ CREATE TABLE "stareau_ass".ass_canalisation (
   altitude_fil_eau_amont float4 NULL, -- altitude fil d'eau amont
   altitude_fil_eau_aval float4 NULL, -- altitude fil d'eau aval
   bassin_collecte text NULL, -- identifiant bassin de collecte
-  ref_ouvrage_aval text null, -- reference de l'ouvrage en aval
+  --ref_ouvrage_aval text null, -- reference de l'ouvrage en aval
+  id_ass_traitement text null, --référence au traitement
   CONSTRAINT pk_ass_canalisation PRIMARY KEY (id_canalisation)
 )
 INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
@@ -171,14 +169,15 @@ COMMENT ON TABLE "stareau_ass".ass_canalisation IS 'canalisation assainissement'
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_canalisation.id_ass_canalisation IS 'identifiant local';
+COMMENT ON COLUMN "stareau_ass".ass_canalisation.id_ass_canalisation IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.fonction_canalisation IS '*fonction de la canalisation dans le réseau*';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.contenu_canalisation IS '*type d''eau transportée*';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.visitable IS '*possibilité de visite pedestre*';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.altitude_fil_eau_amont IS 'altitude fil d''eau amont';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.altitude_fil_eau_aval IS 'altitude fil d''eau aval';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.bassin_collecte IS 'identifiant bassin de collecte';
-COMMENT ON COLUMN "stareau_ass".ass_canalisation.ref_ouvrage_aval IS 'reference de l''ouvrage en aval';
+--COMMENT ON COLUMN "stareau_ass".ass_canalisation.ref_ouvrage_aval IS 'référence de l''ouvrage en aval';
+COMMENT ON COLUMN "stareau_ass".ass_canalisation.id_ass_traitement IS 'référence au traitement rattaché à cette canalisation';
 
 --- PIECE
 
@@ -192,7 +191,7 @@ COMMENT ON TABLE "stareau_ass".ass_piece IS 'Pièces sur canalisations principal
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_piece.id_ass_piece IS 'identifiant local';
+COMMENT ON COLUMN "stareau_ass".ass_piece.id_ass_piece IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_piece.type_piece IS '*type de pièce*';
 
 --- PIECE (HORS TOPOLOGIE)
@@ -212,7 +211,7 @@ COMMENT ON TABLE "stareau_ass".ass_piece_hors_topo IS 'Pièces sur canalisations
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.id_ass_pieceht IS 'identifiant local';
+COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.id_ass_pieceht IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.type_piece IS '*type de pièce*';
 COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.ref_canalisation
  IS 'référence à la conduite de rattachement(id_canalisation)';
@@ -236,7 +235,7 @@ COMMENT ON TABLE "stareau_ass".ass_point_mesure IS 'Point de suivi remarquable d
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_point_mesure.id_ass_point_mesure IS 'identifiant local';
+COMMENT ON COLUMN "stareau_ass".ass_point_mesure.id_ass_point_mesure IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.type_point_mesure IS '*type du point de mesure*';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.code_sandre IS '*code sandre officiel*';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.ref_ouvrage IS 'référence à l''ouvrage de rattachement';
@@ -262,7 +261,7 @@ COMMENT ON TABLE "stareau_ass".ass_regard IS 'enceinte munie d''un tampon amovib
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_regard.id_ass_regard IS 'identifiant local';
+COMMENT ON COLUMN "stareau_ass".ass_regard.id_ass_regard IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_regard.type_regard IS '*type de regard*';
 COMMENT ON COLUMN "stareau_ass".ass_regard.materiau IS '*materiau constitutif du regard*';
 COMMENT ON COLUMN "stareau_ass".ass_regard."position" IS '*position par rapport à la canalisation*';
@@ -271,23 +270,6 @@ COMMENT ON COLUMN "stareau_ass".ass_regard.nb_paliers IS 'nombre de paliers';
 COMMENT ON COLUMN "stareau_ass".ass_regard.z_tampon IS 'cote NGF du tampon';
 COMMENT ON COLUMN "stareau_ass".ass_regard.z_radier IS 'cote NGF du point le plus bas du regard';
 COMMENT ON COLUMN "stareau_ass".ass_regard.profondeur_mesure IS 'profondeur mesurée ou évaluée sur le terrain';
-
----OUVRAGE SPECIAL
-
-CREATE TABLE "stareau_ass".ass_ouvrage_special (
-  id_ass_ouvrage_special TEXT NULL,
-  type_ouvrage_special text NOT NULL, -- >type d'ouvrage spécial
-  ref_ouvrage text NULL, -- ouvrage ou canalisation de rattachement
-  CONSTRAINT pk_ass_ouvrage_special PRIMARY KEY (id_noeud_reseau)
-)
-INHERITS ("stareau_principale".noeud_reseau,"stareau_principale".dimension);
-COMMENT ON TABLE "stareau_ass".ass_ouvrage_special IS 'Ouvrage particulier ne rentrant pas dans une autre classe d''entités';
-
--- Column comments
-
-COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special.id_ass_ouvrage_special IS 'identifiant local';
-COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special.type_ouvrage_special IS '*type d''ouvrage spécial*';
-COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special.ref_ouvrage IS 'ouvrage ou canalisation de rattachement';
 
 ------EXUTOIRE
 
@@ -302,7 +284,7 @@ COMMENT ON TABLE stareau_ass.ass_exutoire IS 'Point de rejet dans le milieu réc
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_exutoire.id_ass_exutoire IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass.ass_exutoire.id_ass_exutoire IS 'identifiant métier';
 COMMENT ON COLUMN stareau_ass.ass_exutoire.code_topage IS 'Code TOPAGE (CdOH) du milieu récepteur';
 COMMENT ON COLUMN stareau_ass.ass_exutoire.destination IS '*type de milieu récepteur*';
 
@@ -327,7 +309,7 @@ COMMENT ON TABLE stareau_ass.ass_bassin IS 'Ouvrage retenant momentanément des 
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_bassin.id_ass_bassin IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass.ass_bassin.id_ass_bassin IS 'identifiant métier';
 COMMENT ON COLUMN stareau_ass.ass_bassin.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN stareau_ass.ass_bassin.type_bassin IS '*type de bassin*';
 COMMENT ON COLUMN stareau_ass.ass_bassin.fonction_bassin IS '*fonction du bassin*';
@@ -341,7 +323,8 @@ COMMENT ON COLUMN stareau_ass.ass_bassin.telegestion IS '*présence d''une gesti
 ---GESTION PLUVIAL
 
 CREATE TABLE stareau_ass.ass_gestion_epl_point (
-	id_ass_gestion_epl_point text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+	id_ass_gestion_epl_point text DEFAULT gen_random_uuid() NOT NULL, -- identifiant métier
+ -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_ass_gestion_epl_point INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl_point TEXT NOt NULL, --
 	type_gestion_epl text NOT NULL, -- *type d'ouvrage de gestion*
@@ -354,13 +337,14 @@ COMMENT ON TABLE stareau_ass.ass_gestion_epl_point IS 'gestion des ouvrages pluv
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.id_ass_gestion_epl_point IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.id_ass_gestion_epl_point IS 'identifiant métier';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.type_gestion_epl IS '*type d''ouvrage de gestion*';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
 
 --
 CREATE TABLE stareau_ass.ass_gestion_epl_ligne (
-	id_ass_gestion_epl_ligne text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+	id_ass_gestion_epl_ligne text DEFAULT gen_random_uuid() NOT NULL, -- identifiant métier
+ -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_ass_gestion_epl_ligne INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl_ligne TEXT NOt NULL, --
 	type_gestion_epl text NOT NULL, -- *type d'ouvrage de gestion*
@@ -373,13 +357,14 @@ COMMENT ON TABLE stareau_ass.ass_gestion_epl_ligne IS 'gestion des ouvrages pluv
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.id_ass_gestion_epl_ligne IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.id_ass_gestion_epl_ligne IS 'identifiant métier';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.type_gestion_epl IS '*type d''ouvrage de gestion*';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
 
 --
 CREATE TABLE stareau_ass.ass_gestion_epl_surface (
-	id_ass_gestion_epl_surface text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+	id_ass_gestion_epl_surface text DEFAULT gen_random_uuid() NOT NULL, -- identifiant métier
+ -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_ass_gestion_epl_surface INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl_surface TEXT NOt NULL, --
 	type_gestion_epl text NOT NULL, -- *type d'ouvrage de gestion*
@@ -392,16 +377,66 @@ COMMENT ON TABLE stareau_ass.ass_gestion_epl_surface IS 'gestion des ouvrages pl
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.id_ass_gestion_epl_surface IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.id_ass_gestion_epl_surface IS 'identifiant métier';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.type_gestion_epl IS '*type d''ouvrage de gestion*';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
 
+---OUVRAGE SPECIAL
 
+CREATE TABLE "stareau_ass".ass_ouvrage_special_point (
+  id_ass_ouvrage_special_p TEXT NULL,
+  type_ouvrage_special text NOT NULL, -- >type d'ouvrage spécial
+  ref_ouvrage text NULL, -- ouvrage ou canalisation de rattachement
+  CONSTRAINT pk_ass_ouvrage_special_p PRIMARY KEY (id_noeud_reseau)
+)
+INHERITS ("stareau_principale".noeud_reseau,"stareau_principale".dimension);
+COMMENT ON TABLE "stareau_ass".ass_ouvrage_special_point IS 'Ouvrage particulier ne rentrant pas dans une autre classe d''entités - point';
+
+-- Column comments
+
+COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special_point.id_ass_ouvrage_special_p IS 'identifiant métier';
+COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special_point.type_ouvrage_special IS '*type d''ouvrage spécial*';
+COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special_point.ref_ouvrage IS 'ouvrage ou canalisation de rattachement';
+
+---OUVRAGE SPECIAL
+
+CREATE TABLE "stareau_ass".ass_ouvrage_special_ligne (
+  id_ass_ouvrage_special_l TEXT NULL,
+  type_ouvrage_special text NOT NULL, -- >type d'ouvrage spécial
+  ref_ouvrage text NULL, -- ouvrage ou canalisation de rattachement
+  CONSTRAINT pk_ass_ouvrage_special_l PRIMARY KEY (id_canalisation)
+)
+INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
+COMMENT ON TABLE "stareau_ass".ass_ouvrage_special_ligne IS 'Ouvrage particulier ne rentrant pas dans une autre classe d''entités_ligne';
+
+-- Column comments
+
+COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special_ligne.id_ass_ouvrage_special_l IS 'identifiant métier';
+COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special_ligne.type_ouvrage_special IS '*type d''ouvrage spécial*';
+COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special_ligne.ref_ouvrage IS 'ouvrage ou canalisation de rattachement';
+
+---OUVRAGE SPECIAL
+
+CREATE TABLE "stareau_ass".ass_ouvrage_special_surface (
+  id_ass_ouvrage_special_s TEXT NULL,
+  type_ouvrage_special text NOT NULL, -- >type d'ouvrage spécial
+  ref_ouvrage text NULL, -- ouvrage ou canalisation de rattachement
+  CONSTRAINT pk_ass_ouvrage_special_s PRIMARY KEY (id_emprise)
+)
+INHERITS ("stareau_principale".emprise,"stareau_principale".dimension);
+COMMENT ON TABLE "stareau_ass".ass_ouvrage_special_surface IS 'Ouvrage particulier ne rentrant pas dans une autre classe d''entités_surface';
+
+-- Column comments
+
+COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special_surface.id_ass_ouvrage_special_s IS 'identifiant métier';
+COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special_surface.type_ouvrage_special IS '*type d''ouvrage spécial*';
+COMMENT ON COLUMN "stareau_ass".ass_ouvrage_special_surface.ref_ouvrage IS 'ouvrage ou canalisation de rattachement';
 
 /* ------------Table combinée-------------------
 
 CREATE TABLE stareau_ass.ass_gestion_epl (
-	id_ass_gestion_epl text DEFAULT gen_random_uuid() NOT NULL, -- identifiant local
+	id_ass_gestion_epl text DEFAULT gen_random_uuid() NOT NULL, -- identifiant métier
+
   --id_ass_gestion_epl INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl TEXT NOt NULL, --
 	type_gestion_epl text NOT NULL, -- *type d'ouvrage de gestion*
@@ -416,6 +451,7 @@ COMMENT ON TABLE stareau_ass.ass_gestion_epl IS 'gestion des ouvrages pluviaux';
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_gestion_epl.id_ass_gestion_epl IS 'identifiant local';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl.id_ass_gestion_epl IS 'identifiant métier';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl.type_gestion_epl IS '*type d''ouvrage de gestion*';
-COMMENT ON COLUMN stareau_ass.ass_gestion_epl.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*'; */
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*'; 
+*/

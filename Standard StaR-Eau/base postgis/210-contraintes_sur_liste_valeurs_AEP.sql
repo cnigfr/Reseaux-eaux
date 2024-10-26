@@ -32,7 +32,7 @@ ALTER TABLE stareau_aep.aep_affleurant ADD CONSTRAINT aep_affleurant_precision_z
 ALTER TABLE stareau_aep.aep_affleurant ADD CONSTRAINT aep_affleurant_origine_creation_fk FOREIGN KEY (origine_creation) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_affleurant ADD CONSTRAINT aep_affleurant_origine_maj_fk FOREIGN KEY (origine_maj) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_affleurant ADD CONSTRAINT aep_affleurant_forme_fk FOREIGN KEY (forme) REFERENCES stareau_valeur.com_forme(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_aep.aep_affleurant ADD CONSTRAINT aep_affleurant_unite_fk FOREIGN KEY (unite) REFERENCES stareau_valeur.com_unite(code) ON UPDATE CASCADE;
+--ALTER TABLE stareau_aep.aep_affleurant ADD CONSTRAINT aep_affleurant_unite_fk FOREIGN KEY (unite) REFERENCES stareau_valeur.com_unite(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_affleurant ADD CONSTRAINT aep_affleurant_type_affleurant_fk FOREIGN KEY (type_affleurant) REFERENCES stareau_valeur.com_type_affleurant(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_appareillage ADD CONSTRAINT aep_appareillage_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_appareillage ADD CONSTRAINT aep_appareillage_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON UPDATE CASCADE;
@@ -54,7 +54,7 @@ ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_raison_
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_materiau_fk FOREIGN KEY (materiau) REFERENCES stareau_valeur.com_materiau(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_revetement_interieur_fk FOREIGN KEY (revetement_interieur) REFERENCES stareau_valeur.com_revetement_interieur(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_forme_fk FOREIGN KEY (forme) REFERENCES stareau_valeur.com_forme(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_unite_fk FOREIGN KEY (unite) REFERENCES stareau_valeur.com_unite(code) ON UPDATE CASCADE;
+--ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_unite_fk FOREIGN KEY (unite) REFERENCES stareau_valeur.com_unite(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_fonction_canalisation_fk FOREIGN KEY (fonction_canalisation) REFERENCES stareau_valeur.aep_fonction_canalisation(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_contenu_canalisation_fk FOREIGN KEY (contenu_canalisation) REFERENCES stareau_valeur.aep_contenu_canalisation(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_protection_cathodique_fk FOREIGN KEY (protection_cathodique) REFERENCES stareau_valeur.com_oui_non(code) ON UPDATE CASCADE;
@@ -123,7 +123,7 @@ ALTER TABLE stareau_aep.aep_protection_mecanique ADD CONSTRAINT aep_protection_m
 ALTER TABLE stareau_aep.aep_protection_mecanique ADD CONSTRAINT aep_protection_mecanique_origine_creation_fk FOREIGN KEY (origine_creation) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_protection_mecanique ADD CONSTRAINT aep_protection_mecanique_origine_maj_fk FOREIGN KEY (origine_maj) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_protection_mecanique ADD CONSTRAINT aep_protection_mecanique_forme_fk FOREIGN KEY (forme) REFERENCES stareau_valeur.com_forme(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_aep.aep_protection_mecanique ADD CONSTRAINT aep_protection_mecanique_unite_fk FOREIGN KEY (unite) REFERENCES stareau_valeur.com_unite(code) ON UPDATE CASCADE;
+--ALTER TABLE stareau_aep.aep_protection_mecanique ADD CONSTRAINT aep_protection_mecanique_unite_fk FOREIGN KEY (unite) REFERENCES stareau_valeur.com_unite(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_protection_mecanique ADD CONSTRAINT aep_protection_mecanique_type_protection_fk FOREIGN KEY (type_protection) REFERENCES stareau_valeur.com_type_protection(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_protection_mecanique ADD CONSTRAINT aep_protection_mecanique_materiau_fk FOREIGN KEY (materiau) REFERENCES stareau_valeur.com_materiau(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_regulation ADD CONSTRAINT aep_regulation_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
@@ -142,7 +142,7 @@ ALTER TABLE stareau_aep.aep_reservoir ADD CONSTRAINT aep_reservoir_precision_z_f
 ALTER TABLE stareau_aep.aep_reservoir ADD CONSTRAINT aep_reservoir_origine_creation_fk FOREIGN KEY (origine_creation) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_reservoir ADD CONSTRAINT aep_reservoir_origine_maj_fk FOREIGN KEY (origine_maj) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_reservoir ADD CONSTRAINT aep_reservoir_forme_fk FOREIGN KEY (forme) REFERENCES stareau_valeur.com_forme(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_aep.aep_reservoir ADD CONSTRAINT aep_reservoir_unite_fk FOREIGN KEY (unite) REFERENCES stareau_valeur.com_unite(code) ON UPDATE CASCADE;
+--ALTER TABLE stareau_aep.aep_reservoir ADD CONSTRAINT aep_reservoir_unite_fk FOREIGN KEY (unite) REFERENCES stareau_valeur.com_unite(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_reservoir ADD CONSTRAINT aep_reservoir_type_reservoir_fk FOREIGN KEY (type_reservoir) REFERENCES stareau_valeur.aep_type_reservoir(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_reservoir ADD CONSTRAINT aep_reservoir_telegestion_fk FOREIGN KEY (telegestion) REFERENCES stareau_valeur.com_oui_non(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_station_alerte ADD CONSTRAINT aep_station_alerte_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
@@ -188,8 +188,8 @@ ALTER TABLE stareau_aep_brcht.aep_canalisation_branchement ADD CONSTRAINT aep_ca
 ALTER TABLE stareau_aep_brcht.aep_canalisation_branchement ADD CONSTRAINT aep_canalisation_branchement_materiau_fk FOREIGN KEY (materiau) REFERENCES stareau_valeur.com_materiau(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep_brcht.aep_canalisation_branchement ADD CONSTRAINT aep_canalisation_branchement_revetement_interieur_fk FOREIGN KEY (revetement_interieur) REFERENCES stareau_valeur.com_revetement_interieur(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep_brcht.aep_canalisation_branchement ADD CONSTRAINT aep_canalisation_branchement_forme_fk FOREIGN KEY (forme) REFERENCES stareau_valeur.com_forme(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_aep_brcht.aep_canalisation_branchement ADD CONSTRAINT aep_canalisation_branchement_unite_fk FOREIGN KEY (unite) REFERENCES stareau_valeur.com_unite(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_aep_brcht.aep_canalisation_branchement ADD CONSTRAINT aep_canalisation_branchement_fonction_canalisation_brt_fk FOREIGN KEY (fonction_canalisation_branchement) REFERENCES stareau_valeur.aep_fonction_branchement(code) ON UPDATE CASCADE;
+--ALTER TABLE stareau_aep_brcht.aep_canalisation_branchement ADD CONSTRAINT aep_canalisation_branchement_unite_fk FOREIGN KEY (unite) REFERENCES stareau_valeur.com_unite(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_aep_brcht.aep_canalisation_branchement ADD CONSTRAINT aep_canalisation_branchement_fonction_canalisation_brt_fk FOREIGN KEY (fonction_canalisation) REFERENCES stareau_valeur.aep_fonction_branchement(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep_brcht.aep_piece_branchement ADD CONSTRAINT aep_piece_branchement_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep_brcht.aep_piece_branchement ADD CONSTRAINT aep_piece_branchement_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep_brcht.aep_piece_branchement ADD CONSTRAINT aep_piece_branchement_precision_xy_fk FOREIGN KEY (precision_xy) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;

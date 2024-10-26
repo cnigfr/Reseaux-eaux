@@ -2,7 +2,7 @@
  * 10-creation_com_materiau.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/06 19:17:19
+ * // Last modified: 2024/10/26 17:18:00
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -38,7 +38,8 @@ CREATE TABLE stareau_valeur.com_materiau (
   CONSTRAINT com_materiau_unique UNIQUE (code)
 );
 COMMENT ON TABLE stareau_valeur.com_materiau IS 'liste des matériaux';
-COMMENT ON COLUMN stareau_valeur.com_materiau.code IS 'identifiant local'
+COMMENT ON COLUMN stareau_valeur.com_materiau.code IS 'identifiant métier
+'
 ;
 COMMENT ON COLUMN stareau_valeur.com_materiau.valeur IS 'valeur';
 COMMENT ON COLUMN stareau_valeur.com_materiau.description IS 'description longue';

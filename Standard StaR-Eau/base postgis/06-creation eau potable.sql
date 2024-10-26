@@ -2,7 +2,7 @@
  * 06-creation eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/26 09:49:44
+ * // Last modified: 2024/10/26 17:40:22
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -39,6 +39,7 @@ CREATE TABLE "stareau_aep".aep_canalisation (
   ref_udi text NULL, -- référence unité de distribution (référence ARS)
   cote_debut float4 NULL, -- cote de la génératrice superieure
   cote_fin float4 NULL, -- cote génératrice supérieure
+  id_aep_reservoir text null, 
   CONSTRAINT pk_aep_canalisation PRIMARY KEY (id_canalisation)
 )
 INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
@@ -46,8 +47,7 @@ COMMENT ON TABLE "stareau_aep".aep_canalisation IS 'assemblage de tuyau, de leur
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep".aep_canalisation.id_aep_canalisation IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.id_aep_canalisation IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.fonction_canalisation IS '*fonction canalisation dans le réseau*';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.contenu_canalisation IS '*type d''eau transportée*';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.protection_cathodique IS '*présence protection cathodique*';
@@ -57,6 +57,7 @@ COMMENT ON COLUMN "stareau_aep".aep_canalisation.ref_udi IS 'référence unité 
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_debut IS 'cote NGF de la génératrice superieure';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_fin IS 'cote NGF génératrice supérieure';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.type_pression IS '*type de pression de distribution*';
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.id_aep_reservoir IS '*référence au réservoir alimentant majoritairement cette canalisation*';
 
 --CAPTAGE
 
@@ -76,8 +77,7 @@ COMMENT ON TABLE "stareau_aep".aep_captage IS 'Ouvrage de prélèvement exploita
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep".aep_captage.id_aep_captage IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_aep".aep_captage.id_aep_captage IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_captage.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN "stareau_aep".aep_captage.type_captage IS '*type de captage*';
 COMMENT ON COLUMN "stareau_aep".aep_captage.nom_ressource IS 'nom ressource';
@@ -106,7 +106,7 @@ COMMENT ON TABLE "stareau_aep".aep_reservoir IS 'installation destinée au stock
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep".aep_reservoir.id_aep_reservoir IS 'identifiant local';
+COMMENT ON COLUMN "stareau_aep".aep_reservoir.id_aep_reservoir IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.type_reservoir IS '*type réservoir*';
 COMMENT ON COLUMN "stareau_aep".aep_reservoir.nb_cuves IS 'nombre de cuves';
@@ -134,8 +134,7 @@ COMMENT ON TABLE "stareau_aep".aep_traitement IS 'ensemble des installations cha
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep".aep_traitement.id_aep_traitement IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_aep".aep_traitement.id_aep_traitement IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_traitement.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN "stareau_aep".aep_traitement.fonction_traitement IS '*fonction traitement*';
 COMMENT ON COLUMN "stareau_aep".aep_traitement.type_desinfection IS '*type désinfection*';
@@ -160,8 +159,7 @@ CREATE TABLE stareau_aep.aep_point_mesure (
 INHERITS (stareau_principale.noeud_reseau);
 COMMENT ON TABLE stareau_aep.aep_point_mesure IS 'table des point de mesure (compteurs) sur réseaux';
 
-COMMENT ON COLUMN stareau_aep.aep_point_mesure.id_aep_point_mesure IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_aep.aep_point_mesure.id_aep_point_mesure IS 'identifiant métier';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.type_point_mesure IS '*type point de mesure*';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.fonction_point_mesure IS '*fonction point de mesure*';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.calibre IS 'calibre/diametre';
@@ -189,8 +187,7 @@ COMMENT ON TABLE "stareau_aep".aep_vanne IS 'Appareillage capable d''intercepter
 
 
 COMMENT ON TABLE "stareau_aep".aep_vanne IS 'vanne réseau';
-COMMENT ON COLUMN "stareau_aep".aep_vanne.id_aep_vanne IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_aep".aep_vanne.id_aep_vanne IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.type_vanne IS '*type_vanne*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.fonction_vanne IS '*fonction vanne*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.diametre IS 'diametre nominal';
@@ -218,7 +215,7 @@ CREATE TABLE "stareau_aep".aep_regulation (
 INHERITS ("stareau_principale".noeud_reseau);
 
 COMMENT ON TABLE "stareau_aep".aep_regulation IS 'appareil de régulation du débit ou de la pression';
-COMMENT ON COLUMN "stareau_aep".aep_regulation.id_aep_regulation IS 'identifiant local';
+COMMENT ON COLUMN "stareau_aep".aep_regulation.id_aep_regulation IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.nom_usuel IS 'nom usage';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.type_regulation IS '*type régulation*';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.type_consigne IS '*type consigne*';
@@ -245,8 +242,7 @@ INHERITS ("stareau_principale".noeud_reseau);
 COMMENT ON TABLE "stareau_aep".aep_pompage IS 'ensemble des dispositifs permettant d''aspirer, de refouler ou de comprimer des eaux';
 
 -- Column comments
-COMMENT ON COLUMN "stareau_aep".aep_pompage.id_aep_pompage IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_aep".aep_pompage.id_aep_pompage IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_pompage.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN "stareau_aep".aep_pompage.fonction_pompage IS '*fonction du pompage*';
 COMMENT ON COLUMN "stareau_aep".aep_pompage.installation_pompage IS '*mode installation*';
@@ -267,8 +263,7 @@ COMMENT ON TABLE "stareau_aep".aep_appareillage IS 'Equipements divers sur le r�
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep".aep_appareillage.id_aep_appareillage IS 'identifiant local'
-;
+COMMENT ON COLUMN "stareau_aep".aep_appareillage.id_aep_appareillage IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_appareillage.type_appareillage IS '*type d''appareillage*';
 COMMENT ON COLUMN "stareau_aep".aep_appareillage.diametre IS 'diametre nominal';
 COMMENT ON COLUMN "stareau_aep".aep_appareillage.telegestion IS '*Présence d''une gestion à distance*';
@@ -287,8 +282,7 @@ COMMENT ON TABLE stareau_aep.aep_station_alerte IS 'equipement permettent de dé
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep.aep_station_alerte.id_aep_station_alerte IS 'identifiant local'
-;
+COMMENT ON COLUMN stareau_aep.aep_station_alerte.id_aep_station_alerte IS 'identifiant métier';
 COMMENT ON COLUMN stareau_aep.aep_station_alerte.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN stareau_aep.aep_station_alerte.telegestion IS '*Présence d''une gestion à distance*';
 
@@ -304,7 +298,7 @@ COMMENT ON TABLE "stareau_aep".aep_piece IS 'Pièces sur canalisation principale
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep".aep_piece.id_aep_piece IS 'identifiant local';
+COMMENT ON COLUMN "stareau_aep".aep_piece.id_aep_piece IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_piece.type_piece IS '*type de pièce*';
 
 --- PIECE (HORS TOPOLOGIE)
@@ -323,7 +317,7 @@ COMMENT ON TABLE "stareau_aep".aep_piece_hors_topo IS 'Pièces sur canalisations
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.id_aep_pieceht IS 'identifiant local';
+COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.id_aep_pieceht IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.type_piece IS '*type de pièce*';
 COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.ref_canalisation
  IS 'référence à la conduite de rattachement(id_canalisation)';

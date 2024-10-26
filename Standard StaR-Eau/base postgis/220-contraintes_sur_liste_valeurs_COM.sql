@@ -62,7 +62,7 @@ ALTER TABLE stareau_principale.champ_commun ADD CONSTRAINT champ_commun_precisio
 ALTER TABLE stareau_principale.champ_commun ADD CONSTRAINT champ_commun_origine_creation_fk FOREIGN KEY (origine_creation) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_principale.champ_commun ADD CONSTRAINT champ_commun_origine_maj_fk FOREIGN KEY (origine_maj) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_principale.dimension ADD CONSTRAINT dimension_forme_fk FOREIGN KEY (forme) REFERENCES stareau_valeur.com_forme(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_principale.dimension ADD CONSTRAINT dimension_unite_fk FOREIGN KEY (unite) REFERENCES stareau_valeur.com_unite(code) ON UPDATE CASCADE;
+--ALTER TABLE stareau_principale.dimension ADD CONSTRAINT dimension_unite_fk FOREIGN KEY (unite) REFERENCES stareau_valeur.com_unite(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_principale.emprise ADD CONSTRAINT emprise_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_principale.emprise ADD CONSTRAINT emprise_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_principale.emprise ADD CONSTRAINT emprise_precision_xy_fk FOREIGN KEY (precision_xy) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;
