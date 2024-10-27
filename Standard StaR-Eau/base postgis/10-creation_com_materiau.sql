@@ -38,9 +38,7 @@ CREATE TABLE stareau_valeur.com_materiau (
   CONSTRAINT com_materiau_unique UNIQUE (code)
 );
 COMMENT ON TABLE stareau_valeur.com_materiau IS 'liste des matériaux';
-COMMENT ON COLUMN stareau_valeur.com_materiau.code IS 'identifiant métier
-'
-;
+COMMENT ON COLUMN stareau_valeur.com_materiau.code IS 'identifiant métier';
 COMMENT ON COLUMN stareau_valeur.com_materiau.valeur IS 'valeur';
 COMMENT ON COLUMN stareau_valeur.com_materiau.description IS 'description longue';
 COMMENT ON COLUMN stareau_valeur.com_materiau.categorie IS 'catégorie ou famille de matériau';

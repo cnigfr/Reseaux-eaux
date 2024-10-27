@@ -41,9 +41,7 @@ CREATE TABLE stareau_principale.dimension (
   longueur_interieure float8 NULL, -- longueur max interieure
   longueur_exterieure float8 NULL -- longueur max exterieure
 );
-COMMENT ON TABLE stareau_principale.dimension IS 'table mère
- des dimensions des éléments
-';
+COMMENT ON TABLE stareau_principale.dimension IS 'table mère des dimensions des éléments';
 
 -- Column comments
 
@@ -115,6 +113,9 @@ COMMENT ON COLUMN stareau_principale.champ_commun.lien_doc1 IS 'lien vers docume
 COMMENT ON COLUMN stareau_principale.champ_commun.lien_doc2 IS 'lien 2 vers document';
 COMMENT ON COLUMN stareau_principale.champ_commun.precision_xy IS '*classe de précision XY*';
 COMMENT ON COLUMN stareau_principale.champ_commun.precision_z IS '*classe de précision Z*';
+COMMENT ON COLUMN stareau_principale.champ_commun.fictif IS 'élélement fictif';
+COMMENT ON COLUMN stareau_principale.champ_commun.commentaire IS 'commentaire ou remarque';
+
 
 --ÉLÉMENTS PONCTUELS - NOEUDS-RÉSEAU
 

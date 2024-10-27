@@ -59,7 +59,6 @@ ALTER TABLE stareau_ass.ass_canalisation ADD CONSTRAINT ass_canalisation_forme_f
 ALTER TABLE stareau_ass.ass_canalisation ADD CONSTRAINT ass_canalisation_fonction_canalisation_fk FOREIGN KEY (fonction_canalisation) REFERENCES stareau_valeur.ass_fonction_canalisation(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_canalisation ADD CONSTRAINT ass_canalisation_contenu_canalisation_fk FOREIGN KEY (contenu_canalisation) REFERENCES stareau_valeur.ass_contenu_canalisation(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_canalisation ADD CONSTRAINT ass_canalisation_visitable_fk FOREIGN KEY (visitable) REFERENCES stareau_valeur.com_oui_non(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_ass.ass_canalisation ADD CONSTRAINT ass_canalisation_ref_traitement_fk FOREIGN KEY (ref_traitement) REFERENCES stareau_valeur.ass_traitement(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_chambre_depollution ADD CONSTRAINT ass_chambre_depollution_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_chambre_depollution ADD CONSTRAINT ass_chambre_depollution_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_chambre_depollution ADD CONSTRAINT ass_chambre_depollution_precision_xy_fk FOREIGN KEY (precision_xy) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;
@@ -167,7 +166,6 @@ ALTER TABLE stareau_ass.ass_piece_hors_topo ADD CONSTRAINT ass_piece_hors_topo_p
 ALTER TABLE stareau_ass.ass_piece_hors_topo ADD CONSTRAINT ass_piece_hors_topo_origine_creation_fk FOREIGN KEY (origine_creation) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_piece_hors_topo ADD CONSTRAINT ass_piece_hors_topo_origine_maj_fk FOREIGN KEY (origine_maj) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_piece_hors_topo ADD CONSTRAINT ass_piece_hors_topo_type_piece_fk FOREIGN KEY (type_piece) REFERENCES stareau_valeur.ass_type_piece(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_ass.ass_piece_hors_topo ADD CONSTRAINT ass_piece_hors_topo_ref_canalisation_fk FOREIGN KEY (ref_canalisation) REFERENCES stareau_valeur.ass_canalisation(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_point_mesure ADD CONSTRAINT ass_point_mesure_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_point_mesure ADD CONSTRAINT ass_point_mesure_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_point_mesure ADD CONSTRAINT ass_point_mesure_precision_xy_fk FOREIGN KEY (precision_xy) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;

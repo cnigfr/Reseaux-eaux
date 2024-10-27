@@ -24,6 +24,7 @@
 
 
 -- source star_dt."canalisationEau"
+CREATE SCHEMA star_dt;
 
 CREATE OR REPLACE VIEW star_dt."canalisationEau"
 AS SELECT ac.id_canalisation AS identifiant,
@@ -58,7 +59,7 @@ AS SELECT ac.id_canalisation AS identifiant,
         END AS "typeCanalisationEau",
     ac.geom AS geometry,
     false AS xyschematique,
-    ac.sensible AS sensible, --à ajouter à Star-Eau ?
+    ac.sensible AS sensible,
     NULL::text AS code,
     false AS "visibleSurface",
     false AS exceptionic,

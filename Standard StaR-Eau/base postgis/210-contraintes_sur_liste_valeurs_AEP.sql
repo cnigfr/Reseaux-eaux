@@ -57,7 +57,6 @@ ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_fonctio
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_contenu_canalisation_fk FOREIGN KEY (contenu_canalisation) REFERENCES stareau_valeur.aep_contenu_canalisation(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_protection_cathodique_fk FOREIGN KEY (protection_cathodique) REFERENCES stareau_valeur.com_oui_non(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_type_pression_fk FOREIGN KEY (type_pression) REFERENCES stareau_valeur.aep_type_pression(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_ref_reservoir_fk FOREIGN KEY (ref_reservoir) REFERENCES stareau_valeur.aep_reservoir(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_captage ADD CONSTRAINT aep_captage_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_captage ADD CONSTRAINT aep_captage_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_captage ADD CONSTRAINT aep_captage_precision_xy_fk FOREIGN KEY (precision_xy) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;
@@ -97,7 +96,6 @@ ALTER TABLE stareau_aep.aep_piece_hors_topo ADD CONSTRAINT aep_piece_hors_topo_p
 ALTER TABLE stareau_aep.aep_piece_hors_topo ADD CONSTRAINT aep_piece_hors_topo_origine_creation_fk FOREIGN KEY (origine_creation) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_piece_hors_topo ADD CONSTRAINT aep_piece_hors_topo_origine_maj_fk FOREIGN KEY (origine_maj) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_piece_hors_topo ADD CONSTRAINT aep_piece_hors_topo_type_piece_fk FOREIGN KEY (type_piece) REFERENCES stareau_valeur.aep_type_piece(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_aep.aep_piece_hors_topo ADD CONSTRAINT aep_piece_hors_topo_ref_canalisation_fk FOREIGN KEY (ref_canalisation) REFERENCES stareau_valeur.aep_canalisation(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_point_mesure ADD CONSTRAINT aep_point_mesure_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_point_mesure ADD CONSTRAINT aep_point_mesure_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep.aep_point_mesure ADD CONSTRAINT aep_point_mesure_precision_xy_fk FOREIGN KEY (precision_xy) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;
@@ -208,7 +206,6 @@ ALTER TABLE stareau_aep_brcht.aep_raccord ADD CONSTRAINT aep_raccord_precision_x
 ALTER TABLE stareau_aep_brcht.aep_raccord ADD CONSTRAINT aep_raccord_precision_z_fk FOREIGN KEY (precision_z) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep_brcht.aep_raccord ADD CONSTRAINT aep_raccord_origine_creation_fk FOREIGN KEY (origine_creation) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep_brcht.aep_raccord ADD CONSTRAINT aep_raccord_origine_maj_fk FOREIGN KEY (origine_maj) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
-ALTER TABLE stareau_aep_brcht.aep_raccord ADD CONSTRAINT aep_raccord_ref_canalisation_fk FOREIGN KEY (ref_canalisation) REFERENCES stareau_valeur.canalisation(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep_brcht.aep_vanne_branchement ADD CONSTRAINT aep_vanne_branchement_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep_brcht.aep_vanne_branchement ADD CONSTRAINT aep_vanne_branchement_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_aep_brcht.aep_vanne_branchement ADD CONSTRAINT aep_vanne_branchement_precision_xy_fk FOREIGN KEY (precision_xy) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;

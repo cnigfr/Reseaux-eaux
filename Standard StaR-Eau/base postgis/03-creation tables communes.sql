@@ -73,12 +73,12 @@ COMMENT ON TABLE stareau_ass.ass_affleurant IS 'table des affleurant des réseau
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep.aep_affleurant.id_aep_affleurant IS 'identifiant métier';
-COMMENT ON COLUMN stareau_aep.aep_affleurant.type_affleurant IS '*type d''affleurant*';
-COMMENT ON COLUMN stareau_aep.aep_affleurant.id_affleurant_pcrs IS 'lien vers identifiant PCRS';
-COMMENT ON COLUMN stareau_aep.aep_affleurant.id_emprise IS 'lien vers emprise';
-COMMENT ON COLUMN stareau_aep.aep_affleurant.id_noeud_reseau IS 'lien vers élément ponctuel';
-COMMENT ON COLUMN stareau_aep.aep_affleurant.id_canalisation IS 'lien vers élément linéaire';
+COMMENT ON COLUMN stareau_ass.ass_affleurant.id_ass_affleurant IS 'identifiant métier';
+COMMENT ON COLUMN stareau_ass.ass_affleurant.type_affleurant IS '*type d''affleurant*';
+COMMENT ON COLUMN stareau_ass.ass_affleurant.id_affleurant_pcrs IS 'lien vers identifiant PCRS';
+COMMENT ON COLUMN stareau_ass.ass_affleurant.id_emprise IS 'lien vers emprise';
+COMMENT ON COLUMN stareau_ass.ass_affleurant.id_noeud_reseau IS 'lien vers élément ponctuel';
+COMMENT ON COLUMN stareau_ass.ass_affleurant.id_canalisation IS 'lien vers élément linéaire';
 
 --GENIE CIVIL
 
@@ -300,6 +300,6 @@ COMMENT ON COLUMN "stareau_commun".point_geolocalisation.z_objet IS 'cote altim�
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.reference_z IS '*lieu de lever du Z*';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mode_lever IS '*mode de lever*';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.date_lever IS 'date du lever';
-COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mesure_precision_xy IS 'qualité précision GPS HRMS en cm/m';
-COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mesure_precision_z IS 'qualité précision GPS HRMS en cm/m';
-COMMENT ON COLUMN "stareau_commun".point_geolocalisation.qualite_outil IS 'pourcent d''erreur de l''appareil ou dela mesure';
+COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mesure_precision_xy IS 'qualité précision (GPS HRMS en cm/m)';
+COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mesure_precision_z IS 'qualité précision (GPS HRMS en cm/m)';
+COMMENT ON COLUMN "stareau_commun".point_geolocalisation.qualite_outil IS 'pourcent d''erreur de l''appareil ou de la mesure';
