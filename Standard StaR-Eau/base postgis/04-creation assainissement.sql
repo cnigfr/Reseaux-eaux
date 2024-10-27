@@ -141,9 +141,7 @@ COMMENT ON TABLE "stareau_ass".ass_chambre_depollution IS 'Une installation ou u
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.id_ass_chambre_depollution IS 'identifiant métier
-'
-;
+COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.id_ass_chambre_depollution IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.type_chambre_depollution IS '*type de chambre de dépollution*';
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.bypass IS '*présence d''un by-pass*';
@@ -161,7 +159,7 @@ CREATE TABLE "stareau_ass".ass_canalisation (
   altitude_fil_eau_aval float4 NULL, -- altitude fil d'eau aval
   bassin_collecte text NULL, -- identifiant bassin de collecte
   --ref_ouvrage_aval text null, -- reference de l'ouvrage en aval
-  id_ass_traitement text null, --référence au traitement
+  --id_ass_traitement lien vers traitement créé dans le fichier 200
   CONSTRAINT pk_ass_canalisation PRIMARY KEY (id_canalisation)
 )
 INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
@@ -177,7 +175,7 @@ COMMENT ON COLUMN "stareau_ass".ass_canalisation.altitude_fil_eau_amont IS 'alti
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.altitude_fil_eau_aval IS 'altitude fil d''eau aval';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.bassin_collecte IS 'identifiant bassin de collecte';
 --COMMENT ON COLUMN "stareau_ass".ass_canalisation.ref_ouvrage_aval IS 'référence de l''ouvrage en aval';
-COMMENT ON COLUMN "stareau_ass".ass_canalisation.id_ass_traitement IS 'référence au traitement rattaché à cette canalisation';
+
 
 --- PIECE
 
@@ -213,8 +211,7 @@ COMMENT ON TABLE "stareau_ass".ass_piece_hors_topo IS 'Pièces sur canalisations
 
 COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.id_ass_pieceht IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.type_piece IS '*type de pièce*';
-COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.ref_canalisation
- IS 'référence à la conduite de rattachement(id_canalisation)';
+COMMENT ON COLUMN "stareau_ass".ass_piece_hors_topo.ref_canalisation IS 'référence à la conduite de rattachement(id_canalisation)';
 
 ---POINT DE MESURE (hors topologie)
 

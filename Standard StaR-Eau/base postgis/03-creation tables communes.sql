@@ -45,9 +45,7 @@ COMMENT ON TABLE stareau_aep.aep_affleurant IS 'table des affleurant des réseau
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep.aep_affleurant.id_aep_affleurant IS 'identifiant métier
-'
-;
+COMMENT ON COLUMN stareau_aep.aep_affleurant.id_aep_affleurant IS 'identifiant métier';
 COMMENT ON COLUMN stareau_aep.aep_affleurant.type_affleurant IS '*type d''affleurant*';
 COMMENT ON COLUMN stareau_aep.aep_affleurant.id_affleurant_pcrs IS 'lien vers identifiant PCRS';
 COMMENT ON COLUMN stareau_aep.aep_affleurant.id_emprise IS 'lien vers emprise';
@@ -75,8 +73,7 @@ COMMENT ON TABLE stareau_ass.ass_affleurant IS 'table des affleurant des réseau
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep.aep_affleurant.id_aep_affleurant IS 'identifiant métier
-';
+COMMENT ON COLUMN stareau_aep.aep_affleurant.id_aep_affleurant IS 'identifiant métier';
 COMMENT ON COLUMN stareau_aep.aep_affleurant.type_affleurant IS '*type d''affleurant*';
 COMMENT ON COLUMN stareau_aep.aep_affleurant.id_affleurant_pcrs IS 'lien vers identifiant PCRS';
 COMMENT ON COLUMN stareau_aep.aep_affleurant.id_emprise IS 'lien vers emprise';
@@ -98,9 +95,7 @@ COMMENT ON TABLE stareau_aep.aep_genie_civil IS 'enveloppe externe de génie civ
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep.aep_genie_civil.id_aep_genie_civil IS 'identifiant métier
-'
-;
+COMMENT ON COLUMN stareau_aep.aep_genie_civil.id_aep_genie_civil IS 'identifiant métier';
 COMMENT ON COLUMN stareau_aep.aep_genie_civil.materiau IS '*materiau constitutif du GC*';
 COMMENT ON COLUMN stareau_aep.aep_genie_civil.niveau IS 'niveau par rapport au sol';
 
@@ -119,8 +114,7 @@ COMMENT ON TABLE stareau_ass.ass_genie_civil IS 'enveloppe externe de génie civ
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_genie_civil.id_ass_genie_civil IS 'identifiant métier
-';
+COMMENT ON COLUMN stareau_ass.ass_genie_civil.id_ass_genie_civil IS 'identifiant métier';
 COMMENT ON COLUMN stareau_ass.ass_genie_civil.materiau IS '*materiau constitutif du GC*';
 COMMENT ON COLUMN stareau_ass.ass_genie_civil.niveau IS 'niveau par rapport au sol';
 
@@ -139,8 +133,7 @@ COMMENT ON TABLE stareau_aep.aep_perimetre_gestion IS 'périmètre virtuel ou ad
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep.aep_perimetre_gestion.id_aep_perimetre_gestion IS 'identifiant métier
-';
+COMMENT ON COLUMN stareau_aep.aep_perimetre_gestion.id_aep_perimetre_gestion IS 'identifiant métier';
 COMMENT ON COLUMN stareau_aep.aep_perimetre_gestion.type_perimetre_gestion IS '*type de périmètre*';
 COMMENT ON COLUMN stareau_aep.aep_perimetre_gestion.type_acces IS '*type d''accès*';
 
@@ -159,8 +152,7 @@ COMMENT ON TABLE stareau_ass.ass_perimetre_gestion IS 'périmètre virtuel ou ad
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_perimetre_gestion.id_ass_perimetre_gestion IS 'identifiant métier
-';
+COMMENT ON COLUMN stareau_ass.ass_perimetre_gestion.id_ass_perimetre_gestion IS 'identifiant métier';
 COMMENT ON COLUMN stareau_ass.ass_perimetre_gestion.type_perimetre_gestion IS '*type de périmètre*';
 COMMENT ON COLUMN stareau_ass.ass_perimetre_gestion.type_acces IS '*type d''accès*';
 
@@ -180,8 +172,7 @@ COMMENT ON TABLE stareau_aep.aep_protection_mecanique IS 'Construction dans laqu
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_aep.aep_protection_mecanique.id_aep_protection_mecanique IS 'identifiant métier
-';
+COMMENT ON COLUMN stareau_aep.aep_protection_mecanique.id_aep_protection_mecanique IS 'identifiant métier';
 COMMENT ON COLUMN stareau_aep.aep_protection_mecanique.type_protection IS '*type de protection*';
 COMMENT ON COLUMN stareau_aep.aep_protection_mecanique.materiau IS '*materiau* constitutif de la protection';
 
@@ -201,8 +192,7 @@ COMMENT ON TABLE stareau_ass.ass_protection_mecanique IS 'Construction dans laqu
 
 -- Column comments
 
-COMMENT ON COLUMN stareau_ass.ass_protection_mecanique.id_ass_protection_mecanique IS 'identifiant métier
-';
+COMMENT ON COLUMN stareau_ass.ass_protection_mecanique.id_ass_protection_mecanique IS 'identifiant métier';
 COMMENT ON COLUMN stareau_ass.ass_protection_mecanique.type_protection IS '*type de protection*';
 COMMENT ON COLUMN stareau_ass.ass_protection_mecanique.materiau IS '*materiau constitutif de la protection*';
 
@@ -245,8 +235,7 @@ COMMENT ON TABLE "stareau_commun".pluviometre IS 'pluviometre';
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_commun".pluviometre.id_pluviometre IS 'identifiant métier
-';
+COMMENT ON COLUMN "stareau_commun".pluviometre.id_pluviometre IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_commun".pluviometre.type_pluviometre IS '*type de pluviométre*';
 COMMENT ON COLUMN "stareau_commun".pluviometre.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_commun".pluviometre.ref_meteo_france IS 'référence MétéoFrance';
@@ -275,8 +264,7 @@ COMMENT ON TABLE "stareau_commun".piezometre IS 'forage non exploité qui permet
 -- Column comments
 
 --COMMENT ON COLUMN "stareau_commun".piezometre.type_piezometre IS '*type_de piezometre*';
-COMMENT ON COLUMN "stareau_commun".piezometre.id_piezometre IS 'identifiant métier
-';
+COMMENT ON COLUMN "stareau_commun".piezometre.id_piezometre IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_commun".piezometre.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_commun".piezometre.diametre IS 'diametre interne du forage';
 COMMENT ON COLUMN "stareau_commun".piezometre.cote_tn IS 'cote terrain naturel';
@@ -292,7 +280,7 @@ CREATE TABLE "stareau_commun".point_geolocalisation (
   --id_point_geolocalisation TEXT NOT NULL,  -- ou INT -- pour personnalisation ou récupération de l'id existant
   z_objet float4 NULL, -- cote altimétrique de l'objet
   reference_z text NOT NULL, -- lieu de lever du Z*
-  mode_lever text NULL, -- mode de lever*
+  mode_lever text NOT NULL, -- mode de lever*
   date_lever timestamp NULL, -- date du lever
   mesure_precision_xy float4 NULL, -- qualité précision GPS HRMS en cm/m
   mesure_precision_z float4 NULL, -- qualité précision GPS HRMS en cm/m
@@ -307,8 +295,7 @@ COMMENT ON TABLE "stareau_commun".point_geolocalisation IS 'point géoréférenc
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_commun".point_geolocalisation.id_point_geolocalisation IS 'identifiant métier
-';
+COMMENT ON COLUMN "stareau_commun".point_geolocalisation.id_point_geolocalisation IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.z_objet IS 'cote altimétrique de l''objet';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.reference_z IS '*lieu de lever du Z*';
 COMMENT ON COLUMN "stareau_commun".point_geolocalisation.mode_lever IS '*mode de lever*';

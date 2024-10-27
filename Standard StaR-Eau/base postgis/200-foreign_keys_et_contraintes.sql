@@ -2,7 +2,7 @@
  * 200-foreign_keys_et_contraintes.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/26 17:18:00
+ * // Last modified: 2024/10/27 00:32:45
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -30,18 +30,22 @@
 
 --ajout lien vers resevoir pour aep_canalisation
 -- modifier le type de valeur suivant la clé primaire choisie
-ALTER TABLE stareau_aep.aep_canalisation ADD ref_reservoir text NOT NULL;
+ALTER TABLE stareau_aep.aep_canalisation ADD id_aep_reservoir text NOT NULL;
 --ALTER TABLE stareau_aep.aep_canalisation ADD ref_reservoir integer NOT NULL;
-ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_aep_reservoir_fk FOREIGN KEY (ref_reservoir) REFERENCES stareau_aep.aep_reservoir(id_noeud_reseau) ON UPDATE CASCADE;
---référence à l'identifiant métier
-
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.id_aep_reservoir IS 'référence au réservoir alimentant majoritairement cette canalisation';
+--lien vers identifiant absolu de la table mère
+ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_aep_reservoir_fk FOREIGN KEY (id_aep_reservoir) REFERENCES stareau_aep.aep_reservoir(id_noeud_reseau) ON UPDATE CASCADE;
+--ou référence à l'identifiant métier
 --ALTER TABLE stareau_aep.aep_canalisation ADD CONSTRAINT aep_canalisation_aep_reservoir_fk FOREIGN KEY (ref_reservoir) REFERENCES stareau_aep.aep_reservoir(id_aep_reservoir) ON UPDATE CASCADE;
 
 --ajout lien vers traitement pour ass_canalisation
 -- modifier le type de valeur suivant la clé primaire choisie
-ALTER TABLE stareau_ass.ass_canalisation ADD ref_traitement text NOT NULL;
+ALTER TABLE stareau_ass.ass_canalisation ADD id_ass_traitement text NOT NULL;
 --ALTER TABLE stareau_ass.ass_canalisation ADD ref_traitement integer NOT NULL;
-ALTER TABLE stareau_ass.ass_canalisation ADD CONSTRAINT ass_canalisation_ass_traitement_fk FOREIGN KEY (ref_traitement) REFERENCES stareau_ass.ass_traitement(id_noeud_reseau) ON UPDATE CASCADE;
+COMMENT ON COLUMN "stareau_ass".ass_canalisation.id_ass_traitement IS 'référence au traitement rattaché à cette canalisation';
+--lien vers identifiant absolu de la table mère
+ALTER TABLE stareau_ass.ass_canalisation ADD CONSTRAINT ass_canalisation_ass_traitement_fk FOREIGN KEY (id_ass_traitement) REFERENCES stareau_ass.ass_traitement(id_noeud_reseau) ON UPDATE CASCADE;
+--ou référence à l'identifiant métier
 --ALTER TABLE stareau_ass.ass_canalisation ADD CONSTRAINT ass_canalisation_ass_traitement_fk FOREIGN KEY (ref_traitement) REFERENCES stareau_ass.ass_traitement(id_ass_traitement) ON UPDATE CASCADE;
 
 

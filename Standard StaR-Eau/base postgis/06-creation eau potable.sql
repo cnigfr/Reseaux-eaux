@@ -2,7 +2,7 @@
  * 06-creation eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/10/26 17:40:22
+ * // Last modified: 2024/10/27 00:20:29
  *
  * ETALABV2 - Alain pour CNIG-2024
  *
@@ -39,7 +39,7 @@ CREATE TABLE "stareau_aep".aep_canalisation (
   ref_udi text NULL, -- référence unité de distribution (référence ARS)
   cote_debut float4 NULL, -- cote de la génératrice superieure
   cote_fin float4 NULL, -- cote génératrice supérieure
-  id_aep_reservoir text null, 
+  -- id_aep_reservoir : lien vers réservoir créer dans le fichier 200
   CONSTRAINT pk_aep_canalisation PRIMARY KEY (id_canalisation)
 )
 INHERITS ("stareau_principale".canalisation,"stareau_principale".dimension);
@@ -57,7 +57,6 @@ COMMENT ON COLUMN "stareau_aep".aep_canalisation.ref_udi IS 'référence unité 
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_debut IS 'cote NGF de la génératrice superieure';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_fin IS 'cote NGF génératrice supérieure';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.type_pression IS '*type de pression de distribution*';
-COMMENT ON COLUMN "stareau_aep".aep_canalisation.id_aep_reservoir IS '*référence au réservoir alimentant majoritairement cette canalisation*';
 
 --CAPTAGE
 
@@ -160,6 +159,7 @@ INHERITS (stareau_principale.noeud_reseau);
 COMMENT ON TABLE stareau_aep.aep_point_mesure IS 'table des point de mesure (compteurs) sur réseaux';
 
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.id_aep_point_mesure IS 'identifiant métier';
+COMMENT ON COLUMN stareau_aep.aep_point_mesure.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.type_point_mesure IS '*type point de mesure*';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.fonction_point_mesure IS '*fonction point de mesure*';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.calibre IS 'calibre/diametre';
@@ -319,5 +319,4 @@ COMMENT ON TABLE "stareau_aep".aep_piece_hors_topo IS 'Pièces sur canalisations
 
 COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.id_aep_pieceht IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.type_piece IS '*type de pièce*';
-COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.ref_canalisation
- IS 'référence à la conduite de rattachement(id_canalisation)';
+COMMENT ON COLUMN "stareau_aep".aep_piece_hors_topo.ref_canalisation  IS 'référence à la conduite de rattachement(id_canalisation)';
