@@ -312,7 +312,7 @@ COMMENT ON COLUMN stareau_ass.ass_bassin.type_bassin IS '*type de bassin*';
 COMMENT ON COLUMN stareau_ass.ass_bassin.fonction_bassin IS '*fonction du bassin*';
 COMMENT ON COLUMN stareau_ass.ass_bassin.structure_bassin IS '*structure du bassin*';
 COMMENT ON COLUMN stareau_ass.ass_bassin.capacite IS 'capacité maximale de stockage en m3';
-COMMENT ON COLUMN stareau_ass.ass_bassin.debit_fuite IS 'Quantité limitée d''eau en M3/s qui s''évacue du bassin de stockage par l''intermédiaire d''un dispositif de régulation';
+COMMENT ON COLUMN stareau_ass.ass_bassin.debit_fuite IS 'Quantité limitée d''eau en M3/s qui s''évacue du bassin par l''intermédiaire d''un dispositif de régulation';
 COMMENT ON COLUMN stareau_ass.ass_bassin.cote_radier IS 'Cote NGF du point le plus bas du fond de bassin';
 COMMENT ON COLUMN stareau_ass.ass_bassin.cote_trop_plein IS 'cote NGF de débordement du bassin';
 COMMENT ON COLUMN stareau_ass.ass_bassin.telegestion IS '*présence d''une gestion à distance*';
@@ -324,19 +324,31 @@ CREATE TABLE stareau_ass.ass_gestion_epl_point (
  -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_ass_gestion_epl_point INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl_point TEXT NOt NULL, --
+  nom_usuel text NULL, -- nom usuel
 	type_gestion_epl text NOT NULL, -- *type d'ouvrage de gestion*
 	fonction_gestion_epl text NOT NULL, -- *fonction de l'ouvrage de gestion*
+  capacite text NULL, -- capacité maximale de stockage en m3
+  debit_fuite numeric NULL, -- Quantité limitée d'eau en M3/s qui s'évacue par l'intermédiaire d'un dispositif de régulation
+  cote_radier numeric NULL, -- Cote NGF du point le plus bas
+  cote_trop_plein numeric NULL, -- cote NGF de débordement 
+  telegestion text NOT NULL, -- >présence d'une gestion à distance
 	geom public.geometry(point, 2154) NOT NULL,
 	CONSTRAINT pk_ass_gestion_epl_point PRIMARY KEY (id_ass_gestion_epl_point)
 )
 INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
-COMMENT ON TABLE stareau_ass.ass_gestion_epl_point IS 'gestion des ouvrages pluviaux surfaciques';
+COMMENT ON TABLE stareau_ass.ass_gestion_epl_point IS 'gestion des ouvrages pluviaux ponctuel';
 
 -- Column comments
 
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.id_ass_gestion_epl_point IS 'identifiant métier';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.type_gestion_epl IS '*type d''ouvrage de gestion*';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.nom_usuel IS 'nom usuel';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.capacite IS 'capacité maximale de stockage en m3';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.debit_fuite IS 'Quantité limitée d''eau en M3/s qui s''évacue par l''intermédiaire d''un dispositif de régulation';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.cote_radier IS 'Cote NGF du point le plus bas';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.cote_trop_plein IS 'cote NGF du point de débordement ';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_point.telegestion IS '*présence d''une gestion à distance*';
 
 --
 CREATE TABLE stareau_ass.ass_gestion_epl_ligne (
@@ -344,19 +356,31 @@ CREATE TABLE stareau_ass.ass_gestion_epl_ligne (
  -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_ass_gestion_epl_ligne INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl_ligne TEXT NOt NULL, --
+  nom_usuel text NULL, -- nom usuel
 	type_gestion_epl text NOT NULL, -- *type d'ouvrage de gestion*
 	fonction_gestion_epl text NOT NULL, -- *fonction de l'ouvrage de gestion*
+  capacite text NULL, -- capacité maximale de stockage en m3
+  debit_fuite numeric NULL, -- Quantité limitée d'eau en M3/s qui s'évacue par l'intermédiaire d'un dispositif de régulation
+  cote_radier numeric NULL, -- Cote NGF du point le plus bas
+  cote_trop_plein numeric NULL, -- cote NGF de débordement 
+  telegestion text NOT NULL, -- >présence d'une gestion à distance
 	geom public.geometry(linestring, 2154) NOT NULL,
 	CONSTRAINT pk_ass_gestion_epl_ligne PRIMARY KEY (id_ass_gestion_epl_ligne)
 )
 INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
-COMMENT ON TABLE stareau_ass.ass_gestion_epl_ligne IS 'gestion des ouvrages pluviaux surfaciques';
+COMMENT ON TABLE stareau_ass.ass_gestion_epl_ligne IS 'gestion des ouvrages pluviaux ponctuel';
 
 -- Column comments
 
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.id_ass_gestion_epl_ligne IS 'identifiant métier';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.type_gestion_epl IS '*type d''ouvrage de gestion*';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.nom_usuel IS 'nom usuel';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.capacite IS 'capacité maximale de stockage en m3';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.debit_fuite IS 'Quantité limitée d''eau en M3/s qui s''évacue par l''intermédiaire d''un dispositif de régulation';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.cote_radier IS 'Cote NGF du point le plus bas';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.cote_trop_plein IS 'cote NGF du point de débordement ';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.telegestion IS '*présence d''une gestion à distance*';
 
 --
 CREATE TABLE stareau_ass.ass_gestion_epl_surface (
@@ -364,19 +388,32 @@ CREATE TABLE stareau_ass.ass_gestion_epl_surface (
  -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_ass_gestion_epl_surface INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl_surface TEXT NOt NULL, --
+  nom_usuel text NULL, -- nom usuel
 	type_gestion_epl text NOT NULL, -- *type d'ouvrage de gestion*
 	fonction_gestion_epl text NOT NULL, -- *fonction de l'ouvrage de gestion*
+  capacite text NULL, -- capacité maximale de stockage en m3
+  debit_fuite numeric NULL, -- Quantité limitée d'eau en M3/s qui s'évacue par l'intermédiaire d'un dispositif de régulation
+  cote_radier numeric NULL, -- Cote NGF du point le plus bas
+  cote_trop_plein numeric NULL, -- cote NGF de débordement 
+  telegestion text NOT NULL, -- >présence d'une gestion à distance
 	geom public.geometry(polygon, 2154) NOT NULL,
 	CONSTRAINT pk_ass_gestion_epl_surface PRIMARY KEY (id_ass_gestion_epl_surface)
 )
 INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
-COMMENT ON TABLE stareau_ass.ass_gestion_epl_surface IS 'gestion des ouvrages pluviaux surfaciques';
+COMMENT ON TABLE stareau_ass.ass_gestion_epl_surface IS 'gestion des ouvrages pluviaux ponctuel';
 
 -- Column comments
 
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.id_ass_gestion_epl_surface IS 'identifiant métier';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.type_gestion_epl IS '*type d''ouvrage de gestion*';
 COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.fonction_gestion_epl IS '*fonction de l''ouvrage de gestion*';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.nom_usuel IS 'nom usuel';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.capacite IS 'capacité maximale de stockage en m3';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.debit_fuite IS 'Quantité limitée d''eau en M3/s qui s''évacue par l''intermédiaire d''un dispositif de régulation';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.cote_radier IS 'Cote NGF du point le plus bas';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.cote_trop_plein IS 'cote NGF du point de débordement ';
+COMMENT ON COLUMN stareau_ass.ass_gestion_epl_surface.telegestion IS '*présence d''une gestion à distance*';
+
 
 ---OUVRAGE SPECIAL
 

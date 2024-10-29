@@ -1,6 +1,7 @@
 "gravitaire","gravitaire","ecoulement suivant la gravité"
 "surpresse","surpressé","secteur ou étage après surpresseur"
 "reduit","réduit","secteur ou étage où la pression est réduite"
+"surpresse_reduit","surpressé - réduit","pression réduite après la phase de surpression"
 "non_renseigne","Non renseigné(e)","information en recherche ou disponible mais non saisie"
 "non_concerne","Non concerné(e)","information non possible ou non pertinente pour l'élément décrit"
 "non_valide","Non validé(e)","information existe mais n'est pas officiellement validée"

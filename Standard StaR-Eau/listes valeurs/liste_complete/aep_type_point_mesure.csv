@@ -2,6 +2,7 @@
 "vitesse","vitesse","mesure la vitesse d'écoulement"
 "debit","débit","mesure du débit"
 "pression","pression","mesure de la pression"
+"physico_chimique","Physico-Chimique","mesure un ou des paramètres physico chimqiue (température, pH, chlore...)"
 "multiple","multiple","plusieurs mesures au même point"
 "non_renseigne","Non renseigné(e)","information en recherche ou disponible mais non saisie"
 "non_concerne","Non concerné(e)","information non possible ou non pertinente pour l'élément décrit"

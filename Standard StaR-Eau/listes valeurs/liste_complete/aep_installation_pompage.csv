@@ -1,5 +1,6 @@
 "ligne","en ligne","installation sur conduite"
 "bache","dans bâche","installation dans une bâche"
+"hors_bache","hors bache","pompe en local sec (hors bache)"
 "non_renseigne","Non renseigné(e)","information en recherche ou disponible mais non saisie"
 "non_concerne","Non concerné(e)","information non possible ou non pertinente pour l'élément décrit"
 "non_valide","Non validé(e)","information existe mais n'est pas officiellement validée"
