@@ -336,7 +336,7 @@ CREATE TABLE stareau_ass.ass_gestion_epl_point (
 	CONSTRAINT pk_ass_gestion_epl_point PRIMARY KEY (id_ass_gestion_epl_point)
 )
 INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
-COMMENT ON TABLE stareau_ass.ass_gestion_epl_point IS 'gestion des ouvrages pluviaux ponctuel';
+COMMENT ON TABLE stareau_ass.ass_gestion_epl_point IS 'gestion des ouvrages pluviaux ponctuels';
 
 -- Column comments
 
@@ -368,7 +368,7 @@ CREATE TABLE stareau_ass.ass_gestion_epl_ligne (
 	CONSTRAINT pk_ass_gestion_epl_ligne PRIMARY KEY (id_ass_gestion_epl_ligne)
 )
 INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
-COMMENT ON TABLE stareau_ass.ass_gestion_epl_ligne IS 'gestion des ouvrages pluviaux ponctuel';
+COMMENT ON TABLE stareau_ass.ass_gestion_epl_ligne IS 'gestion des ouvrages pluviaux linéaires';
 
 -- Column comments
 
@@ -400,7 +400,7 @@ CREATE TABLE stareau_ass.ass_gestion_epl_surface (
 	CONSTRAINT pk_ass_gestion_epl_surface PRIMARY KEY (id_ass_gestion_epl_surface)
 )
 INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
-COMMENT ON TABLE stareau_ass.ass_gestion_epl_surface IS 'gestion des ouvrages pluviaux ponctuel';
+COMMENT ON TABLE stareau_ass.ass_gestion_epl_surface IS 'gestion des ouvrages pluviaux surfaciques';
 
 -- Column comments
 
