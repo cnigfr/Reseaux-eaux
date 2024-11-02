@@ -2,9 +2,9 @@
  * 02-aep_creation_vues.sql - 2024-05-17
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/09/25 00:05:10
+ * // Last modified: 2024/11/02 09:41:16
  *
- * ETALABV2 - Alain pour CNIG-2024
+ * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
  * Ce fichier est un document libre ; vous pouvez le redistribuer et/ou le modifier selon les termes de la
  * Licence Publique LICENCE OUVERTE / OPEN LICENCE Version 2.0 telle que publiée par ETALAB

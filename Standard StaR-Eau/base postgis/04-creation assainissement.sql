@@ -1,7 +1,7 @@
 /*
  * 04-creation assainissement.sql - 2024-09-24
  *
- * ETALABV2 - Alain pour CNIG-2024
+ * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
  * Ce fichier est un document libre ; vous pouvez le redistribuer et/ou le modifier selon les termes de la
  * Licence Publique LICENCE OUVERTE / OPEN LICENCE Version 2.0 telle que publiée par ETALAB
