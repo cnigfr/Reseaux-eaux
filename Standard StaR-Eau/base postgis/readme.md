@@ -9,6 +9,9 @@ DDL initial depuis postgresl 13 / postgis 3
 
 **Merci de lire les commentaires dans les fichiers**
 
+> [!note]
+> Les fichiers dont le nom commence par 200- sont optionnels.
+
 # indicateurs
 
 Essai de la base pour calcul des indicateurs SISPEA
