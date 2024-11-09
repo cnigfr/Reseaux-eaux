@@ -788,12 +788,12 @@
     <alias name="" index="24" field="commentaire"/>
     <alias name="forme générale de l'objet" index="25" field="forme"/>
     <alias name="unité des mesures" index="26" field="unite"/>
-    <alias name="hauteur max interieure" index="27" field="hauteur_interieure"/>
-    <alias name="hauteur max exterieure" index="28" field="hauteur_exterieure"/>
-    <alias name="largeur max interieure" index="29" field="largeur_interieure"/>
-    <alias name="largeur max exterieure" index="30" field="largeur_exterieure"/>
-    <alias name="longueur max interieure" index="31" field="longueur_interieure"/>
-    <alias name="longueur max exterieure" index="32" field="longueur_exterieure"/>
+    <alias name="hauteur max intérieure" index="27" field="hauteur_interieure"/>
+    <alias name="hauteur max extérieure" index="28" field="hauteur_exterieure"/>
+    <alias name="largeur max intérieure" index="29" field="largeur_interieure"/>
+    <alias name="largeur max extérieure" index="30" field="largeur_exterieure"/>
+    <alias name="longueur max intérieure" index="31" field="longueur_interieure"/>
+    <alias name="longueur max extérieure" index="32" field="longueur_exterieure"/>
     <alias name="" index="33" field="id_protection_mecanique"/>
     <alias name="type de protection" index="34" field="type_protection"/>
     <alias name="matériau constitutif" index="35" field="materiau"/>

@@ -29,7 +29,7 @@
 CREATE TABLE stareau_aep.aep_affleurant (
   id_aep_affleurant text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
 --id_aep_affleurant text NULL,
---id_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
+--id_aep_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
   type_affleurant text NOT NULL,
   id_affleurant_pcrs text NULL,
   id_emprise text NULL, -- lien vers emprise
@@ -57,7 +57,7 @@ COMMENT ON COLUMN stareau_aep.aep_affleurant.id_canalisation IS 'lien vers élé
 CREATE TABLE stareau_ass.ass_affleurant (
   id_ass_affleurant text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
 --id_ass_affleurant text NULL,
---id_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
+--id_ass_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
   type_affleurant text NOT NULL,
   id_affleurant_pcrs text NULL,
   id_emprise text NULL, -- lien vers emprise
@@ -236,7 +236,7 @@ COMMENT ON TABLE "stareau_commun".pluviometre IS 'pluviometre';
 -- Column comments
 
 COMMENT ON COLUMN "stareau_commun".pluviometre.id_pluviometre IS 'identifiant métier';
-COMMENT ON COLUMN "stareau_commun".pluviometre.type_pluviometre IS '*type de pluviométre*';
+COMMENT ON COLUMN "stareau_commun".pluviometre.type_pluviometre IS '*type de pluviomètre*';
 COMMENT ON COLUMN "stareau_commun".pluviometre.nom_usuel IS 'nom usuel';
 COMMENT ON COLUMN "stareau_commun".pluviometre.ref_meteo_france IS 'référence MétéoFrance';
 COMMENT ON COLUMN stareau_commun.pluviometre.telegestion IS '*présence d''une gestion à distance*';
@@ -249,7 +249,6 @@ CREATE TABLE "stareau_commun".piezometre (
   id_piezometre text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
 --id_piezometre INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
 --id_piezometre TEXT NOT NULL,
---type_piezometre text NOT NULL, -- type_de piezometre*
   nom_usuel text NULL, -- nom usuel
   diametre int4 NULL, -- diametre interne du forage
   cote_tn float4 NULL, -- cote terrain naturel
@@ -263,10 +262,9 @@ COMMENT ON TABLE "stareau_commun".piezometre IS 'forage non exploité qui permet
 
 -- Column comments
 
---COMMENT ON COLUMN "stareau_commun".piezometre.type_piezometre IS '*type_de piezometre*';
 COMMENT ON COLUMN "stareau_commun".piezometre.id_piezometre IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_commun".piezometre.nom_usuel IS 'nom usuel';
-COMMENT ON COLUMN "stareau_commun".piezometre.diametre IS 'diametre interne du forage';
+COMMENT ON COLUMN "stareau_commun".piezometre.diametre IS 'diamétre interne du forage';
 COMMENT ON COLUMN "stareau_commun".piezometre.cote_tn IS 'cote terrain naturel';
 COMMENT ON COLUMN "stareau_commun".piezometre.cote_fin_crepine IS 'cote de fin de crépine';
 COMMENT ON COLUMN "stareau_commun".piezometre.ref_bss IS 'référence dans la banque du sous-sol (BRGM)';

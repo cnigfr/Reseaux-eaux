@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/11/02 09:41:16
+ * // Last modified: 2024/11/09 01:00:53
  *
  * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
@@ -34,12 +34,12 @@ CREATE TABLE stareau_principale.dimension (
   forme text DEFAULT 'circulaire'::text NOT NULL, -- *forme générale de l'objet*
   --unite text DEFAULT 'mm'::text NOT NULL, -- *unité des mesures*
   lien_detail text NULL,
-  hauteur_interieure float8 NULL, -- hauteur max interieure
-  hauteur_exterieure float8 NULL, -- hauteur max exterieure
-  largeur_interieure float8 NULL, -- largeur max interieure
-  largeur_exterieure float8 NULL, -- largeur max exterieure
-  longueur_interieure float8 NULL, -- longueur max interieure
-  longueur_exterieure float8 NULL -- longueur max exterieure
+  hauteur_interieure float8 NULL, -- hauteur max intérieure
+  hauteur_exterieure float8 NULL, -- hauteur max extérieure
+  largeur_interieure float8 NULL, -- largeur max intérieure
+  largeur_exterieure float8 NULL, -- largeur max extérieure
+  longueur_interieure float8 NULL, -- longueur max intérieure
+  longueur_exterieure float8 NULL -- longueur max extérieure
 );
 COMMENT ON TABLE stareau_principale.dimension IS 'table mère des dimensions des éléments';
 
@@ -48,12 +48,12 @@ COMMENT ON TABLE stareau_principale.dimension IS 'table mère des dimensions des
 COMMENT ON COLUMN stareau_principale.dimension.forme IS '*forme générale de l''objet*';
 --COMMENT ON COLUMN stareau_principale.dimension.unite IS '*unité des mesures*';
 COMMENT ON COLUMN stareau_principale.dimension.lien_detail IS 'lien vers fichier descriptif des formes complexes';
-COMMENT ON COLUMN stareau_principale.dimension.hauteur_interieure IS 'hauteur max interieure';
-COMMENT ON COLUMN stareau_principale.dimension.hauteur_exterieure IS 'hauteur max exterieure';
-COMMENT ON COLUMN stareau_principale.dimension.largeur_interieure IS 'largeur max interieure';
-COMMENT ON COLUMN stareau_principale.dimension.largeur_exterieure IS 'largeur max exterieure';
-COMMENT ON COLUMN stareau_principale.dimension.longueur_interieure IS 'longueur max interieure';
-COMMENT ON COLUMN stareau_principale.dimension.longueur_exterieure IS 'longueur max exterieure';
+COMMENT ON COLUMN stareau_principale.dimension.hauteur_interieure IS 'hauteur max intérieure';
+COMMENT ON COLUMN stareau_principale.dimension.hauteur_exterieure IS 'hauteur max extérieure';
+COMMENT ON COLUMN stareau_principale.dimension.largeur_interieure IS 'largeur max intérieure';
+COMMENT ON COLUMN stareau_principale.dimension.largeur_exterieure IS 'largeur max extérieure';
+COMMENT ON COLUMN stareau_principale.dimension.longueur_interieure IS 'longueur max intérieure';
+COMMENT ON COLUMN stareau_principale.dimension.longueur_exterieure IS 'longueur max extérieure';
 
 
 --DONNÉES GÉNÉRALES
@@ -113,7 +113,7 @@ COMMENT ON COLUMN stareau_principale.champ_commun.lien_doc1 IS 'lien vers docume
 COMMENT ON COLUMN stareau_principale.champ_commun.lien_doc2 IS 'lien 2 vers document';
 COMMENT ON COLUMN stareau_principale.champ_commun.precision_xy IS '*classe de précision XY*';
 COMMENT ON COLUMN stareau_principale.champ_commun.precision_z IS '*classe de précision Z*';
-COMMENT ON COLUMN stareau_principale.champ_commun.fictif IS 'élélement fictif';
+COMMENT ON COLUMN stareau_principale.champ_commun.fictif IS 'élément fictif';
 COMMENT ON COLUMN stareau_principale.champ_commun.commentaire IS 'commentaire ou remarque';
 
 

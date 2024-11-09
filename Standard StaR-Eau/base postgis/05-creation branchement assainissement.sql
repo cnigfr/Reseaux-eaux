@@ -2,7 +2,7 @@
  * 05-creation branchement assainissement.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/11/02 09:41:16
+ * // Last modified: 2024/11/09 00:25:34
  *
  * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
@@ -61,12 +61,12 @@ CREATE TABLE "stareau_ass_brcht".ass_point_collecte (
   CONSTRAINT pk_ass_point_collecte PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".dimension,"stareau_principale".noeud_reseau);
-COMMENT ON TABLE "stareau_ass_brcht".ass_point_collecte IS 'Interface physique fixe en amont de laquelle le service public de l’eau n’a plus la responsabilité légale pleine et entière du service  ou des infrastructures';
+COMMENT ON TABLE "stareau_ass_brcht".ass_point_collecte IS 'Interface physique fixe en amont de laquelle le service public de l’eau n’a plus la responsabilité légale pleine et entière du service ou des infrastructures';
 
 -- Column comments
 
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.id_point_collecte IS 'identifiant métier';
-COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.type_point_collecte IS '*type de boite de branchement*';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.type_point_collecte IS '*type de point de collecte (boite branchement)*';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.ref_externe IS 'référence externe';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.type_usager IS '*type d''usager raccordé*';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.materiau IS '*materiau*';

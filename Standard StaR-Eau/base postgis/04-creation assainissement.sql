@@ -64,8 +64,8 @@ COMMENT ON TABLE "stareau_ass".ass_pretraitement IS 'Les prétraitements ont pou
 
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.id_ass_pretraitement IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.type_pretraitement IS '*type de prétraitement*';
-COMMENT ON COLUMN "stareau_ass".ass_pretraitement.capacite IS 'capacité du prétraitement';
-COMMENT ON COLUMN "stareau_ass".ass_pretraitement.volume IS 'volume total du stockage éventuel';
+COMMENT ON COLUMN "stareau_ass".ass_pretraitement.capacite IS 'capacité du prétraitement en m3/s';
+COMMENT ON COLUMN "stareau_ass".ass_pretraitement.volume IS 'volume total du stockage éventuel en m3';
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.telegestion IS '*présence d''une gestion à distance*';
 COMMENT ON COLUMN "stareau_ass".ass_pretraitement.nom_usuel IS 'nom d''usage du prétraitement';
 
@@ -75,7 +75,7 @@ CREATE TABLE "stareau_ass".ass_equipement (
   id_ass_equipement TEXT NULL,
   type_equipement text NOT NULL, -- *type équipement*
   fonction_equipement text NOT NULL, -- *fonction de l'équipement*
-  telegestion text NOT NULL, -- >présence d''une gestion à distance
+  telegestion text NOT NULL, -- >présence d'une gestion à distance
   CONSTRAINT pk_ass_equipement PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);
@@ -86,7 +86,7 @@ COMMENT ON TABLE "stareau_ass".ass_equipement IS 'Composant associé à un ouvra
 COMMENT ON COLUMN "stareau_ass".ass_equipement.id_ass_equipement IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_equipement.type_equipement IS '*type équipement*';
 COMMENT ON COLUMN "stareau_ass".ass_equipement.fonction_equipement IS '*fonction de l''équipement*';
-COMMENT ON COLUMN "stareau_ass".ass_equipement.telegestion IS '*présence d''''une gestion à distance*';
+COMMENT ON COLUMN "stareau_ass".ass_equipement.telegestion IS '*présence d''une gestion à distance*';
 
 ---POMPAGE
 
@@ -96,8 +96,8 @@ CREATE TABLE "stareau_ass".ass_pompage (
   nom_usuel text NULL, -- nom d'usage du pompag
   fonction_pompage text NOT NULL, -- >fonction du pompage
   nb_pompe int2 NOT NULL DEFAULT 1, -- nombre de pompe
-  debit_temps_sec float4 NULL, -- débit normal moyen par temps sec (m3/h)
-  debit_temps_pluie float4 NULL, -- débit normal moyen par temps de pluie (m3/h)
+  debit_temps_sec float4 NULL, -- débit maxi moyen par temps sec (m3/h)
+  debit_temps_pluie float4 NULL, -- débit maxi moyen par temps de pluie (m3/h)
   nb_bache int2 NULL DEFAULT 1, -- nombre de bâche du poste
   volume_bache float4 NULL, -- volume total de la ou des bâches
   cote_trop_plein float4 NULL, -- cote de déversement du trop-plein (NGF)
@@ -117,10 +117,10 @@ COMMENT ON COLUMN "stareau_ass".ass_pompage.id_ass_pompage IS 'identifiant méti
 COMMENT ON COLUMN "stareau_ass".ass_pompage.type_pompage IS '*type de pompage*';
 COMMENT ON COLUMN "stareau_ass".ass_pompage.fonction_pompage IS '*fonction du pompage*';
 COMMENT ON COLUMN "stareau_ass".ass_pompage.nb_pompe IS 'nombre de pompe';
-COMMENT ON COLUMN "stareau_ass".ass_pompage.debit_temps_sec IS 'débit normal moyen par temps sec (m3/h)';
-COMMENT ON COLUMN "stareau_ass".ass_pompage.debit_temps_pluie IS 'débit normal moyen par temps de pluie (m3/h)';
+COMMENT ON COLUMN "stareau_ass".ass_pompage.debit_temps_sec IS 'débit maximal moyen par temps sec (m3/h)';
+COMMENT ON COLUMN "stareau_ass".ass_pompage.debit_temps_pluie IS 'débit maximal moyen par temps de pluie (m3/h)';
 COMMENT ON COLUMN "stareau_ass".ass_pompage.nb_bache IS 'nombre de bâche du poste';
-COMMENT ON COLUMN "stareau_ass".ass_pompage.volume_bache IS 'volume total de la ou des bâches';
+COMMENT ON COLUMN "stareau_ass".ass_pompage.volume_bache IS 'volume total de la ou des bâches en m3';
 COMMENT ON COLUMN "stareau_ass".ass_pompage.cote_trop_plein IS 'cote de déversement du trop-plein (NGF)';
 COMMENT ON COLUMN "stareau_ass".ass_pompage.telegestion IS '*présence d''une gestion à distance*';
 COMMENT ON COLUMN "stareau_ass".ass_pompage.nom_usuel IS 'nom d''usage du pompage';
@@ -146,7 +146,7 @@ COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.nom_usuel IS 'nom usuel'
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.type_chambre_depollution IS '*type de chambre de dépollution*';
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.bypass IS '*présence d''un by-pass*';
 COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.volume_chambre IS 'volume totale en m3';
-COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.telegestion IS '*présence ou non d''une télégestion*';
+COMMENT ON COLUMN "stareau_ass".ass_chambre_depollution.telegestion IS '*présence d''une gestion à distance*';
 
 --- CANALISATION
 
@@ -219,6 +219,7 @@ CREATE TABLE "stareau_ass".ass_point_mesure (
   id_ass_point_mesure text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
 --id_ass_point_mesure INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
 --id_ass_point_mesure TEXT NOt NULL, --
+  nom_usuel text NULL, 
   type_point_mesure text NOT NULL, -- >type du point de mesure
   code_sandre text NOT NULL, -- >code sandre officiel
   id_sandre text NULL, -- identifiant SANDRE
@@ -233,6 +234,7 @@ COMMENT ON TABLE "stareau_ass".ass_point_mesure IS 'Point de suivi remarquable d
 -- Column comments
 
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.id_ass_point_mesure IS 'identifiant métier';
+COMMENT ON COLUMN "stareau_ass".ass_point_mesure.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.type_point_mesure IS '*type du point de mesure*';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.code_sandre IS '*code sandre officiel*';
 COMMENT ON COLUMN "stareau_ass".ass_point_mesure.ref_ouvrage IS 'référence à l''ouvrage de rattachement';
@@ -285,6 +287,26 @@ COMMENT ON COLUMN stareau_ass.ass_exutoire.id_ass_exutoire IS 'identifiant méti
 COMMENT ON COLUMN stareau_ass.ass_exutoire.code_topage IS 'Code TOPAGE (CdOH) du milieu récepteur';
 COMMENT ON COLUMN stareau_ass.ass_exutoire.destination IS '*type de milieu récepteur*';
 
+----- point de prelevement
+CREATE TABLE stareau_ass.ass_point_prelevement(
+	id_ass_point_prelevement text DEFAULT gen_random_uuid() NOT NULL, -- identifiant métier -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+  --id_ass_gestion_epl_point INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+  --id_ass_gestion_epl_point TEXT NOt NULL, --
+  nom_usuel text NULL,
+  type_point_prelevement text NOT NULL,
+  code_sandre text NOT NULL,
+  ref_ouvrage text NULL, -- référence à l'ouvrage de rattachement
+  geom public.geometry(point, 2154) NOT NULL,
+  CONSTRAINT pk_ass_point_prelevement PRIMARY KEY (id_ass_point_prelevement)
+)
+INHERITS (stareau_principale.champ_commun); 
+
+COMMENT ON COLUMN "stareau_ass".ass_point_prelevement.id_ass_point_prelevement IS 'identifiant métier';
+COMMENT ON COLUMN "stareau_ass".ass_point_prelevement.nom_usuel IS 'nom d''usage';
+COMMENT ON COLUMN "stareau_ass".ass_point_prelevement.type_point_prelevement IS '*type de point prélèvement*';
+COMMENT ON COLUMN "stareau_ass".ass_point_prelevement.code_sandre IS '*code SANDRE*';
+COMMENT ON COLUMN "stareau_ass".ass_point_prelevement.ref_ouvrage IS 'référence à l''ouvrage de rattachement';
+
 ----BASSIN
 
 CREATE TABLE stareau_ass.ass_bassin (
@@ -320,8 +342,7 @@ COMMENT ON COLUMN stareau_ass.ass_bassin.telegestion IS '*présence d''une gesti
 ---GESTION PLUVIAL
 
 CREATE TABLE stareau_ass.ass_gestion_epl_point (
-	id_ass_gestion_epl_point text DEFAULT gen_random_uuid() NOT NULL, -- identifiant métier
- -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+	id_ass_gestion_epl_point text DEFAULT gen_random_uuid() NOT NULL, -- identifiant métier -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_ass_gestion_epl_point INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl_point TEXT NOt NULL, --
   nom_usuel text NULL, -- nom usuel
@@ -384,8 +405,7 @@ COMMENT ON COLUMN stareau_ass.ass_gestion_epl_ligne.telegestion IS '*présence d
 
 --
 CREATE TABLE stareau_ass.ass_gestion_epl_surface (
-	id_ass_gestion_epl_surface text DEFAULT gen_random_uuid() NOT NULL, -- identifiant métier
- -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
+	id_ass_gestion_epl_surface text DEFAULT gen_random_uuid() NOT NULL, -- identifiant métier -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
   --id_ass_gestion_epl_surface INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
   --id_ass_gestion_epl_surface TEXT NOt NULL, --
   nom_usuel text NULL, -- nom usuel

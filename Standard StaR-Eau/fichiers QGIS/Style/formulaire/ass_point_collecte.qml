@@ -857,12 +857,12 @@
     <alias field="fid" name="" index="0"/>
     <alias field="forme" name="forme générale de l'objet" index="1"/>
     <alias field="unite" name="unité des mesures" index="2"/>
-    <alias field="hauteur_interieure" name="hauteur max interieure" index="3"/>
-    <alias field="hauteur_exterieure" name="hauteur max exterieure" index="4"/>
-    <alias field="largeur_interieure" name="largeur max interieure" index="5"/>
-    <alias field="largeur_exterieure" name="largeur max exterieure" index="6"/>
-    <alias field="longueur_interieure" name="longueur max interieure" index="7"/>
-    <alias field="longueur_exterieure" name="longueur max exterieure" index="8"/>
+    <alias field="hauteur_interieure" name="hauteur max intérieure" index="3"/>
+    <alias field="hauteur_exterieure" name="hauteur max extérieure" index="4"/>
+    <alias field="largeur_interieure" name="largeur max intérieure" index="5"/>
+    <alias field="largeur_exterieure" name="largeur max extérieure" index="6"/>
+    <alias field="longueur_interieure" name="longueur max intérieure" index="7"/>
+    <alias field="longueur_exterieure" name="longueur max extérieure" index="8"/>
     <alias field="type_reseau" name="type de réseau" index="9"/>
     <alias field="fictif" name="fictif ?" index="10"/>
     <alias field="etat_service" name="état de service" index="11"/>

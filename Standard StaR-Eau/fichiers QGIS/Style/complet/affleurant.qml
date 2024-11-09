@@ -928,12 +928,12 @@
     <alias field="commentaire" name="" index="25"/>
     <alias field="forme" name="forme générale de l'objet" index="26"/>
     <alias field="unite" name="unité des mesures" index="27"/>
-    <alias field="hauteur_interieure" name="hauteur max interieure" index="28"/>
-    <alias field="hauteur_exterieure" name="hauteur max exterieure" index="29"/>
-    <alias field="largeur_interieure" name="largeur max interieure" index="30"/>
-    <alias field="largeur_exterieure" name="largeur max exterieure" index="31"/>
-    <alias field="longueur_interieure" name="longueur max interieure" index="32"/>
-    <alias field="longueur_exterieure" name="longueur max exterieure" index="33"/>
+    <alias field="hauteur_interieure" name="hauteur max intérieure" index="28"/>
+    <alias field="hauteur_exterieure" name="hauteur max extérieure" index="29"/>
+    <alias field="largeur_interieure" name="largeur max intérieure" index="30"/>
+    <alias field="largeur_exterieure" name="largeur max extérieure" index="31"/>
+    <alias field="longueur_interieure" name="longueur max intérieure" index="32"/>
+    <alias field="longueur_exterieure" name="longueur max extérieure" index="33"/>
     <alias field="id_affleurant" name="" index="34"/>
     <alias field="type_affleurant" name="type d'affleurant" index="35"/>
     <alias field="id_affleurant_pcrs" name="lien vers PCRS" index="36"/>

@@ -598,12 +598,12 @@
     <alias index="26" name="visible ?" field="visible"/>
     <alias index="27" name="forme générale de l'objet" field="forme"/>
     <alias index="28" name="unité des mesures" field="unite"/>
-    <alias index="29" name="hauteur max interieure" field="hauteur_interieure"/>
-    <alias index="30" name="hauteur max exterieure" field="hauteur_exterieure"/>
-    <alias index="31" name="largeur max interieure" field="largeur_interieure"/>
-    <alias index="32" name="largeur max exterieure" field="largeur_exterieure"/>
-    <alias index="33" name="longueur max interieure" field="longueur_interieure"/>
-    <alias index="34" name="longueur max exterieure" field="longueur_exterieure"/>
+    <alias index="29" name="hauteur max intérieure" field="hauteur_interieure"/>
+    <alias index="30" name="hauteur max extérieure" field="hauteur_exterieure"/>
+    <alias index="31" name="largeur max intérieure" field="largeur_interieure"/>
+    <alias index="32" name="largeur max extérieure" field="largeur_exterieure"/>
+    <alias index="33" name="longueur max intérieure" field="longueur_interieure"/>
+    <alias index="34" name="longueur max extérieure" field="longueur_exterieure"/>
     <alias index="35" name="identifiant spécifique" field="id"/>
   </aliases>
   <defaults>

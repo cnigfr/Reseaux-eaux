@@ -1034,12 +1034,12 @@
     <alias name="identifiant noeud initial" field="noeudinitial" index="34"/>
     <alias name="forme générale de l'objet" field="forme" index="35"/>
     <alias name="unité des mesures" field="unite" index="36"/>
-    <alias name="hauteur max interieure" field="hauteur_interieure" index="37"/>
-    <alias name="hauteur max exterieure" field="hauteur_exterieure" index="38"/>
-    <alias name="largeur max interieure" field="largeur_interieure" index="39"/>
-    <alias name="largeur max exterieure" field="largeur_exterieure" index="40"/>
-    <alias name="longueur max interieure" field="longueur_interieure" index="41"/>
-    <alias name="longueur max exterieure" field="longueur_exterieure" index="42"/>
+    <alias name="hauteur max intérieure" field="hauteur_interieure" index="37"/>
+    <alias name="hauteur max extérieure" field="hauteur_exterieure" index="38"/>
+    <alias name="largeur max intérieure" field="largeur_interieure" index="39"/>
+    <alias name="largeur max extérieure" field="largeur_exterieure" index="40"/>
+    <alias name="longueur max intérieure" field="longueur_interieure" index="41"/>
+    <alias name="longueur max extérieure" field="longueur_exterieure" index="42"/>
     <alias name="identifiant spécifique" field="id" index="43"/>
   </aliases>
   <defaults>

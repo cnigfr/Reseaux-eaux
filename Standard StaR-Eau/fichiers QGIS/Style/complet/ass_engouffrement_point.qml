@@ -1276,12 +1276,12 @@
     <alias field="id_noeud_reseau" name="" index="26"/>
     <alias field="forme" name="forme générale de l'objet" index="27"/>
     <alias field="unite" name="unité des mesures" index="28"/>
-    <alias field="hauteur_interieure" name="hauteur max interieure" index="29"/>
-    <alias field="hauteur_exterieure" name="hauteur max exterieure" index="30"/>
-    <alias field="largeur_interieure" name="largeur max interieure" index="31"/>
-    <alias field="largeur_exterieure" name="largeur max exterieure" index="32"/>
-    <alias field="longueur_interieure" name="longueur max interieure" index="33"/>
-    <alias field="longueur_exterieure" name="longueur max exterieure" index="34"/>
+    <alias field="hauteur_interieure" name="hauteur max intérieure" index="29"/>
+    <alias field="hauteur_exterieure" name="hauteur max extérieure" index="30"/>
+    <alias field="largeur_interieure" name="largeur max intérieure" index="31"/>
+    <alias field="largeur_exterieure" name="largeur max extérieure" index="32"/>
+    <alias field="longueur_interieure" name="longueur max intérieure" index="33"/>
+    <alias field="longueur_exterieure" name="longueur max extérieure" index="34"/>
     <alias field="id_ass_engouffrement_point" name="" index="35"/>
     <alias field="type_engouffrement" name="type d'engouffrement" index="36"/>
     <alias field="decantation" name="présence d'une décantation ?" index="37"/>

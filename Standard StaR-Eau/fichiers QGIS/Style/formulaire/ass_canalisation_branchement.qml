@@ -1037,12 +1037,12 @@
     <alias field="noeudinitial" name="identifiant noeud initial" index="35"/>
     <alias field="forme" name="forme générale de l'objet" index="36"/>
     <alias field="unite" name="unité des mesures" index="37"/>
-    <alias field="hauteur_interieure" name="hauteur max interieure" index="38"/>
-    <alias field="hauteur_exterieure" name="hauteur max exterieure" index="39"/>
-    <alias field="largeur_interieure" name="largeur max interieure" index="40"/>
-    <alias field="largeur_exterieure" name="largeur max exterieure" index="41"/>
-    <alias field="longueur_interieure" name="longueur max interieure" index="42"/>
-    <alias field="longueur_exterieure" name="longueur max exterieure" index="43"/>
+    <alias field="hauteur_interieure" name="hauteur max intérieure" index="38"/>
+    <alias field="hauteur_exterieure" name="hauteur max extérieure" index="39"/>
+    <alias field="largeur_interieure" name="largeur max intérieure" index="40"/>
+    <alias field="largeur_exterieure" name="largeur max extérieure" index="41"/>
+    <alias field="longueur_interieure" name="longueur max intérieure" index="42"/>
+    <alias field="longueur_exterieure" name="longueur max extérieure" index="43"/>
     <alias field="id_ass_canalisation_branchement" name="" index="44"/>
   </aliases>
   <defaults>

@@ -2,7 +2,7 @@
  * 06-creation eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/11/02 09:41:16
+ * // Last modified: 2024/11/09 08:08:18
  *
  * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
@@ -68,6 +68,7 @@ CREATE TABLE "stareau_aep".aep_captage (
   type_ressource text NOT NULL, -- type de ressource
   ref_aac text NULL, -- reference aire alimentation captage
   ref_dup text NULL, -- référence arrêté autorisation
+  ref_bss text NULL, -- référence Banque Sous Sol -brgm
   debit_max_autorise text NULL,-- Débit max autorisé mentionné dans la DUP, accompagné de son unité
   CONSTRAINT pk_aep_captage PRIMARY KEY (id_noeud_reseau)
 )
@@ -82,7 +83,8 @@ COMMENT ON COLUMN "stareau_aep".aep_captage.type_captage IS '*type de captage*';
 COMMENT ON COLUMN "stareau_aep".aep_captage.nom_ressource IS 'nom ressource';
 COMMENT ON COLUMN "stareau_aep".aep_captage.type_ressource IS '*type de ressource*';
 COMMENT ON COLUMN "stareau_aep".aep_captage.ref_aac IS 'reference aire alimentation captage';
-COMMENT ON COLUMN "stareau_aep".aep_captage.ref_dup IS 'référence arrêté autorisation ';
+COMMENT ON COLUMN "stareau_aep".aep_captage.ref_dup IS 'référence arrêté autorisation - prefecture ';
+COMMENT ON COLUMN "stareau_aep".aep_captage.ref_bss IS 'référence Banque Sous Sol - brgm';
 COMMENT ON COLUMN "stareau_aep".aep_captage.debit_max_autorise IS 'Débit max autorisé mentionné dans la DUP, accompagné de son unité';
 
 
@@ -190,10 +192,10 @@ COMMENT ON TABLE "stareau_aep".aep_vanne IS 'vanne réseau';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.id_aep_vanne IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.type_vanne IS '*type_vanne*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.fonction_vanne IS '*fonction vanne*';
-COMMENT ON COLUMN "stareau_aep".aep_vanne.diametre IS 'diametre nominal';
+COMMENT ON COLUMN "stareau_aep".aep_vanne.diametre IS 'diametre nominal en mm';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.sens_fermeture IS '*sens fermeture*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.blocage IS '*vanne bloquée*';
-COMMENT ON COLUMN "stareau_aep".aep_vanne.etat_ouverture IS '*état ouverture en focntionnement normal*';
+COMMENT ON COLUMN "stareau_aep".aep_vanne.etat_ouverture IS '*état ouverture en fonctionnement normal*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.motorisation IS '*motorisation*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.telegestion IS '*présence d''une gestion à distance*';
 
@@ -216,7 +218,7 @@ INHERITS ("stareau_principale".noeud_reseau);
 
 COMMENT ON TABLE "stareau_aep".aep_regulation IS 'appareil de régulation du débit ou de la pression';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.id_aep_regulation IS 'identifiant métier';
-COMMENT ON COLUMN "stareau_aep".aep_regulation.nom_usuel IS 'nom usage';
+COMMENT ON COLUMN "stareau_aep".aep_regulation.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.type_regulation IS '*type régulation*';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.type_consigne IS '*type consigne*';
 COMMENT ON COLUMN "stareau_aep".aep_regulation.consigne_amont IS 'consigne en amont';

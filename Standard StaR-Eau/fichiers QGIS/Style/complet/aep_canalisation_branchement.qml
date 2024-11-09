@@ -2941,12 +2941,12 @@
     <alias index="35" name="identifiant noeud initial" field="noeudinitial"/>
     <alias index="36" name="forme générale de l'objet" field="forme"/>
     <alias index="37" name="unité des mesures" field="unite"/>
-    <alias index="38" name="hauteur max interieure" field="hauteur_interieure"/>
-    <alias index="39" name="hauteur max exterieure" field="hauteur_exterieure"/>
-    <alias index="40" name="largeur max interieure" field="largeur_interieure"/>
-    <alias index="41" name="largeur max exterieure" field="largeur_exterieure"/>
-    <alias index="42" name="longueur max interieure" field="longueur_interieure"/>
-    <alias index="43" name="longueur max exterieure" field="longueur_exterieure"/>
+    <alias index="38" name="hauteur max intérieure" field="hauteur_interieure"/>
+    <alias index="39" name="hauteur max extérieure" field="hauteur_exterieure"/>
+    <alias index="40" name="largeur max intérieure" field="largeur_interieure"/>
+    <alias index="41" name="largeur max extérieure" field="largeur_exterieure"/>
+    <alias index="42" name="longueur max intérieure" field="longueur_interieure"/>
+    <alias index="43" name="longueur max extérieure" field="longueur_exterieure"/>
     <alias index="44" name="" field="id_aep_canalisation_branchement"/>
     <alias index="45" name="fonction branchement" field="fonction_canalisation_branchement"/>
   </aliases>

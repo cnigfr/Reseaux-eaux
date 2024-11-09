@@ -626,12 +626,12 @@
     <alias name="" field="id_noeud_reseau" index="25"/>
     <alias name="forme générale de l'objet" field="forme" index="26"/>
     <alias name="unité des mesures" field="unite" index="27"/>
-    <alias name="hauteur max interieure" field="hauteur_interieure" index="28"/>
-    <alias name="hauteur max exterieure" field="hauteur_exterieure" index="29"/>
-    <alias name="largeur max interieure" field="largeur_interieure" index="30"/>
-    <alias name="largeur max exterieure" field="largeur_exterieure" index="31"/>
-    <alias name="longueur max interieure" field="longueur_interieure" index="32"/>
-    <alias name="longueur max exterieure" field="longueur_exterieure" index="33"/>
+    <alias name="hauteur max intérieure" field="hauteur_interieure" index="28"/>
+    <alias name="hauteur max extérieure" field="hauteur_exterieure" index="29"/>
+    <alias name="largeur max intérieure" field="largeur_interieure" index="30"/>
+    <alias name="largeur max extérieure" field="largeur_exterieure" index="31"/>
+    <alias name="longueur max intérieure" field="longueur_interieure" index="32"/>
+    <alias name="longueur max extérieure" field="longueur_exterieure" index="33"/>
     <alias name="identifiant spécifique" field="id" index="34"/>
     <alias name="nom usuel" field="nom_usuel" index="35"/>
     <alias name="présence d'une gestion/relève à distance" field="telegestion" index="36"/>
