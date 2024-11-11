@@ -2,7 +2,7 @@
  * 07-creation branchement eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/11/09 08:08:16
+ * // Last modified: 2024/11/09 13:57:17
  *
  * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
@@ -63,8 +63,7 @@ COMMENT ON TABLE "stareau_aep_brcht".aep_point_livraison IS 'point de livraison'
 
 -- Column comments
 
-COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.id_point_livraison IS 'identifiant métier
-';
+COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.id_point_livraison IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.type_point_livraison IS '*type point livraison*';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.ref_externe IS 'référence externe (sdis, exploitation...)';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_point_livraison.ref_client IS 'référence client';

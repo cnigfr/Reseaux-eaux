@@ -7,7 +7,7 @@ import os
 dossier_csv = '.../Reseaux-eaux/Standard StaR-Eau/listes valeurs/brute avant import/'
 
 # Nom du fichier Excel de sortie
-fichier_excel = 'ass_listes_valeurs.xlsx'
+fichier_excel = 'liste_valeurs_ASS.xlsx'
 
 # Créer un nouveau classeur Excel
 workbook = openpyxl.Workbook()

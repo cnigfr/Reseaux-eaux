@@ -288,24 +288,27 @@ COMMENT ON COLUMN stareau_ass.ass_exutoire.code_topage IS 'Code TOPAGE (CdOH) du
 COMMENT ON COLUMN stareau_ass.ass_exutoire.destination IS '*type de milieu récepteur*';
 
 ----- point de prelevement
-CREATE TABLE stareau_ass.ass_point_prelevement(
-	id_ass_point_prelevement text DEFAULT gen_random_uuid() NOT NULL, -- identifiant métier -- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
-  --id_ass_gestion_epl_point INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
-  --id_ass_gestion_epl_point TEXT NOt NULL, --
-  nom_usuel text NULL,
-  type_point_prelevement text NOT NULL,
-  code_sandre text NOT NULL,
-  ref_ouvrage text NULL, -- référence à l'ouvrage de rattachement
-  geom public.geometry(point, 2154) NOT NULL,
-  CONSTRAINT pk_ass_point_prelevement PRIMARY KEY (id_ass_point_prelevement)
+CREATE TABLE stareau_ass.ass_point_prelevement (
+	id_ass_point_prelevement text DEFAULT gen_random_uuid() NOT NULL, -- identifiant métier
+--id_ass_point_prelevement INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto
+--id_ass_point_prelevement TEXT NOt NULL, --
+	nom_usuel text NULL, -- nom d'usage
+	type_point_prelevement text NOT NULL, -- *type de point prélèvement*
+	code_sandre text NOT NULL, -- *code SANDRE*
+	ref_ouvrage text NULL, -- référence à l'ouvrage de rattachement
+	geom public.geometry(point, 2154) NOT NULL,
+	CONSTRAINT pk_ass_point_prelevement PRIMARY KEY (id_ass_point_prelevement)
 )
-INHERITS (stareau_principale.champ_commun); 
+INHERITS (stareau_principale.champ_commun);
+COMMENT ON TABLE stareau_ass.ass_point_prelevement IS 'Emplacement spécifique où des échantillons d''effluents sont prélevés aux fins d''analyses et de tests.';
 
-COMMENT ON COLUMN "stareau_ass".ass_point_prelevement.id_ass_point_prelevement IS 'identifiant métier';
-COMMENT ON COLUMN "stareau_ass".ass_point_prelevement.nom_usuel IS 'nom d''usage';
-COMMENT ON COLUMN "stareau_ass".ass_point_prelevement.type_point_prelevement IS '*type de point prélèvement*';
-COMMENT ON COLUMN "stareau_ass".ass_point_prelevement.code_sandre IS '*code SANDRE*';
-COMMENT ON COLUMN "stareau_ass".ass_point_prelevement.ref_ouvrage IS 'référence à l''ouvrage de rattachement';
+-- Column comments
+
+COMMENT ON COLUMN stareau_ass.ass_point_prelevement.id_ass_point_prelevement IS 'identifiant métier';
+COMMENT ON COLUMN stareau_ass.ass_point_prelevement.nom_usuel IS 'nom d''usage';
+COMMENT ON COLUMN stareau_ass.ass_point_prelevement.type_point_prelevement IS '*type de point prélèvement*';
+COMMENT ON COLUMN stareau_ass.ass_point_prelevement.code_sandre IS '*code SANDRE*';
+COMMENT ON COLUMN stareau_ass.ass_point_prelevement.ref_ouvrage IS 'référence à l''ouvrage de rattachement';
 
 ----BASSIN
 

@@ -2,7 +2,7 @@
  * 220-contraintes_sur_liste_valeurs_ASS.sql - 2024-06-02
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/11/02 09:41:16
+ * // Last modified: 2024/11/09 13:46:43
  *
  * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
@@ -175,6 +175,14 @@ ALTER TABLE stareau_ass.ass_point_mesure ADD CONSTRAINT ass_point_mesure_origine
 ALTER TABLE stareau_ass.ass_point_mesure ADD CONSTRAINT ass_point_mesure_type_point_mesure_fk FOREIGN KEY (type_point_mesure) REFERENCES stareau_valeur.ass_type_point_mesure(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_point_mesure ADD CONSTRAINT ass_point_mesure_code_sandre_fk FOREIGN KEY (code_sandre) REFERENCES stareau_valeur.ass_code_sandre(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_point_mesure ADD CONSTRAINT ass_point_mesure_telegestion_fk FOREIGN KEY (telegestion) REFERENCES stareau_valeur.com_oui_non(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass.ass_point_prelevement ADD CONSTRAINT ass_point_prelevement_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass.ass_point_prelevement ADD CONSTRAINT ass_point_prelevement_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass.ass_point_prelevement ADD CONSTRAINT ass_point_prelevement_precision_xy_fk FOREIGN KEY (precision_xy) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass.ass_point_prelevement ADD CONSTRAINT ass_point_prelevement_precision_z_fk FOREIGN KEY (precision_z) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass.ass_point_prelevement ADD CONSTRAINT ass_point_prelevement_origine_creation_fk FOREIGN KEY (origine_creation) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass.ass_point_prelevement ADD CONSTRAINT ass_point_prelevement_origine_maj_fk FOREIGN KEY (origine_maj) REFERENCES stareau_valeur.com_origine(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass.ass_point_prelevement ADD CONSTRAINT ass_point_prelevement_type_point_mesure_fk FOREIGN KEY (type_point_prelevement) REFERENCES stareau_valeur.ass_type_point_prelevement(code) ON UPDATE CASCADE;
+ALTER TABLE stareau_ass.ass_point_prelevement ADD CONSTRAINT ass_point_prelevement_code_sandre_fk FOREIGN KEY (code_sandre) REFERENCES stareau_valeur.ass_code_sandre(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_pompage ADD CONSTRAINT ass_pompage_type_reseau_fk FOREIGN KEY (type_reseau) REFERENCES stareau_valeur.com_type_reseau(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_pompage ADD CONSTRAINT ass_pompage_etat_service_fk FOREIGN KEY (etat_service) REFERENCES stareau_valeur.com_etat_service(code) ON UPDATE CASCADE;
 ALTER TABLE stareau_ass.ass_pompage ADD CONSTRAINT ass_pompage_precision_xy_fk FOREIGN KEY (precision_xy) REFERENCES stareau_valeur.com_precision(code) ON UPDATE CASCADE;
