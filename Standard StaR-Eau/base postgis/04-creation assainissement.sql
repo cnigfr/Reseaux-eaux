@@ -93,7 +93,7 @@ COMMENT ON COLUMN "stareau_ass".ass_equipement.telegestion IS '*présence d''une
 CREATE TABLE "stareau_ass".ass_pompage (
   id_ass_pompage TEXT NULL,
   type_pompage text NOT NULL, -- >type de pompage
-  nom_usuel text NULL, -- nom d'usage du pompag
+  nom_usuel text NULL, -- nom d'usage du pompage
   fonction_pompage text NOT NULL, -- >fonction du pompage
   nb_pompe int2 NOT NULL DEFAULT 1, -- nombre de pompe
   debit_temps_sec float4 NULL, -- débit maxi moyen par temps sec (m3/h)
@@ -154,7 +154,7 @@ CREATE TABLE "stareau_ass".ass_canalisation (
   id_ass_canalisation TEXT NULL,
   fonction_canalisation text NOT NULL, -- *fonction de la canalisation dans le réseau*
   contenu_canalisation text NOT NULL,
-  visitable text NOT NULL, -- *possibilité de visite pedestre*
+  visitable text NOT NULL, -- *possibilité de visite pédestre*
   altitude_fil_eau_amont float4 NULL, -- altitude fil d'eau amont
   altitude_fil_eau_aval float4 NULL, -- altitude fil d'eau aval
   bassin_collecte text NULL, -- identifiant bassin de collecte
@@ -170,7 +170,7 @@ COMMENT ON TABLE "stareau_ass".ass_canalisation IS 'canalisation assainissement'
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.id_ass_canalisation IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.fonction_canalisation IS '*fonction de la canalisation dans le réseau*';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.contenu_canalisation IS '*type d''eau transportée*';
-COMMENT ON COLUMN "stareau_ass".ass_canalisation.visitable IS '*possibilité de visite pedestre*';
+COMMENT ON COLUMN "stareau_ass".ass_canalisation.visitable IS '*possibilité de visite pédestre*';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.altitude_fil_eau_amont IS 'altitude fil d''eau amont';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.altitude_fil_eau_aval IS 'altitude fil d''eau aval';
 COMMENT ON COLUMN "stareau_ass".ass_canalisation.bassin_collecte IS 'identifiant bassin de collecte';
@@ -246,7 +246,7 @@ COMMENT ON COLUMN stareau_ass.ass_point_mesure.telegestion IS '*présence d''une
 CREATE TABLE "stareau_ass".ass_regard (
   id_ass_regard TEXT NULL,
   type_regard text NOT NULL, -- type de regard *
-  materiau text NOT NULL, -- materiau constitutif du regard *
+  materiau text NOT NULL, -- matériau constitutif du regard *
   "position" text NOT NULL, -- position par rapport à la canalisation *
   type_descente text NOT NULL, -- élément de descente dans le regard *
   nb_paliers int2 NULL, -- nombre de paliers
@@ -262,7 +262,7 @@ COMMENT ON TABLE "stareau_ass".ass_regard IS 'enceinte munie d''un tampon amovib
 
 COMMENT ON COLUMN "stareau_ass".ass_regard.id_ass_regard IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_ass".ass_regard.type_regard IS '*type de regard*';
-COMMENT ON COLUMN "stareau_ass".ass_regard.materiau IS '*materiau constitutif du regard*';
+COMMENT ON COLUMN "stareau_ass".ass_regard.materiau IS '*matériau constitutif du regard*';
 COMMENT ON COLUMN "stareau_ass".ass_regard."position" IS '*position par rapport à la canalisation*';
 COMMENT ON COLUMN "stareau_ass".ass_regard.type_descente IS '*élément de descente dans le regard*';
 COMMENT ON COLUMN "stareau_ass".ass_regard.nb_paliers IS 'nombre de paliers';

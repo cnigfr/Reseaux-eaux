@@ -43,7 +43,7 @@ CREATE INDEX sidx_aep_affleurant_geom ON stareau_aep.aep_affleurant USING gist (
 
 COMMENT ON TABLE stareau_aep.aep_affleurant IS 'table des affleurant des réseaux';
 
--- Column comments
+-- COLUMN comments
 
 COMMENT ON COLUMN stareau_aep.aep_affleurant.id_aep_affleurant IS 'identifiant métier';
 COMMENT ON COLUMN stareau_aep.aep_affleurant.type_affleurant IS '*type d''affleurant*';
@@ -57,7 +57,7 @@ COMMENT ON COLUMN stareau_aep.aep_affleurant.id_canalisation IS 'lien vers élé
 CREATE TABLE stareau_ass.ass_affleurant (
   id_ass_affleurant text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
 --id_ass_affleurant text NULL,
---id_ass_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
+--id_ass_affleurant INT GENERATED ALWAYS AS IDENTITY, -- id numérique à numérotation auto,
   type_affleurant text NOT NULL,
   id_affleurant_pcrs text NULL,
   id_emprise text NULL, -- lien vers emprise
@@ -80,7 +80,7 @@ COMMENT ON COLUMN stareau_ass.ass_affleurant.id_emprise IS 'lien vers emprise';
 COMMENT ON COLUMN stareau_ass.ass_affleurant.id_noeud_reseau IS 'lien vers élément ponctuel';
 COMMENT ON COLUMN stareau_ass.ass_affleurant.id_canalisation IS 'lien vers élément linéaire';
 
---GENIE CIVIL
+--GÉNIE CIVIL
 
 CREATE TABLE stareau_aep.aep_genie_civil(
   id_aep_genie_civil text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
@@ -96,7 +96,7 @@ COMMENT ON TABLE stareau_aep.aep_genie_civil IS 'enveloppe externe de génie civ
 -- Column comments
 
 COMMENT ON COLUMN stareau_aep.aep_genie_civil.id_aep_genie_civil IS 'identifiant métier';
-COMMENT ON COLUMN stareau_aep.aep_genie_civil.materiau IS '*materiau constitutif du GC*';
+COMMENT ON COLUMN stareau_aep.aep_genie_civil.materiau IS '*matériau constitutif du GC*';
 COMMENT ON COLUMN stareau_aep.aep_genie_civil.niveau IS 'niveau par rapport au sol';
 
 --GENIE CIVIL
@@ -106,7 +106,7 @@ CREATE TABLE stareau_ass.ass_genie_civil(
 --id_ass_genie_civil text NULL,
 --id_ass_genie_civil INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
   materiau TEXT NOT NULL,
-  niveau int2 NOT null default 0 ,-- niveau par rapport au sol
+  niveau int2 NOT NULL default 0 ,-- niveau par rapport au sol
   CONSTRAINT pk_ass_genie_civil PRIMARY KEY (id_emprise)
 )
 INHERITS ("stareau_principale".emprise);
@@ -115,7 +115,7 @@ COMMENT ON TABLE stareau_ass.ass_genie_civil IS 'enveloppe externe de génie civ
 -- Column comments
 
 COMMENT ON COLUMN stareau_ass.ass_genie_civil.id_ass_genie_civil IS 'identifiant métier';
-COMMENT ON COLUMN stareau_ass.ass_genie_civil.materiau IS '*materiau constitutif du GC*';
+COMMENT ON COLUMN stareau_ass.ass_genie_civil.materiau IS '*matériau constitutif du GC*';
 COMMENT ON COLUMN stareau_ass.ass_genie_civil.niveau IS 'niveau par rapport au sol';
 
 --PERIMETRE_GESTION
@@ -123,7 +123,7 @@ COMMENT ON COLUMN stareau_ass.ass_genie_civil.niveau IS 'niveau par rapport au s
 CREATE TABLE stareau_aep.aep_perimetre_gestion (
   id_aep_perimetre_gestion text NOT NULL DEFAULT gen_random_uuid(), ---- >=PG13 uuid par défaut peut-être retirer pour autre identifiant
 --id_aep_perimetre_gestion text NULL,
---id_aep_perimetre_gestion INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
+--id_aep_perimetre_gestion INT GENERATED ALWAYS AS IDENTITY, -- id numérique à numérotation auto,
   type_perimetre_gestion text NOT NULL, --*type de périmètre*
   type_acces text NOT NULL, --*type d'accès*
   CONSTRAINT pk_aep_perimetre_gestion PRIMARY KEY (id_emprise)
@@ -250,7 +250,7 @@ CREATE TABLE "stareau_commun".piezometre (
 --id_piezometre INT GENERATED ALWAYS AS IDENTITY, -- id numerique à numérotation auto,
 --id_piezometre TEXT NOT NULL,
   nom_usuel text NULL, -- nom usuel
-  diametre int4 NULL, -- diametre interne du forage
+  diametre int4 NULL, -- diamètre interne du forage
   cote_tn float4 NULL, -- cote terrain naturel
   cote_fin_crepine float4 NULL, -- cote de fin de crépine
   ref_bss text NULL, -- référence dans la banque du sous-sol (BRGM)
@@ -264,7 +264,7 @@ COMMENT ON TABLE "stareau_commun".piezometre IS 'forage non exploité qui permet
 
 COMMENT ON COLUMN "stareau_commun".piezometre.id_piezometre IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_commun".piezometre.nom_usuel IS 'nom usuel';
-COMMENT ON COLUMN "stareau_commun".piezometre.diametre IS 'diamétre interne du forage';
+COMMENT ON COLUMN "stareau_commun".piezometre.diametre IS 'diamètre interne du forage';
 COMMENT ON COLUMN "stareau_commun".piezometre.cote_tn IS 'cote terrain naturel';
 COMMENT ON COLUMN "stareau_commun".piezometre.cote_fin_crepine IS 'cote de fin de crépine';
 COMMENT ON COLUMN "stareau_commun".piezometre.ref_bss IS 'référence dans la banque du sous-sol (BRGM)';

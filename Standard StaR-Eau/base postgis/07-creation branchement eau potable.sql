@@ -2,7 +2,7 @@
  * 07-creation branchement eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/11/09 13:57:17
+ * // Last modified: 2024/11/11 10:39:37
  *
  * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
@@ -45,7 +45,7 @@ COMMENT ON TABLE "stareau_aep_brcht".aep_canalisation_branchement IS 'conduite e
 COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.id_aep_canalisation_branchement IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.fonction_canalisation IS '*fonction du branchement*';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.contenu_canalisation IS '*type d''eau transportée*';
-COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.cote_debut IS 'cote NGF de la génératrice superieure';
+COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.cote_debut IS 'cote NGF de la génératrice supérieure';
 COMMENT ON COLUMN "stareau_aep_brcht".aep_canalisation_branchement.cote_fin IS 'cote NGF génératrice supérieure';
 
 --POINT LIVRAISON
@@ -105,7 +105,7 @@ COMMENT ON COLUMN stareau_aep_brcht.aep_piece_branchement.type_piece_branchement
 CREATE TABLE stareau_aep_brcht.aep_vanne_branchement (
   id_vanne_branchement text null,
   type_vanne_branchement text NOT NULL, -- >type de vanne
-  diametre float4 NULL, -- diametre nominale de la vanne
+  diametre float4 NULL, -- diamètre nominale de la vanne
   etat_ouverture text NOT NULL, -- >état d'ouverture
   sens_fermeture text NOT NULL, -- >sens de fermeture
   CONSTRAINT pk_aep_vanne_brcht PRIMARY KEY (id_noeud_reseau)
@@ -116,7 +116,7 @@ COMMENT ON TABLE stareau_aep_brcht.aep_vanne_branchement IS 'élément de coupur
 
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.id_vanne_branchement IS 'identifiant métier';
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.type_vanne_branchement IS '*type de vanne*';
-COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.diametre IS 'diamétre nominal de la vanne';
+COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.diametre IS 'diamètre nominal de la vanne';
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.sens_fermeture IS '*sens de fermeture*';
 COMMENT ON COLUMN stareau_aep_brcht.aep_vanne_branchement.etat_ouverture IS '*état d''ouverture*';
 

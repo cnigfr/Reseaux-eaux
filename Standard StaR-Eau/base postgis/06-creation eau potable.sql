@@ -2,7 +2,7 @@
  * 06-creation eau potable.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/11/09 08:08:18
+ * // Last modified: 2024/11/11 10:29:52
  *
  * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
@@ -51,10 +51,10 @@ COMMENT ON COLUMN "stareau_aep".aep_canalisation.id_aep_canalisation IS 'identif
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.fonction_canalisation IS '*fonction canalisation dans le réseau*';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.contenu_canalisation IS '*type d''eau transportée*';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.protection_cathodique IS '*présence protection cathodique*';
-COMMENT ON COLUMN "stareau_aep".aep_canalisation.etage_pression IS 'référence etage de pression';
-COMMENT ON COLUMN "stareau_aep".aep_canalisation.secteur_hydraulique IS 'secteur ou ilot de distribution';
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.etage_pression IS 'référence étage de pression';
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.secteur_hydraulique IS 'secteur ou îlot de distribution';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.ref_udi IS 'référence unité de distribution (référence ARS)';
-COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_debut IS 'cote NGF de la génératrice superieure';
+COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_debut IS 'cote NGF de la génératrice supérieure';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.cote_fin IS 'cote NGF génératrice supérieure';
 COMMENT ON COLUMN "stareau_aep".aep_canalisation.type_pression IS '*type de pression de distribution*';
 
@@ -83,7 +83,7 @@ COMMENT ON COLUMN "stareau_aep".aep_captage.type_captage IS '*type de captage*';
 COMMENT ON COLUMN "stareau_aep".aep_captage.nom_ressource IS 'nom ressource';
 COMMENT ON COLUMN "stareau_aep".aep_captage.type_ressource IS '*type de ressource*';
 COMMENT ON COLUMN "stareau_aep".aep_captage.ref_aac IS 'reference aire alimentation captage';
-COMMENT ON COLUMN "stareau_aep".aep_captage.ref_dup IS 'référence arrêté autorisation - prefecture ';
+COMMENT ON COLUMN "stareau_aep".aep_captage.ref_dup IS 'référence arrêté autorisation - préfecture ';
 COMMENT ON COLUMN "stareau_aep".aep_captage.ref_bss IS 'référence Banque Sous Sol - brgm';
 COMMENT ON COLUMN "stareau_aep".aep_captage.debit_max_autorise IS 'Débit max autorisé mentionné dans la DUP, accompagné de son unité';
 
@@ -164,7 +164,7 @@ COMMENT ON COLUMN stareau_aep.aep_point_mesure.id_aep_point_mesure IS 'identifia
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.type_point_mesure IS '*type point de mesure*';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.fonction_point_mesure IS '*fonction point de mesure*';
-COMMENT ON COLUMN stareau_aep.aep_point_mesure.calibre IS 'calibre/diametre';
+COMMENT ON COLUMN stareau_aep.aep_point_mesure.calibre IS 'calibre/diamètre';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.annee_fabrication IS 'année fabrication';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.marque IS 'marque compteur';
 COMMENT ON COLUMN stareau_aep.aep_point_mesure.numero_serie IS 'numéro série';
@@ -192,7 +192,7 @@ COMMENT ON TABLE "stareau_aep".aep_vanne IS 'vanne réseau';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.id_aep_vanne IS 'identifiant métier';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.type_vanne IS '*type_vanne*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.fonction_vanne IS '*fonction vanne*';
-COMMENT ON COLUMN "stareau_aep".aep_vanne.diametre IS 'diametre nominal en mm';
+COMMENT ON COLUMN "stareau_aep".aep_vanne.diametre IS 'diamètre nominal en mm';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.sens_fermeture IS '*sens fermeture*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.blocage IS '*vanne bloquée*';
 COMMENT ON COLUMN "stareau_aep".aep_vanne.etat_ouverture IS '*état ouverture en fonctionnement normal*';
@@ -261,7 +261,7 @@ CREATE TABLE "stareau_aep".aep_appareillage (
   CONSTRAINT pk_noeud_reseau PRIMARY KEY (id_noeud_reseau)
 )
 INHERITS ("stareau_principale".noeud_reseau);
-COMMENT ON TABLE "stareau_aep".aep_appareillage IS 'Equipements divers sur le réseau d''eau potable non pris en compte dans les autres classes d''entités';
+COMMENT ON TABLE "stareau_aep".aep_appareillage IS 'Équipements divers sur le réseau d''eau potable non pris en compte dans les autres classes d''entités';
 
 -- Column comments
 
@@ -280,7 +280,7 @@ CREATE TABLE stareau_aep.aep_station_alerte (
   CONSTRAINT pk_aep_station_alerte PRIMARY KEY (id_aep_station_alerte)
 )
 INHERITS (stareau_principale.champ_commun);
-COMMENT ON TABLE stareau_aep.aep_station_alerte IS 'equipement permettent de déclencher une alerte en cas de pollution ou de dépassement de seuils';
+COMMENT ON TABLE stareau_aep.aep_station_alerte IS 'Équipement permettant de déclencher une alerte en cas de pollution ou de dépassement de seuils';
 
 -- Column comments
 

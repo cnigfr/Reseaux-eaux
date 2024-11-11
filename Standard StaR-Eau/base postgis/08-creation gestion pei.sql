@@ -2,7 +2,7 @@
  * 08-creation gestion pei.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/11/02 09:41:16
+ * // Last modified: 2024/11/11 10:40:02
  *
  * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
@@ -138,7 +138,7 @@ CREATE TABLE defense_incendie.pei (
 CREATE INDEX sidx_pei_geom ON defense_incendie.pei USING gist (geom);
 ---commentaires
 
-COMMENT ON TABLE defense_incendie.pei IS 'points d''eau incendie suivant modele defense';
+COMMENT ON TABLE defense_incendie.pei IS 'points d''eau incendie suivant modèle defense';
 -- Column comments
 COMMENT ON COLUMN defense_incendie.pei.insee IS 'Numéro INSEE de la commune';
 COMMENT ON COLUMN defense_incendie.pei.id_sdis IS 'Identifiant interne du PEI pour le SDIS';

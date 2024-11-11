@@ -2,7 +2,7 @@
  * 05-creation branchement assainissement.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/11/09 00:25:34
+ * // Last modified: 2024/11/11 10:29:49
  *
  * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
@@ -69,7 +69,7 @@ COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.id_point_collecte IS 'i
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.type_point_collecte IS '*type de point de collecte (boite branchement)*';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.ref_externe IS 'référence externe';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.type_usager IS '*type d''usager raccordé*';
-COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.materiau IS '*materiau*';
+COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.materiau IS '*matériau*';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.z_tampon IS 'z NGF tampon';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.z_radier IS 'z NGF radier';
 COMMENT ON COLUMN "stareau_ass_brcht".ass_point_collecte.profondeur IS 'profondeur mesurée ou calculée';

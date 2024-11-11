@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/11/09 01:00:53
+ * // Last modified: 2024/11/11 10:43:46
  *
  * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
@@ -94,17 +94,17 @@ COMMENT ON COLUMN stareau_principale.champ_commun.type_reseau IS '*type de rése
 COMMENT ON COLUMN stareau_principale.champ_commun.etat_service IS '*état de service*';
 COMMENT ON COLUMN stareau_principale.champ_commun.insee_commune IS 'insee de la commune';
 COMMENT ON COLUMN stareau_principale.champ_commun.localisation IS 'adresse, nom de la rue principale, ou localisation relative du patrimoine';
-COMMENT ON COLUMN stareau_principale.champ_commun.maitre_ouvrage IS 'maitre d''ouvrage';
+COMMENT ON COLUMN stareau_principale.champ_commun.maitre_ouvrage IS 'maître d''ouvrage';
 COMMENT ON COLUMN stareau_principale.champ_commun.exploitant IS 'exploitant actuel';
 COMMENT ON COLUMN stareau_principale.champ_commun.entreprise_pose IS 'entreprise de pose';
-COMMENT ON COLUMN stareau_principale.champ_commun.an_pose_sup IS 'Année marquant la fin de la période de pose';
-COMMENT ON COLUMN stareau_principale.champ_commun.an_pose_inf IS 'Année marquant le début de la période de pose';
-COMMENT ON COLUMN stareau_principale.champ_commun.an_service_sup IS 'Année marquant la fin de la période de mise en service';
-COMMENT ON COLUMN stareau_principale.champ_commun.an_service_inf IS 'Année marquant le début de la période de mise en service';
-COMMENT ON COLUMN stareau_principale.champ_commun.an_abandon_sup IS 'Année marquant la fin de la période d''arrêt définitif';
-COMMENT ON COLUMN stareau_principale.champ_commun.an_abandon_inf IS 'Année marquant le début de la période d''arrêt définitif';
-COMMENT ON COLUMN stareau_principale.champ_commun.an_rehab_sup IS 'Année marquant la fin de la période de réhabilitation';
-COMMENT ON COLUMN stareau_principale.champ_commun.an_rehab_inf IS 'Année marquant le début de la période de mise en service';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_pose_sup IS 'année marquant la fin de la période de pose';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_pose_inf IS 'année marquant le début de la période de pose';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_service_sup IS 'année marquant la fin de la période de mise en service';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_service_inf IS 'année marquant le début de la période de mise en service';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_abandon_sup IS 'année marquant la fin de la période d''arrêt définitif';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_abandon_inf IS 'année marquant le début de la période d''arrêt définitif';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_rehab_sup IS 'année marquant la fin de la période de réhabilitation';
+COMMENT ON COLUMN stareau_principale.champ_commun.an_rehab_inf IS 'année marquant le début de la période de mise en service';
 COMMENT ON COLUMN stareau_principale.champ_commun.date_creation IS 'date de la création de l''objet sig';
 COMMENT ON COLUMN stareau_principale.champ_commun.origine_creation IS '*document source de la création*';
 COMMENT ON COLUMN stareau_principale.champ_commun.date_maj IS 'date de mise à jour de l''objet sig';
@@ -159,9 +159,9 @@ COMMENT ON COLUMN "stareau_principale".canalisation.id_canalisation IS 'identifi
 COMMENT ON COLUMN "stareau_principale".canalisation.mode_circulation IS '*mode de circulation*';
 COMMENT ON COLUMN "stareau_principale".canalisation.type_pose IS '*type de pose*';
 COMMENT ON COLUMN "stareau_principale".canalisation.raison_pose IS '*raison de la pose*';
-COMMENT ON COLUMN "stareau_principale".canalisation.materiau IS '*materiau constitutif*';
+COMMENT ON COLUMN "stareau_principale".canalisation.materiau IS '*matériau constitutif*';
 COMMENT ON COLUMN "stareau_principale".canalisation.revetement_interieur IS '*revêtement intérieur*';
-COMMENT ON COLUMN "stareau_principale".canalisation.diametre_equivalent IS 'diametre nominal ou équivalent';
+COMMENT ON COLUMN "stareau_principale".canalisation.diametre_equivalent IS 'diamètre nominal ou équivalent';
 COMMENT ON COLUMN "stareau_principale".canalisation.longueur_terrain IS 'longueur réelle terrain';
 
 -- ÉLÉMENTS SURFACIQUES - EMPRISE--
