@@ -1,4 +1,4 @@
-"gravitaire","Gravitaire","L'eau s'écoule par l'effet de la pesanteur dans la canalisation"
-"refoulement","refoulement","L'eau circule sous pression dans la canalisation grâce à un système de pompage"
-"sous_vide","Sous vide","L'eau circule par l'effet de la mise sous vide de la canalisation par une centrale d'aspiration"
+"gravitaire","gravitaire","l'eau s'écoule par l'effet de la pesanteur dans la canalisation"
+"refoulement","refoulement","l'eau circule sous pression dans la canalisation grâce à un système de pompage"
+"sous_vide","sous vide","l'eau circule par l'effet de la mise sous vide de la canalisation par une centrale d'aspiration"
 "forcee","forcée","canalisation en charge sous l'effet de la gravité"
