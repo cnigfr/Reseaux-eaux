@@ -2,7 +2,7 @@
  * 02-creation tables principales.sql
  *
  * // Created: 2024/07/01 05:48:52
- * // Last modified: 2024/11/11 10:43:46
+ * // Last modified: 2024/11/11 15:03:26
  *
  * ETALABV2 - Alain pour ASTEE / CNIG-2024
  *
@@ -163,6 +163,7 @@ COMMENT ON COLUMN "stareau_principale".canalisation.materiau IS '*matériau cons
 COMMENT ON COLUMN "stareau_principale".canalisation.revetement_interieur IS '*revêtement intérieur*';
 COMMENT ON COLUMN "stareau_principale".canalisation.diametre_equivalent IS 'diamètre nominal ou équivalent';
 COMMENT ON COLUMN "stareau_principale".canalisation.longueur_terrain IS 'longueur réelle terrain';
+COMMENT ON COLUMN "stareau_principale".canalisation.sensible IS 'ouvrage sensible DT-DICT';
 
 -- ÉLÉMENTS SURFACIQUES - EMPRISE--
 
