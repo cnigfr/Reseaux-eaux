@@ -1,8 +1,8 @@
 > [!caution]
-> **TRAVAIL EN COURS**. Tous les fichiers sont ici à titre d'esssais. Vous utilisez ces fichiers à vos risques et périls
+> **TRAVAIL EN COURS**. Ces fichiers ne font pas partie du standard. Tous les fichiers sont ici à titre d'essais. Vous utilisez ces fichiers à vos risques et périls.
 
 # QGIS
 
-Ici se retrouve les fichier projet de démonstration et les fichiers de style pour QGIS
+Ici se retrouve les fichier projet de démonstration et les fichiers de style pour QGIS. Créé sur QGIS 3.28.
 
-Créé sur QGIS 3.28.
+**Version 3.34 en cours**

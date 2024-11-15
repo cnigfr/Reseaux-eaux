@@ -1,6 +1,7 @@
 from qgis.core import QgsProject
 from qgis.gui import *
 import qgis.utils
+# à faire pour chaque couche
 inLayer = 'pei'
 for layer in QgsProject.instance().mapLayers().values():
     if inLayer in layer.name():
