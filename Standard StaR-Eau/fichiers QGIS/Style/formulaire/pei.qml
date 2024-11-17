@@ -1,509 +1,540 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="3.28.9-Firenze" styleCategories="Fields|Forms|Actions|AttributeTable|Relations">
+<qgis version="3.34.6-Prizren" styleCategories="Fields|Forms|Actions|AttributeTable|Relations">
   <referencedLayers/>
   <fieldConfiguration>
-    <field configurationFlags="None" name="fid">
+    <field name="fid" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="insee">
+    <field name="insee" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="id_sdis">
+    <field name="id_sdis" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="id_gestion">
+    <field name="id_gestion" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="nom_gest">
+    <field name="nom_gest" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="ref_terr">
+    <field name="ref_terr" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="type_pei">
+    <field name="type_pei" configurationFlags="NoFlag">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
             <Option name="map" type="List">
               <Option type="Map">
-                <Option name="poteau incendie" value="PI" type="QString"/>
+                <Option name="poteau incendie" type="QString" value="PI"/>
               </Option>
               <Option type="Map">
-                <Option name="bouche incendie" value="BI" type="QString"/>
+                <Option name="bouche incendie" type="QString" value="BI"/>
               </Option>
               <Option type="Map">
-                <Option name="point aspiration" value="PA" type="QString"/>
+                <Option name="point aspiration" type="QString" value="PA"/>
               </Option>
               <Option type="Map">
-                <Option name="citerne incendie" value="CI" type="QString"/>
+                <Option name="citerne incendie" type="QString" value="CI"/>
               </Option>
             </Option>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="type_rd">
+    <field name="type_rd" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="diam_pei">
+    <field name="diam_pei" configurationFlags="NoFlag">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
             <Option name="map" type="List">
               <Option type="Map">
-                <Option name="80" value="80" type="QString"/>
+                <Option name="80" type="QString" value="80"/>
               </Option>
               <Option type="Map">
-                <Option name="100" value="100" type="QString"/>
+                <Option name="100" type="QString" value="100"/>
               </Option>
               <Option type="Map">
-                <Option name="150" value="150" type="QString"/>
+                <Option name="150" type="QString" value="150"/>
               </Option>
               <Option type="Map">
-                <Option name="inconnu" value="999" type="QString"/>
+                <Option name="inconnu" type="QString" value="999"/>
               </Option>
             </Option>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="diam_cana">
+    <field name="diam_cana" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="source_pei">
+    <field name="source_pei" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="statut">
+    <field name="statut" configurationFlags="NoFlag">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
             <Option name="map" type="List">
               <Option type="Map">
-                <Option name="public" value="public" type="QString"/>
+                <Option name="public" type="QString" value="public"/>
               </Option>
               <Option type="Map">
-                <Option name="privé" value="prive" type="QString"/>
+                <Option name="privé" type="QString" value="prive"/>
               </Option>
               <Option type="Map">
-                <Option name="inconnu" value="inconnu" type="QString"/>
+                <Option name="inconnu" type="QString" value="inconnu"/>
               </Option>
             </Option>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="nom_etab">
+    <field name="nom_etab" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="situation">
+    <field name="situation" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="press_dyn">
+    <field name="press_dyn" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="press_stat">
+    <field name="press_stat" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="debit">
+    <field name="debit" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="volume">
+    <field name="volume" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="disponible">
+    <field name="disponible" configurationFlags="NoFlag">
       <editWidget type="ValueMap">
         <config>
           <Option type="Map">
             <Option name="map" type="List">
               <Option type="Map">
-                <Option name="indisponible" value="0" type="QString"/>
+                <Option name="indisponible" type="QString" value="0"/>
               </Option>
               <Option type="Map">
-                <Option name="disponible" value="1" type="QString"/>
+                <Option name="disponible" type="QString" value="1"/>
               </Option>
             </Option>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="date_mes">
+    <field name="date_mes" configurationFlags="NoFlag">
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option name="allow_null" value="true" type="bool"/>
-            <Option name="calendar_popup" value="true" type="bool"/>
-            <Option name="display_format" value="dd/MM/yyyy" type="QString"/>
-            <Option name="field_format" value="dd/MM/yyyy" type="QString"/>
-            <Option name="field_iso_format" value="false" type="bool"/>
+            <Option name="allow_null" type="bool" value="true"/>
+            <Option name="calendar_popup" type="bool" value="true"/>
+            <Option name="display_format" type="QString" value="dd/MM/yyyy"/>
+            <Option name="field_format" type="QString" value="dd/MM/yyyy"/>
+            <Option name="field_iso_format" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="date_maj">
+    <field name="date_maj" configurationFlags="NoFlag">
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option name="allow_null" value="true" type="bool"/>
-            <Option name="calendar_popup" value="true" type="bool"/>
-            <Option name="display_format" value="dd/MM/yyyy" type="QString"/>
-            <Option name="field_format" value="dd/MM/yyyy" type="QString"/>
-            <Option name="field_iso_format" value="false" type="bool"/>
+            <Option name="allow_null" type="bool" value="true"/>
+            <Option name="calendar_popup" type="bool" value="true"/>
+            <Option name="display_format" type="QString" value="dd/MM/yyyy"/>
+            <Option name="field_format" type="QString" value="dd/MM/yyyy"/>
+            <Option name="field_iso_format" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="date_ct">
+    <field name="date_ct" configurationFlags="NoFlag">
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option name="allow_null" value="true" type="bool"/>
-            <Option name="calendar_popup" value="true" type="bool"/>
-            <Option name="display_format" value="dd/MM/yyyy" type="QString"/>
-            <Option name="field_format" value="dd/MM/yyyy" type="QString"/>
-            <Option name="field_iso_format" value="false" type="bool"/>
+            <Option name="allow_null" type="bool" value="true"/>
+            <Option name="calendar_popup" type="bool" value="true"/>
+            <Option name="display_format" type="QString" value="dd/MM/yyyy"/>
+            <Option name="field_format" type="QString" value="dd/MM/yyyy"/>
+            <Option name="field_iso_format" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="date_ro">
+    <field name="date_ro" configurationFlags="NoFlag">
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option name="allow_null" value="true" type="bool"/>
-            <Option name="calendar_popup" value="true" type="bool"/>
-            <Option name="display_format" value="dd/MM/yyyy" type="QString"/>
-            <Option name="field_format" value="dd/MM/yyyy" type="QString"/>
-            <Option name="field_iso_format" value="false" type="bool"/>
+            <Option name="allow_null" type="bool" value="true"/>
+            <Option name="calendar_popup" type="bool" value="true"/>
+            <Option name="display_format" type="QString" value="dd/MM/yyyy"/>
+            <Option name="field_format" type="QString" value="dd/MM/yyyy"/>
+            <Option name="field_iso_format" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="prec">
+    <field name="prec" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="date_dispo">
+    <field name="date_dispo" configurationFlags="NoFlag">
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option name="allow_null" value="true" type="bool"/>
-            <Option name="calendar_popup" value="true" type="bool"/>
-            <Option name="display_format" value="dd/MM/yyyy" type="QString"/>
-            <Option name="field_format" value="dd/MM/yyyy" type="QString"/>
-            <Option name="field_iso_format" value="false" type="bool"/>
+            <Option name="allow_null" type="bool" value="true"/>
+            <Option name="calendar_popup" type="bool" value="true"/>
+            <Option name="display_format" type="QString" value="dd/MM/yyyy"/>
+            <Option name="field_format" type="QString" value="dd/MM/yyyy"/>
+            <Option name="field_iso_format" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="x_l93">
+    <field name="x_l93" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="y_l93">
+    <field name="y_l93" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="lon">
+    <field name="lon" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="None" name="lat">
+    <field name="lat" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option name="IsMultiline" value="false" type="bool"/>
-            <Option name="UseHtml" value="false" type="bool"/>
+            <Option name="IsMultiline" type="bool" value="false"/>
+            <Option name="UseHtml" type="bool" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias index="0" name="" field="fid"/>
-    <alias index="1" name="Numéro INSEE de la commune" field="insee"/>
-    <alias index="2" name="Identifiant interne du PEI pour le SDIS" field="id_sdis"/>
-    <alias index="3" name="Identifiant interne du PEI pour le gestionnaire" field="id_gestion"/>
-    <alias index="4" name="Nom du gestionnaire responsable de distribution" field="nom_gest"/>
-    <alias index="5" name="Numéro ou référence du point d’eau visible sur le terrain" field="ref_terr"/>
-    <alias index="6" name="Type de point d’eau incendie.&#xa;Valeurs possibles : PI, BI, PA, CI" field="type_pei"/>
-    <alias index="7" name="Précision sur le type de point d’eau incendie défini dans le règlement départemental DECI" field="type_rd"/>
-    <alias index="8" name="Diamètre intérieur du poteau ou de la bouche&#xa;Valeurs possibles : 80, 100, 150" field="diam_pei"/>
-    <alias index="9" name="Diamètre de la canalisation exprimé en mm pour les PI et BI" field="diam_cana"/>
-    <alias index="10" name="Source du point d’eau" field="source_pei"/>
-    <alias index="11" name="Statut du point d’eau (public, prive)" field="statut"/>
-    <alias index="12" name="Dans le cas d’un statut privé, nom de l’établissement propriétaire" field="nom_etab"/>
-    <alias index="13" name="Adresse ou informations permettant de faciliter la localisation du point d’eau sur le terrain." field="situation"/>
-    <alias index="14" name="Pression dynamique en bars au débit nominal" field="press_dyn"/>
-    <alias index="15" name="Pression statique en bars" field="press_stat"/>
-    <alias index="16" name="Valeur de débit mesuré exprimé en m3/h sous une pression de 1 bar" field="debit"/>
-    <alias index="17" name="Capacité volumique utile de la source d’eau en m3" field="volume"/>
-    <alias index="18" name="0 ou 1. Valide à la date de dernière mise à disposition des données" field="disponible"/>
-    <alias index="19" name="Date de Date de mise en service du PEI" field="date_mes"/>
-    <alias index="20" name="Date de dernière mise à jour de la donnée a" field="date_maj"/>
-    <alias index="21" name="Date du dernier contrôle technique" field="date_ct"/>
-    <alias index="22" name="Date de la dernière reconnaissance opérationnelle" field="date_ro"/>
-    <alias index="23" name="Classes de précision" field="prec"/>
-    <alias index="24" name="Date de dernier changement d’état de disponibilité" field="date_dispo"/>
-    <alias index="25" name="x en lambert 93 (précision de 2 décimales)" field="x_l93"/>
-    <alias index="26" name="y en lambert 93 (précision de 2 décimales)" field="y_l93"/>
-    <alias index="27" name="longitude en degrés décimaux en WGS 84 (précision de 8 décimales)" field="lon"/>
-    <alias index="28" name="latitude en degrés décimaux en WGS 84 (précision de 8 décimales)" field="lat"/>
+    <alias name="" index="0" field="fid"/>
+    <alias name="Numéro INSEE de la commune" index="1" field="insee"/>
+    <alias name="Identifiant interne du PEI pour le SDIS" index="2" field="id_sdis"/>
+    <alias name="Identifiant interne du PEI pour le gestionnaire" index="3" field="id_gestion"/>
+    <alias name="Nom du gestionnaire responsable de distribution" index="4" field="nom_gest"/>
+    <alias name="Numéro ou référence du point d’eau visible sur le terrain" index="5" field="ref_terr"/>
+    <alias name="Type de point d’eau incendie.&#xa;Valeurs possibles : PI, BI, PA, CI" index="6" field="type_pei"/>
+    <alias name="Précision sur le type de point d’eau incendie défini dans le règlement départemental DECI" index="7" field="type_rd"/>
+    <alias name="Diamètre intérieur du poteau ou de la bouche&#xa;Valeurs possibles : 80, 100, 150" index="8" field="diam_pei"/>
+    <alias name="Diamètre de la canalisation exprimé en mm pour les PI et BI" index="9" field="diam_cana"/>
+    <alias name="Source du point d’eau" index="10" field="source_pei"/>
+    <alias name="Statut du point d’eau (public, prive)" index="11" field="statut"/>
+    <alias name="Dans le cas d’un statut privé, nom de l’établissement propriétaire" index="12" field="nom_etab"/>
+    <alias name="Adresse ou informations permettant de faciliter la localisation du point d’eau sur le terrain." index="13" field="situation"/>
+    <alias name="Pression dynamique en bars au débit nominal" index="14" field="press_dyn"/>
+    <alias name="Pression statique en bars" index="15" field="press_stat"/>
+    <alias name="Valeur de débit mesuré exprimé en m3/h sous une pression de 1 bar" index="16" field="debit"/>
+    <alias name="Capacité volumique utile de la source d’eau en m3" index="17" field="volume"/>
+    <alias name="0 ou 1. Valide à la date de dernière mise à disposition des données" index="18" field="disponible"/>
+    <alias name="Date de Date de mise en service du PEI" index="19" field="date_mes"/>
+    <alias name="Date de dernière mise à jour de la donnée a" index="20" field="date_maj"/>
+    <alias name="Date du dernier contrôle technique" index="21" field="date_ct"/>
+    <alias name="Date de la dernière reconnaissance opérationnelle" index="22" field="date_ro"/>
+    <alias name="Classes de précision" index="23" field="prec"/>
+    <alias name="Date de dernier changement d’état de disponibilité" index="24" field="date_dispo"/>
+    <alias name="x en lambert 93 (précision de 2 décimales)" index="25" field="x_l93"/>
+    <alias name="y en lambert 93 (précision de 2 décimales)" index="26" field="y_l93"/>
+    <alias name="longitude en degrés décimaux en WGS 84 (précision de 8 décimales)" index="27" field="lon"/>
+    <alias name="latitude en degrés décimaux en WGS 84 (précision de 8 décimales)" index="28" field="lat"/>
   </aliases>
+  <splitPolicies>
+    <policy policy="Duplicate" field="fid"/>
+    <policy policy="Duplicate" field="insee"/>
+    <policy policy="Duplicate" field="id_sdis"/>
+    <policy policy="Duplicate" field="id_gestion"/>
+    <policy policy="Duplicate" field="nom_gest"/>
+    <policy policy="Duplicate" field="ref_terr"/>
+    <policy policy="Duplicate" field="type_pei"/>
+    <policy policy="Duplicate" field="type_rd"/>
+    <policy policy="Duplicate" field="diam_pei"/>
+    <policy policy="Duplicate" field="diam_cana"/>
+    <policy policy="Duplicate" field="source_pei"/>
+    <policy policy="Duplicate" field="statut"/>
+    <policy policy="Duplicate" field="nom_etab"/>
+    <policy policy="Duplicate" field="situation"/>
+    <policy policy="Duplicate" field="press_dyn"/>
+    <policy policy="Duplicate" field="press_stat"/>
+    <policy policy="Duplicate" field="debit"/>
+    <policy policy="Duplicate" field="volume"/>
+    <policy policy="Duplicate" field="disponible"/>
+    <policy policy="Duplicate" field="date_mes"/>
+    <policy policy="Duplicate" field="date_maj"/>
+    <policy policy="Duplicate" field="date_ct"/>
+    <policy policy="Duplicate" field="date_ro"/>
+    <policy policy="Duplicate" field="prec"/>
+    <policy policy="Duplicate" field="date_dispo"/>
+    <policy policy="Duplicate" field="x_l93"/>
+    <policy policy="Duplicate" field="y_l93"/>
+    <policy policy="Duplicate" field="lon"/>
+    <policy policy="Duplicate" field="lat"/>
+  </splitPolicies>
   <defaults>
-    <default field="fid" applyOnUpdate="0" expression=""/>
-    <default field="insee" applyOnUpdate="0" expression=""/>
-    <default field="id_sdis" applyOnUpdate="0" expression="&quot;fid&quot;"/>
-    <default field="id_gestion" applyOnUpdate="0" expression=""/>
-    <default field="nom_gest" applyOnUpdate="0" expression=""/>
-    <default field="ref_terr" applyOnUpdate="0" expression=""/>
-    <default field="type_pei" applyOnUpdate="0" expression="'PI'"/>
-    <default field="type_rd" applyOnUpdate="0" expression=""/>
-    <default field="diam_pei" applyOnUpdate="0" expression="100"/>
-    <default field="diam_cana" applyOnUpdate="0" expression="'999'"/>
-    <default field="source_pei" applyOnUpdate="0" expression=""/>
-    <default field="statut" applyOnUpdate="0" expression="'public'"/>
-    <default field="nom_etab" applyOnUpdate="0" expression=""/>
-    <default field="situation" applyOnUpdate="0" expression=""/>
-    <default field="press_dyn" applyOnUpdate="0" expression=""/>
-    <default field="press_stat" applyOnUpdate="0" expression=""/>
-    <default field="debit" applyOnUpdate="0" expression=""/>
-    <default field="volume" applyOnUpdate="0" expression=""/>
-    <default field="disponible" applyOnUpdate="0" expression="1"/>
-    <default field="date_mes" applyOnUpdate="0" expression=""/>
-    <default field="date_maj" applyOnUpdate="1" expression="now()"/>
-    <default field="date_ct" applyOnUpdate="0" expression=""/>
-    <default field="date_ro" applyOnUpdate="0" expression=""/>
-    <default field="prec" applyOnUpdate="0" expression=""/>
-    <default field="date_dispo" applyOnUpdate="0" expression=""/>
-    <default field="x_l93" applyOnUpdate="1" expression="$x"/>
-    <default field="y_l93" applyOnUpdate="1" expression="$y"/>
-    <default field="lon" applyOnUpdate="1" expression="x(transform(@geometry,'EPSG:2154','EPSG:4326'))"/>
-    <default field="lat" applyOnUpdate="1" expression="y(transform(@geometry,'EPSG:2154','EPSG:4326'))"/>
+    <default applyOnUpdate="0" expression="" field="fid"/>
+    <default applyOnUpdate="0" expression="" field="insee"/>
+    <default applyOnUpdate="0" expression="&quot;fid&quot;" field="id_sdis"/>
+    <default applyOnUpdate="0" expression="" field="id_gestion"/>
+    <default applyOnUpdate="0" expression="" field="nom_gest"/>
+    <default applyOnUpdate="0" expression="" field="ref_terr"/>
+    <default applyOnUpdate="0" expression="'PI'" field="type_pei"/>
+    <default applyOnUpdate="0" expression="" field="type_rd"/>
+    <default applyOnUpdate="0" expression="100" field="diam_pei"/>
+    <default applyOnUpdate="0" expression="'999'" field="diam_cana"/>
+    <default applyOnUpdate="0" expression="" field="source_pei"/>
+    <default applyOnUpdate="0" expression="'public'" field="statut"/>
+    <default applyOnUpdate="0" expression="" field="nom_etab"/>
+    <default applyOnUpdate="0" expression="" field="situation"/>
+    <default applyOnUpdate="0" expression="" field="press_dyn"/>
+    <default applyOnUpdate="0" expression="" field="press_stat"/>
+    <default applyOnUpdate="0" expression="" field="debit"/>
+    <default applyOnUpdate="0" expression="" field="volume"/>
+    <default applyOnUpdate="0" expression="1" field="disponible"/>
+    <default applyOnUpdate="0" expression="" field="date_mes"/>
+    <default applyOnUpdate="1" expression="now()" field="date_maj"/>
+    <default applyOnUpdate="0" expression="" field="date_ct"/>
+    <default applyOnUpdate="0" expression="" field="date_ro"/>
+    <default applyOnUpdate="0" expression="" field="prec"/>
+    <default applyOnUpdate="0" expression="" field="date_dispo"/>
+    <default applyOnUpdate="1" expression="$x" field="x_l93"/>
+    <default applyOnUpdate="1" expression="$y" field="y_l93"/>
+    <default applyOnUpdate="1" expression="x(transform(@geometry,'EPSG:2154','EPSG:4326'))" field="lon"/>
+    <default applyOnUpdate="1" expression="y(transform(@geometry,'EPSG:2154','EPSG:4326'))" field="lat"/>
   </defaults>
   <constraints>
-    <constraint exp_strength="0" constraints="3" unique_strength="1" notnull_strength="1" field="fid"/>
-    <constraint exp_strength="0" constraints="1" unique_strength="0" notnull_strength="2" field="insee"/>
-    <constraint exp_strength="0" constraints="3" unique_strength="1" notnull_strength="1" field="id_sdis"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="id_gestion"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="nom_gest"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="ref_terr"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="type_pei"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="type_rd"/>
-    <constraint exp_strength="0" constraints="3" unique_strength="1" notnull_strength="2" field="diam_pei"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="diam_cana"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="source_pei"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="statut"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="nom_etab"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="situation"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="press_dyn"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="press_stat"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="debit"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="volume"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="disponible"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="date_mes"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="date_maj"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="date_ct"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="date_ro"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="prec"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="date_dispo"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="x_l93"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="y_l93"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="lon"/>
-    <constraint exp_strength="0" constraints="0" unique_strength="0" notnull_strength="0" field="lat"/>
+    <constraint exp_strength="0" constraints="3" notnull_strength="1" unique_strength="1" field="fid"/>
+    <constraint exp_strength="0" constraints="1" notnull_strength="2" unique_strength="0" field="insee"/>
+    <constraint exp_strength="0" constraints="3" notnull_strength="1" unique_strength="1" field="id_sdis"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="id_gestion"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="nom_gest"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="ref_terr"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="type_pei"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="type_rd"/>
+    <constraint exp_strength="0" constraints="3" notnull_strength="2" unique_strength="1" field="diam_pei"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="diam_cana"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="source_pei"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="statut"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="nom_etab"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="situation"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="press_dyn"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="press_stat"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="debit"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="volume"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="disponible"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="date_mes"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="date_maj"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="date_ct"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="date_ro"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="prec"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="date_dispo"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="x_l93"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="y_l93"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="lon"/>
+    <constraint exp_strength="0" constraints="0" notnull_strength="0" unique_strength="0" field="lat"/>
   </constraints>
   <constraintExpressions>
-    <constraint exp="" field="fid" desc=""/>
-    <constraint exp="" field="insee" desc=""/>
-    <constraint exp="" field="id_sdis" desc=""/>
-    <constraint exp="" field="id_gestion" desc=""/>
-    <constraint exp="" field="nom_gest" desc=""/>
-    <constraint exp="" field="ref_terr" desc=""/>
-    <constraint exp="" field="type_pei" desc=""/>
-    <constraint exp="" field="type_rd" desc=""/>
-    <constraint exp="" field="diam_pei" desc=""/>
-    <constraint exp="" field="diam_cana" desc=""/>
-    <constraint exp="" field="source_pei" desc=""/>
-    <constraint exp="" field="statut" desc=""/>
-    <constraint exp="" field="nom_etab" desc=""/>
-    <constraint exp="" field="situation" desc=""/>
-    <constraint exp="" field="press_dyn" desc=""/>
-    <constraint exp="" field="press_stat" desc=""/>
-    <constraint exp="" field="debit" desc=""/>
-    <constraint exp="" field="volume" desc=""/>
-    <constraint exp="" field="disponible" desc=""/>
-    <constraint exp="" field="date_mes" desc=""/>
-    <constraint exp="" field="date_maj" desc=""/>
-    <constraint exp="" field="date_ct" desc=""/>
-    <constraint exp="" field="date_ro" desc=""/>
-    <constraint exp="" field="prec" desc=""/>
-    <constraint exp="" field="date_dispo" desc=""/>
-    <constraint exp="" field="x_l93" desc=""/>
-    <constraint exp="" field="y_l93" desc=""/>
-    <constraint exp="" field="lon" desc=""/>
-    <constraint exp="" field="lat" desc=""/>
+    <constraint desc="" exp="" field="fid"/>
+    <constraint desc="" exp="" field="insee"/>
+    <constraint desc="" exp="" field="id_sdis"/>
+    <constraint desc="" exp="" field="id_gestion"/>
+    <constraint desc="" exp="" field="nom_gest"/>
+    <constraint desc="" exp="" field="ref_terr"/>
+    <constraint desc="" exp="" field="type_pei"/>
+    <constraint desc="" exp="" field="type_rd"/>
+    <constraint desc="" exp="" field="diam_pei"/>
+    <constraint desc="" exp="" field="diam_cana"/>
+    <constraint desc="" exp="" field="source_pei"/>
+    <constraint desc="" exp="" field="statut"/>
+    <constraint desc="" exp="" field="nom_etab"/>
+    <constraint desc="" exp="" field="situation"/>
+    <constraint desc="" exp="" field="press_dyn"/>
+    <constraint desc="" exp="" field="press_stat"/>
+    <constraint desc="" exp="" field="debit"/>
+    <constraint desc="" exp="" field="volume"/>
+    <constraint desc="" exp="" field="disponible"/>
+    <constraint desc="" exp="" field="date_mes"/>
+    <constraint desc="" exp="" field="date_maj"/>
+    <constraint desc="" exp="" field="date_ct"/>
+    <constraint desc="" exp="" field="date_ro"/>
+    <constraint desc="" exp="" field="prec"/>
+    <constraint desc="" exp="" field="date_dispo"/>
+    <constraint desc="" exp="" field="x_l93"/>
+    <constraint desc="" exp="" field="y_l93"/>
+    <constraint desc="" exp="" field="lon"/>
+    <constraint desc="" exp="" field="lat"/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
     <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
   </attributeactions>
-  <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+  <attributetableconfig sortExpression="" sortOrder="0" actionWidgetStyle="dropDown">
     <columns>
-      <column hidden="0" name="insee" width="-1" type="field"/>
-      <column hidden="0" name="id_sdis" width="-1" type="field"/>
-      <column hidden="0" name="id_gestion" width="-1" type="field"/>
-      <column hidden="0" name="nom_gest" width="-1" type="field"/>
-      <column hidden="0" name="ref_terr" width="-1" type="field"/>
-      <column hidden="0" name="type_pei" width="-1" type="field"/>
-      <column hidden="0" name="type_rd" width="-1" type="field"/>
-      <column hidden="0" name="diam_pei" width="-1" type="field"/>
-      <column hidden="0" name="diam_cana" width="-1" type="field"/>
-      <column hidden="0" name="source_pei" width="-1" type="field"/>
-      <column hidden="0" name="statut" width="-1" type="field"/>
-      <column hidden="0" name="nom_etab" width="-1" type="field"/>
-      <column hidden="0" name="situation" width="-1" type="field"/>
-      <column hidden="0" name="press_dyn" width="-1" type="field"/>
-      <column hidden="0" name="press_stat" width="-1" type="field"/>
-      <column hidden="0" name="debit" width="-1" type="field"/>
-      <column hidden="0" name="volume" width="-1" type="field"/>
-      <column hidden="0" name="disponible" width="-1" type="field"/>
-      <column hidden="0" name="date_mes" width="-1" type="field"/>
-      <column hidden="0" name="date_maj" width="-1" type="field"/>
-      <column hidden="0" name="date_ct" width="-1" type="field"/>
-      <column hidden="0" name="date_ro" width="-1" type="field"/>
-      <column hidden="0" name="prec" width="-1" type="field"/>
-      <column hidden="0" name="date_dispo" width="-1" type="field"/>
-      <column hidden="0" name="x_l93" width="-1" type="field"/>
-      <column hidden="0" name="y_l93" width="-1" type="field"/>
-      <column hidden="0" name="lon" width="-1" type="field"/>
-      <column hidden="0" name="lat" width="-1" type="field"/>
-      <column hidden="0" name="fid" width="-1" type="field"/>
-      <column hidden="1" width="-1" type="actions"/>
+      <column name="insee" width="-1" type="field" hidden="0"/>
+      <column name="id_sdis" width="-1" type="field" hidden="0"/>
+      <column name="id_gestion" width="-1" type="field" hidden="0"/>
+      <column name="nom_gest" width="-1" type="field" hidden="0"/>
+      <column name="ref_terr" width="-1" type="field" hidden="0"/>
+      <column name="type_pei" width="-1" type="field" hidden="0"/>
+      <column name="type_rd" width="-1" type="field" hidden="0"/>
+      <column name="diam_pei" width="-1" type="field" hidden="0"/>
+      <column name="diam_cana" width="-1" type="field" hidden="0"/>
+      <column name="source_pei" width="-1" type="field" hidden="0"/>
+      <column name="statut" width="-1" type="field" hidden="0"/>
+      <column name="nom_etab" width="-1" type="field" hidden="0"/>
+      <column name="situation" width="-1" type="field" hidden="0"/>
+      <column name="press_dyn" width="-1" type="field" hidden="0"/>
+      <column name="press_stat" width="-1" type="field" hidden="0"/>
+      <column name="debit" width="-1" type="field" hidden="0"/>
+      <column name="volume" width="-1" type="field" hidden="0"/>
+      <column name="disponible" width="-1" type="field" hidden="0"/>
+      <column name="date_mes" width="-1" type="field" hidden="0"/>
+      <column name="date_maj" width="-1" type="field" hidden="0"/>
+      <column name="date_ct" width="-1" type="field" hidden="0"/>
+      <column name="date_ro" width="-1" type="field" hidden="0"/>
+      <column name="prec" width="-1" type="field" hidden="0"/>
+      <column name="date_dispo" width="-1" type="field" hidden="0"/>
+      <column name="x_l93" width="-1" type="field" hidden="0"/>
+      <column name="y_l93" width="-1" type="field" hidden="0"/>
+      <column name="lon" width="-1" type="field" hidden="0"/>
+      <column name="lat" width="-1" type="field" hidden="0"/>
+      <column name="fid" width="-1" type="field" hidden="0"/>
+      <column width="-1" type="actions" hidden="1"/>
     </columns>
   </attributetableconfig>
   <conditionalstyles>
@@ -536,160 +567,160 @@ def my_form_open(dialog, layer, feature):
   <editorlayout>tablayout</editorlayout>
   <attributeEditorForm>
     <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-      <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+      <labelFont italic="0" style="" underline="0" strikethrough="0" description="Liberation Sans,12,-1,5,50,0,0,0,0,0" bold="0"/>
     </labelStyle>
-    <attributeEditorField index="1" name="insee" showLabel="1">
+    <attributeEditorField horizontalStretch="0" name="insee" verticalStretch="0" showLabel="1" index="1">
       <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-        <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+        <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
       </labelStyle>
     </attributeEditorField>
-    <attributeEditorField index="13" name="situation" showLabel="1">
+    <attributeEditorField horizontalStretch="0" name="situation" verticalStretch="0" showLabel="1" index="13">
       <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-        <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+        <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
       </labelStyle>
     </attributeEditorField>
-    <attributeEditorField index="18" name="disponible" showLabel="1">
+    <attributeEditorField horizontalStretch="0" name="disponible" verticalStretch="0" showLabel="1" index="18">
       <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-        <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+        <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
       </labelStyle>
     </attributeEditorField>
-    <attributeEditorContainer groupBox="0" visibilityExpressionEnabled="0" collapsed="0" name="info" columnCount="1" collapsedExpressionEnabled="0" collapsedExpression="" visibilityExpression="" showLabel="1">
+    <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" visibilityExpressionEnabled="0" name="info" visibilityExpression="" collapsed="0" verticalStretch="0" showLabel="1" collapsedExpression="" type="Tab" columnCount="1" groupBox="0">
       <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-        <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+        <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
       </labelStyle>
-      <attributeEditorField index="2" name="id_sdis" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="id_sdis" verticalStretch="0" showLabel="1" index="2">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="3" name="id_gestion" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="id_gestion" verticalStretch="0" showLabel="1" index="3">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="4" name="nom_gest" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="nom_gest" verticalStretch="0" showLabel="1" index="4">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="11" name="statut" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="statut" verticalStretch="0" showLabel="1" index="11">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="5" name="ref_terr" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="ref_terr" verticalStretch="0" showLabel="1" index="5">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="6" name="type_pei" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="type_pei" verticalStretch="0" showLabel="1" index="6">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="7" name="type_rd" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="type_rd" verticalStretch="0" showLabel="1" index="7">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="8" name="diam_pei" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="diam_pei" verticalStretch="0" showLabel="1" index="8">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="9" name="diam_cana" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="diam_cana" verticalStretch="0" showLabel="1" index="9">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="12" name="nom_etab" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="nom_etab" verticalStretch="0" showLabel="1" index="12">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="10" name="source_pei" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="source_pei" verticalStretch="0" showLabel="1" index="10">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
     </attributeEditorContainer>
-    <attributeEditorContainer groupBox="0" visibilityExpressionEnabled="0" collapsed="0" name="pesée" columnCount="2" collapsedExpressionEnabled="0" collapsedExpression="" visibilityExpression="" showLabel="1">
+    <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" visibilityExpressionEnabled="0" name="pesée" visibilityExpression="" collapsed="0" verticalStretch="0" showLabel="1" collapsedExpression="" type="Tab" columnCount="2" groupBox="0">
       <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-        <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+        <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
       </labelStyle>
-      <attributeEditorField index="14" name="press_dyn" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="press_dyn" verticalStretch="0" showLabel="1" index="14">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="15" name="press_stat" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="press_stat" verticalStretch="0" showLabel="1" index="15">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="16" name="debit" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="debit" verticalStretch="0" showLabel="1" index="16">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="17" name="volume" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="volume" verticalStretch="0" showLabel="1" index="17">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="19" name="date_mes" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="date_mes" verticalStretch="0" showLabel="1" index="19">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="20" name="date_maj" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="date_maj" verticalStretch="0" showLabel="1" index="20">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="21" name="date_ct" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="date_ct" verticalStretch="0" showLabel="1" index="21">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="22" name="date_ro" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="date_ro" verticalStretch="0" showLabel="1" index="22">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="23" name="prec" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="prec" verticalStretch="0" showLabel="1" index="23">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="24" name="date_dispo" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="date_dispo" verticalStretch="0" showLabel="1" index="24">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
     </attributeEditorContainer>
-    <attributeEditorContainer groupBox="0" visibilityExpressionEnabled="0" collapsed="0" name="coordonnées" columnCount="1" collapsedExpressionEnabled="0" collapsedExpression="" visibilityExpression="" showLabel="1">
+    <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" visibilityExpressionEnabled="0" name="coordonnées" visibilityExpression="" collapsed="0" verticalStretch="0" showLabel="1" collapsedExpression="" type="Tab" columnCount="1" groupBox="0">
       <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-        <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+        <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
       </labelStyle>
-      <attributeEditorField index="25" name="x_l93" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="x_l93" verticalStretch="0" showLabel="1" index="25">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="26" name="y_l93" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="y_l93" verticalStretch="0" showLabel="1" index="26">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="27" name="lon" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="lon" verticalStretch="0" showLabel="1" index="27">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField index="28" name="lat" showLabel="1">
+      <attributeEditorField horizontalStretch="0" name="lat" verticalStretch="0" showLabel="1" index="28">
         <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255">
-          <labelFont bold="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" underline="0" style=""/>
+          <labelFont italic="0" style="" underline="0" strikethrough="0" description="Noto Sans,10,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
     </attributeEditorContainer>
