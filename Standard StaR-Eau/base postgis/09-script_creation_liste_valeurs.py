@@ -1,6 +1,6 @@
 #
 #// Created: 2024/07/01 05:48:52
-#// Last modified: 2024/09/25 00:02:19
+#// Last modified: 2024/11/19 18:32:34
 #
 
 import os
@@ -19,7 +19,7 @@ conn_params = {
 }
 
 # Chemin vers le répertoire contenant les fichiers CSV
-repertoire_csv = '/*********/Reseaux-eaux/Standard StaR-Eau/listes valeurs/brute avant import/'
+repertoire_csv = '/*********/Reseaux-eaux/Standard StaR-Eau/listes valeurs/brutes_avant_import/'
 
 # Connexion à la base de données PostgreSQL
 conn = psycopg.connect(**conn_params)

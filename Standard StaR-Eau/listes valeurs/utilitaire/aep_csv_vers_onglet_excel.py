@@ -4,7 +4,7 @@ from openpyxl.utils.dataframe import dataframe_to_rows
 import os
 
 # Dossier contenant les fichiers CSV - chemin à changer
-dossier_csv = '.../Reseaux-eaux/Standard StaR-Eau/listes valeurs/brute avant import/'
+dossier_csv = '.../Reseaux-eaux/Standard StaR-Eau/listes valeurs/brutes_avant_import/'
 
 # Nom du fichier Excel de sortie
 fichier_excel = 'liste_valeurs_AEP.xlsx'
