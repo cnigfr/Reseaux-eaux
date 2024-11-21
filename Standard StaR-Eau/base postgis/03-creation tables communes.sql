@@ -41,7 +41,7 @@ CREATE TABLE stareau_aep.aep_affleurant (
 INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
 CREATE INDEX sidx_aep_affleurant_geom ON stareau_aep.aep_affleurant USING gist (geom);
 
-COMMENT ON TABLE stareau_aep.aep_affleurant IS 'table des affleurant des réseaux';
+COMMENT ON TABLE stareau_aep.aep_affleurant IS 'table des affleurants des réseaux';
 
 -- COLUMN comments
 
@@ -69,7 +69,7 @@ CREATE TABLE stareau_ass.ass_affleurant (
 INHERITS (stareau_principale.champ_commun,stareau_principale.dimension);
 CREATE INDEX sidx_ass_affleurant_geom ON stareau_ass.ass_affleurant USING gist (geom);
 
-COMMENT ON TABLE stareau_ass.ass_affleurant IS 'table des affleurant des réseaux';
+COMMENT ON TABLE stareau_ass.ass_affleurant IS 'table des affleurants des réseaux';
 
 -- Column comments
 
