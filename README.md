@@ -4,7 +4,7 @@
 
 # GT Réseaux enterrés des eaux
 
-Retrouvez le suivi du groupe de travail sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html)
+Retrouvez le suivi du [groupe de travail de L'ASTEE](https://www.astee.org/?s=star+eau) sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html)
 
 # Présentation
 
@@ -12,22 +12,27 @@ Le groupe de travail de l’ASTEE ‘Standards SIG’ a été créé pour travai
 
 ## Objectif
 
-L’objectif de cette démarche est de proposer des évolutions des modèles de données Eau et Assainissement en zone urbaine, sur la base du modèle RAEPA avec les objectifs
-suivants :
+L’objectif de cette démarche est de proposer des évolutions des modèles de données Eau et Assainissement en zone urbaine, sur la base du modèle RAEPA avec les objectifs suivants :
 
-- Compléter les modèles de données représentatifs de l’ensemble du patrimoine pour répondre aux besoins métiers et faciliter les échanges de données
-- Répondre aux obligations réglementaires (réforme anti-endommagement, descriptif détaillé des réseaux, …)
-- Assurer une interopérabilité / compatibilité avec les autres standards ou normes d’échanges de données dont le RAEPA, StaR-DT, PCRS, …
-- Faciliter le calcul des indicateurs de connaissance patrimoniale
+- Compléter les modèles de données représentatifs de l’ensemble du patrimoine pour **répondre aux besoins métiers** et **faciliter les échanges de données**,
+- Répondre aux obligations réglementaires (réforme anti-endommagement, descriptif détaillé des réseaux, …),
+- Assurer une interopérabilité / compatibilité avec les autres standards ou normes d’échanges de données dont le RAEPA, StaR-DT, PCRS, …,
+- Faciliter le calcul des indicateurs de connaissance patrimoniale.
+
+Les objectifs de la symbologie sont :
+
+-  Harmoniser la représentation cartographique pour améliorer la lisibilité des plans et la sécurité des chantiers ;
+-  Proposer une représentation cartographique métier pour l’exploitation et la gestion patrimoniale des réseaux ;
+-  Assurer la cohérence et la coordination avec les travaux du groupe StaR-DT (Géostandard de réseaux dans le cadre des DT/DICT).
 
 # MODÈLE STANDARD DE DONNÉES - STAR-EAU
 
 **appel à commentaire terminé - merci de votre participation.**
-Le fichier reste ouvert à cette adresse [commentaire](https://cryptpad.fr/sheet/#/2/sheet/edit/ew31VKDhicOB2gzORdItaF6W/embed/). Les commentaires peuvent encore être déposé mais ne seront pas pris en compte pour la version 2024 à venir.
+Le fichier reste ouvert à cette adresse [commentaire](https://cryptpad.fr/sheet/#/2/sheet/edit/ew31VKDhicOB2gzORdItaF6W/embed/). Les commentaires peuvent encore être déposés.
 
 Vous pouvez consulter le wiki : https://github.com/cnigfr/Reseaux-eaux/wiki
 
-Pour toutes questions, utilisez les [ISSUES](https://github.com/cnigfr/Reseaux-eaux/issues) ou @ASTEE
+Pour toutes questions, utilisez les [ISSUES](https://github.com/cnigfr/Reseaux-eaux/issues) ou [ASTEE](https://www.astee.org/contactez-nous/)
 
 ---
 

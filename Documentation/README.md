@@ -1,25 +1,22 @@
-# Fr Water Network Styles
+# Documentation
 
-QGIS French official styles for water network elements. 
+Ici vous trouverez toute la documentation du standard.
+## modèle
+- la description du géostandard Compléter
+- les fichiers de modélisation
+- les fichiers tableurs des dictionnaires de données
 
-Work leaded by ASTEE https://www.astee.org/ 
+Les gabarits, liste de valeurs en csv... sont dans le répertoire des fichiers techniques.
 
-# Symboles et styles QGIS pour les réseaux d'eau potable et assainissement
+## symboles
+- Note méthodologique
+- aide à l'installation sous QGIS
 
-Ce dépôt rassemble la bibliothèque de symboles produites par le groupe de travail de l'Astee dédié aux Standards https://www.astee.org/ dans le cadre du projet d'unification des représentations.
-
-Les objectifs de sont :
-
--  Harmoniser la représentation cartographique pour améliorer la lisibilité des plans et la sécurité des chantiers ;
-
--  Proposer une représentation cartographique métier pour l’exploitation et la gestion patrimoniale des réseaux ;
-
--  Assurer la cohérence et la coordination avec les travaux du groupe StaR-DT (Géostandard de réseaux dans le cadre des DT/DICT).
-
-
+Les symboles sous différents formats et styles sont dans le répertoire collections (nom compatible avec le plugin Resource Sharing de QGIS)
 Le travail d'adaptation à QGIS pour le paramétrage des couleurs et épaisseurs a été réalisé par le Grand Lyon et Oslandia. 
 
-Les symboles sont diffusés en licence Creative Commons :warning: précisions à venir
+## image_documentation
+contient les visuels et fichiers présents dans les documents et le wiki du github.
 
 # Contribuer 
 

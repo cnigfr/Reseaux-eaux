@@ -1,5 +1,7 @@
 # Changelog
 
+# publication imminente V2024 du standard
+
 ## [Unreleased](https://github.com/cnigfr/Reseaux-eaux/tree/HEAD)
 
 [Full Changelog](https://github.com/cnigfr/Reseaux-eaux/compare/AC_juin_2024...HEAD)
