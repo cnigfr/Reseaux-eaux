@@ -2,34 +2,34 @@
 
 # publication imminente V2024 du standard
 
-## [Unreleased](https://github.com/cnigfr/Reseaux-eaux/tree/HEAD)
+## [Unreleased](https://github.com/cnigfr/StaR-Eau/tree/HEAD)
 
-[Full Changelog](https://github.com/cnigfr/Reseaux-eaux/compare/AC_juin_2024...HEAD)
+[Full Changelog](https://github.com/cnigfr/StaR-Eau/compare/AC_juin_2024...HEAD)
 
 **Closed issues:**
 
-- Mauvais lien d'accès au cryptpad [\#4](https://github.com/cnigfr/Reseaux-eaux/issues/4)
+- Mauvais lien d'accès au cryptpad [\#4](https://github.com/cnigfr/StaR-Eau/issues/4)
 
-## [AC_juin_2024](https://github.com/cnigfr/Reseaux-eaux/tree/AC_juin_2024) (2024-06-10)
+## [AC_juin_2024](https://github.com/cnigfr/StaR-Eau/tree/AC_juin_2024) (2024-06-10)
 
-[Full Changelog](https://github.com/cnigfr/Reseaux-eaux/compare/V2022.10...AC_juin_2024)
+[Full Changelog](https://github.com/cnigfr/StaR-Eau/compare/V2022.10...AC_juin_2024)
 
 **Merged pull requests:**
 
-- modif erreur [\#3](https://github.com/cnigfr/Reseaux-eaux/pull/3) ([AlainPasquier](https://github.com/AlainPasquier))
-- Rédaction du document du standard [\#2](https://github.com/cnigfr/Reseaux-eaux/pull/2) ([jbhebbrecht-dea](https://github.com/jbhebbrecht-dea))
+- modif erreur [\#3](https://github.com/cnigfr/StaR-Eau/pull/3) ([AlainPasquier](https://github.com/AlainPasquier))
+- Rédaction du document du standard [\#2](https://github.com/cnigfr/StaR-Eau/pull/2) ([jbhebbrecht-dea](https://github.com/jbhebbrecht-dea))
 
-## [V2022.10](https://github.com/cnigfr/Reseaux-eaux/tree/V2022.10) (2022-10-14)
+## [V2022.10](https://github.com/cnigfr/StaR-Eau/tree/V2022.10) (2022-10-14)
 
-[Full Changelog](https://github.com/cnigfr/Reseaux-eaux/compare/V2022.09...V2022.10)
+[Full Changelog](https://github.com/cnigfr/StaR-Eau/compare/V2022.09...V2022.10)
 
-## [V2022.09](https://github.com/cnigfr/Reseaux-eaux/tree/V2022.09) (2022-10-04)
+## [V2022.09](https://github.com/cnigfr/StaR-Eau/tree/V2022.09) (2022-10-04)
 
-[Full Changelog](https://github.com/cnigfr/Reseaux-eaux/compare/V2020.09...V2022.09)
+[Full Changelog](https://github.com/cnigfr/StaR-Eau/compare/V2020.09...V2022.09)
 
-## [V2020.09](https://github.com/cnigfr/Reseaux-eaux/tree/V2020.09) (2022-07-05)
+## [V2020.09](https://github.com/cnigfr/StaR-Eau/tree/V2020.09) (2022-07-05)
 
-[Full Changelog](https://github.com/cnigfr/Reseaux-eaux/compare/4c8396d6f61897689838becdf4730b2b790edd25...V2020.09)
+[Full Changelog](https://github.com/cnigfr/StaR-Eau/compare/4c8396d6f61897689838becdf4730b2b790edd25...V2020.09)
 
 
 

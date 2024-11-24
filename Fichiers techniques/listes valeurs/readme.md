@@ -16,7 +16,7 @@ Le nom est ensuite celui du champ concerné dans la table. :joy:
 - sans en-tête (compatible QGIS) --> dans liste complète (avec les champs communs de renseignements)
 
 # Schéma de création de liste dans les répertoires
-Les listes "brutes_avant_import" servent de base aux imports Postgis grâce au script présent dans [base postgis - utilitaire](https://github.com/cnigfr/Reseaux-eaux/tree/main/Standard%20StaR-Eau/base%20postgis/utilitaire)
+Les listes "brutes_avant_import" servent de base aux imports Postgis grâce au script présent dans [base postgis - utilitaire](https://github.com/cnigfr/StaR-Eau/tree/main/Standard%20StaR-Eau/base%20postgis/utilitaire)
 
 > [!important]
 > **Les listes à modifier en priorité sont celles de «brutes_avant_import»**

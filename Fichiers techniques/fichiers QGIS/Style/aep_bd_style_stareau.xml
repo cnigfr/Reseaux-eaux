@@ -123,7 +123,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_CLAPET.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_CLAPET.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -355,7 +355,7 @@
           <Option name="color" value="0,0,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_PURGE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_PURGE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -393,7 +393,7 @@
           <Option name="color" value="0,0,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_VENTOUSE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_VENTOUSE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -431,7 +431,7 @@
           <Option name="color" value="255,0,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_PURGE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_PURGE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -6164,7 +6164,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_BORNE_FONTAINE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_BORNE_FONTAINE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MapUnit" type="QString"/>
@@ -6285,7 +6285,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_BOUCHE_ARROSAGE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_BOUCHE_ARROSAGE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -6369,7 +6369,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_BORNE_PUISAGE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_BORNE_PUISAGE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -6453,7 +6453,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_FACADE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_FACADE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -6967,7 +6967,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7005,7 +7005,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7043,7 +7043,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7081,7 +7081,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7119,7 +7119,7 @@
           <Option name="color" value="0,192,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7157,7 +7157,7 @@
           <Option name="color" value="255,127,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7195,7 +7195,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7233,7 +7233,7 @@
           <Option name="color" value="166,206,227,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_COMPTEUR_DEBIT.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7418,7 +7418,7 @@
           <Option name="color" value="0,192,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_STATION_POMPAGE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_STATION_POMPAGE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7456,7 +7456,7 @@
           <Option name="color" value="22,211,110,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_STATION_POMPAGE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_STATION_POMPAGE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7494,7 +7494,7 @@
           <Option name="color" value="255,105,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_STATION_POMPAGE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_STATION_POMPAGE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7532,7 +7532,7 @@
           <Option name="color" value="166,206,227,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_REGULATEUR_DEBIT_PRESSION.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_REGULATEUR_DEBIT_PRESSION.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7600,7 +7600,7 @@
           <Option name="color" value="255,127,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_STATION_POMPAGE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_STATION_POMPAGE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -7638,7 +7638,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_STATION_POMPAGE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_STATION_POMPAGE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8039,7 +8039,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_REGULATEUR_DEBIT_PRESSION.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_REGULATEUR_DEBIT_PRESSION.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8107,7 +8107,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_REGULATEUR_DEBIT_PRESSION.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_REGULATEUR_DEBIT_PRESSION.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8175,7 +8175,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_REGULATEUR_DEBIT_PRESSION.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_REGULATEUR_DEBIT_PRESSION.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8243,7 +8243,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_REGULATEUR_DEBIT_PRESSION.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_REGULATEUR_DEBIT_PRESSION.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8311,7 +8311,7 @@
           <Option name="color" value="139,139,139,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_REGULATEUR_DEBIT_PRESSION.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_REGULATEUR_DEBIT_PRESSION.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8496,7 +8496,7 @@
           <Option name="color" value="0,192,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_RESERVOIR.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_RESERVOIR.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8534,7 +8534,7 @@
           <Option name="color" value="0,0,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_RESERVOIR.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_RESERVOIR.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8572,7 +8572,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_RESERVOIR.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_RESERVOIR.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8610,7 +8610,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_RESERVOIR_TOUR.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_RESERVOIR_TOUR.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8648,7 +8648,7 @@
           <Option name="color" value="0,192,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_RESERVOIR.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_RESERVOIR.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8686,7 +8686,7 @@
           <Option name="color" value="0,0,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_RESERVOIR.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_RESERVOIR.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8724,7 +8724,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_RESERVOIR.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_RESERVOIR.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8762,7 +8762,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_RESERVOIR_TOUR.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_RESERVOIR_TOUR.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -8977,7 +8977,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_STATION_ALERTE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_STATION_ALERTE.svg" type="QString"/>
           <Option name="offset" value="-0.20000000000000001,-0.20000000000000001" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -9015,7 +9015,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_STATION_ALERTE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_STATION_ALERTE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -9200,7 +9200,7 @@
           <Option name="color" value="247,252,245,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_POINT_CHLORATION.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_POINT_CHLORATION.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -9238,7 +9238,7 @@
           <Option name="color" value="247,252,245,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_POINT_CHLORATION.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_POINT_CHLORATION.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -9276,7 +9276,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_USINE_TRAITEMENT.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_USINE_TRAITEMENT.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -9314,7 +9314,7 @@
           <Option name="color" value="247,252,245,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_POINT_CHLORATION.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_POINT_CHLORATION.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -9352,7 +9352,7 @@
           <Option name="color" value="247,252,245,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_POINT_CHLORATION.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_POINT_CHLORATION.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -9390,7 +9390,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_USINE_TRAITEMENT.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_USINE_TRAITEMENT.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -9611,7 +9611,7 @@
           <Option name="color" value="0,0,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -9691,7 +9691,7 @@
           <Option name="color" value="0,0,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -9771,7 +9771,7 @@
           <Option name="color" value="0,0,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -10874,7 +10874,7 @@
           <Option name="color" value="255,0,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_CITERNE_INCENDIE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_CITERNE_INCENDIE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -10912,7 +10912,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_ASPIRATION.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_ASPIRATION.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -10950,7 +10950,7 @@
           <Option name="color" value="255,0,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_BOUCHE_INCENDIE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_BOUCHE_INCENDIE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -10988,7 +10988,7 @@
           <Option name="color" value="255,255,255,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_POTEAU_INCENDIE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_POTEAU_INCENDIE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -11739,7 +11739,7 @@
           <Option name="color" value="0,0,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/assainissement/svg/EAU_POINT_MESURE_NAPPE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/assainissement/svg/EAU_POINT_MESURE_NAPPE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>
@@ -11807,7 +11807,7 @@
           <Option name="color" value="0,0,0,255" type="QString"/>
           <Option name="fixedAspectRatio" value="0" type="QString"/>
           <Option name="horizontal_anchor_point" value="1" type="QString"/>
-          <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/assainissement/svg/EAU_PLUVIOMETRE.svg" type="QString"/>
+          <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/assainissement/svg/EAU_PLUVIOMETRE.svg" type="QString"/>
           <Option name="offset" value="0,0" type="QString"/>
           <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
           <Option name="offset_unit" value="MM" type="QString"/>

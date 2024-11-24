@@ -2,7 +2,7 @@
 
 Ici vous trouverez toute la documentation du standard.
 ## modèle
-- la description du géostandard Compléter
+- la description du géostandard complète
 - les fichiers de modélisation
 - les fichiers tableurs des dictionnaires de données
 
@@ -20,6 +20,6 @@ contient les visuels et fichiers présents dans les documents et le wiki du gith
 
 # Contribuer 
 
-Si vous constatez une anomalie technique ou une optimisation possible d'un symbole, vous pouvez ouvrir un [ticket] et proposer directement une modification via une proposition de modification [pull request].
+Si vous constatez une anomalie technique ou une optimisation possible d'un symbole, vous pouvez ouvrir un [ticket](https://github.com/cnigfr/StaR-Eau/issues) et proposer directement une modification via une proposition de modification [pull request](https://github.com/cnigfr/StaR-Eau/pulls).
 
 

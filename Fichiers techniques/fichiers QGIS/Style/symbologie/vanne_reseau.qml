@@ -57,7 +57,7 @@
             <Option type="QString" name="color" value="0,0,0,255"/>
             <Option type="QString" name="fixedAspectRatio" value="0"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
-            <Option type="QString" name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg"/>
+            <Option type="QString" name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg"/>
             <Option type="QString" name="offset" value="0,0"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="MM"/>
@@ -137,7 +137,7 @@
             <Option type="QString" name="color" value="0,0,0,255"/>
             <Option type="QString" name="fixedAspectRatio" value="0"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
-            <Option type="QString" name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg"/>
+            <Option type="QString" name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg"/>
             <Option type="QString" name="offset" value="0,0"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="MM"/>
@@ -217,7 +217,7 @@
             <Option type="QString" name="color" value="212,17,222,255"/>
             <Option type="QString" name="fixedAspectRatio" value="0"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
-            <Option type="QString" name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg"/>
+            <Option type="QString" name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg"/>
             <Option type="QString" name="offset" value="0,0"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="MM"/>
@@ -299,7 +299,7 @@
             <Option type="QString" name="color" value="0,0,0,255"/>
             <Option type="QString" name="fixedAspectRatio" value="0"/>
             <Option type="QString" name="horizontal_anchor_point" value="1"/>
-            <Option type="QString" name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg"/>
+            <Option type="QString" name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/eau_potable/svg/AEP_VANNES_RESEAU.svg"/>
             <Option type="QString" name="offset" value="0,0"/>
             <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             <Option type="QString" name="offset_unit" value="MM"/>

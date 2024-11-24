@@ -215,7 +215,7 @@
             <Option name="color" type="QString" value="255,255,255,255"/>
             <Option name="fixedAspectRatio" type="QString" value="0"/>
             <Option name="horizontal_anchor_point" type="QString" value="1"/>
-            <Option name="name" type="QString" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/assainissement/svg/ASS_DEGRILLEUR.svg"/>
+            <Option name="name" type="QString" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/assainissement/svg/ASS_DEGRILLEUR.svg"/>
             <Option name="offset" type="QString" value="0,0"/>
             <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
             <Option name="offset_unit" type="QString" value="MM"/>

@@ -1,4 +1,4 @@
-![logo](https://github.com/cnigfr/Reseaux-eaux/blob/main/Documentation/image_documentation/logo/logo.png "logo")
+![logo](https://github.com/cnigfr/StaR-Eau/blob/main/Documentation/image_documentation/logo/logo.png "logo")
 ![logo-astee-2](https://github.com/user-attachments/assets/de90a9e7-a8ad-4648-92be-8f2b2cfaaebe)
 
 
@@ -30,17 +30,17 @@ Les objectifs de la symbologie sont :
 **appel à commentaire terminé - merci de votre participation.**
 Le fichier reste ouvert à cette adresse [commentaire](https://cryptpad.fr/sheet/#/2/sheet/edit/ew31VKDhicOB2gzORdItaF6W/embed/). Les commentaires peuvent encore être déposés.
 
-Vous pouvez consulter le wiki : https://github.com/cnigfr/Reseaux-eaux/wiki
+Vous pouvez consulter le wiki : https://github.com/cnigfr/StaR-Eau/wiki
 
-Pour toutes questions, utilisez les [ISSUES](https://github.com/cnigfr/Reseaux-eaux/issues) ou [ASTEE](https://www.astee.org/contactez-nous/)
+Pour toutes questions, utilisez les [ISSUES](https://github.com/cnigfr/StaR-Eau/issues) ou [ASTEE](https://www.astee.org/contactez-nous/)
 
 ---
 
 # SYMBOLOGIE
 
-Le premier chantier de ce groupe a abouti à une symbologie SIG des réseaux d’eau et d’assainissement prête à l’emploi, disponible depuis septembre 2020 et téléchargeable ici [RELEASE](https://github.com/cnigfr/Reseaux-eaux/releases/), et retrouver l'actu sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html), ou l’[ASTEE](https://www.astee.org/publications/symbologies-des-reseaux-deau-et-dassainissement-applicables-aux-systemes-dinformation-geographique-sig/)
+Le premier chantier de ce groupe a abouti à une symbologie SIG des réseaux d’eau et d’assainissement prête à l’emploi, disponible depuis septembre 2020 et téléchargeable ici [RELEASE](https://github.com/cnigfr/StaR-Eau/releases/), et retrouver l'actu sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html), ou l’[ASTEE](https://www.astee.org/publications/symbologies-des-reseaux-deau-et-dassainissement-applicables-aux-systemes-dinformation-geographique-sig/)
 
-Retrouver la [documentation simplifiée en cliquant ici](https://github.com/cnigfr/Reseaux-eaux/wiki)
+Retrouver la [documentation simplifiée en cliquant ici](https://github.com/cnigfr/StaR-Eau/wiki)
 
 ## Version de septembre 2022
 

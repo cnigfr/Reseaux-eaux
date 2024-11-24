@@ -29,7 +29,7 @@
             <Option name="color" value="255,255,255,255" type="QString"/>
             <Option name="fixedAspectRatio" value="0" type="QString"/>
             <Option name="horizontal_anchor_point" value="1" type="QString"/>
-            <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/assainissement/svg/ASS_STEU.svg" type="QString"/>
+            <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/assainissement/svg/ASS_STEU.svg" type="QString"/>
             <Option name="offset" value="0,0" type="QString"/>
             <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
             <Option name="offset_unit" value="MM" type="QString"/>
@@ -67,7 +67,7 @@
             <Option name="color" value="255,255,255,255" type="QString"/>
             <Option name="fixedAspectRatio" value="0" type="QString"/>
             <Option name="horizontal_anchor_point" value="1" type="QString"/>
-            <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/assainissement/svg/ASS_STEU.svg" type="QString"/>
+            <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/assainissement/svg/ASS_STEU.svg" type="QString"/>
             <Option name="offset" value="0,0" type="QString"/>
             <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
             <Option name="offset_unit" value="MM" type="QString"/>
@@ -135,7 +135,7 @@
             <Option name="color" value="255,255,255,255" type="QString"/>
             <Option name="fixedAspectRatio" value="0" type="QString"/>
             <Option name="horizontal_anchor_point" value="1" type="QString"/>
-            <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/assainissement/svg/ASS_STEU.svg" type="QString"/>
+            <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/assainissement/svg/ASS_STEU.svg" type="QString"/>
             <Option name="offset" value="0,0" type="QString"/>
             <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
             <Option name="offset_unit" value="MM" type="QString"/>
@@ -203,7 +203,7 @@
             <Option name="color" value="255,255,255,255" type="QString"/>
             <Option name="fixedAspectRatio" value="0" type="QString"/>
             <Option name="horizontal_anchor_point" value="1" type="QString"/>
-            <Option name="name" value="https://github.com/cnigfr/Reseaux-eaux/raw/main/collections/assainissement/svg/ASS_STEU.svg" type="QString"/>
+            <Option name="name" value="https://github.com/cnigfr/StaR-Eau/raw/main/collections/assainissement/svg/ASS_STEU.svg" type="QString"/>
             <Option name="offset" value="0,0" type="QString"/>
             <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
             <Option name="offset_unit" value="MM" type="QString"/>
