@@ -1,5 +1,5 @@
 > [!caution]
-> **TRAVAIL EN COURS**. Tous les fichiers sont ici à titre d'esssais. Vous utilisez ces fichiers à vos risques et périls
+> Vous utilisez ces fichiers à vos risques et périls
 
 # Liste de valeurs
 Les listes commençant par :

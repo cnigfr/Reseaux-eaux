@@ -5,6 +5,6 @@ Ici, vous trouverez tous les fichiers dits techniques :
 - gabarit,
 - fichiers de démo,
 - fichier QGIS (les styles migreront à terme dans la symbologie)
-- les liste de valeurs
+- les listes de valeurs
 
-Ce dossier a vocation a grandir en fonction des contributions et des formats exploités.
+**Ce dossier a vocation a grandir en fonction des contributions et des formats exploités.**

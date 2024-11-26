@@ -1,12 +1,13 @@
 > [!caution]
-> **TRAVAIL EN COURS**. Tous les fichiers sont ici à titre d'esssais. Vous utilisez ces fichiers à vos risques et périls **Attention, ils sont susceptibles de changer à l'issue de la période d'appel à commentaires**
+> Vous utilisez ces fichiers à vos risques et périls.
 
 # Projets QGIS
-Des fichiers projet de démo QGIS sont enregistrés dans les géopackages (gpkg).
+
+Des fichiers projet de démo QGIS sont enregistrés dans les géopackages (gpkg sans _no_style).
 
 Pour les ouvrir, utiliser dans QGIS : Projet --> Ouvrir depuis... --> geopackage , choisir le gpkg qui convient et ouvrir.
 
-Des styles sont définies pour test et visualisation du rendu.
+Des styles sont définis pour tests et visualisation du rendu. **Ces fichiers ne font pas partie du standard**
 
 # GEOPACKAGE
 
@@ -16,8 +17,8 @@ Les fichiers sont séparés par métiers, ils contiennent toutefois les couches 
  > ATTENTION, la gestion des héritages, relations et des identifiants n'est pas mise en place dans les fichiers fournis
 
 ## no-style
-Des styles par défaut sont enregistrés dans les geopackage pour faciliter la prise en main et avoir une idée du rendu.
-Les geopackage sont aussi enregistré en no-style, c'est à dire sans les fichiers de style.
+Des styles par défaut sont enregistrés dans les geopackage pour faciliter la prise en main.
+Les **geopackages sont aussi enregistrés en no-style**, c'est à dire sans les fichiers de style.
 
 ## Pas vides
 Par défaut, ces fichiers contiennent des objets qui servent de tests et au projet de démonstration qgis. Pensez à les effacer si vous utilisez ces fichiers.

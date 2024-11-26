@@ -1,10 +1,7 @@
 # Changelog
 
-# publication imminente V2024 du standard
-
-## [Unreleased](https://github.com/cnigfr/StaR-Eau/tree/HEAD)
-
-[Full Changelog](https://github.com/cnigfr/StaR-Eau/compare/AC_juin_2024...HEAD)
+##  publication V2024 du standard
+Un nouveau changelog sera publié à la suite.
 
 **Closed issues:**
 

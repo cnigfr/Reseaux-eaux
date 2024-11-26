@@ -1,5 +1,5 @@
 > [!caution]
-> **TRAVAIL EN COURS. Ces fichiers ne font pas partie du standard**. Tous les fichiers sont ici à titre d'essais. Vous utilisez ces fichiers à vos risques et périls.
+> **Ces fichiers ne font pas partie du standard**. Tous les fichiers sont ici à titre d'essais. Vous utilisez ces fichiers à vos risques et périls.
 
 # QGIS
 

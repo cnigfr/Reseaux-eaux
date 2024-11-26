@@ -1,9 +1,9 @@
 > [!caution]
-> TRAVAIL EN COURS. Tous les fichiers sont ici à titre d'esssais. Vous utilisez ces fichiers à vos risques et périls
+> Vous utilisez ces fichiers à vos risques et périls
 
 # Montage dans base POSTGIS
 
-DDL initial depuis postgresl 13 / postgis 3
+DDL initial depuis postgresl 15 / postgis 3
 
 **fichiers sql à lancer dans l'ordre de numérotation**
 
@@ -18,4 +18,8 @@ Essai de la base pour calcul des indicateurs SISPEA
 
 # star-dt
 
-Creation de vues pour compatibilité Star-Dt
+Création de vues pour compatibilité Star-Dt
+
+# Triggers
+
+Déclencheurs et script pour la gestion des bases et des données.

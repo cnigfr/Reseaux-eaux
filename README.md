@@ -27,8 +27,10 @@ Les objectifs de la symbologie sont :
 
 # MODÈLE STANDARD DE DONNÉES - STAR-EAU
 
-**appel à commentaire terminé - merci de votre participation.**
-Le fichier reste ouvert à cette adresse [commentaire](https://cryptpad.fr/sheet/#/2/sheet/edit/ew31VKDhicOB2gzORdItaF6W/embed/). Les commentaires peuvent encore être déposés.
+## V2024 - Novembre 2024
+La version finale, appelé V2024, est en ligne sur ce site : documentation --> modèle et sur le site de l'ASTEE.
+
+Le fichier de commentaire reste ouvert à cette adresse [commentaire](https://cryptpad.fr/sheet/#/2/sheet/edit/ew31VKDhicOB2gzORdItaF6W/embed/). Les commentaires peuvent encore être déposés. ** merci de votre participation.**
 
 Vous pouvez consulter le wiki : https://github.com/cnigfr/StaR-Eau/wiki
 
