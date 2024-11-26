@@ -295,6 +295,7 @@ CREATE TABLE stareau_ass.ass_point_prelevement (
 	nom_usuel text NULL, -- nom d'usage
 	type_point_prelevement text NOT NULL, -- *type de point prélèvement*
 	code_sandre text NOT NULL, -- *code SANDRE*
+  id_sandre text NULL, --
 	ref_ouvrage text NULL, -- référence à l'ouvrage de rattachement
 	geom public.geometry(point, 2154) NOT NULL,
 	CONSTRAINT pk_ass_point_prelevement PRIMARY KEY (id_ass_point_prelevement)
@@ -308,6 +309,7 @@ COMMENT ON COLUMN stareau_ass.ass_point_prelevement.id_ass_point_prelevement IS 
 COMMENT ON COLUMN stareau_ass.ass_point_prelevement.nom_usuel IS 'nom d''usage';
 COMMENT ON COLUMN stareau_ass.ass_point_prelevement.type_point_prelevement IS '*type de point prélèvement*';
 COMMENT ON COLUMN stareau_ass.ass_point_prelevement.code_sandre IS '*code SANDRE*';
+COMMENT ON COLUMN stareau_ass.ass_point_prelevement.code_sandre IS 'identifiant SANDRE';
 COMMENT ON COLUMN stareau_ass.ass_point_prelevement.ref_ouvrage IS 'référence à l''ouvrage de rattachement';
 
 ----BASSIN
