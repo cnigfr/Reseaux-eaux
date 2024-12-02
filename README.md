@@ -4,11 +4,11 @@
 
 # GT Réseaux enterrés des eaux
 
-Retrouvez le suivi du [groupe de travail de L'ASTEE](https://www.astee.org/?s=star+eau) sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html)
+Retrouvez le suivi du [groupe de travail de l'Astee](https://www.astee.org/?s=star+eau) sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html)
 
 # Présentation
 
-Le groupe de travail de l’ASTEE ‘Standards SIG’ a été créé pour travailler sur des ressources ou livrables SIG standards facilitant l’usage des SIG par les exploitants ou gestionnaires des réseaux d’eau ou d’assainissement.
+Le groupe de travail de l’Astee ‘Standards SIG’ a été créé pour travailler sur des ressources ou livrables SIG standards facilitant l’usage des SIG par les exploitants ou gestionnaires des réseaux d’eau ou d’assainissement.
 
 ## Objectif
 
@@ -28,21 +28,21 @@ Les objectifs de la symbologie sont :
 # MODÈLE STANDARD DE DONNÉES - STAR-EAU
 
 ## V2024 - Novembre 2024
-La version finale, appelé V2024, est en ligne sur ce site : documentation --> modèle et sur le site de l'ASTEE.
+La version finale, appelée V2024, est en ligne sur ce site : [documentation --> modèle](Documentation/Modéle) et sur le [site de l'Astee](https://www.astee.org/publications/geostandard-de-reseaux-star-eau/).
 
-Le fichier de commentaire reste ouvert à cette adresse [commentaire](https://cryptpad.fr/sheet/#/2/sheet/edit/ew31VKDhicOB2gzORdItaF6W/embed/). Les commentaires peuvent encore être déposés. ** merci de votre participation.**
+Le fichier de commentaire reste ouvert à cette adresse [commentaire](https://cryptpad.fr/sheet/#/2/sheet/edit/ew31VKDhicOB2gzORdItaF6W/embed/). Les commentaires peuvent encore être déposés. **merci de votre participation.**
 
-Vous pouvez consulter le wiki : https://github.com/cnigfr/StaR-Eau/wiki
+Vous pouvez aussi consulter le wiki [en suivant ce lien.](https://github.com/cnigfr/StaR-Eau/wiki)
 
-Pour toutes questions, utilisez les [ISSUES](https://github.com/cnigfr/StaR-Eau/issues) ou [ASTEE](https://www.astee.org/contactez-nous/)
+Pour toutes questions, utilisez les [ISSUES](https://github.com/cnigfr/StaR-Eau/issues) ou l’adresse indiquée sur le site de [Astee](https://www.astee.org/contactez-nous/)
 
 ---
 
 # SYMBOLOGIE
 
-Le premier chantier de ce groupe a abouti à une symbologie SIG des réseaux d’eau et d’assainissement prête à l’emploi, disponible depuis septembre 2020 et téléchargeable ici [RELEASE](https://github.com/cnigfr/StaR-Eau/releases/), et retrouver l'actu sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html), ou l’[ASTEE](https://www.astee.org/publications/symbologies-des-reseaux-deau-et-dassainissement-applicables-aux-systemes-dinformation-geographique-sig/)
+Le premier chantier de ce groupe a abouti à une symbologie SIG des réseaux d’eau et d’assainissement prête à l’emploi, disponible depuis septembre 2020 et téléchargeable ici [RELEASE](https://github.com/cnigfr/StaR-Eau/releases/), et retrouvez l'actu sur le site du [CNIG](http://cnig.gouv.fr/gt-reseaux-enterres-des-eaux-a23994.html), ou l’[Astee](https://www.astee.org/publications/symbologies-des-reseaux-deau-et-dassainissement-applicables-aux-systemes-dinformation-geographique-sig/)
 
-Retrouver la [documentation simplifiée en cliquant ici](https://github.com/cnigfr/StaR-Eau/wiki)
+Retrouvez la [documentation simplifiée en cliquant ici](https://github.com/cnigfr/StaR-Eau/wiki/accueil-symbologie)
 
 ## Version de septembre 2022
 
@@ -69,4 +69,4 @@ les dossiers sont composés comme suit :
 
 - Documents_Symbologie_RAEPA : contient les documents et tutoriel pour la mise en place et la compréhension des symboles.
 
-* utils : contient des fichiers, script et paramètre pour création des symboles
+* utilitaire : contient des fichiers, scripts et paramètres pour création des symboles.
