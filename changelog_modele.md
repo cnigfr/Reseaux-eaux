@@ -1,5 +1,5 @@
 # Changelog - Journal des modifications
-// Last modified: 2024/12/12 20:05:56
+// Last modified: 2024/12/12 20:14:23
 
 
 Tous les changements notables du modèle sont listés ici. Merci de respecter la format.
@@ -8,24 +8,19 @@ Le format de ce fichier est basé sur [Keep a Changelog](https://keepachangelog.
 
 ## [Unreleased] - En cours
 
---- ### Added - Ajouté
-
+### Added - Ajouté
 - 
 
---- ### fixed - Corrigé
-
+### fixed - Corrigé
 - 
 
---- ### Changed - Changé
-
+### Changed - Changé
 - 
 
---- ### Removed - Retiré
-
+### Removed - Retiré
 - 
 
---- ### deprecated - déprécié
-
+### deprecated - déprécié
 - 
 
 ## [V2024] - 2024-12-10
